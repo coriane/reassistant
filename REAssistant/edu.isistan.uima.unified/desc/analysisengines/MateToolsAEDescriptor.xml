@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenAEDescriptor">
+      <import location="opennlp/TokenAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceAEDescriptor">
+      <import location="opennlp/SentenceAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="POSAEDescriptor">
+      <import location="matetools/POSAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LemmaAEDescriptor">
+      <import location="matetools/LemmaAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="CoNLLSRLAEDescriptor">
+      <import location="srl/CoNLLSRLAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="CoNLLDependencyAEDescriptor">
+      <import location="matetools/CoNLLDependencyAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="WrapperAEDescriptor">
+      <import location="WrapperAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>MateToolsAEDescriptor</name>
+    <description/>
+    <version>1.0</version>
+    <vendor>Alejandro Rago</vendor>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>WrapperAEDescriptor</node>
+        <node>SentenceAEDescriptor</node>
+        <node>TokenAEDescriptor</node>
+        <node>LemmaAEDescriptor</node>
+        <node>POSAEDescriptor</node>
+        <node>CoNLLDependencyAEDescriptor</node>
+        <node>CoNLLSRLAEDescriptor</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities>
+      <priorityList>
+        <type>edu.isistan.uima.unified.typesystems.srs.Project</type>
+        <type>edu.isistan.uima.unified.typesystems.srs.Document</type>
+        <type>edu.isistan.uima.unified.typesystems.srs.Section</type>
+      </priorityList>
+    </typePriorities>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

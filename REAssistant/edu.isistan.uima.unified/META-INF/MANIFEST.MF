@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UIMA Unified
+Bundle-SymbolicName: edu.isistan.uima.unified
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.isistan.uima.unified.UIMAUnifiedActivator
+Bundle-Vendor: Alejandro Rago
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf;bundle-version="2.6.0",
+ org.eclipse.emf.common;bundle-version="2.6.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
+ edu.isistan.dal;bundle-version="1.0.0",
+ edu.isistan.uima.libs;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-RegisterBuddy: edu.isistan.uima.libs
+Export-Package: edu.isistan.uima.unified

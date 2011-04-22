@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="edu.isistan.dal.wizards.SRSWizardCategory"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.isistan.dal.ucs.model.presentation.UCSModelModelWizard"
+            name="%_UI_UCSModelModelWizard_label"
+            class="edu.isistan.dal.ucs.model.presentation.UCSModelModelWizard"
+            category="edu.isistan.dal.wizards.SRSWizardCategory"
+            icon="icons/full/obj16/UCSModelModelFile.gif">
+         <description>%_UI_UCSModelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="edu.isistan.dal.ucs.model.presentation.UCSModelEditorID"
+            name="%_UI_UCSModelEditor_label"
+            icon="icons/full/obj16/UCSModelModelFile.gif"
+            extensions="ucsmodel"
+            class="edu.isistan.dal.ucs.model.presentation.UCSModelEditor"
+            contributorClass="edu.isistan.dal.ucs.model.presentation.UCSModelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

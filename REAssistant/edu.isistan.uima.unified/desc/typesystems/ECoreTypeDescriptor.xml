@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>ECoreTypeDescriptor</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>Alejandro Rago</vendor>
+  <imports>
+    <import location="IdentifiableTypeDescriptor.xml"/>
+    <import location="srs/ProjectTypeDescriptor.xml"/>
+    <import location="srs/DocumentTypeDescriptor.xml"/>
+    <import location="srs/SectionTypeDescriptor.xml"/>
+    <import location="nlp/SentenceTypeDescriptor.xml"/>
+    <import location="nlp/TokenTypeDescriptor.xml"/>
+    <import location="nlp/ChunkTypeDescriptor.xml"/>
+    <import location="nlp/CoNLLDependencyTypeDescriptor.xml"/>
+    <import location="nlp/SDDependencyTypeDescriptor.xml"/>
+    <import location="nlp/EntityTypeDescriptor.xml"/>
+    <import location="wordnet/SenseTypeDescriptor.xml"/>
+    <import location="srl/RoleTypeDescriptor.xml"/>
+    <import location="srl/StructureTypeDescriptor.xml"/>
+    <import location="srl/PredicateTypeDescriptor.xml"/>
+    <import location="srl/ArgumentTypeDescriptor.xml"/>
+  </imports>
+</typeSystemDescription>

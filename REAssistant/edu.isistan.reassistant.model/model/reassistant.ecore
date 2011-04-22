@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model"
+    nsURI="http://www.users.exa.unicen.edu.ar/~arago/reassistant" nsPrefix="edu.isistan.reassistant">
+  <eClassifiers xsi:type="ecore:EClass" name="Identifiable" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Nameable" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="REAssistantProject" eSuperTypes="#//Identifiable #//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Project" eType="ecore:EClass ../../edu.isistan.dal/model/srs.ecore#//Project"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProjectURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UIMAURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CrosscuttingConcerns" upperBound="-1"
+        eType="#//CrosscuttingConcern" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="QualityAttributes" upperBound="-1"
+        eType="#//QualityAttribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="QualityAttributeScenarios"
+        upperBound="-1" eType="#//QualityAttributeScenario" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CrosscuttingConcern" eSuperTypes="#//Identifiable #//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Impacts" upperBound="-1"
+        eType="#//Impact" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Documents" upperBound="-1"
+        eType="ecore:EClass ../../edu.isistan.uima.model/model/uima.ecore#/0/isistan/uima/unified/typesystems/srs/Document"
+        changeable="false" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="#//Identifiable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Realization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CompositionRule" eType="#//CompositionRules"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Document" eType="ecore:EClass ../../edu.isistan.uima.model/model/uima.ecore#/0/isistan/uima/unified/typesystems/srs/Document"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Section" eType="ecore:EClass ../../edu.isistan.uima.model/model/uima.ecore#/0/isistan/uima/unified/typesystems/srs/Section"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Sentence" eType="ecore:EClass ../../edu.isistan.uima.model/model/uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Sentence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CompositionRules">
+    <eLiterals name="Wrap" literal="Wrap"/>
+    <eLiterals name="Overlap" value="1" literal="Overlap"/>
+    <eLiterals name="Override" value="2" literal="Override"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QualityAttribute" eSuperTypes="#//Identifiable #//Nameable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QualityAttributeScenario" eSuperTypes="#//Identifiable #//Nameable"/>
+</ecore:EPackage>

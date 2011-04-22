@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="edu.isistan.reassistant.wizards.REAWizardCategory"
+            name="REAssistant Wizards"/>
+      <wizard
+            id="edu.isistan.reassistant.wizards.REAssistantWizard"
+            name="REAssistant Model"
+            class="edu.isistan.reassistant.wizards.REAssistantWizard"
+            category="edu.isistan.reassistant.wizards.REAWizardCategory"
+            icon="icons/file_obj.gif">
+         	<description>Create a new REAssistant model file</description>
+      </wizard>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="edu.isistan.reassistant.editor.REAssistantEditor"
+            id="edu.isistan.reassistant.editor.REAssistantEditor"
+            name="REAssistant Editor"
+            extensions="rea"
+            icon="icons/sample.gif"
+            contributorClass="edu.isistan.reassistant.editor.REAssistantEditorContributor">
+      </editor>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="java.lang.Object"
+            id="edu.isistan.reassistant.popupMenu">
+         <menu
+            label="REAssistant"
+            path="additions"
+            id="edu.isistan.reassistant.popupSubMenu">
+            <groupMarker
+               name="content"/>
+            <separator
+               name="additions"/>
+         </menu>
+         <visibility>
+            <and>
+			    <objectClass name="org.eclipse.core.resources.IResource"/>
+			    <or>
+			    	<objectState name="name" value="*.srs"/>
+			    	<objectState name="name" value="*.ucs"/>
+			    	<objectState name="name" value="*.ucsmodel"/>
+			    </or>
+            </and>
+         </visibility>
+         <action
+			id="edu.isistan.reassistant.actions.REAssistantWizardAction"
+			label="Create REA"
+			tooltip="Launchs the REAssistant Wizard over the selected resource"
+			icon="icons/sample.gif"
+			class="edu.isistan.reassistant.actions.REAssistantWizardActionDelegate"
+			menubarPath="edu.isistan.reassistant.popupSubMenu/additions"
+			enablesFor="1">
+		    <enablement>
+				<and>
+				    <objectClass name="org.eclipse.core.resources.IResource"/>
+				    <or>
+				    	<objectState name="name" value="*.srs"/>
+				    	<objectState name="name" value="*.ucs"/>
+				    	<objectState name="name" value="*.ucsmodel"/>
+				    </or>
+				</and>
+		    </enablement>
+         </action>
+      </objectContribution>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editorActions">
+      <editorContribution
+            targetID="edu.isistan.reassistant.editor.REAssistantEditor"
+            id="edu.isistan.reassistant.editorMenu">
+         <menu
+            label="REAssistant"
+            path="additions"
+            id="edu.isistan.reassistant.editorSubMenu">
+            <groupMarker
+               name="content"/>
+            <separator
+               name="additions"/>
+         </menu>
+         <action
+			id="edu.isistan.reassistant.actions.CCMineAction"
+			label="Mine CC"
+			tooltip="Mine crosscutting concerns using UIMA preprocessing file"
+			icon="icons/sample.gif"
+			class="edu.isistan.reassistant.actions.CCMineActionDelegate"
+			menubarPath="edu.isistan.reassistant.editorSubMenu/additions"
+			toolbarPath="Normal/additions">
+         </action>
+      </editorContribution>
+   </extension>
+</plugin>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>CoNLLDependencyTypeDescriptor</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>Alejandro Rago</vendor>
+  <imports>
+    <import location="../IdentifiableTypeDescriptor.xml"/>
+    <import location="TokenTypeDescriptor.xml"/>
+  </imports>
+  <types>
+    <typeDescription>
+      <name>edu.isistan.uima.unified.typesystems.nlp.CoNLLDependency</name>
+      <description/>
+      <supertypeName>edu.isistan.uima.unified.typesystems.IdentifiableAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>relation</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>source</name>
+          <description/>
+          <rangeTypeName>edu.isistan.uima.unified.typesystems.nlp.Token</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>target</name>
+          <description/>
+          <rangeTypeName>edu.isistan.uima.unified.typesystems.nlp.Token</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

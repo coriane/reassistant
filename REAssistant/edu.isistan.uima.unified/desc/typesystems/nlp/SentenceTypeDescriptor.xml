@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>SentenceTypeDescriptor</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>Alejandro Rago</vendor>
+  <imports>
+    <import location="../IdentifiableTypeDescriptor.xml"/>
+  </imports>
+  <types>
+    <typeDescription>
+      <name>edu.isistan.uima.unified.typesystems.nlp.Sentence</name>
+      <description/>
+      <supertypeName>edu.isistan.uima.unified.typesystems.IdentifiableAnnotation</supertypeName>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

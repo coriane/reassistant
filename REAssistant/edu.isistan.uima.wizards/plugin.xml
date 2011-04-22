@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="edu.isistan.uima.wizards.UIMAWizardCategory"
+            name="UIMA Wizards">
+      </category>
+      <wizard
+            category="edu.isistan.uima.wizards.UIMAWizardCategory"
+            class="edu.isistan.uima.wizards.UIMAWizard"
+            icon="icons/sample.gif"
+            id="edu.isistan.uima.wizards.UIMAWizard"
+            name="UIMA Wizard">
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="java.lang.Object"
+            id="edu.isistan.uima.popupMenu">
+         <menu
+            label="UIMA"
+            path="additions"
+            id="edu.isistan.uima.popupSubMenu">
+            <groupMarker
+               name="content"/>
+            <separator
+               name="additions"/>
+         </menu>
+         <visibility>
+            <and>
+			    <objectClass name="org.eclipse.core.resources.IResource"/>
+			    <or>
+			    	<objectState name="name" value="*.srs"/>
+			    	<objectState name="name" value="*.ucs"/>
+			    	<objectState name="name" value="*.ucsmodel"/>
+			    </or>
+            </and>
+         </visibility>
+         <action
+			id="edu.isistan.uima.actions.UIMAWizardAction"
+			label="Create UIMA"
+			tooltip="Launchs the UIMA wizard over the selected resource"
+			icon="icons/sample.gif"
+			class="edu.isistan.uima.actions.UIMAWizardActionDelegate"
+			menubarPath="edu.isistan.uima.popupSubMenu/additions"
+			enablesFor="1">
+		    <enablement>
+				<and>
+				    <objectClass name="org.eclipse.core.resources.IResource"/>
+				    <or>
+				    	<objectState name="name" value="*.srs"/>
+				    	<objectState name="name" value="*.ucs"/>
+				    	<objectState name="name" value="*.ucsmodel"/>
+				    </or>
+				</and>
+		    </enablement>
+         </action>
+      </objectContribution>
+   </extension>
+</plugin>

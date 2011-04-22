@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.users.exa.unicen.edu.ar/~arago/srs"
+            class="edu.isistan.dal.srs.model.SRSModelPackage"
+            genModel="model/srs.genmodel"/>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.users.exa.unicen.edu.ar/~arago/ucs"
+            class="edu.isistan.dal.ucs.model.UCSModelPackage"
+            genModel="model/ucs.genmodel"/>
+   </extension>
+
+</plugin>

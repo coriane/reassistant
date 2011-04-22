@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model"
+    nsURI="http://www.users.exa.unicen.edu.ar/~arago/ucs" nsPrefix="edu.isistan.dal.ucs">
+  <eClassifiers xsi:type="ecore:EClass" name="Stereotypeable" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Stereotype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UCSProject" eSuperTypes="srs.ecore#//Project">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Actors" upperBound="-1"
+        eType="#//Actor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UseCaseSpecifications"
+        upperBound="-1" eType="#//UseCaseSpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SupplementarySpecifications"
+        upperBound="-1" eType="#//SupplementarySpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ProblemStatement" eType="#//ProblemStatement"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Glossary" eType="#//Glossary"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Vision" eType="#//Vision"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="srs.ecore#//Stakeholder #//Stereotypeable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UseCaseSpecification" eSuperTypes="srs.ecore#//Document #//Stereotypeable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MainActor" eType="#//Actor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BasicFlow" eType="ecore:EClass srs.ecore#//Section"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AlternativeFlows" upperBound="-1"
+        eType="ecore:EClass srs.ecore#//Section" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Preconditions" upperBound="-1"
+        eType="ecore:EClass srs.ecore#//Section" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Postconditions" upperBound="-1"
+        eType="ecore:EClass srs.ecore#//Section" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SpecialRequirements" upperBound="-1"
+        eType="ecore:EClass srs.ecore#//Section" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SupplementarySpecification" eSuperTypes="srs.ecore#//Document #//Stereotypeable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SupplementaryRequirement"
+        upperBound="-1" eType="ecore:EClass srs.ecore#//Section" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProblemStatement" eSuperTypes="srs.ecore#//Document"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Glossary" eSuperTypes="srs.ecore#//Document">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Definitions" upperBound="-1"
+        eType="ecore:EClass srs.ecore#//Section" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vision" eSuperTypes="srs.ecore#//Document">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BusinessRequirements" eType="ecore:EClass srs.ecore#//Section"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ProductOverview" eType="ecore:EClass srs.ecore#//Section"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MajorFeatures" eType="ecore:EClass srs.ecore#//Section"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Scope" eType="ecore:EClass srs.ecore#//Section"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Others" upperBound="-1"
+        eType="ecore:EClass srs.ecore#//Section" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
