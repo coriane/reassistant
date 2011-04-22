@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="edu" nsURI="http:///edu.ecore" nsPrefix="edu">
+    <eSubpackages name="isistan" nsURI="http:///edu/isistan.ecore" nsPrefix="isistan">
+      <eSubpackages name="uima" nsURI="http:///edu/isistan/uima.ecore" nsPrefix="uima">
+        <eSubpackages name="unified" nsURI="http:///edu/isistan/uima/unified.ecore"
+            nsPrefix="unified">
+          <eSubpackages name="typesystems" nsURI="http:///edu/isistan/uima/unified/typesystems.ecore"
+              nsPrefix="typesystems">
+            <eAnnotations source="http://uima.apache.org"/>
+            <eClassifiers xsi:type="ecore:EClass" name="IdentifiableAnnotation" eSuperTypes="#/1/tcas/Annotation">
+              <eStructuralFeatures xsi:type="ecore:EAttribute" name="identification"
+                  eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+            </eClassifiers>
+            <eSubpackages name="nlp" nsURI="http:///edu/isistan/uima/unified/typesystems/nlp.ecore"
+                nsPrefix="nlp">
+              <eClassifiers xsi:type="ecore:EClass" name="Chunk" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="chunk" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="CoNLLDependency" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="relation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="SDDependency" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="relation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="gov" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="dep" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="Sentence" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation"/>
+              <eClassifiers xsi:type="ecore:EClass" name="Token" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="lemma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="morph" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="pos" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="probability"
+                    eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+              </eClassifiers>
+            </eSubpackages>
+            <eSubpackages name="srl" nsURI="http:///edu/isistan/uima/unified/typesystems/srl.ecore"
+                nsPrefix="srl">
+              <eClassifiers xsi:type="ecore:EClass" name="Argument" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="description"
+                    eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="root" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="yield" upperBound="-1"
+                    eType="#/0/isistan/uima/unified/typesystems/nlp/Token">
+                  <eAnnotations source="http://uima.apache.org">
+                    <details key="uimaType" value="uima.cas.FSArray"/>
+                  </eAnnotations>
+                </eStructuralFeatures>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="Predicate" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="root" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="passiveVoice"
+                    eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="arguments"
+                    upperBound="-1" eType="#/0/isistan/uima/unified/typesystems/srl/Argument">
+                  <eAnnotations source="http://uima.apache.org">
+                    <details key="uimaType" value="uima.cas.FSArray"/>
+                  </eAnnotations>
+                </eStructuralFeatures>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="descriptions"
+                    upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+                  <eAnnotations source="http://uima.apache.org">
+                    <details key="uimaType" value="uima.cas.StringArray"/>
+                  </eAnnotations>
+                </eStructuralFeatures>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="ocurrencies"
+                    upperBound="-1" eType="#/1/cas/FSArray">
+                  <eAnnotations source="http://uima.apache.org">
+                    <details key="uimaType" value="uima.cas.FSArray"/>
+                  </eAnnotations>
+                </eStructuralFeatures>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="Structure" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EReference" name="subject" eType="#/0/isistan/uima/unified/typesystems/srl/Role"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="verb" eType="#/0/isistan/uima/unified/typesystems/srl/Role"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="directObject"
+                    eType="#/0/isistan/uima/unified/typesystems/srl/Role"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="indirectObject"
+                    eType="#/0/isistan/uima/unified/typesystems/srl/Role"/>
+              </eClassifiers>
+            </eSubpackages>
+            <eSubpackages name="srs" nsURI="http:///edu/isistan/uima/unified/typesystems/srs.ecore"
+                nsPrefix="srs">
+              <eClassifiers xsi:type="ecore:EClass" name="Document" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="Project" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="URI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+              </eClassifiers>
+            </eSubpackages>
+            <eSubpackages name="wordnet" nsURI="http:///edu/isistan/uima/unified/typesystems/wordnet.ecore"
+                nsPrefix="wordnet">
+              <eClassifiers xsi:type="ecore:EClass" name="Sense" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="pos" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="sense" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="gloss" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="senses" upperBound="-1"
+                    eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+                  <eAnnotations source="http://uima.apache.org">
+                    <details key="uimaType" value="uima.cas.StringArray"/>
+                  </eAnnotations>
+                </eStructuralFeatures>
+              </eClassifiers>
+            </eSubpackages>
+          </eSubpackages>
+        </eSubpackages>
+      </eSubpackages>
+    </eSubpackages>
+  </ecore:EPackage>
+  <ecore:EPackage name="uima" nsURI="http:///uima.ecore" nsPrefix="uima">
+    <eSubpackages name="cas" nsURI="http:///uima/cas.ecore" nsPrefix="cas">
+      <eClassifiers xsi:type="ecore:EClass" name="TOP"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Sofa" eSuperTypes="#/1/cas/TOP">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="sofaNum" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="sofaID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="mimeType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="sofaArray" eType="#/1/cas/TOP"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="sofaString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="sofaURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ListBase" abstract="true" eSuperTypes="#/1/cas/TOP"/>
+      <eClassifiers xsi:type="ecore:EClass" name="FSList" abstract="true" eSuperTypes="#/1/cas/ListBase"/>
+      <eClassifiers xsi:type="ecore:EClass" name="NonEmptyFSList" eSuperTypes="#/1/cas/FSList">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="head" eType="#/1/cas/TOP"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="tail" eType="#/1/cas/FSList"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="EmptyFSList" eSuperTypes="#/1/cas/FSList"/>
+      <eClassifiers xsi:type="ecore:EClass" name="StringList" abstract="true" eSuperTypes="#/1/cas/ListBase"/>
+      <eClassifiers xsi:type="ecore:EClass" name="EmptyStringList" eSuperTypes="#/1/cas/StringList"/>
+      <eClassifiers xsi:type="ecore:EClass" name="NonEmptyStringList" eSuperTypes="#/1/cas/StringList">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="head" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="tail" eType="#/1/cas/StringList"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="IntegerList" eSuperTypes="#/1/cas/ListBase"/>
+      <eClassifiers xsi:type="ecore:EClass" name="EmptyIntegerList" eSuperTypes="#/1/cas/IntegerList"/>
+      <eClassifiers xsi:type="ecore:EClass" name="NonEmptyIntegerList" eSuperTypes="#/1/cas/IntegerList">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="head" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="tail" eType="#/1/cas/IntegerList"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FloatList" eSuperTypes="#/1/cas/ListBase"/>
+      <eClassifiers xsi:type="ecore:EClass" name="EmptyFloatList" eSuperTypes="#/1/cas/FloatList"/>
+      <eClassifiers xsi:type="ecore:EClass" name="NonEmptyFloatList" eSuperTypes="#/1/cas/FloatList">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="head" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="tail" eType="#/1/cas/FloatList"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ArrayBase" eSuperTypes="#/1/cas/TOP"/>
+      <eClassifiers xsi:type="ecore:EClass" name="IntegerArray" eSuperTypes="#/1/cas/ArrayBase">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="elements" upperBound="-1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FloatArray" eSuperTypes="#/1/cas/ArrayBase">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="elements" upperBound="-1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="StringArray" eSuperTypes="#/1/cas/ArrayBase">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="elements" upperBound="-1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FSArray" eSuperTypes="#/1/cas/ArrayBase">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="elements" unique="false"
+            upperBound="-1" eType="#/1/cas/TOP"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="NULL" eSuperTypes="#/1/cas/TOP"/>
+      <eClassifiers xsi:type="ecore:EClass" name="View">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="members" upperBound="-1"
+            eType="#/1/cas/TOP"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="sofa" eType="#/1/cas/Sofa"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="AnnotationBase" eSuperTypes="#/1/cas/TOP">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="sofa" lowerBound="1"
+            eType="#/1/cas/Sofa"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ShortArray" eSuperTypes="#/1/cas/ArrayBase">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="elements" upperBound="-1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LongArray" eSuperTypes="#/1/cas/ArrayBase">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="elements" upperBound="-1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="DoubleArray" eSuperTypes="#/1/cas/ArrayBase">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="elements" upperBound="-1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanArray" eSuperTypes="#/1/cas/ArrayBase">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="elements" upperBound="-1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ByteArray" eSuperTypes="#/1/cas/ArrayBase">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="elements" upperBound="-1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="tcas" nsURI="http:///uima/tcas.ecore" nsPrefix="tcas">
+      <eClassifiers xsi:type="ecore:EClass" name="Annotation" eSuperTypes="#/1/cas/AnnotationBase">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="begin" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="DocumentAnnotation" eSuperTypes="#/1/tcas/Annotation">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+    </eSubpackages>
+  </ecore:EPackage>
+</xmi:XMI>

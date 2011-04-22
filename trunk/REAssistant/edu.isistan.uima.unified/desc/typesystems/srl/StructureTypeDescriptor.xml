@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>StructureTypeDescriptor</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>Alejandro Rago</vendor>
+  <imports>
+    <import location="../IdentifiableTypeDescriptor.xml"/>
+    <import location="RoleTypeDescriptor.xml"/>
+  </imports>
+  <types>
+    <typeDescription>
+      <name>edu.isistan.uima.unified.typesystems.srl.Structure</name>
+      <description/>
+      <supertypeName>edu.isistan.uima.unified.typesystems.IdentifiableAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>subject</name>
+          <description/>
+          <rangeTypeName>edu.isistan.uima.unified.typesystems.srl.Role</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>verb</name>
+          <description/>
+          <rangeTypeName>edu.isistan.uima.unified.typesystems.srl.Role</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>directObject</name>
+          <description/>
+          <rangeTypeName>edu.isistan.uima.unified.typesystems.srl.Role</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>indirectObject</name>
+          <description/>
+          <rangeTypeName>edu.isistan.uima.unified.typesystems.srl.Role</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

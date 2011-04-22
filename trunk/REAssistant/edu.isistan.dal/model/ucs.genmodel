@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.isistan.dal/src"
+    modelPluginID="edu.isistan.dal" modelName="Ucs" editPluginClass="edu.isistan.dal.ucs.model.provider.UCSEditPlugin"
+    editorPluginClass="edu.isistan.dal.ucs.model.presentation.UCSEditorPlugin" testSuiteClass="edu.isistan.dal.ucs.model.tests.UCSAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="srs.genmodel#//model">
+  <foreignModel>ucs.ecore</foreignModel>
+  <genPackages prefix="UCSModel" basePackage="edu.isistan.dal.ucs" disposableProviderFactory="true"
+      ecorePackage="ucs.ecore#/">
+    <genClasses image="false" ecoreClass="ucs.ecore#//Stereotypeable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ucs.ecore#//Stereotypeable/Stereotype"/>
+    </genClasses>
+    <genClasses ecoreClass="ucs.ecore#//UMLProject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ucs.ecore#//UMLProject/Actors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ucs.ecore#//UMLProject/UseCaseSpecifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ucs.ecore#//UMLProject/SupplementarySpecifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ucs.ecore#//UMLProject/ProblemStatement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ucs.ecore#//UMLProject/Glossary"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ucs.ecore#//UMLProject/Vision"/>
+    </genClasses>
+    <genClasses ecoreClass="ucs.ecore#//Actor"/>
+    <genClasses ecoreClass="ucs.ecore#//UseCaseSpecification">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//UseCaseSpecification/Actors"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//UseCaseSpecification/BasicFlow"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//UseCaseSpecification/AlternativeFlows"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//UseCaseSpecification/Preconditions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//UseCaseSpecification/Postconditions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//UseCaseSpecification/SpecialRequirements"/>
+    </genClasses>
+    <genClasses ecoreClass="ucs.ecore#//SupplementarySpecification">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//SupplementarySpecification/SupplementaryRequirement"/>
+    </genClasses>
+    <genClasses ecoreClass="ucs.ecore#//ProblemStatement"/>
+    <genClasses ecoreClass="ucs.ecore#//Glossary">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//Glossary/Definitions"/>
+    </genClasses>
+    <genClasses ecoreClass="ucs.ecore#//Vision">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//Vision/BusinessRequirements"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//Vision/ProductOverview"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//Vision/MajorFeatures"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//Vision/Scope"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ucs.ecore#//Vision/Others"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

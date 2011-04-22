@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.isistan.uima.model/src"
+    modelPluginID="edu.isistan.uima.model" modelName="Uima" editPluginClass="edu.isistan.uima.model.edit.UIMAEditPlugin"
+    editorPluginClass="edu.isistan.uima.model.editor.UIMAEditorPlugin" testSuiteClass="edu.isistan.uima.model.tests.UIMAAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>uima.ecore</foreignModel>
+  <genPackages prefix="Edu" disposableProviderFactory="true" ecorePackage="uima.ecore#/0">
+    <nestedGenPackages prefix="Isistan" basePackage="edu" disposableProviderFactory="true"
+        ecorePackage="uima.ecore#/0/isistan">
+      <nestedGenPackages prefix="Uima" basePackage="edu.isistan" disposableProviderFactory="true"
+          ecorePackage="uima.ecore#/0/isistan/uima">
+        <nestedGenPackages prefix="Unified" basePackage="edu.isistan.uima" disposableProviderFactory="true"
+            ecorePackage="uima.ecore#/0/isistan/uima/unified">
+          <nestedGenPackages prefix="Typesystems" basePackage="edu.isistan.uima.unified"
+              disposableProviderFactory="true" ecorePackage="uima.ecore#/0/isistan/uima/unified/typesystems">
+            <nestedGenPackages prefix="NLP" basePackage="edu.isistan.uima.unified.typesystems"
+                disposableProviderFactory="true" ecorePackage="uima.ecore#/0/isistan/uima/unified/typesystems/nlp">
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Chunk">
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Chunk/chunkTag"/>
+              </genClasses>
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Dependency">
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Dependency/relation"/>
+                <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                    ecoreFeature="ecore:EReference uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Dependency/gov"/>
+                <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                    ecoreFeature="ecore:EReference uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Dependency/dep"/>
+              </genClasses>
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Entity">
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Entity/kind"/>
+              </genClasses>
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Sentence"/>
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Token">
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Token/POSTag"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Token/probability"/>
+              </genClasses>
+            </nestedGenPackages>
+            <nestedGenPackages prefix="SRL" basePackage="edu.isistan.uima.unified.typesystems"
+                disposableProviderFactory="true" ecorePackage="uima.ecore#/0/isistan/uima/unified/typesystems/srl">
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/srl/Role">
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srl/Role/kind"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srl/Role/descriptions"/>
+                <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                    ecoreFeature="ecore:EReference uima.ecore#/0/isistan/uima/unified/typesystems/srl/Role/ocurrencies"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srl/Role/externalId"/>
+              </genClasses>
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/srl/Structure">
+                <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                    ecoreFeature="ecore:EReference uima.ecore#/0/isistan/uima/unified/typesystems/srl/Structure/subject"/>
+                <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                    ecoreFeature="ecore:EReference uima.ecore#/0/isistan/uima/unified/typesystems/srl/Structure/verb"/>
+                <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                    ecoreFeature="ecore:EReference uima.ecore#/0/isistan/uima/unified/typesystems/srl/Structure/directObject"/>
+                <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                    ecoreFeature="ecore:EReference uima.ecore#/0/isistan/uima/unified/typesystems/srl/Structure/indirectObject"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srl/Structure/externalId"/>
+              </genClasses>
+            </nestedGenPackages>
+            <nestedGenPackages prefix="SRS" basePackage="edu.isistan.uima.unified.typesystems"
+                disposableProviderFactory="true" ecorePackage="uima.ecore#/0/isistan/uima/unified/typesystems/srs">
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/srs/Document">
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Document/ID"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Document/Name"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Document/Kind"/>
+              </genClasses>
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/srs/Project">
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Project/ID"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Project/Name"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Project/Content"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Project/Kind"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Project/URI"/>
+              </genClasses>
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/srs/Section">
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Section/ID"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Section/Name"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/srs/Section/Kind"/>
+              </genClasses>
+            </nestedGenPackages>
+            <nestedGenPackages prefix="WordNet" basePackage="edu.isistan.uima.unified.typesystems"
+                disposableProviderFactory="true" ecorePackage="uima.ecore#/0/isistan/uima/unified/typesystems/wordnet">
+              <genClasses ecoreClass="uima.ecore#/0/isistan/uima/unified/typesystems/wordnet/Sense">
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/wordnet/Sense/POS"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/wordnet/Sense/Sense"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/wordnet/Sense/Gloss"/>
+                <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/0/isistan/uima/unified/typesystems/wordnet/Sense/Senses"/>
+              </genClasses>
+            </nestedGenPackages>
+          </nestedGenPackages>
+        </nestedGenPackages>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages prefix="Uima" disposableProviderFactory="true" ecorePackage="uima.ecore#/1">
+    <nestedGenPackages prefix="Cas" basePackage="uima" disposableProviderFactory="true"
+        ecorePackage="uima.ecore#/1/cas">
+      <genClasses ecoreClass="uima.ecore#/1/cas/TOP"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/Sofa">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/Sofa/sofaNum"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/Sofa/sofaID"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/Sofa/mimeType"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/Sofa/sofaArray"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/Sofa/sofaString"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/Sofa/sofaURI"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="uima.ecore#/1/cas/ListBase"/>
+      <genClasses image="false" ecoreClass="uima.ecore#/1/cas/FSList"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/NonEmptyFSList">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/NonEmptyFSList/head"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/NonEmptyFSList/tail"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/EmptyFSList"/>
+      <genClasses image="false" ecoreClass="uima.ecore#/1/cas/StringList"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/EmptyStringList"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/NonEmptyStringList">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/NonEmptyStringList/head"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/NonEmptyStringList/tail"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/IntegerList"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/EmptyIntegerList"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/NonEmptyIntegerList">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/NonEmptyIntegerList/head"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/NonEmptyIntegerList/tail"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/FloatList"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/EmptyFloatList"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/NonEmptyFloatList">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/NonEmptyFloatList/head"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/NonEmptyFloatList/tail"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/ArrayBase"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/IntegerArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/IntegerArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/FloatArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/FloatArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/StringArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/StringArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/FSArray">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/FSArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/NULL"/>
+      <genClasses ecoreClass="uima.ecore#/1/cas/View">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/View/members"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/View/sofa"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/AnnotationBase">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference uima.ecore#/1/cas/AnnotationBase/sofa"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/ShortArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/ShortArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/LongArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/LongArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/DoubleArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/DoubleArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/BooleanArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/BooleanArray/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/cas/ByteArray">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/cas/ByteArray/elements"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="TCas" basePackage="uima" disposableProviderFactory="true"
+        ecorePackage="uima.ecore#/1/tcas">
+      <genClasses ecoreClass="uima.ecore#/1/tcas/Annotation">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/tcas/Annotation/begin"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/tcas/Annotation/end"/>
+      </genClasses>
+      <genClasses ecoreClass="uima.ecore#/1/tcas/DocumentAnnotation">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uima.ecore#/1/tcas/DocumentAnnotation/language"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

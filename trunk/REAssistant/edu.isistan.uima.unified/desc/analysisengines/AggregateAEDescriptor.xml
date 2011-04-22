@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenAEDescriptor">
+      <import location="opennlp/TokenAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceAEDescriptor">
+      <import location="opennlp/SentenceAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="POSAEDescriptor">
+      <import location="stanfordnlp/POSAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="BanerjeeWSDAEDescriptor">
+      <import location="wsd/BanerjeeWSDAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="JWNLWordNetAEDescriptor">
+      <import location="wordnet/JWNLWordNetAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SDSRLAEDescriptor">
+      <import location="srl/SDSRLAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SDDependencyAEDescriptor">
+      <import location="stanfordnlp/SDDependencyAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ChunkAEDescriptor">
+      <import location="opennlp/ChunkAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="WrapperAEDescriptor">
+      <import location="WrapperAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>AggregateAEDescriptor</name>
+    <description/>
+    <version>1.0</version>
+    <vendor>Alejandro Rago</vendor>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>WrapperAEDescriptor</node>
+        <node>SentenceAEDescriptor</node>
+        <node>TokenAEDescriptor</node>
+        <node>POSAEDescriptor</node>
+        <node>ChunkAEDescriptor</node>
+        <node>SDDependencyAEDescriptor</node>
+        <node>JWNLWordNetAEDescriptor</node>
+        <node>BanerjeeWSDAEDescriptor</node>
+        <node>SDSRLAEDescriptor</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

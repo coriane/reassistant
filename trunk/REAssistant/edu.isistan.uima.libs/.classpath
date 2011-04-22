@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="anna.jar"/>
+	<classpathentry exported="true" kind="lib" path="liblinear-1.51-with-deps.jar"/>
+	<classpathentry exported="true" kind="lib" path="srl.jar"/>
+	<classpathentry exported="true" kind="lib" path="uima-document-annotation.jar"/>
+	<classpathentry exported="true" kind="lib" path="jaws.jar"/>
+	<classpathentry exported="true" kind="lib" path="jwi-2.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="maxent-3.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="opennlp-tools-1.5.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="stanford-corenlp-2010-11-12.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="lib" path="uima-core.jar" sourcepath="C:/Libraries/uima-2.3.1-src/uimaj-core"/>
+	<classpathentry exported="true" kind="lib" path="uima-cpe.jar"/>
+	<classpathentry exported="true" kind="lib" path="uima-tools.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="spring-core-3.0.3.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="uimafit-1.1.0.jar" sourcepath="C:/Libraries/uimafit-1.1.0/lib/uimafit-1.1.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jwnl.jar" sourcepath="C:/Libraries/jwnl/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
