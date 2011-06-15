@@ -8,6 +8,8 @@ package edu.isistan.uima.unified.typesystems.srl.impl;
 
 import edu.isistan.uima.unified.typesystems.TypesystemsPackage;
 
+import edu.isistan.uima.unified.typesystems.domain.DomainPackage;
+import edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl;
 import edu.isistan.uima.unified.typesystems.impl.TypesystemsPackageImpl;
 
 import edu.isistan.uima.unified.typesystems.nlp.NLPPackage;
@@ -127,6 +129,7 @@ public class SRLPackageImpl extends EPackageImpl implements SRLPackage {
 
 		// Obtain or create and register interdependencies
 		TypesystemsPackageImpl theTypesystemsPackage = (TypesystemsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesystemsPackage.eNS_URI) instanceof TypesystemsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesystemsPackage.eNS_URI) : TypesystemsPackage.eINSTANCE);
+		DomainPackageImpl theDomainPackage = (DomainPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) instanceof DomainPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) : DomainPackage.eINSTANCE);
 		NLPPackageImpl theNLPPackage = (NLPPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(NLPPackage.eNS_URI) instanceof NLPPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(NLPPackage.eNS_URI) : NLPPackage.eINSTANCE);
 		SRSPackageImpl theSRSPackage = (SRSPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SRSPackage.eNS_URI) instanceof SRSPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SRSPackage.eNS_URI) : SRSPackage.eINSTANCE);
 		WordNetPackageImpl theWordNetPackage = (WordNetPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(WordNetPackage.eNS_URI) instanceof WordNetPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(WordNetPackage.eNS_URI) : WordNetPackage.eINSTANCE);
@@ -136,6 +139,7 @@ public class SRLPackageImpl extends EPackageImpl implements SRLPackage {
 		// Create package meta-data objects
 		theSRLPackage.createPackageContents();
 		theTypesystemsPackage.createPackageContents();
+		theDomainPackage.createPackageContents();
 		theNLPPackage.createPackageContents();
 		theSRSPackage.createPackageContents();
 		theWordNetPackage.createPackageContents();
@@ -145,6 +149,7 @@ public class SRLPackageImpl extends EPackageImpl implements SRLPackage {
 		// Initialize created meta-data
 		theSRLPackage.initializePackageContents();
 		theTypesystemsPackage.initializePackageContents();
+		theDomainPackage.initializePackageContents();
 		theNLPPackage.initializePackageContents();
 		theSRSPackage.initializePackageContents();
 		theWordNetPackage.initializePackageContents();

@@ -6,7 +6,6 @@ import java.util.EventObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
@@ -15,7 +14,6 @@ import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.databinding.EMFDataBindingContext;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -31,6 +29,7 @@ import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.SaveAsDialog;
@@ -51,8 +50,6 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 
 	protected ComposedAdapterFactory adapterFactory;
 	protected AdapterFactoryEditingDomain editingDomain;
-
-	protected DataBindingContext bindingContext;
 	
 	protected REAssistantProject modelRoot;
 	protected Project projectRoot;
@@ -61,7 +58,6 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 	public REAssistantEditor() {
 		super();
 		initializeEditingDomain();
-		initializeDataBindingContext();
 	}
 	
 	protected void initializeEditingDomain() {
@@ -69,8 +65,8 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new REAssistantModelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
 		BasicCommandStack commandStack = new BasicCommandStack();
@@ -89,11 +85,6 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 		// Create the editing domain with a special command stack.
 		editingDomain = new AdapterFactoryEditingDomain(adapterFactory, commandStack, new HashMap<Resource, Boolean>());
 	}
-	
-	protected void initializeDataBindingContext() {
-		//bindingContext = new DataBindingContext();
-		bindingContext = new EMFDataBindingContext();
-	}
 
 	@SuppressWarnings("unused")
 	public void createModel() {
@@ -109,6 +100,11 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 			resource = editingDomain.getResourceSet().getResource(resourceURI, false);
 		}
 		modelRoot = (REAssistantProject) resource.getContents().get(0);
+	}
+	
+	@Override
+	protected void firePropertyChange(int action) {
+		super.firePropertyChange(action);
 	}
 	
 	public void createProjectModel() {
@@ -163,6 +159,14 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 			} catch (PartInitException e) {
 				e.printStackTrace();
 			}
+			
+			getSite().getShell().getDisplay().asyncExec
+			(new Runnable() {
+				 @Override
+				public void run() {
+					 setActivePage(0);
+				 }
+			 });
 		}
 	}
 	
@@ -261,10 +265,6 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 		return editingDomain;
 	}
 	
-	public DataBindingContext getBindingContext() {
-		return bindingContext;
-	}
-	
 	public REAssistantProject getModelRoot() {
 		return modelRoot;
 	}
@@ -275,5 +275,21 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 	
 	public UIMAProjectQueryAdapter getUimaRoot() {
 		return uimaRoot;
+	}
+	
+	@Override
+	public void init(IEditorSite site, IEditorInput editorInput) {
+		setSite(site);
+		setInputWithNotify(editorInput);
+		setPartName(editorInput.getName());
+	}
+	
+	@Override
+	public void dispose() {
+		adapterFactory.dispose();
+		if(getActionBarContributor().getActiveEditor() == this) {
+			getActionBarContributor().setActiveEditor(null);
+		}
+		super.dispose();
 	}
 }

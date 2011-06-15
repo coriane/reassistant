@@ -4,8 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import opennlp.tools.sentdetect.SentenceDetector;
 import opennlp.tools.sentdetect.SentenceDetectorME;
@@ -31,9 +29,6 @@ public class SentenceAnnotator extends JCasAnnotator_ImplBase {
 	protected SentenceModel model;
 	protected SentenceDetector sdetector;
 	
-	protected static final String regex = "\\A(\\t+|\\s+)?(\\d((\\.|\\-|,)(\\d|x))*(\\s(and|or)\\s)?)+(\\.|:|\\-|\\))?(\\t+|\\s+)?";
-	protected Pattern pattern;
-	
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
 		super.initialize(aContext);
@@ -43,8 +38,6 @@ public class SentenceAnnotator extends JCasAnnotator_ImplBase {
 			in = new FileInputStream(modelName);
 			model = new SentenceModel(in);
 			sdetector = new SentenceDetectorME(model);
-			//
-			pattern = Pattern.compile(regex);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -77,49 +70,22 @@ public class SentenceAnnotator extends JCasAnnotator_ImplBase {
 			while(sectionIterator.hasNext()) {
 				Annotation sAnnotation = sectionIterator.next();
 				Section section = (Section) sAnnotation;
+				String sectionText = section.getCoveredText();
+				String[] splittedText = sectionText.split("\\r?\\n");
 				
-				String[] sentences = sdetector.sentDetect(section.getCoveredText());
-				
-				int sentencePos = 0;
-				for(int sentenceNumber = 0; sentenceNumber < sentences.length; sentenceNumber++) {
-//					String sentence = sentences[sentenceNumber];
-//					
-//					int sentenceBegin = section.getCoveredText().indexOf(sentence, sentencePos);
-//					int sentenceEnd = sentenceBegin + sentence.length();
-//					
-//					AnnotationGenerator.generateSentence(section.getBegin() + sentenceBegin, section.getBegin() + sentenceEnd, aJCas);
-//					
-//					sentencePos = sentenceEnd;
-					String originalSentence = sentences[sentenceNumber];
-					int sentenceBegin = section.getCoveredText().indexOf(originalSentence, sentencePos);
-					int sentenceEnd = sentenceBegin + originalSentence.length();
+				for(String text : splittedText) {
+					String[] sentences = sdetector.sentDetect(text);
 					
-					int subSentencePos = sentencePos;
-					String[] subSentences = originalSentence.split("\\r?\\n");
-					for(int i = 0; i < subSentences.length; i++) {
-						//
-						String subSentence = subSentences[i];
-						//
-						String subSentenceFiltered = subSentence;
-						Matcher matcher = pattern.matcher(subSentence);
-						if(matcher.find())
-							subSentenceFiltered = subSentence.substring(matcher.end(), subSentence.length());
-						//
-						int subSentenceBegin;
-						int subSentenceEnd;
-						if(subSentenceFiltered.length() > 0) {
-							subSentenceBegin = section.getCoveredText().indexOf(subSentenceFiltered, subSentencePos);
-							subSentenceEnd = subSentenceBegin + subSentenceFiltered.length();
-							AnnotationGenerator.generateSentence(section.getBegin() + subSentenceBegin, section.getBegin() + subSentenceEnd, aJCas);
-						}
-						else {
-							subSentenceBegin = section.getCoveredText().indexOf(subSentence, subSentencePos);
-							subSentenceEnd = subSentenceBegin + subSentence.length();
-						}
-						subSentencePos = subSentenceEnd;
-						//
+					int sentencePos = 0;
+					for(int sentenceNumber = 0; sentenceNumber < sentences.length; sentenceNumber++) {
+						String sentence = sentences[sentenceNumber];
+						int sentenceBegin = sectionText.indexOf(sentence, sentencePos);
+						int sentenceEnd = sentenceBegin + sentence.length();
+						
+						AnnotationGenerator.generateSentence(section.getBegin() + sentenceBegin, section.getBegin() + sentenceEnd, aJCas);
+						
+						sentencePos = sentenceEnd;
 					}
-					sentencePos = sentenceEnd;
 				}
 			}
 		}
@@ -131,4 +97,37 @@ public class SentenceAnnotator extends JCasAnnotator_ImplBase {
 		sdetector = null;
 		super.destroy();
 	}
+	
+	/*
+	String originalSentence = sentences[sentenceNumber];
+	int sentenceBegin = section.getCoveredText().indexOf(originalSentence, sentencePos);
+	int sentenceEnd = sentenceBegin + originalSentence.length();
+	
+	int subSentencePos = sentencePos;
+	String[] subSentences = originalSentence.split("\\r?\\n");
+	for(int i = 0; i < subSentences.length; i++) {
+		//
+		String subSentence = subSentences[i];
+		//
+		String subSentenceFiltered = subSentence;
+		Matcher matcher = pattern.matcher(subSentence);
+		if(matcher.find())
+			subSentenceFiltered = subSentence.substring(matcher.end(), subSentence.length());
+		//
+		int subSentenceBegin;
+		int subSentenceEnd;
+		if(subSentenceFiltered.length() > 0) {
+			subSentenceBegin = section.getCoveredText().indexOf(subSentenceFiltered, subSentencePos);
+			subSentenceEnd = subSentenceBegin + subSentenceFiltered.length();
+			AnnotationGenerator.generateSentence(section.getBegin() + subSentenceBegin, section.getBegin() + subSentenceEnd, aJCas);
+		}
+		else {
+			subSentenceBegin = section.getCoveredText().indexOf(subSentence, subSentencePos);
+			subSentenceEnd = subSentenceBegin + subSentence.length();
+		}
+		subSentencePos = subSentenceEnd;
+		//
+	}
+	sentencePos = sentenceEnd;
+	*/
 }

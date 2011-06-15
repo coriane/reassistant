@@ -64,7 +64,7 @@ public class CCMineActionDelegate implements IEditorActionDelegate {
 			float minimumDistance = dialog.getMinimumDistance();
 			int crosscuttingThreshold = dialog.getCrosscuttingThreshold();
 			
-			UIMAProcessor processor = new UIMAProcessor();
+			UIMAProcessor processor = UIMAProcessor.getInstance();
 			List<List<String>> clusters = processor.executeClustering(inputFile, linkageType, distanceType, minimumDistance);
 			
 			CompoundCommand compoundCommand = new CompoundCommand();

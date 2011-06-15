@@ -9,6 +9,9 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: 
  edu.isistan.uima.unified.typesystems,
+ edu.isistan.uima.unified.typesystems.domain,
+ edu.isistan.uima.unified.typesystems.domain.impl,
+ edu.isistan.uima.unified.typesystems.domain.util,
  edu.isistan.uima.unified.typesystems.impl,
  edu.isistan.uima.unified.typesystems.nlp,
  edu.isistan.uima.unified.typesystems.nlp.impl,

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry exported="true" kind="lib" path="weka.jar"/>
+	<classpathentry exported="true" kind="lib" path="mulan.jar" sourcepath="C:/Libraries/mulan-1.2.0/mulan-src.jar"/>
+	<classpathentry exported="true" kind="lib" path="snowball-weka.jar"/>
+	<classpathentry exported="true" kind="lib" path="uimafit-1.1.0.jar" sourcepath="C:/Libraries/uimafit-1.2.0/lib/uimafit-1.2.0-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="anna.jar"/>
 	<classpathentry exported="true" kind="lib" path="liblinear-1.51-with-deps.jar"/>
 	<classpathentry exported="true" kind="lib" path="srl.jar"/>
@@ -13,10 +17,10 @@
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry exported="true" kind="lib" path="uima-core.jar" sourcepath="C:/Libraries/uima-2.3.1-src/uimaj-core"/>
 	<classpathentry exported="true" kind="lib" path="uima-cpe.jar"/>
-	<classpathentry exported="true" kind="lib" path="uima-tools.jar"/>
+	<classpathentry exported="true" kind="lib" path="uima-tools.jar" sourcepath="C:/Libraries/uima-2.3.1-src/uimaj-tools"/>
 	<classpathentry exported="true" kind="lib" path="commons-logging-1.1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="spring-core-3.0.3.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="uimafit-1.1.0.jar" sourcepath="C:/Libraries/uimafit-1.1.0/lib/uimafit-1.1.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="uimafit-1.2.0.jar" sourcepath="C:/Libraries/uimafit-1.2.0/lib/uimafit-1.2.0-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="jwnl.jar" sourcepath="C:/Libraries/jwnl/src"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

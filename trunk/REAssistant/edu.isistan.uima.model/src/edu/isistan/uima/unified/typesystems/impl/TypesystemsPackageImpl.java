@@ -10,6 +10,8 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 import edu.isistan.uima.unified.typesystems.TypesystemsFactory;
 import edu.isistan.uima.unified.typesystems.TypesystemsPackage;
 
+import edu.isistan.uima.unified.typesystems.domain.DomainPackage;
+import edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl;
 import edu.isistan.uima.unified.typesystems.nlp.NLPPackage;
 
 import edu.isistan.uima.unified.typesystems.nlp.impl.NLPPackageImpl;
@@ -101,6 +103,7 @@ public class TypesystemsPackageImpl extends EPackageImpl implements TypesystemsP
 		isInited = true;
 
 		// Obtain or create and register interdependencies
+		DomainPackageImpl theDomainPackage = (DomainPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) instanceof DomainPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) : DomainPackage.eINSTANCE);
 		NLPPackageImpl theNLPPackage = (NLPPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(NLPPackage.eNS_URI) instanceof NLPPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(NLPPackage.eNS_URI) : NLPPackage.eINSTANCE);
 		SRLPackageImpl theSRLPackage = (SRLPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SRLPackage.eNS_URI) instanceof SRLPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SRLPackage.eNS_URI) : SRLPackage.eINSTANCE);
 		SRSPackageImpl theSRSPackage = (SRSPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SRSPackage.eNS_URI) instanceof SRSPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SRSPackage.eNS_URI) : SRSPackage.eINSTANCE);
@@ -110,6 +113,7 @@ public class TypesystemsPackageImpl extends EPackageImpl implements TypesystemsP
 
 		// Create package meta-data objects
 		theTypesystemsPackage.createPackageContents();
+		theDomainPackage.createPackageContents();
 		theNLPPackage.createPackageContents();
 		theSRLPackage.createPackageContents();
 		theSRSPackage.createPackageContents();
@@ -119,6 +123,7 @@ public class TypesystemsPackageImpl extends EPackageImpl implements TypesystemsP
 
 		// Initialize created meta-data
 		theTypesystemsPackage.initializePackageContents();
+		theDomainPackage.initializePackageContents();
 		theNLPPackage.initializePackageContents();
 		theSRLPackage.initializePackageContents();
 		theSRSPackage.initializePackageContents();
@@ -209,6 +214,7 @@ public class TypesystemsPackageImpl extends EPackageImpl implements TypesystemsP
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		DomainPackage theDomainPackage = (DomainPackage)EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI);
 		NLPPackage theNLPPackage = (NLPPackage)EPackage.Registry.INSTANCE.getEPackage(NLPPackage.eNS_URI);
 		SRLPackage theSRLPackage = (SRLPackage)EPackage.Registry.INSTANCE.getEPackage(SRLPackage.eNS_URI);
 		SRSPackage theSRSPackage = (SRSPackage)EPackage.Registry.INSTANCE.getEPackage(SRSPackage.eNS_URI);
@@ -216,6 +222,7 @@ public class TypesystemsPackageImpl extends EPackageImpl implements TypesystemsP
 		TCasPackage theTCasPackage = (TCasPackage)EPackage.Registry.INSTANCE.getEPackage(TCasPackage.eNS_URI);
 
 		// Add subpackages
+		getESubpackages().add(theDomainPackage);
 		getESubpackages().add(theNLPPackage);
 		getESubpackages().add(theSRLPackage);
 		getESubpackages().add(theSRSPackage);

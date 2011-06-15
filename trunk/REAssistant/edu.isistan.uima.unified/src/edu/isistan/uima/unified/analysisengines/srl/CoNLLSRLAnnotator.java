@@ -227,8 +227,16 @@ public class CoNLLSRLAnnotator extends JCasAnnotator_ImplBase {
 	
 	@Override
 	public void destroy() {
-		zipFile = null;
-		srl = null;
+		if(zipFile != null) {
+			try {
+				zipFile.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			zipFile = null;
+		}
+		if(srl != null)
+			srl = null;
 		super.destroy();
 	}
 }

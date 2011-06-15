@@ -8,6 +8,8 @@ package uima.cas.impl;
 
 import edu.isistan.uima.unified.typesystems.TypesystemsPackage;
 
+import edu.isistan.uima.unified.typesystems.domain.DomainPackage;
+import edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl;
 import edu.isistan.uima.unified.typesystems.impl.TypesystemsPackageImpl;
 
 import edu.isistan.uima.unified.typesystems.nlp.NLPPackage;
@@ -317,6 +319,7 @@ public class CasPackageImpl extends EPackageImpl implements CasPackage {
 
 		// Obtain or create and register interdependencies
 		TypesystemsPackageImpl theTypesystemsPackage = (TypesystemsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesystemsPackage.eNS_URI) instanceof TypesystemsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesystemsPackage.eNS_URI) : TypesystemsPackage.eINSTANCE);
+		DomainPackageImpl theDomainPackage = (DomainPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) instanceof DomainPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) : DomainPackage.eINSTANCE);
 		NLPPackageImpl theNLPPackage = (NLPPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(NLPPackage.eNS_URI) instanceof NLPPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(NLPPackage.eNS_URI) : NLPPackage.eINSTANCE);
 		SRLPackageImpl theSRLPackage = (SRLPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SRLPackage.eNS_URI) instanceof SRLPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SRLPackage.eNS_URI) : SRLPackage.eINSTANCE);
 		SRSPackageImpl theSRSPackage = (SRSPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SRSPackage.eNS_URI) instanceof SRSPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SRSPackage.eNS_URI) : SRSPackage.eINSTANCE);
@@ -326,6 +329,7 @@ public class CasPackageImpl extends EPackageImpl implements CasPackage {
 		// Create package meta-data objects
 		theCasPackage.createPackageContents();
 		theTypesystemsPackage.createPackageContents();
+		theDomainPackage.createPackageContents();
 		theNLPPackage.createPackageContents();
 		theSRLPackage.createPackageContents();
 		theSRSPackage.createPackageContents();
@@ -335,6 +339,7 @@ public class CasPackageImpl extends EPackageImpl implements CasPackage {
 		// Initialize created meta-data
 		theCasPackage.initializePackageContents();
 		theTypesystemsPackage.initializePackageContents();
+		theDomainPackage.initializePackageContents();
 		theNLPPackage.initializePackageContents();
 		theSRLPackage.initializePackageContents();
 		theSRSPackage.initializePackageContents();

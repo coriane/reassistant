@@ -9,11 +9,11 @@
     <delegateAnalysisEngine key="SentenceAEDescriptor">
       <import location="opennlp/SentenceAEDescriptor.xml"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="POSAEDescriptor">
-      <import location="matetools/POSAEDescriptor.xml"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="LemmaAEDescriptor">
       <import location="matetools/LemmaAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="POSAEDescriptor">
+      <import location="matetools/POSAEDescriptor.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="CoNLLSRLAEDescriptor">
       <import location="srl/CoNLLSRLAEDescriptor.xml"/>
@@ -23,6 +23,9 @@
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="WrapperAEDescriptor">
       <import location="WrapperAEDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="EmptyDomainLabelerAEDescriptor">
+      <import location="domain/EmptyDomainLabelerAEDescriptor.xml"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
@@ -41,6 +44,7 @@
         <node>POSAEDescriptor</node>
         <node>CoNLLDependencyAEDescriptor</node>
         <node>CoNLLSRLAEDescriptor</node>
+        <node>EmptyDomainLabelerAEDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities>

@@ -12,7 +12,7 @@ import org.apache.uima.cas.Type;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Fri Mar 11 15:22:16 ART 2011
+ * Updated by JCasGen Wed Jun 01 16:56:12 ART 2011
  * @generated */
 public class Sentence_Type extends IdentifiableAnnotation_Type {
   /** @generated */

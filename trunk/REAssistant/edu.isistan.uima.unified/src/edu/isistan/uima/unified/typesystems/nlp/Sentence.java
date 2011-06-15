@@ -11,8 +11,8 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 
 
 /** 
- * Updated by JCasGen Fri Mar 11 15:22:16 ART 2011
- * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/nlp/SentenceTypeDescriptor.xml
+ * Updated by JCasGen Wed Jun 01 16:56:12 ART 2011
+ * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/domain/DomainNumberTypeDescriptor.xml
  * @generated */
 public class Sentence extends IdentifiableAnnotation {
   /** @generated
