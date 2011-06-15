@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels xmlns="http://mulan.sourceforge.net/labels">
+	<label name="IO">
+		<label name="Input">
+			<label name="Entry"></label>
+			<label name="Selection"></label>
+		</label>
+		<label name="Output">
+			<label name="Display"></label>
+			<label name="Notification"></label>
+		</label>
+	</label>
+	<label name="Data">
+		<label name="Read">
+			<label name="Single"></label>
+			<label name="Multiple"></label>
+		</label>
+		<label name="Write">
+			<label name="Create"></label>
+			<label name="Update"></label>
+			<label name="Delete"></label>
+		</label>
+	</label>
+	<label name="Process">
+		<label name="Calculation"></label>
+		<label name="Verification"></label>
+		<label name="Communication">
+			<label name="Indoor"></label>
+			<label name="Outdoor"></label>
+		</label>
+	</label>
+	<label name="UseCase">
+		<label name="Start"></label>
+		<label name="Flow"></label>
+		<label name="Stop"></label>
+	</label>
+	<label name="Noise"></label>
+</labels>
