@@ -34,9 +34,14 @@ public class JWNLWordNetAnnotator extends JCasAnnotator_ImplBase {
 		super.initialize(aContext);
 		//jwnlName = (String) aContext.getConfigParameterValue("jwnl");
 		//wordnetName = (String) aContext.getConfigParameterValue("wordnet");
-		if(!JWNLInitialization.isInit())
-			JWNLInitialization.init(jwnlName, wordnetName);
-		dictionary = JWNLInitialization.getDictionary();
+		try {
+			if(!JWNLInitialization.isInit())
+				JWNLInitialization.init(jwnlName, wordnetName);
+			dictionary = JWNLInitialization.getDictionary();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@Override

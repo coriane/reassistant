@@ -14,12 +14,17 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.XMLSerializer;
 import org.uimafit.component.JCasConsumer_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.uimafit.descriptor.ExternalResource;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
+
+import edu.isistan.uima.unified.sharedresources.XMISharedData;
 
 public class XMIWriterCasConsumer extends JCasConsumer_ImplBase {
 	@ConfigurationParameter(name="output")
 	private String outputString;
+	@ExternalResource(key="sharedData", mandatory=false)
+	private XMISharedData sharedData;
 	//
 	private URI resourceURI;
 	private FileOutputStream outputStream;
@@ -47,7 +52,10 @@ public class XMIWriterCasConsumer extends JCasConsumer_ImplBase {
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
 		try {
 			ser = new XmiCasSerializer(jCas.getTypeSystem());
-			ser.serialize(jCas.getCas(), contentHandler);
+			if(sharedData != null && sharedData.getSharedData() != null)
+				ser.serialize(jCas.getCas(), contentHandler, null, sharedData.getSharedData());
+			else
+				ser.serialize(jCas.getCas(), contentHandler);
 		}
 		catch (SAXException e) {
 			throw new AnalysisEngineProcessException(e);

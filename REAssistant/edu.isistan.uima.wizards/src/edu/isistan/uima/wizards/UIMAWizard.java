@@ -95,7 +95,7 @@ public class UIMAWizard extends Wizard implements INewWizard {
 					try {
 						String inputURI = inputFile.getLocationURI().toString();
 						String outputURI = outputFile.getLocationURI().toString();
-						UIMAProcessor processor = new UIMAProcessor();
+						UIMAProcessor processor = UIMAProcessor.getInstance();
 						processor.execute(inputURI, outputURI);
 					}
 					catch (Exception e) {

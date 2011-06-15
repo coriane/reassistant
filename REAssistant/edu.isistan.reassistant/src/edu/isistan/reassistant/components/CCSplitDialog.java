@@ -2,12 +2,12 @@ package edu.isistan.reassistant.components;
 
 import java.util.Collection;
 
-import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.ObservablesManager;
+//import org.eclipse.core.databinding.ObservablesManager;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.databinding.EMFDataBindingContext;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.jface.databinding.swt.SWTObservables;
@@ -44,10 +44,7 @@ import org.eclipse.swt.events.SelectionEvent;
 
 public class CCSplitDialog extends Dialog {
 	private DataBindingContext bindingContext;
-	private ObservablesManager observablesManager;
-	
-	private Binding bindingLeft;
-	private Binding bindingRight;
+//	private ObservablesManager observablesManager;
 	
 	private REAssistantModelFactory reaFactory;
 
@@ -81,12 +78,11 @@ public class CCSplitDialog extends Dialog {
 	 * Create the dialog.
 	 * @param parentShell
 	 */
-	public CCSplitDialog(Shell parentShell, CrosscuttingConcern originalCC, UIMAProjectQueryAdapter uimaRoot, DataBindingContext bindingContext) {
+	public CCSplitDialog(Shell parentShell, CrosscuttingConcern originalCC, UIMAProjectQueryAdapter uimaRoot) {
 		super(parentShell);
 		setShellStyle(SWT.TITLE);
 		setInitial(originalCC);
 		this.uimaRoot = uimaRoot;
-		this.bindingContext = bindingContext;
 	}
 	
 	private void setInitial(CrosscuttingConcern originalCC) {
@@ -325,74 +321,67 @@ public class CCSplitDialog extends Dialog {
 		);
 	}
 	
-	public DataBindingContext initDataBindings(boolean firstTime) {
-		if(firstTime) {
-			//bindingContext = new EMFDataBindingContext();
-			//
-			if(splittedLeftCC != null && splittedLeftCC.getImpacts() != null) {
-				ObservableListContentProvider listCCLeftContentProvider = new ObservableListContentProvider();
-				listViewerCCLeft.setContentProvider(listCCLeftContentProvider);
+	public void initDataBindings() {
+		this.disposeDataBindings();
+		bindingContext = new EMFDataBindingContext();
+//		observablesManager = new ObservablesManager();
+
+//		observablesManager.runAndCollect(new Runnable() {
+//			public void run() {
+				if(splittedLeftCC != null && splittedLeftCC.getImpacts() != null) {
+					if(listViewerCCLeft.getContentProvider() == null) {
+						ObservableListContentProvider listCCLeftContentProvider = new ObservableListContentProvider();
+						listViewerCCLeft.setContentProvider(listCCLeftContentProvider);
+						//
+						IObservableMap[] observeCCLeftMaps = EMFObservables.observeMaps(listCCLeftContentProvider.getKnownElements(), new EStructuralFeature[] {
+							REAssistantModelPackage.Literals.IMPACT__COMPOSITION_RULE,
+							REAssistantModelPackage.Literals.IMPACT__DOCUMENT,
+							REAssistantModelPackage.Literals.IMPACT__SECTION,
+							REAssistantModelPackage.Literals.IMPACT__SENTENCE				
+						});
+						listViewerCCLeft.setLabelProvider(new ImpactObservableMapLabelProvider(observeCCLeftMaps, uimaRoot));
+						//
+						IObservableList observableListCCLeft = EMFObservables.observeList(splittedLeftCC, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS);
+						listViewerCCLeft.setInput(observableListCCLeft);
+					}
+				}
 				//
-				IObservableMap[] observeCCLeftMaps = EMFObservables.observeMaps(listCCLeftContentProvider.getKnownElements(), new EStructuralFeature[] {
-					REAssistantModelPackage.Literals.IMPACT__COMPOSITION_RULE,
-					REAssistantModelPackage.Literals.IMPACT__DOCUMENT,
-					REAssistantModelPackage.Literals.IMPACT__SECTION,
-					REAssistantModelPackage.Literals.IMPACT__SENTENCE				
-				});
-				listViewerCCLeft.setLabelProvider(new ImpactObservableMapLabelProvider(observeCCLeftMaps, uimaRoot));
-				//
-				IObservableList observableListCCLeft = EMFObservables.observeList(splittedLeftCC, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS);
-				listViewerCCLeft.setInput(observableListCCLeft);
-			}
-			//
-			if(splittedRightCC != null && splittedRightCC.getImpacts() != null) {
-				ObservableListContentProvider listCCRightContentProvider = new ObservableListContentProvider();
-				listViewerCCRight.setContentProvider(listCCRightContentProvider);
-				//
-				IObservableMap[] observeCCRightMaps = EMFObservables.observeMaps(listCCRightContentProvider.getKnownElements(), new EStructuralFeature[] {
-					REAssistantModelPackage.Literals.IMPACT__COMPOSITION_RULE,
-					REAssistantModelPackage.Literals.IMPACT__DOCUMENT,
-					REAssistantModelPackage.Literals.IMPACT__SECTION,
-					REAssistantModelPackage.Literals.IMPACT__SENTENCE				
-				});
-				listViewerCCRight.setLabelProvider(new ImpactObservableMapLabelProvider(observeCCRightMaps, uimaRoot));
-				//
-				IObservableList observableListCCRight = EMFObservables.observeList(splittedRightCC, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS);
-				listViewerCCRight.setInput(observableListCCRight);
-			}
-			//
-		}
-		else
-			disposeDataBindings();
-		if(observablesManager == null)
-			this.observablesManager = new ObservablesManager();
-		
-		observablesManager.runAndCollect(new Runnable() {
-			public void run() {
+				if(splittedRightCC != null && splittedRightCC.getImpacts() != null) {
+					if(listViewerCCLeft.getContentProvider() == null) {
+						ObservableListContentProvider listCCRightContentProvider = new ObservableListContentProvider();
+						listViewerCCRight.setContentProvider(listCCRightContentProvider);
+						//
+						IObservableMap[] observeCCRightMaps = EMFObservables.observeMaps(listCCRightContentProvider.getKnownElements(), new EStructuralFeature[] {
+							REAssistantModelPackage.Literals.IMPACT__COMPOSITION_RULE,
+							REAssistantModelPackage.Literals.IMPACT__DOCUMENT,
+							REAssistantModelPackage.Literals.IMPACT__SECTION,
+							REAssistantModelPackage.Literals.IMPACT__SENTENCE				
+						});
+						listViewerCCRight.setLabelProvider(new ImpactObservableMapLabelProvider(observeCCRightMaps, uimaRoot));
+						//
+						IObservableList observableListCCRight = EMFObservables.observeList(splittedRightCC, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS);
+						listViewerCCRight.setInput(observableListCCRight);
+					}
+				}
 				//
 				IObservableValue textLeftObserveTextObserveWidget = SWTObservables.observeText(textLeft, SWT.FocusOut);
 				IObservableValue sectionLeftObserveValue = EMFObservables.observeValue(splittedLeftCC, REAssistantModelPackage.Literals.NAMEABLE__NAME);
-				bindingLeft = bindingContext.bindValue(textLeftObserveTextObserveWidget, sectionLeftObserveValue, null, null);
+				bindingContext.bindValue(textLeftObserveTextObserveWidget, sectionLeftObserveValue, null, null);
 				//
 				IObservableValue textRightObserveTextObserveWidget = SWTObservables.observeText(textRight, SWT.FocusOut);
 				IObservableValue sectionRightObserveValue = EMFObservables.observeValue(splittedRightCC, REAssistantModelPackage.Literals.NAMEABLE__NAME);
-				bindingRight = bindingContext.bindValue(textRightObserveTextObserveWidget, sectionRightObserveValue, null, null);
+				bindingContext.bindValue(textRightObserveTextObserveWidget, sectionRightObserveValue, null, null);
 				//
 			}
-		});
-
-		return bindingContext;
-	}
+//		});
+//	}
 	
+
 	public void disposeDataBindings() {
-		if(bindingContext != null) {
-			if(bindingLeft != null)
-				bindingContext.removeBinding(bindingLeft);
-			if(bindingRight != null)
-				bindingContext.removeBinding(bindingRight);
-		}
-		if(observablesManager != null)
-			observablesManager.dispose();
+		if(bindingContext != null)
+			bindingContext.dispose();
+//		if(observablesManager != null)
+//			observablesManager.dispose();
 	}
 	
 	public void dispose() {

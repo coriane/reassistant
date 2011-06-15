@@ -20,5 +20,7 @@
     <import location="srl/StructureTypeDescriptor.xml"/>
     <import location="srl/PredicateTypeDescriptor.xml"/>
     <import location="srl/ArgumentTypeDescriptor.xml"/>
+    <import location="domain/DomainNumberTypeDescriptor.xml"/>
+    <import location="domain/DomainActionTypeDescriptor.xml"/>
   </imports>
 </typeSystemDescription>

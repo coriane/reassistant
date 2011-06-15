@@ -11,8 +11,8 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 
 
 /** 
- * Updated by JCasGen Fri Mar 11 15:22:51 ART 2011
- * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/PredicateTypeDescriptor.xml
+ * Updated by JCasGen Mon Jun 13 12:00:10 ART 2011
+ * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/domain/DomainActionTypeDescriptor.xml
  * @generated */
 public class Token extends IdentifiableAnnotation {
   /** @generated

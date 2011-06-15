@@ -14,11 +14,16 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 import org.uimafit.component.JCasCollectionReader_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.uimafit.descriptor.ExternalResource;
 import org.xml.sax.SAXException;
+
+import edu.isistan.uima.unified.sharedresources.XMISharedData;
 
 public class XMIReaderCollectionReader extends JCasCollectionReader_ImplBase {
 	@ConfigurationParameter(name="input")
 	private String inputString;
+	@ExternalResource(key="sharedData", mandatory=false)
+	private XMISharedData sharedData;
 	//
 	private URI resourceURI;
 	private FileInputStream inputStream;
@@ -45,7 +50,10 @@ public class XMIReaderCollectionReader extends JCasCollectionReader_ImplBase {
 	@Override
 	public void getNext(JCas jCas) throws IOException, CollectionException {
 		try {
-			XmiCasDeserializer.deserialize(inputStream, jCas.getCas());
+			if(sharedData != null && sharedData.getSharedData() != null)
+				XmiCasDeserializer.deserialize(inputStream, jCas.getCas(), false, sharedData.getSharedData());
+			else
+				XmiCasDeserializer.deserialize(inputStream, jCas.getCas());
 			processed = true;
 		} catch (SAXException e) {
 			throw new CollectionException(e);

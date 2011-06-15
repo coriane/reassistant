@@ -229,7 +229,7 @@ public class REAssistantWizard extends Wizard implements INewWizard {
 						if(createUIMA) {
 							String inputFile = srsFile.getLocationURI().toString();
 							String outputFile = uimaFile.getLocationURI().toString();
-							UIMAProcessor processor = new UIMAProcessor();
+							UIMAProcessor processor = UIMAProcessor.getInstance();
 							processor.execute(inputFile, outputFile);
 							try {
 								uimaFile.getParent().refreshLocal(IResource.DEPTH_ONE, null);

@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.ObservablesManager;
+//import org.eclipse.core.databinding.ObservablesManager;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CompoundCommand;
+import org.eclipse.emf.databinding.EMFDataBindingContext;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -63,7 +64,7 @@ import org.eclipse.swt.custom.SashForm;
 
 public class CCMasterBlock extends MasterDetailsBlock {
 	private DataBindingContext bindingContext;
-	private ObservablesManager observablesManager;
+//	private ObservablesManager observablesManager;
 
 	@SuppressWarnings("unused")
 	private FormPage formPage;
@@ -91,7 +92,6 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		this.formPage = formPage;
 		
 		editingDomain = ((IEditingDomainProvider)formPage.getEditor()).getEditingDomain();
-		bindingContext = ((REAssistantEditor)formPage.getEditor()).getBindingContext();
 		modelRoot = ((REAssistantEditor)formPage.getEditor()).getModelRoot();
 		projectRoot = ((REAssistantEditor)formPage.getEditor()).getProjectRoot();
 		uimaRoot = ((REAssistantEditor)formPage.getEditor()).getUimaRoot();
@@ -248,9 +248,9 @@ public class CCMasterBlock extends MasterDetailsBlock {
 				StructuredSelection selection = (StructuredSelection)listViewer.getSelection();
 				if(!selection.isEmpty() && selection.size() == 1) {
 					CrosscuttingConcern crosscuttingConcern = (CrosscuttingConcern) selection.getFirstElement();
-					CCSplitDialog dialog = new CCSplitDialog(parent.getShell(), crosscuttingConcern, uimaRoot, bindingContext);
+					CCSplitDialog dialog = new CCSplitDialog(parent.getShell(), crosscuttingConcern, uimaRoot);
 					dialog.create();
-					dialog.initDataBindings(true);
+					dialog.initDataBindings();
 					dialog.open();
 					if(dialog.getReturnCode() == CCSplitDialog.OK && dialog.getOriginalCC() != null && dialog.getSplittedLeftCC() != null && dialog.getSplittedRightCC() != null) {
 						CompoundCommand compoundCommand = new CompoundCommand();
@@ -328,7 +328,7 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		listDocuments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		sashForm.setWeights(new int[] {3, 1});
 		
-		initDataBindings(true);
+		initDataBindings();
 	}
 
 	/**
@@ -371,46 +371,38 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		form.getToolBarManager().add(vaction);
 	}
 	
-	protected DataBindingContext initDataBindings(boolean firstTime) {
-		if(firstTime) {
-			//bindingContext = new EMFDataBindingContext();
-			//
-			if(modelRoot != null && modelRoot.getCrosscuttingConcerns() != null) {
-				ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
-				listViewer.setContentProvider(listContentProvider);
-				//
-				IObservableMap[] observeMaps = EMFEditObservables.observeMaps(editingDomain, listContentProvider.getKnownElements(), new EStructuralFeature[] {REAssistantModelPackage.Literals.NAMEABLE__NAME});
-				listViewer.setLabelProvider(new ObservableMapLabelProvider(observeMaps));
-				//
-				IObservableList observableList = EMFEditObservables.observeList(editingDomain, modelRoot, REAssistantModelPackage.Literals.RE_ASSISTANT_PROJECT__CROSSCUTTING_CONCERNS);
-				listViewer.setInput(observableList);
-				//
-				ObservableListContentProvider listDocumentsContentProvider = new ObservableListContentProvider();
-				listViewerDocuments.setContentProvider(listDocumentsContentProvider);
-				//
-				IObservableMap[] observeDocumentsMaps = EMFObservables.observeMaps(listDocumentsContentProvider.getKnownElements(), new EStructuralFeature[] {SRSPackage.Literals.DOCUMENT__NAME});
-				listViewerDocuments.setLabelProvider(new DocumentObservableMapLabelProvider(observeDocumentsMaps, uimaRoot));
-				//
-			}
-			//
-		}
-		else
-			disposeDataBindings();
-		if(observablesManager == null)
-			this.observablesManager = new ObservablesManager();
-		
-		observablesManager.runAndCollect(new Runnable() {
-			public void run() {
-				
-			}
-		});
+	protected void initDataBindings() {
+		this.disposeDataBindings();
+		bindingContext = new EMFDataBindingContext();
+//		observablesManager = new ObservablesManager();
 
-		return bindingContext;
+//		observablesManager.runAndCollect(new Runnable() {
+//			public void run() {
+				if(modelRoot != null && modelRoot.getCrosscuttingConcerns() != null) {
+					ObservableListContentProvider listContentProvider = new ObservableListContentProvider();
+					listViewer.setContentProvider(listContentProvider);
+					//
+					IObservableMap[] observeMaps = EMFEditObservables.observeMaps(editingDomain, listContentProvider.getKnownElements(), new EStructuralFeature[] {REAssistantModelPackage.Literals.NAMEABLE__NAME});
+					listViewer.setLabelProvider(new ObservableMapLabelProvider(observeMaps));
+					//
+					IObservableList observableList = EMFEditObservables.observeList(editingDomain, modelRoot, REAssistantModelPackage.Literals.RE_ASSISTANT_PROJECT__CROSSCUTTING_CONCERNS);
+					listViewer.setInput(observableList);
+					//
+					ObservableListContentProvider listDocumentsContentProvider = new ObservableListContentProvider();
+					listViewerDocuments.setContentProvider(listDocumentsContentProvider);
+					//
+					IObservableMap[] observeDocumentsMaps = EMFObservables.observeMaps(listDocumentsContentProvider.getKnownElements(), new EStructuralFeature[] {SRSPackage.Literals.DOCUMENT__NAME});
+					listViewerDocuments.setLabelProvider(new DocumentObservableMapLabelProvider(observeDocumentsMaps, uimaRoot));
+				}
+//			}
+//		});
 	}
 	
 	public void disposeDataBindings() {
-		if(observablesManager != null)
-			observablesManager.dispose();
+		if(bindingContext != null)
+			bindingContext.dispose();
+//		if(observablesManager != null)
+//			observablesManager.dispose();
 	}
 	
 	public void dispose() {

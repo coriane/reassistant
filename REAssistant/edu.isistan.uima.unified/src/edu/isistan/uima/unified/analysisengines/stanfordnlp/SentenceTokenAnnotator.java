@@ -55,18 +55,29 @@ public class SentenceTokenAnnotator extends JCasAnnotator_ImplBase {
 			while(sectionIterator.hasNext()) {
 				Annotation sAnnotation = sectionIterator.next();
 				Section section = (Section) sAnnotation;
+				String sectionText = section.getCoveredText();
+				String[] splittedText = sectionText.split("\\r?\\n");
 
-				Reader input = new StringReader(section.getCoveredText());
-				List<ArrayList<? extends HasWord>> sentences = MaxentTagger.tokenizeText(input);
-				
-				for(ArrayList<? extends HasWord> sentence : sentences) {
-					Word firstWord = (Word) sentence.get(0);
-					Word lastWord = (Word) sentence.get(sentence.size() - 1);
-					AnnotationGenerator.generateSentence(section.getBegin() + firstWord.beginPosition(), section.getBegin() + lastWord.endPosition(), aJCas);
-					for(HasWord hasWord : sentence) {
-						Word word = (Word) hasWord;
-						AnnotationGenerator.generateToken(section.getBegin() + word.beginPosition(), section.getBegin() + word.endPosition(), aJCas);
+				int textPos = 0;
+				for(String text : splittedText) {
+					Reader input = new StringReader(text);
+					List<ArrayList<? extends HasWord>> sentences = MaxentTagger.tokenizeText(input);
+					
+					int textBegin = sectionText.indexOf(text, textPos);
+					int textEnd = textBegin + text.length();
+					
+					for(ArrayList<? extends HasWord> sentence : sentences) {
+						Word firstWord = (Word) sentence.get(0);
+						Word lastWord = (Word) sentence.get(sentence.size() - 1);
+						//
+						AnnotationGenerator.generateSentence(section.getBegin() + textBegin + firstWord.beginPosition(), section.getBegin() + textBegin + lastWord.endPosition(), aJCas);
+						for(HasWord hasWord : sentence) {
+							Word word = (Word) hasWord;
+							AnnotationGenerator.generateToken(section.getBegin() + textBegin + word.beginPosition(), section.getBegin() + textBegin + word.endPosition(), aJCas);
+						}
 					}
+					
+					textPos = textEnd;
 				}
 			}
 		}

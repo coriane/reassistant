@@ -14,6 +14,24 @@
               <eStructuralFeatures xsi:type="ecore:EAttribute" name="identification"
                   eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
             </eClassifiers>
+            <eSubpackages name="domain" nsURI="http:///edu/isistan/uima/unified/typesystems/domain.ecore"
+                nsPrefix="domain">
+              <eClassifiers xsi:type="ecore:EClass" name="DomainAction" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="confidence"
+                    eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="ranking" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#/0/isistan/uima/unified/typesystems/domain/DomainAction"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="childs" upperBound="-1"
+                    eType="#/0/isistan/uima/unified/typesystems/domain/DomainAction">
+                  <eAnnotations source="http://uima.apache.org">
+                    <details key="uimaType" value="uima.cas.FSArray"/>
+                  </eAnnotations>
+                </eStructuralFeatures>
+              </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="DomainNumber" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation"/>
+            </eSubpackages>
             <eSubpackages name="nlp" nsURI="http:///edu/isistan/uima/unified/typesystems/nlp.ecore"
                 nsPrefix="nlp">
               <eClassifiers xsi:type="ecore:EClass" name="Chunk" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">

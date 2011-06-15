@@ -10,6 +10,8 @@ import org.apache.uima.jcas.cas.StringArray;
 import edu.isistan.uima.unified.typesystems.srs.Project;
 import edu.isistan.uima.unified.typesystems.srs.Document;
 import edu.isistan.uima.unified.typesystems.srs.Section;
+import edu.isistan.uima.unified.typesystems.domain.DomainAction;
+import edu.isistan.uima.unified.typesystems.domain.DomainNumber;
 import edu.isistan.uima.unified.typesystems.nlp.Chunk;
 import edu.isistan.uima.unified.typesystems.nlp.Coreference;
 import edu.isistan.uima.unified.typesystems.nlp.CoNLLDependency;
@@ -216,17 +218,49 @@ public class AnnotationGenerator {
 		annotation.addToIndexes();
 	}
 	
-	public static void generateSense(int begin, int end, String pos, String[] senses, JCas jCas) {
-		Sense annotation = new Sense(jCas);
+	public static void generateSense(int begin, int end, String pos, String[] senses, JCas aJCas) {
+		Sense annotation = new Sense(aJCas);
 		annotation.setIdentification(UUID.randomUUID().toString());
 		annotation.setBegin(begin);
 		annotation.setEnd(end);
 		annotation.setPos(pos);
-		StringArray array = new StringArray(jCas, senses.length);
+		StringArray array = new StringArray(aJCas, senses.length);
 		for (int i = 0; i < senses.length; i++) {
 			array.set(i, senses[i]);
 		}
 		annotation.setSenses(array);
 		annotation.addToIndexes();
+	}
+
+	public static void generateDomainNumber(int begin, int end, JCas aJCas) {
+		DomainNumber annotation = new DomainNumber(aJCas);
+		annotation.setIdentification(UUID.randomUUID().toString());
+		annotation.setBegin(begin);
+		annotation.setEnd(end);
+		annotation.addToIndexes();
+	}
+	
+	public static DomainAction generateDomainAction(int begin, int end, Token action, String label, double confidence, int ranking, JCas aJCas) {
+		DomainAction annotation = new DomainAction(aJCas);
+		annotation.setIdentification(UUID.randomUUID().toString());
+		annotation.setBegin(begin);
+		annotation.setEnd(end);
+		annotation.setAction(action);
+		annotation.setLabel(label);
+		annotation.setConfidence(confidence);
+		annotation.setRanking(ranking);
+		annotation.addToIndexes();
+		return annotation;
+	}
+	
+	public static DomainAction generateDomainAction(DomainAction annotation, DomainAction parent, List<DomainAction> childs, JCas aJCas) {
+		annotation.setParent(parent);
+		FSArray array = new FSArray(aJCas, childs.size());
+		for (int i = 0; i < childs.size(); i++) {
+			DomainAction domainAction = childs.get(i);
+			array.set(i, domainAction);
+		}
+		annotation.setChilds(array);
+		return annotation;
 	}
 }

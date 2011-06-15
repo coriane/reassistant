@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Mar 14 19:00:52 ART 2011
- * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/StructureTypeDescriptor.xml
+ * Updated by JCasGen Mon Jun 13 12:00:10 ART 2011
+ * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/domain/DomainActionTypeDescriptor.xml
  * @generated */
 public class IdentifiableAnnotation extends Annotation {
   /** @generated

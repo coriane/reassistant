@@ -7,9 +7,11 @@ import java.util.List;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.collection.CollectionReader;
+import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.metadata.TypePriorities;
 import org.apache.uima.resource.metadata.TypeSystemDescription;
+import org.apache.uima.util.InvalidXMLException;
 import org.uimafit.factory.AnalysisEngineFactory;
 import org.uimafit.factory.CollectionReaderFactory;
 import org.uimafit.factory.TypePrioritiesFactory;
@@ -21,10 +23,17 @@ import edu.isistan.uima.unified.sharedresources.ClustersResource;
 
 @SuppressWarnings("unused")
 public class UIMAProcessor {
-	private UIMAFactory factory;
+	private static UIMAProcessor instance = null;
+	private UIMAFactory factory = null;
 	
-	public UIMAProcessor() {
-		factory = new UIMAFactory();
+	private UIMAProcessor() {
+		factory = UIMAFactory.getInstance();
+	}
+	
+	public static UIMAProcessor getInstance() {
+		if(instance == null)
+			instance = new UIMAProcessor();
+		return instance;
 	}
 	
 	public void execute(String inputFile, String outputFile) {
@@ -32,11 +41,16 @@ public class UIMAProcessor {
 			TypeSystemDescription typeSystemDescription = factory.getTypeSystemDescription();
 			TypePriorities typePriorities = factory.getTypePriorities();
 			
+			ExternalResourceDescription externalResource = factory.getXMISharedData();
+			
 			CollectionReader collectionReader = factory.getUCSCR(typeSystemDescription, typePriorities, inputFile);
 			
 			AnalysisEngine sentenceAE = factory.getOpenNLPSentenceAA(typeSystemDescription, typePriorities);
 			AnalysisEngine tokenAE = factory.getOpenNLPTokenAA(typeSystemDescription, typePriorities);
 			//AnalysisEngine sentenceTokenAE = factory.getStanfordSentenceTokenAA(typeSystemDescription, typePriorities);
+			
+			AnalysisEngine domainNumberAE = factory.getDomainNumberAA(typeSystemDescription, typePriorities);
+			AnalysisEngine domainNumberExlusionAE = factory.getDomainNumberExclusionAA(typeSystemDescription, typePriorities);
 			
 			AnalysisEngine lemmaAE = factory.getMateToolsLemmaAA(typeSystemDescription, typePriorities);
 			
@@ -64,19 +78,25 @@ public class UIMAProcessor {
 
 			AnalysisEngine sdsrlAE = factory.getSDSRLAA(typeSystemDescription, typePriorities);
 			AnalysisEngine conllsrlAE = factory.getCoNLLSRLAA(typeSystemDescription, typePriorities);
-						
-			AnalysisEngine writerCC = factory.getXMIWriterCC(typeSystemDescription, typePriorities, outputFile);
+
+			AnalysisEngine domainActionAE = factory.getDomainActionAA(typeSystemDescription, typePriorities);
+			
+			AnalysisEngine writerCC = factory.getXMIWriterCC(typeSystemDescription, typePriorities, outputFile, externalResource);
 
 			SimplePipeline.runPipeline(
 					collectionReader, 
-					sentenceAE, tokenAE, 
+					sentenceAE, tokenAE,
+					//sentenceTokenAE, 
+					domainNumberAE, domainNumberExlusionAE,
 					lemmaAE, 
 					//morphAE, 
 					posAE, 
 					chunkAE, sddependencyAE, conlldependencyAE, 
+					//entityAE, 
 					//entityDateAE, entityLocationAE, entityMoneyAE, entityOrganizationAE, entityPercentageAE, entityPersonAE, entityTimeAE,
 					wordnetAE, wsdAE, 
 					sdsrlAE, conllsrlAE, 
+					domainActionAE,
 					writerCC);
 		} catch (ResourceInitializationException e) {
 			e.printStackTrace();
@@ -91,8 +111,10 @@ public class UIMAProcessor {
 		try {
 			TypeSystemDescription typeSystemDescription = factory.getTypeSystemDescription();
 			TypePriorities typePriorities = factory.getTypePriorities();
+
+			ExternalResourceDescription externalResource = factory.getXMISharedData();
 			
-			CollectionReader collectionReader = factory.getXMIReaderCR(typeSystemDescription, typePriorities, inputFile);
+			CollectionReader collectionReader = factory.getXMIReaderCR(typeSystemDescription, typePriorities, inputFile, externalResource);
 			
 			AnalysisEngine clustererCC = factory.getClustererCC(typeSystemDescription, typePriorities, linkageType, distanceType, minimumDistance);
 
@@ -112,5 +134,58 @@ public class UIMAProcessor {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public void executeDomainExtraction(String inputFile, String outputFile) {
+		try {
+			TypeSystemDescription typeSystemDescription = factory.getTypeSystemDescription();
+			TypePriorities typePriorities = factory.getTypePriorities();
+			
+			ExternalResourceDescription externalResource = factory.getXMISharedData();
+			
+			CollectionReader collectionReader = factory.getXMIReaderCR(typeSystemDescription, typePriorities, inputFile, externalResource);
+			
+			AnalysisEngine domainCSVExtractorCC = factory.getDomainCSVExtractorCC(typeSystemDescription, typePriorities, outputFile);
+
+			SimplePipeline.runPipeline(
+					collectionReader,
+					domainCSVExtractorCC);
+		} catch (ResourceInitializationException e) {
+			e.printStackTrace();
+		} catch (InvalidXMLException e) {
+			e.printStackTrace();
+		} catch (UIMAException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void executeDomainLabeling(String inputFile, String outputFile) {
+		try {
+			TypeSystemDescription typeSystemDescription = factory.getTypeSystemDescription();
+			TypePriorities typePriorities = factory.getTypePriorities();
+			
+			ExternalResourceDescription externalResource = factory.getXMISharedData();
+			
+			CollectionReader collectionReader = factory.getXMIReaderCR(typeSystemDescription, typePriorities, inputFile, externalResource);
+			
+			AnalysisEngine domainActionAA = factory.getDomainActionAA(typeSystemDescription, typePriorities);
+			
+			AnalysisEngine writerCC = factory.getXMIWriterCC(typeSystemDescription, typePriorities, outputFile, externalResource);
+
+			SimplePipeline.runPipeline(
+					collectionReader,
+					domainActionAA,
+					writerCC);
+		} catch (ResourceInitializationException e) {
+			e.printStackTrace();
+		} catch (InvalidXMLException e) {
+			e.printStackTrace();
+		} catch (UIMAException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

@@ -1,14 +1,14 @@
 package edu.isistan.reassistant.masterdetails;
 
-import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.ObservablesManager;
+//import org.eclipse.core.databinding.ObservablesManager;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CompoundCommand;
+import org.eclipse.emf.databinding.EMFDataBindingContext;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.command.AddCommand;
@@ -63,7 +63,10 @@ import org.eclipse.swt.widgets.Combo;
 import org.eclipse.jface.viewers.ComboViewer;
 
 public class CCDetailsPage implements IDetailsPage {
-	private DataBindingContext bindingContext;
+	private DataBindingContext bindingContextCC;
+	private DataBindingContext bindingContextImpact;
+//	private ObservablesManager observablesManagerCC;
+//	private ObservablesManager observablesManagerImpact;
 	
 	private Text textId;
 	private Text textName;
@@ -84,14 +87,6 @@ public class CCDetailsPage implements IDetailsPage {
 
 	private IManagedForm managedForm;
 	private EditingDomain editingDomain;
-	private ObservablesManager observablesManager;
-	private ObservablesManager observablesImpactManager;
-	
-	private Binding bindingId;
-	private Binding bindingName;
-	private Binding bindingDescription;
-	private Binding bindingRealization;
-	private Binding bindingCompositionRule;
 	
 	private ISelectionChangedListener listenerImpacts;
 	
@@ -117,7 +112,6 @@ public class CCDetailsPage implements IDetailsPage {
 	public void initialize(IManagedForm form) {
 		managedForm = form;
 		editingDomain = ((IEditingDomainProvider)((FormPage)managedForm.getContainer()).getEditor()).getEditingDomain();
-		bindingContext = ((REAssistantEditor)((FormPage)managedForm.getContainer()).getEditor()).getBindingContext();
 		modelRoot = ((REAssistantEditor)((FormPage)managedForm.getContainer()).getEditor()).getModelRoot();
 		projectRoot = ((REAssistantEditor)((FormPage)managedForm.getContainer()).getEditor()).getProjectRoot();
 		uimaRoot = ((REAssistantEditor)((FormPage)managedForm.getContainer()).getEditor()).getUimaRoot();
@@ -344,19 +338,17 @@ public class CCDetailsPage implements IDetailsPage {
 		TableWrapData twd_textContext = new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.MIDDLE);
 		twd_textContext.heightHint = 50;
 		textContext.setLayoutData(twd_textContext);
-
-		initDataBindings(true);
 		
 		registerTextControls();
 	}
 	
 	public void setFocus() {
 		// Set focus
+		initDataBindingsCC();
 	}
 	
 	private void update() {
-		// Update
-		initDataBindings(false);
+		initDataBindingsCC();
 	}
 
 	public boolean setFormInput(Object input) {
@@ -370,7 +362,7 @@ public class CCDetailsPage implements IDetailsPage {
 		}
 		else
 			crosscuttingConcern = null;
-		update();
+		initDataBindingsCC();
 	}
 
 	public void commit(boolean onSave) {
@@ -389,126 +381,118 @@ public class CCDetailsPage implements IDetailsPage {
 		update();
 	}
 	
-	protected DataBindingContext initDataBindings(boolean firstTime) {
-		if(firstTime) {
-			//bindingContext = new EMFDataBindingContext();
-			ObservableListContentProvider listImpactsContentProvider = new ObservableListContentProvider();
-			listViewerImpacts.setContentProvider(listImpactsContentProvider);
-			//
-			IObservableMap[] observeMaps = EMFEditObservables.observeMaps(editingDomain, listImpactsContentProvider.getKnownElements(), new EStructuralFeature[] {
-				REAssistantModelPackage.Literals.IMPACT__COMPOSITION_RULE,
-				REAssistantModelPackage.Literals.IMPACT__DOCUMENT,
-				REAssistantModelPackage.Literals.IMPACT__SECTION,
-				REAssistantModelPackage.Literals.IMPACT__SENTENCE				
-			});
-			listViewerImpacts.setLabelProvider(new ImpactObservableMapLabelProvider(observeMaps, uimaRoot));
-			//
-			comboViewerCompositionRule.setContentProvider(new ObservableListContentProvider());
-			comboViewerCompositionRule.setLabelProvider(new CompositionRuleLabelProvider());
-			comboViewerCompositionRule.setInput(new WritableList(CompositionRules.VALUES, CompositionRules.class));
-			//
-		}
-		else
-			disposeDataBindings();
-		if(observablesManager == null)
-			this.observablesManager = new ObservablesManager();
-		if(observablesImpactManager == null)
-			this.observablesImpactManager = new ObservablesManager();
-		if(crosscuttingConcern != null) {
-			//
-			if(listViewerImpacts.getInput() == null) {
-				IObservableList observableListImpacts = EMFEditObservables.observeList(editingDomain, crosscuttingConcern, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS);
-				listViewerImpacts.setInput(observableListImpacts);
-			}
-			//
-			observablesManager.runAndCollect(new Runnable() {
-				public void run() {
+	protected void initDataBindingsCC() {
+		this.disposeDataBindingsCC();
+		bindingContextCC = new EMFDataBindingContext();
+//		observablesManagerCC = new ObservablesManager();
+	
+//		observablesManagerCC.runAndCollect(new Runnable() {
+//			public void run() {
+				if(listViewerImpacts.getContentProvider() == null) {
+					ObservableListContentProvider listImpactsContentProvider = new ObservableListContentProvider();
+					listViewerImpacts.setContentProvider(listImpactsContentProvider);
+					//
+					IObservableMap[] observeMaps = EMFEditObservables.observeMaps(editingDomain, listImpactsContentProvider.getKnownElements(), new EStructuralFeature[] {
+						REAssistantModelPackage.Literals.IMPACT__COMPOSITION_RULE,
+						REAssistantModelPackage.Literals.IMPACT__DOCUMENT,
+						REAssistantModelPackage.Literals.IMPACT__SECTION,
+						REAssistantModelPackage.Literals.IMPACT__SENTENCE				
+					});
+					listViewerImpacts.setLabelProvider(new ImpactObservableMapLabelProvider(observeMaps, uimaRoot));
+				}
+				//
+				if(comboViewerCompositionRule.getContentProvider() == null) {
+					comboViewerCompositionRule.setContentProvider(new ObservableListContentProvider());
+					comboViewerCompositionRule.setLabelProvider(new CompositionRuleLabelProvider());
+					comboViewerCompositionRule.setInput(new WritableList(CompositionRules.VALUES, CompositionRules.class));
+				}
+				//
+				if(crosscuttingConcern != null) {
+					//
+					if(listViewerImpacts.getInput() == null) {
+						IObservableList observableListImpacts = EMFEditObservables.observeList(editingDomain, crosscuttingConcern, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS);
+						listViewerImpacts.setInput(observableListImpacts);
+					}
 					//
 					IObservableValue textIdObserveTextObserveWidget = SWTObservables.observeText(textId, SWT.FocusOut);
 					IObservableValue sectionIdObserveValue = EMFEditObservables.observeValue(editingDomain, crosscuttingConcern, REAssistantModelPackage.Literals.IDENTIFIABLE__ID);
-					bindingId = bindingContext.bindValue(textIdObserveTextObserveWidget, sectionIdObserveValue, null, null);
+					bindingContextCC.bindValue(textIdObserveTextObserveWidget, sectionIdObserveValue, null, null);
 					//
 					IObservableValue textNameObserveTextObserveWidget = SWTObservables.observeText(textName, SWT.FocusOut);
 					IObservableValue sectionNameObserveValue = EMFEditObservables.observeValue(editingDomain, crosscuttingConcern, REAssistantModelPackage.Literals.NAMEABLE__NAME);
-					bindingName = bindingContext.bindValue(textNameObserveTextObserveWidget, sectionNameObserveValue, null, null);
+					bindingContextCC.bindValue(textNameObserveTextObserveWidget, sectionNameObserveValue, null, null);
 					//
 					IObservableValue textDescriptionObserveTextObserveWidget = SWTObservables.observeText(textDescription, SWT.FocusOut);
 					IObservableValue sectionDescriptionObserveValue = EMFEditObservables.observeValue(editingDomain, crosscuttingConcern, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__DESCRIPTION);
-					bindingDescription = bindingContext.bindValue(textDescriptionObserveTextObserveWidget, sectionDescriptionObserveValue, null, null);
+					bindingContextCC.bindValue(textDescriptionObserveTextObserveWidget, sectionDescriptionObserveValue, null, null);
 					//
-				}
-			});
-			//
-			if(listenerImpacts != null)
-				listViewerImpacts.removePostSelectionChangedListener(listenerImpacts);
-			listenerImpacts = new ISelectionChangedListener() {
-				@Override
-				public void selectionChanged(SelectionChangedEvent event) {
-					final Impact impact = (Impact)((StructuredSelection)event.getSelection()).getFirstElement();
-					//
-					if(bindingRealization != null)
-						bindingContext.removeBinding(bindingRealization);
-					if(bindingCompositionRule != null)
-						bindingContext.removeBinding(bindingCompositionRule);
-					observablesImpactManager.dispose();
-					//
-					if(impact != null) {
-						observablesImpactManager.runAndCollect(new Runnable() {
-							public void run() {
-								//
-								IObservableValue textRealizationObserveTextObserveWidget = SWTObservables.observeText(textRealization, SWT.FocusOut);
-								IObservableValue sectionRealizationObserveValue = EMFEditObservables.observeValue(editingDomain, impact, REAssistantModelPackage.Literals.IMPACT__REALIZATION);
-								bindingRealization = bindingContext.bindValue(textRealizationObserveTextObserveWidget, sectionRealizationObserveValue, null, null);
-								//
-								IObservableValue compositionContentObserveComboObserveWidget = ViewersObservables.observeSingleSelection(comboViewerCompositionRule);
-								IObservableValue compositionContentObserveValue = EMFEditObservables.observeValue(editingDomain, impact, REAssistantModelPackage.Literals.IMPACT__COMPOSITION_RULE);
-								bindingCompositionRule = bindingContext.bindValue(compositionContentObserveComboObserveWidget, compositionContentObserveValue, null, null);
-								//
-							}
-						});
-						//
-						textDocument.setText(impact.getDocument().getName());
-						StringBuffer buffer = new StringBuffer();
-						for(Sentence sentence : uimaRoot.getContext(impact.getDocument(), impact.getSection(), impact.getSentence())) {
-							buffer.append(uimaRoot.getCoveredText(sentence)).append("\n");
+					if(listenerImpacts != null)
+						listViewerImpacts.removePostSelectionChangedListener(listenerImpacts);
+					listenerImpacts = new ISelectionChangedListener() {
+						@Override
+						public void selectionChanged(SelectionChangedEvent event) {
+							Impact impact = (Impact)((StructuredSelection)event.getSelection()).getFirstElement();
+							initDataBindingsImpact(impact);
 						}
-						textContext.setText(buffer.toString());
-						textSentence.setText(uimaRoot.getCoveredText(impact.getSentence()));
-					}
-					else {
-						textDocument.setText("");
-						textContext.setText("");
-						textSentence.setText("");						
-					}
+					};
+					listViewerImpacts.addPostSelectionChangedListener(listenerImpacts);
 				}
-			};
-			listViewerImpacts.addPostSelectionChangedListener(listenerImpacts);
-		}
-		return bindingContext;
+			}
+//		});
+//	}
+	
+	public void initDataBindingsImpact(final Impact impact) {
+		this.disposeDataBindingsImpact();
+		bindingContextImpact = new EMFDataBindingContext();
+//		observablesManagerImpact = new ObservablesManager();
+
+//		observablesManagerImpact.runAndCollect(new Runnable() {
+//			public void run() {
+				if(impact != null) {
+					//
+					IObservableValue textRealizationObserveTextObserveWidget = SWTObservables.observeText(textRealization, SWT.FocusOut);
+					IObservableValue sectionRealizationObserveValue = EMFEditObservables.observeValue(editingDomain, impact, REAssistantModelPackage.Literals.IMPACT__REALIZATION);
+					bindingContextImpact.bindValue(textRealizationObserveTextObserveWidget, sectionRealizationObserveValue, null, null);
+					//
+					IObservableValue compositionContentObserveComboObserveWidget = ViewersObservables.observeSingleSelection(comboViewerCompositionRule);
+					IObservableValue compositionContentObserveValue = EMFEditObservables.observeValue(editingDomain, impact, REAssistantModelPackage.Literals.IMPACT__COMPOSITION_RULE);
+					bindingContextImpact.bindValue(compositionContentObserveComboObserveWidget, compositionContentObserveValue, null, null);
+					//
+					textDocument.setText(impact.getDocument().getName());
+					StringBuffer buffer = new StringBuffer();
+					for(Sentence sentence : uimaRoot.getContext(impact.getDocument(), impact.getSection(), impact.getSentence())) {
+						buffer.append(uimaRoot.getCoveredText(sentence)).append("\n");
+					}
+					textContext.setText(buffer.toString());
+					textSentence.setText(uimaRoot.getCoveredText(impact.getSentence()));
+				}
+				else {
+					textDocument.setText("");
+					textContext.setText("");
+					textSentence.setText("");						
+				}
+//			}
+//		});
 	}
 	
-	public void disposeDataBindings() {
-		if(bindingContext != null) {
-			if(bindingId != null)
-				bindingContext.removeBinding(bindingId);
-			if(bindingName != null)
-				bindingContext.removeBinding(bindingName);
-			if(bindingDescription != null)
-				bindingContext.removeBinding(bindingDescription);
-			if(bindingRealization != null)
-				bindingContext.removeBinding(bindingRealization);
-			if(bindingCompositionRule != null)
-				bindingContext.removeBinding(bindingCompositionRule);
-		}
-		if(observablesManager != null)
-			observablesManager.dispose();
-		if(observablesImpactManager != null)
-			observablesImpactManager.dispose();
+	public void disposeDataBindingsCC() {
+		if(bindingContextCC != null)
+			bindingContextCC.dispose();
+//		if(observablesManagerCC != null)
+//			observablesManagerCC.dispose();
+	}
+
+	public void disposeDataBindingsImpact() {
+		if(bindingContextImpact != null)
+			bindingContextImpact.dispose();
+//		if(observablesManagerImpact != null)
+//			observablesManagerImpact.dispose();
 	}
 	
 	@Override
 	public void dispose() {
-		this.disposeDataBindings();
+		this.disposeDataBindingsCC();
+		this.disposeDataBindingsImpact();
 	}
 	
 	public void registerTextControls() {
