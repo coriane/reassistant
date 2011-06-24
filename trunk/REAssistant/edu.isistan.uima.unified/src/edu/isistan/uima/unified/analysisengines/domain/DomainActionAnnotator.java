@@ -10,13 +10,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import mulan.classifier.InvalidDataException;
 import mulan.classifier.ModelInitializationException;
 import mulan.classifier.MultiLabelLearner;
 import mulan.classifier.MultiLabelOutput;
-import mulan.classifier.neural.BPMLL;
 import mulan.data.LabelNode;
 import mulan.data.LabelsBuilder;
 import mulan.data.LabelsMetaData;
@@ -36,7 +34,6 @@ import weka.core.FastVector;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.SparseInstance;
-import weka.core.stemmers.SnowballStemmer;
 import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.StringToWordVector;
 
@@ -46,9 +43,9 @@ import edu.isistan.uima.unified.typesystems.nlp.Sentence;
 import edu.isistan.uima.unified.typesystems.nlp.Token;
 import edu.isistan.uima.unified.typesystems.srl.Argument;
 import edu.isistan.uima.unified.typesystems.srl.Predicate;
-import edu.stanford.nlp.tagger.maxent.MaxentTagger;
+import edu.isistan.uima.unified.utils.SnowballStemmer;
 
-@SuppressWarnings({ "deprecation", "rawtypes", "unchecked", "unused"})
+@SuppressWarnings({ "deprecation", "rawtypes", "unchecked"})
 public class DomainActionAnnotator extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name="model")
 	private String modelName;
@@ -92,9 +89,9 @@ public class DomainActionAnnotator extends JCasAnnotator_ImplBase {
 			ObjectInputStream in = new ObjectInputStream(fis); 
 			learner = (MultiLabelLearner) in.readObject();
 			fis.close();
-			//
+				
 			label = LabelsBuilder.createLabels(labelName);
-			//
+			
 			reader = new BufferedReader(new FileReader(sourceName));
 			source = new Instances(reader);
 			//
@@ -185,8 +182,8 @@ public class DomainActionAnnotator extends JCasAnnotator_ImplBase {
 		int counter = 0;
 		// Generate instances
 		for(Annotation sAnnotation : sAnnotations) {
-			Sentence sentenceAnnotation = (Sentence) sAnnotation;
-			String sentence = sentenceAnnotation.getCoveredText();
+			//Sentence sentenceAnnotation = (Sentence) sAnnotation;
+			//String sentence = sentenceAnnotation.getCoveredText();
 			Iterator<Annotation> predicateIterator = pAnnotations.subiterator(sAnnotation);
 			
 			while(predicateIterator.hasNext()) {				
@@ -224,6 +221,7 @@ public class DomainActionAnnotator extends JCasAnnotator_ImplBase {
 			weights(instances);
 			// Filtering
 			StringToWordVector filter = filter(source);
+			@SuppressWarnings("unused")
 			Instances fsource = Filter.useFilter(source, filter);
 			Instances finstances = Filter.useFilter(instances, filter);			
 			// Classifying
@@ -340,7 +338,8 @@ public class DomainActionAnnotator extends JCasAnnotator_ImplBase {
 		filter.setInputFormat(input);
 		filter.setIDFTransform(true);
 		filter.setUseStoplist(true);
-		filter.setStemmer(new SnowballStemmer("porter"));
+		SnowballStemmer stemmer = new SnowballStemmer();
+		filter.setStemmer(stemmer);
 		filter.setLowerCaseTokens(true);
 		return filter;
 	}
