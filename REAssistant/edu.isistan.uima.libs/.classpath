@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry exported="true" kind="lib" path="mulan.jar"/>
 	<classpathentry exported="true" kind="lib" path="weka.jar"/>
-	<classpathentry exported="true" kind="lib" path="mulan.jar" sourcepath="C:/Libraries/mulan-1.2.0/mulan-src.jar"/>
 	<classpathentry exported="true" kind="lib" path="snowball-weka.jar"/>
 	<classpathentry exported="true" kind="lib" path="uimafit-1.1.0.jar" sourcepath="C:/Libraries/uimafit-1.2.0/lib/uimafit-1.2.0-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="anna.jar"/>
