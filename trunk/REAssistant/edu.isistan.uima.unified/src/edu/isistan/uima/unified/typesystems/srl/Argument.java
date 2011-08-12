@@ -13,7 +13,7 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 
 
 /** 
- * Updated by JCasGen Fri Mar 11 15:22:52 ART 2011
+ * Updated by JCasGen Fri Aug 12 18:17:38 ART 2011
  * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/PredicateTypeDescriptor.xml
  * @generated */
 public class Argument extends IdentifiableAnnotation {

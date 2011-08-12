@@ -15,12 +15,36 @@
         <multiValued>false</multiValued>
         <mandatory>true</mandatory>
       </configurationParameter>
+      <configurationParameter>
+        <name>propbank</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>nombank</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
     </configurationParameters>
     <configurationParameterSettings>
       <nameValuePair>
         <name>model</name>
         <value>
           <string><envVarRef>MODELS_PATH</envVarRef>srl/se/lth/cs/srl/model/srl-eng.model</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>propbank</name>
+        <value>
+          <string><envVarRef>MODELS_PATH</envVarRef>srl/propbank/</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>nombank</name>
+        <value>
+          <string><envVarRef>MODELS_PATH</envVarRef>srl/nombank/</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

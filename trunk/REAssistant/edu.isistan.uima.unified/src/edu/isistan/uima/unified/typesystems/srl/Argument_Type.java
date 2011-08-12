@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Fri Mar 11 15:22:52 ART 2011
+ * Updated by JCasGen Fri Aug 12 18:17:39 ART 2011
  * @generated */
 public class Argument_Type extends IdentifiableAnnotation_Type {
   /** @generated */

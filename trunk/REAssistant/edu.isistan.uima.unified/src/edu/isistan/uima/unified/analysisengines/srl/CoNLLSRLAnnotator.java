@@ -35,9 +35,15 @@ import edu.isistan.uima.unified.typesystems.srl.Argument;
 public class CoNLLSRLAnnotator extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name="model")
 	private String modelName;
+	@ConfigurationParameter(name="propbank")
+	private String propBankName;
+	@ConfigurationParameter(name="nombank")
+	private String nomBankName;
 
 	private ZipFile zipFile;
 	private Pipeline srl;
+	
+	private CoNLLSRLAnnotatorHelper helper;
 	
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
@@ -47,7 +53,10 @@ public class CoNLLSRLAnnotator extends JCasAnnotator_ImplBase {
 			Language.setLanguage(L.eng);
 			zipFile = new ZipFile(new File(modelName));
 			srl = Pipeline.fromZipFile(zipFile);
-			// srl=Pipeline.fromZipFile(zipFile, new Step[] {Step.pd, Step.ai, Step.ac} );
+			//srl=Pipeline.fromZipFile(zipFile, new Step[] {Step.pd, Step.ai, Step.ac} );
+			//propBankName = (String) aContext.getConfigParameterValue("propbank");
+			//nomBankName = (String) aContext.getConfigParameterValue("nombank");
+			helper = new CoNLLSRLAnnotatorHelper(propBankName, nomBankName);
 		}
 		catch (Exception e) { 
 			e.printStackTrace();
@@ -181,6 +190,7 @@ public class CoNLLSRLAnnotator extends JCasAnnotator_ImplBase {
 				int rootIndex = sentence.indexOf(predicate) - 1;
 				Token root = tokenList.get(rootIndex);
 				String kind = predicate.getPOS().startsWith("V") ? "PROPBANK" : "NOMBANK";
+				String description = kind.equals("PROPBANK") ? helper.getPropbankPredicateDescription(label) : helper.getNombankPredicateDescription(label);
 				boolean passiveVoice = predicate.isPassiveVoiceEng();
 				List<Argument> arguments = new LinkedList<Argument>();
 
@@ -191,6 +201,8 @@ public class CoNLLSRLAnnotator extends JCasAnnotator_ImplBase {
 				
 				for(Yield yield : yields) {
 					String argumentLabel = yield.getArgLabel();
+					String argumentDescription = kind.equals("PROPBANK") ? helper.getPropbankArgumentDescription(label, argumentLabel) : helper.getNombankArgumentDescription(label, argumentLabel);
+					
 					Word first = yield.first();
 					int firstIndex = sentence.indexOf(first);
 					Word last = yield.last();
@@ -215,12 +227,12 @@ public class CoNLLSRLAnnotator extends JCasAnnotator_ImplBase {
 						yieldEnd = argumentRoot.getEnd();
 					}
 						
-					Argument argument = AnnotationGenerator.generateArgument(yieldBegin, yieldEnd, argumentLabel, "", argumentRoot, yieldList, aJCas);
+					Argument argument = AnnotationGenerator.generateArgument(yieldBegin, yieldEnd, argumentLabel, argumentDescription, argumentRoot, yieldList, aJCas);
 					arguments.add(argument);
 				}
 				int begin = root.getBegin();
 				int end = root.getEnd();
-				AnnotationGenerator.generatePredicate(begin, end, label, root, kind, passiveVoice, arguments, aJCas);
+				AnnotationGenerator.generatePredicate(begin, end, label, description, root, kind, passiveVoice, arguments, aJCas);
 			}
 		}
 	}

@@ -233,8 +233,17 @@ public class SRLPackageImpl extends EPackageImpl implements SRLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPredicate_Description() {
+		return (EAttribute)predicateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getPredicate_Root() {
-		return (EReference)predicateEClass.getEStructuralFeatures().get(1);
+		return (EReference)predicateEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -243,15 +252,6 @@ public class SRLPackageImpl extends EPackageImpl implements SRLPackage {
 	 * @generated
 	 */
 	public EAttribute getPredicate_Kind() {
-		return (EAttribute)predicateEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPredicate_PassiveVoice() {
 		return (EAttribute)predicateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -260,8 +260,17 @@ public class SRLPackageImpl extends EPackageImpl implements SRLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPredicate_PassiveVoice() {
+		return (EAttribute)predicateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getPredicate_Arguments() {
-		return (EReference)predicateEClass.getEStructuralFeatures().get(4);
+		return (EReference)predicateEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -381,6 +390,7 @@ public class SRLPackageImpl extends EPackageImpl implements SRLPackage {
 
 		predicateEClass = createEClass(PREDICATE);
 		createEAttribute(predicateEClass, PREDICATE__LABEL);
+		createEAttribute(predicateEClass, PREDICATE__DESCRIPTION);
 		createEReference(predicateEClass, PREDICATE__ROOT);
 		createEAttribute(predicateEClass, PREDICATE__KIND);
 		createEAttribute(predicateEClass, PREDICATE__PASSIVE_VOICE);
@@ -445,6 +455,7 @@ public class SRLPackageImpl extends EPackageImpl implements SRLPackage {
 
 		initEClass(predicateEClass, Predicate.class, "Predicate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPredicate_Label(), ecorePackage.getEString(), "label", null, 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPredicate_Description(), ecorePackage.getEString(), "description", null, 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPredicate_Root(), theNLPPackage.getToken(), null, "root", null, 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPredicate_Kind(), ecorePackage.getEString(), "kind", null, 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPredicate_PassiveVoice(), ecorePackage.getEBoolean(), "passiveVoice", null, 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

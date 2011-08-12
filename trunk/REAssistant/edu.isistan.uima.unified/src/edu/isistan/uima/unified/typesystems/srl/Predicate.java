@@ -13,7 +13,7 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 
 
 /** 
- * Updated by JCasGen Fri Mar 11 15:22:52 ART 2011
+ * Updated by JCasGen Fri Aug 12 18:17:39 ART 2011
  * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/PredicateTypeDescriptor.xml
  * @generated */
 public class Predicate extends IdentifiableAnnotation {
@@ -77,6 +77,24 @@ public class Predicate extends IdentifiableAnnotation {
     if (Predicate_Type.featOkTst && ((Predicate_Type)jcasType).casFeat_label == null)
       jcasType.jcas.throwFeatMissing("label", "edu.isistan.uima.unified.typesystems.srl.Predicate");
     jcasType.ll_cas.ll_setStringValue(addr, ((Predicate_Type)jcasType).casFeatCode_label, v);}    
+   
+    
+  //*--------------*
+  //* Feature: description
+
+  /** getter for description - gets 
+   * @generated */
+  public String getDescription() {
+    if (Predicate_Type.featOkTst && ((Predicate_Type)jcasType).casFeat_description == null)
+      jcasType.jcas.throwFeatMissing("description", "edu.isistan.uima.unified.typesystems.srl.Predicate");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Predicate_Type)jcasType).casFeatCode_description);}
+    
+  /** setter for description - sets  
+   * @generated */
+  public void setDescription(String v) {
+    if (Predicate_Type.featOkTst && ((Predicate_Type)jcasType).casFeat_description == null)
+      jcasType.jcas.throwFeatMissing("description", "edu.isistan.uima.unified.typesystems.srl.Predicate");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Predicate_Type)jcasType).casFeatCode_description, v);}    
    
     
   //*--------------*

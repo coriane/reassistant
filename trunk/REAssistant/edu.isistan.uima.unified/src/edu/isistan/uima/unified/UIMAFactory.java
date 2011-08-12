@@ -408,7 +408,9 @@ public class UIMAFactory {
 		if(!cache.containsKey(key)) {
 			AnalysisEngine analysisEngine = 
 				AnalysisEngineFactory.createPrimitive(CoNLLSRLAnnotator.class, typeSystemDescription, typePriorities,
-				"model", getModelsPath() + "srl/se/lth/cs/srl/model/srl-eng.model");
+				"model", getModelsPath() + "srl/se/lth/cs/srl/model/srl-eng.model",
+				"propbank", getModelsPath() + "srl/propbank/",
+				"nombank", getModelsPath() + "srl/nombank/");
 			cache.put(key, analysisEngine);
 		}
 		return (AnalysisEngine) cache.get(key);

@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Mon Jun 13 12:00:10 ART 2011
+ * Updated by JCasGen Fri Aug 12 18:17:38 ART 2011
  * @generated */
 public class Token_Type extends IdentifiableAnnotation_Type {
   /** @generated */

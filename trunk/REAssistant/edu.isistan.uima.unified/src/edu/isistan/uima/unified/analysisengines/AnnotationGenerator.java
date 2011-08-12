@@ -200,12 +200,13 @@ public class AnnotationGenerator {
 		return annotation;
 	}
 	
-	public static void generatePredicate(int begin, int end, String label, Token root, String kind, boolean passiveVoice, List<Argument> arguments, JCas aJCas) {
+	public static void generatePredicate(int begin, int end, String label, String description, Token root, String kind, boolean passiveVoice, List<Argument> arguments, JCas aJCas) {
 		Predicate annotation = new Predicate(aJCas);
 		annotation.setIdentification(UUID.randomUUID().toString());
 		annotation.setBegin(begin);
 		annotation.setEnd(end);
 		annotation.setLabel(label);
+		annotation.setDescription(description);
 		annotation.setRoot(root);
 		annotation.setKind(kind);
 		annotation.setPassiveVoice(passiveVoice);
