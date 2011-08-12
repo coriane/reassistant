@@ -18,15 +18,18 @@ public class UIMAProcessorTester {
 	}
 	
 	public void rebuildUIMA() {
+		for(String filename : filenames)
+			rebuildUIMA(filename);
+	}
+	
+	public void rebuildUIMA(String filename) {
 		String inputExtension = ".ucs";
 		String outputExtension = ".uima";
 		String outputPath = inputPath;
 
-		for(String filename : filenames) {
-			String input = inputPath + filename + inputExtension;
-			String output = outputPath + filename + outputExtension;
-			UIMAProcessor.getInstance().execute(input, output);
-		}
+		String input = inputPath + filename + inputExtension;
+		String output = outputPath + filename + outputExtension;
+		UIMAProcessor.getInstance().execute(input, output);
 	}
 	
 	public void extractCSV() {
@@ -53,7 +56,7 @@ public class UIMAProcessorTester {
 	
 	public static void main(String[] args) {
 		UIMAProcessorTester tester = new UIMAProcessorTester();
-		tester.rebuildUIMA();
+		tester.rebuildUIMA("HWS");
 		//tester.extractCSV();
 		//tester.domainLabeling();
 	}

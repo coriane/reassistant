@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link edu.isistan.uima.unified.typesystems.srl.impl.PredicateImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link edu.isistan.uima.unified.typesystems.srl.impl.PredicateImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.srl.impl.PredicateImpl#getRoot <em>Root</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.srl.impl.PredicateImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.srl.impl.PredicateImpl#isPassiveVoice <em>Passive Voice</em>}</li>
@@ -64,6 +65,26 @@ public class PredicateImpl extends IdentifiableAnnotationImpl implements Predica
 	 * @ordered
 	 */
 	protected String label = LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getRoot() <em>Root</em>}' reference.
@@ -170,6 +191,27 @@ public class PredicateImpl extends IdentifiableAnnotationImpl implements Predica
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SRLPackage.PREDICATE__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Token getRoot() {
 		if (root != null && root.eIsProxy()) {
 			InternalEObject oldRoot = (InternalEObject)root;
@@ -267,6 +309,8 @@ public class PredicateImpl extends IdentifiableAnnotationImpl implements Predica
 		switch (featureID) {
 			case SRLPackage.PREDICATE__LABEL:
 				return getLabel();
+			case SRLPackage.PREDICATE__DESCRIPTION:
+				return getDescription();
 			case SRLPackage.PREDICATE__ROOT:
 				if (resolve) return getRoot();
 				return basicGetRoot();
@@ -291,6 +335,9 @@ public class PredicateImpl extends IdentifiableAnnotationImpl implements Predica
 		switch (featureID) {
 			case SRLPackage.PREDICATE__LABEL:
 				setLabel((String)newValue);
+				return;
+			case SRLPackage.PREDICATE__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 			case SRLPackage.PREDICATE__ROOT:
 				setRoot((Token)newValue);
@@ -320,6 +367,9 @@ public class PredicateImpl extends IdentifiableAnnotationImpl implements Predica
 			case SRLPackage.PREDICATE__LABEL:
 				setLabel(LABEL_EDEFAULT);
 				return;
+			case SRLPackage.PREDICATE__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 			case SRLPackage.PREDICATE__ROOT:
 				setRoot((Token)null);
 				return;
@@ -346,6 +396,8 @@ public class PredicateImpl extends IdentifiableAnnotationImpl implements Predica
 		switch (featureID) {
 			case SRLPackage.PREDICATE__LABEL:
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
+			case SRLPackage.PREDICATE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case SRLPackage.PREDICATE__ROOT:
 				return root != null;
 			case SRLPackage.PREDICATE__KIND:
@@ -370,6 +422,8 @@ public class PredicateImpl extends IdentifiableAnnotationImpl implements Predica
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (label: ");
 		result.append(label);
+		result.append(", description: ");
+		result.append(description);
 		result.append(", kind: ");
 		result.append(kind);
 		result.append(", passiveVoice: ");

@@ -21,6 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link edu.isistan.uima.unified.typesystems.srl.Predicate#getLabel <em>Label</em>}</li>
+ *   <li>{@link edu.isistan.uima.unified.typesystems.srl.Predicate#getDescription <em>Description</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.srl.Predicate#getRoot <em>Root</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.srl.Predicate#getKind <em>Kind</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.srl.Predicate#isPassiveVoice <em>Passive Voice</em>}</li>
@@ -58,6 +59,32 @@ public interface Predicate extends IdentifiableAnnotation {
 	 * @generated
 	 */
 	void setLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see edu.isistan.uima.unified.typesystems.srl.SRLPackage#getPredicate_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link edu.isistan.uima.unified.typesystems.srl.Predicate#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Root</b></em>' reference.

@@ -68,6 +68,7 @@ public class PredicateItemProvider
 			super.getPropertyDescriptors(object);
 
 			addLabelPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 			addRootPropertyDescriptor(object);
 			addKindPropertyDescriptor(object);
 			addPassiveVoicePropertyDescriptor(object);
@@ -90,6 +91,28 @@ public class PredicateItemProvider
 				 getString("_UI_Predicate_label_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Predicate_label_feature", "_UI_Predicate_type"),
 				 SRLPackage.Literals.PREDICATE__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Predicate_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Predicate_description_feature", "_UI_Predicate_type"),
+				 SRLPackage.Literals.PREDICATE__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -222,6 +245,7 @@ public class PredicateItemProvider
 
 		switch (notification.getFeatureID(Predicate.class)) {
 			case SRLPackage.PREDICATE__LABEL:
+			case SRLPackage.PREDICATE__DESCRIPTION:
 			case SRLPackage.PREDICATE__KIND:
 			case SRLPackage.PREDICATE__PASSIVE_VOICE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

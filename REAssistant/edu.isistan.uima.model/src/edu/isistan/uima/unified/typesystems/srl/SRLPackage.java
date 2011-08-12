@@ -208,13 +208,22 @@ public interface SRLPackage extends EPackage {
 	int PREDICATE__LABEL = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE__DESCRIPTION = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Root</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__ROOT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 1;
+	int PREDICATE__ROOT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Kind</b></em>' attribute.
@@ -223,7 +232,7 @@ public interface SRLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__KIND = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 2;
+	int PREDICATE__KIND = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Passive Voice</b></em>' attribute.
@@ -232,7 +241,7 @@ public interface SRLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__PASSIVE_VOICE = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 3;
+	int PREDICATE__PASSIVE_VOICE = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Arguments</b></em>' reference list.
@@ -241,7 +250,7 @@ public interface SRLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__ARGUMENTS = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 4;
+	int PREDICATE__ARGUMENTS = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Predicate</em>' class.
@@ -250,7 +259,7 @@ public interface SRLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 5;
+	int PREDICATE_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link edu.isistan.uima.unified.typesystems.srl.impl.RoleImpl <em>Role</em>}' class.
@@ -502,6 +511,17 @@ public interface SRLPackage extends EPackage {
 	EAttribute getPredicate_Label();
 
 	/**
+	 * Returns the meta object for the attribute '{@link edu.isistan.uima.unified.typesystems.srl.Predicate#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.srl.Predicate#getDescription()
+	 * @see #getPredicate()
+	 * @generated
+	 */
+	EAttribute getPredicate_Description();
+
+	/**
 	 * Returns the meta object for the reference '{@link edu.isistan.uima.unified.typesystems.srl.Predicate#getRoot <em>Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -723,6 +743,14 @@ public interface SRLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PREDICATE__LABEL = eINSTANCE.getPredicate_Label();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PREDICATE__DESCRIPTION = eINSTANCE.getPredicate_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Root</b></em>' reference feature.

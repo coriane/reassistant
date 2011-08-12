@@ -21,6 +21,11 @@
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
         <featureDescription>
+          <name>description</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
           <name>root</name>
           <description/>
           <rangeTypeName>edu.isistan.uima.unified.typesystems.nlp.Token</rangeTypeName>

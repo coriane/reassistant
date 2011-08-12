@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Fri Mar 11 15:22:52 ART 2011
+ * Updated by JCasGen Fri Aug 12 18:17:39 ART 2011
  * @generated */
 public class Predicate_Type extends IdentifiableAnnotation_Type {
   /** @generated */
@@ -56,6 +56,24 @@ public class Predicate_Type extends IdentifiableAnnotation_Type {
         if (featOkTst && casFeat_label == null)
       jcas.throwFeatMissing("label", "edu.isistan.uima.unified.typesystems.srl.Predicate");
     ll_cas.ll_setStringValue(addr, casFeatCode_label, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_description;
+  /** @generated */
+  final int     casFeatCode_description;
+  /** @generated */ 
+  public String getDescription(int addr) {
+        if (featOkTst && casFeat_description == null)
+      jcas.throwFeatMissing("description", "edu.isistan.uima.unified.typesystems.srl.Predicate");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_description);
+  }
+  /** @generated */    
+  public void setDescription(int addr, String v) {
+        if (featOkTst && casFeat_description == null)
+      jcas.throwFeatMissing("description", "edu.isistan.uima.unified.typesystems.srl.Predicate");
+    ll_cas.ll_setStringValue(addr, casFeatCode_description, v);}
     
   
  
@@ -136,7 +154,7 @@ public class Predicate_Type extends IdentifiableAnnotation_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_arguments), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_arguments), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_arguments), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_arguments), i);
   }
    
   /** @generated */ 
@@ -161,6 +179,10 @@ public class Predicate_Type extends IdentifiableAnnotation_Type {
  
     casFeat_label = jcas.getRequiredFeatureDE(casType, "label", "uima.cas.String", featOkTst);
     casFeatCode_label  = (null == casFeat_label) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_label).getCode();
+
+ 
+    casFeat_description = jcas.getRequiredFeatureDE(casType, "description", "uima.cas.String", featOkTst);
+    casFeatCode_description  = (null == casFeat_description) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_description).getCode();
 
  
     casFeat_root = jcas.getRequiredFeatureDE(casType, "root", "edu.isistan.uima.unified.typesystems.nlp.Token", featOkTst);
