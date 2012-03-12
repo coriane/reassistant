@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="edu.isistan.reassistant.ViewCategory"
+            class="edu.isistan.reassistant.evaluator.gui.view.EvaluatorViewPart"
+            icon="icons/evaluator.gif"
+            id="edu.isistan.reassistant.evaluator.gui.view.EvaluatorViewPart"
+            name="Crosscutting Concern Evaluator">
+      </view>
+   </extension>
+</plugin>
