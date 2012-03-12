@@ -18,7 +18,7 @@
             id="edu.isistan.dal.ucs.model.presentation.UCSModelModelWizard"
             name="%_UI_UCSModelModelWizard_label"
             class="edu.isistan.dal.ucs.model.presentation.UCSModelModelWizard"
-            category="edu.isistan.dal.wizards.SRSWizardCategory"
+            category="edu.isistan.reassistant.WizardCategory"
             icon="icons/full/obj16/UCSModelModelFile.gif">
          <description>%_UI_UCSModelModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
