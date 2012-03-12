@@ -71,6 +71,8 @@ public class TokenItemProvider
 			addMorphPropertyDescriptor(object);
 			addPosPropertyDescriptor(object);
 			addProbabilityPropertyDescriptor(object);
+			addStopwordPropertyDescriptor(object);
+			addStemPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -164,6 +166,50 @@ public class TokenItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Stopword feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStopwordPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Token_stopword_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Token_stopword_feature", "_UI_Token_type"),
+				 NLPPackage.Literals.TOKEN__STOPWORD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Stem feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStemPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Token_stem_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Token_stem_feature", "_UI_Token_type"),
+				 NLPPackage.Literals.TOKEN__STEM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Token.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,6 +248,8 @@ public class TokenItemProvider
 			case NLPPackage.TOKEN__MORPH:
 			case NLPPackage.TOKEN__POS:
 			case NLPPackage.TOKEN__PROBABILITY:
+			case NLPPackage.TOKEN__STOPWORD:
+			case NLPPackage.TOKEN__STEM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

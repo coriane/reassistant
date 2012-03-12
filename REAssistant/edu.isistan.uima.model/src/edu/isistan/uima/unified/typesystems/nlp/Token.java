@@ -20,6 +20,8 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
  *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.Token#getMorph <em>Morph</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.Token#getPos <em>Pos</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.Token#getProbability <em>Probability</em>}</li>
+ *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.Token#isStopword <em>Stopword</em>}</li>
+ *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.Token#getStem <em>Stem</em>}</li>
  * </ul>
  * </p>
  *
@@ -131,5 +133,57 @@ public interface Token extends IdentifiableAnnotation {
 	 * @generated
 	 */
 	void setProbability(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Stopword</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Stopword</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Stopword</em>' attribute.
+	 * @see #setStopword(boolean)
+	 * @see edu.isistan.uima.unified.typesystems.nlp.NLPPackage#getToken_Stopword()
+	 * @model
+	 * @generated
+	 */
+	boolean isStopword();
+
+	/**
+	 * Sets the value of the '{@link edu.isistan.uima.unified.typesystems.nlp.Token#isStopword <em>Stopword</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Stopword</em>' attribute.
+	 * @see #isStopword()
+	 * @generated
+	 */
+	void setStopword(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Stem</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Stem</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Stem</em>' attribute.
+	 * @see #setStem(String)
+	 * @see edu.isistan.uima.unified.typesystems.nlp.NLPPackage#getToken_Stem()
+	 * @model
+	 * @generated
+	 */
+	String getStem();
+
+	/**
+	 * Sets the value of the '{@link edu.isistan.uima.unified.typesystems.nlp.Token#getStem <em>Stem</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Stem</em>' attribute.
+	 * @see #getStem()
+	 * @generated
+	 */
+	void setStem(String value);
 
 } // Token
