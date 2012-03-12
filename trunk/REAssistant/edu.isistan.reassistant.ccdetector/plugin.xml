@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="edu.isistan.reassistant.ViewCategory"
+            class="edu.isistan.reassistant.ccdetector.gui.view.CCDetectorViewPart"
+            icon="icons/ccdetector.gif"
+            id="edu.isistan.reassistant.ccdetector.gui.view.CCDetectorViewPart"
+            name="Crosscutting Detector">
+      </view>
+   </extension>
+</plugin>
