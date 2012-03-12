@@ -4,14 +4,10 @@
    
    <extension
          point="org.eclipse.ui.newWizards">
-      <category
-            id="edu.isistan.uima.wizards.UIMAWizardCategory"
-            name="UIMA Wizards">
-      </category>
       <wizard
-            category="edu.isistan.uima.wizards.UIMAWizardCategory"
+            category="edu.isistan.reassistant.WizardCategory"
             class="edu.isistan.uima.wizards.UIMAWizard"
-            icon="icons/sample.gif"
+            icon="icons/uima.gif"
             id="edu.isistan.uima.wizards.UIMAWizard"
             name="UIMA Wizard">
          <selection class="org.eclipse.core.resources.IResource"/>
@@ -19,14 +15,26 @@
    </extension>
    
    <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            id="edu.isistan.uima.editors.UIMAEditor"
+            class="org.eclipse.ui.editors.text.TextEditor"
+            name="UIMA Editor"
+            extensions="uima"
+            icon="icons/uima.gif"
+            contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor">
+      </editor>
+   </extension>
+   
+   <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution
             objectClass="java.lang.Object"
-            id="edu.isistan.uima.popupMenu">
+            id="edu.isistan.reassistant.popupMenu">
          <menu
-            label="UIMA"
+            label="REAssistant"
             path="additions"
-            id="edu.isistan.uima.popupSubMenu">
+            id="edu.isistan.reassistant.popupSubMenu">
             <groupMarker
                name="content"/>
             <separator
@@ -46,9 +54,9 @@
 			id="edu.isistan.uima.actions.UIMAWizardAction"
 			label="Create UIMA"
 			tooltip="Launchs the UIMA wizard over the selected resource"
-			icon="icons/sample.gif"
+			icon="icons/uima.gif"
 			class="edu.isistan.uima.actions.UIMAWizardActionDelegate"
-			menubarPath="edu.isistan.uima.popupSubMenu/additions"
+			menubarPath="edu.isistan.reassistant.popupSubMenu/additions"
 			enablesFor="1">
 		    <enablement>
 				<and>

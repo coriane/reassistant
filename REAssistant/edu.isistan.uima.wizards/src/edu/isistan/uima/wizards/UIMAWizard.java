@@ -5,18 +5,27 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.jface.action.Action;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.part.ISetSelectionTarget;
+import org.eclipse.ui.progress.IProgressConstants;
 
 import edu.isistan.uima.unified.*;
 
@@ -95,8 +104,7 @@ public class UIMAWizard extends Wizard implements INewWizard {
 					try {
 						String inputURI = inputFile.getLocationURI().toString();
 						String outputURI = outputFile.getLocationURI().toString();
-						UIMAProcessor processor = UIMAProcessor.getInstance();
-						processor.execute(inputURI, outputURI);
+						executeJob(inputURI, outputURI, progressMonitor);
 					}
 					catch (Exception e) {
 						e.printStackTrace();
@@ -133,5 +141,58 @@ public class UIMAWizard extends Wizard implements INewWizard {
 			exception.printStackTrace();
 			return false;
 		}
+	}
+	
+	private void executeUIMA(String inputURI, String outputURI, IProgressMonitor monitor) {
+		UIMAProcessor processor = UIMAProcessor.getInstance();
+		processor.execute(inputURI, outputURI, monitor);
+	}
+	
+	public void executeJob(final String inputURI, final String outputURI, IProgressMonitor group) {
+		Job job = new Job("REAssistant UIMA Processing Execution") {
+			protected IStatus run(IProgressMonitor monitor) {
+				// UIMA Execution
+				executeUIMA(inputURI, outputURI, monitor);
+				//
+				setProperty(IProgressConstants.ICON_PROPERTY, null);
+				if (isModal(this)) {
+					showResults();
+				} else {
+					setProperty(IProgressConstants.KEEP_PROPERTY, Boolean.TRUE);
+					setProperty(IProgressConstants.ACTION_PROPERTY, getCompletedAction());
+				}
+				if(monitor.isCanceled())
+					return Status.CANCEL_STATUS;
+				else
+					return Status.OK_STATUS;
+			}
+
+			public boolean isModal(Job job) {
+				Boolean isModal = (Boolean)job.getProperty(IProgressConstants.PROPERTY_IN_DIALOG);
+				if(isModal == null)
+					return false;
+				return isModal.booleanValue();
+			}
+	     };
+	     job.setProgressGroup(group, 1);
+	     job.setUser(true);
+	     job.schedule();
+	}
+	
+	protected static Action getCompletedAction() {
+		return new Action("View UIMA processing execution status") {
+			public void run() {
+				Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+				MessageDialog.openInformation(shell, "UIMA processing execution complete", "The source input processing task has been succesfully completed.");
+			}
+		};
+	}
+
+	protected static void showResults() {
+		Display.getDefault().asyncExec(new Runnable() {
+			public void run() {
+				getCompletedAction().run();
+			}
+		});
 	}
 }
