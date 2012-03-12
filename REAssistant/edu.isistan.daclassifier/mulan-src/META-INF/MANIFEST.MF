@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 20.0-b11 (Sun Microsystems Inc.)
+Implementation-Title: Mulan - A Java library for multi-label learning
+Implementation-Version: 1.3.0
+
