@@ -1,11 +1,25 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: SRS Editor (Software Requirement Specification Editor)
-Bundle-SymbolicName: edu.isistan.srseditor
+Bundle-Name: %pluginName
+Bundle-SymbolicName: edu.isistan.srseditor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: edu.isistan.srseditor.Activator
-Bundle-Vendor: Alejandro Rago
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+Bundle-Activator: edu.isistan.srseditor.SRSEditorActivator
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: edu.isistan.dal;bundle-version="1.0.0",
+ edu.isistan.dal.edit;bundle-version="1.0.0",
+ org.eclipse.ui.forms;bundle-version="3.5.100",
+ org.eclipse.ui.editors;bundle-version="3.7.0",
+ org.eclipse.ui.ide;bundle-version="3.7.0",
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources;bundle-version="3.7.100",
+ org.eclipse.core.databinding;bundle-version="1.4.0",
+ org.eclipse.emf.edit.ui;bundle-version="2.7.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.7.0",
+ org.eclipse.emf.databinding.edit;bundle-version="1.2.0",
+ org.eclipse.jface.databinding;bundle-version="1.5.0",
+ org.eclipse.core.databinding.beans,
+ org.eclipse.core.databinding.property,
+ com.ibm.icu
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

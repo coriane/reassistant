@@ -38,13 +38,13 @@ import org.eclipse.ui.forms.widgets.ExpandableComposite;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.wb.swt.ResourceManager;
 
 import edu.isistan.dal.srs.model.SRSModelPackage;
 import edu.isistan.dal.ucs.model.SupplementarySpecification;
 import edu.isistan.dal.ucs.model.UCSModelFactory;
 import edu.isistan.dal.ucs.model.UCSModelPackage;
 import edu.isistan.dal.ucs.model.UCSProject;
-import edu.isistan.ucseditor.UCSEditorActivator;
 import edu.isistan.ucseditor.editor.UCSEditor;
 import edu.isistan.ucseditor.providers.SupplementarySpecificationDetailsPageProvider;
 
@@ -127,6 +127,7 @@ public class SupplementarySpecificationMasterBlock extends MasterDetailsBlock {
 		compositeBtn.setLayout(fl_compositeButtons);
 		
 		Button btnAdd = toolkit.createButton(compositeBtn, "Add", SWT.NONE);
+		btnAdd.setImage(ResourceManager.getPluginImage("edu.isistan.ucseditor", "icons/add.gif"));
 		btnAdd.setToolTipText("Add Supplementary Specification");
 		btnAdd.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -150,6 +151,7 @@ public class SupplementarySpecificationMasterBlock extends MasterDetailsBlock {
 		});
 		
 		Button btnRemove = toolkit.createButton(compositeBtn, "Remove", SWT.NONE);
+		btnRemove.setImage(ResourceManager.getPluginImage("edu.isistan.ucseditor", "icons/delete.gif"));
 		btnRemove.setToolTipText("Remove Supplementary Specification");
 		btnRemove.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -201,7 +203,7 @@ public class SupplementarySpecificationMasterBlock extends MasterDetailsBlock {
 		};
 		haction.setChecked(true);
 		haction.setToolTipText("Horizontal"); //$NON-NLS-1$
-		haction.setImageDescriptor(UCSEditorActivator.INSTANCE.getImageDescriptor(UCSEditorActivator.IMG_HORIZONTAL));
+		haction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("edu.isistan.ucseditor", "icons/horizontal.gif"));
 		Action vaction = new Action("ver", Action.AS_RADIO_BUTTON) { //$NON-NLS-1$
 			public void run() {
 				sashForm.setOrientation(SWT.VERTICAL);
@@ -210,7 +212,7 @@ public class SupplementarySpecificationMasterBlock extends MasterDetailsBlock {
 		};
 		vaction.setChecked(false);
 		vaction.setToolTipText("Vertical"); //$NON-NLS-1$
-		vaction.setImageDescriptor(UCSEditorActivator.INSTANCE.getImageDescriptor(UCSEditorActivator.IMG_VERTICAL));
+		vaction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("edu.isistan.ucseditor", "icons/vertical.gif"));
 		form.getToolBarManager().add(haction);
 		form.getToolBarManager().add(vaction);
 	}

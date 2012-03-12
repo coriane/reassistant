@@ -12,6 +12,7 @@ import org.eclipse.ui.forms.widgets.ExpandableComposite;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.wb.swt.ResourceManager;
 import org.eclipse.swt.widgets.List;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -135,7 +136,8 @@ public class ActorMasterBlock extends MasterDetailsBlock {
 		fl_compositeBtn.spacing = 5;
 		compositeBtn.setLayout(fl_compositeBtn);
 		
-		Button btnAdd = toolkit.createButton(compositeBtn, "Add Actor", SWT.NONE);
+		Button btnAdd = toolkit.createButton(compositeBtn, "Add", SWT.NONE);
+		btnAdd.setImage(ResourceManager.getPluginImage("edu.isistan.ucseditor", "icons/add.gif"));
 		btnAdd.setToolTipText("Add Actor");
 		btnAdd.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -159,6 +161,7 @@ public class ActorMasterBlock extends MasterDetailsBlock {
 		});
 		
 		Button btnRemove = toolkit.createButton(compositeBtn, "Remove", SWT.NONE);
+		btnRemove.setImage(ResourceManager.getPluginImage("edu.isistan.ucseditor", "icons/delete.gif"));
 		btnRemove.setToolTipText("Remove Actor");
 		btnRemove.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -210,7 +213,7 @@ public class ActorMasterBlock extends MasterDetailsBlock {
 		};
 		haction.setChecked(true);
 		haction.setToolTipText("Horizontal"); //$NON-NLS-1$
-		haction.setImageDescriptor(UCSEditorActivator.INSTANCE.getImageDescriptor(UCSEditorActivator.IMG_HORIZONTAL));
+		haction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("edu.isistan.ucseditor", "icons/horizontal.gif"));
 		Action vaction = new Action("ver", Action.AS_RADIO_BUTTON) { //$NON-NLS-1$
 			public void run() {
 				sashForm.setOrientation(SWT.VERTICAL);
@@ -219,7 +222,7 @@ public class ActorMasterBlock extends MasterDetailsBlock {
 		};
 		vaction.setChecked(false);
 		vaction.setToolTipText("Vertical"); //$NON-NLS-1$
-		vaction.setImageDescriptor(UCSEditorActivator.INSTANCE.getImageDescriptor(UCSEditorActivator.IMG_VERTICAL));
+		vaction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("edu.isistan.ucseditor", "icons/vertical.gif"));
 		form.getToolBarManager().add(haction);
 		form.getToolBarManager().add(vaction);
 	}

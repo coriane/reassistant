@@ -29,6 +29,7 @@ import edu.isistan.dal.srs.model.SRSModelPackage;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.wb.swt.ResourceManager;
 
 public class MultipleArtifactComposite extends Composite {
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
@@ -92,11 +93,13 @@ public class MultipleArtifactComposite extends Composite {
 		toolkit.paintBordersFor(compositeBtn);
 		
 		btnAdd = new Button(compositeBtn, SWT.NONE);
+		btnAdd.setImage(ResourceManager.getPluginImage("edu.isistan.ucseditor", "icons/add.gif"));
 		btnAdd.setSize(75, 25);
 		toolkit.adapt(btnAdd, true, true);
 		btnAdd.setText("Add");
 		
 		btnRemove = new Button(compositeBtn, SWT.NONE);
+		btnRemove.setImage(ResourceManager.getPluginImage("edu.isistan.ucseditor", "icons/delete.gif"));
 		btnRemove.setSize(75, 25);
 		toolkit.adapt(btnRemove, true, true);
 		btnRemove.setText("Remove");
