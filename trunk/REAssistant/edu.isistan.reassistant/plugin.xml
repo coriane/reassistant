@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+    <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="edu.isistan.reassistant.ViewCategory"
+            name="REAssistant Views"/>
+   </extension>
    
    <extension point="org.eclipse.ui.newWizards">
       <category
-            id="edu.isistan.reassistant.wizards.REAWizardCategory"
+            id="edu.isistan.reassistant.WizardCategory"
             name="REAssistant Wizards"/>
+   </extension>
+            
+   <extension point="org.eclipse.ui.newWizards">
       <wizard
             id="edu.isistan.reassistant.wizards.REAssistantWizard"
             name="REAssistant Model"
             class="edu.isistan.reassistant.wizards.REAssistantWizard"
-            category="edu.isistan.reassistant.wizards.REAWizardCategory"
-            icon="icons/file_obj.gif">
+            category="edu.isistan.reassistant.WizardCategory"
+            icon="icons/reassistant.gif">
          	<description>Create a new REAssistant model file</description>
       </wizard>
    </extension>
@@ -23,7 +32,7 @@
             id="edu.isistan.reassistant.editor.REAssistantEditor"
             name="REAssistant Editor"
             extensions="rea"
-            icon="icons/sample.gif"
+            icon="icons/reassistant.gif"
             contributorClass="edu.isistan.reassistant.editor.REAssistantEditorContributor">
       </editor>
    </extension>
@@ -56,7 +65,7 @@
 			id="edu.isistan.reassistant.actions.REAssistantWizardAction"
 			label="Create REA"
 			tooltip="Launchs the REAssistant Wizard over the selected resource"
-			icon="icons/sample.gif"
+			icon="icons/reassistant.gif"
 			class="edu.isistan.reassistant.actions.REAssistantWizardActionDelegate"
 			menubarPath="edu.isistan.reassistant.popupSubMenu/additions"
 			enablesFor="1">
@@ -90,13 +99,38 @@
          </menu>
          <action
 			id="edu.isistan.reassistant.actions.CCMineAction"
-			label="Mine CC"
-			tooltip="Mine crosscutting concerns using UIMA preprocessing file"
-			icon="icons/sample.gif"
+			label="Cluster Mine CC"
+			tooltip="Mine crosscutting concerns using UIMA preprocessing file and a clustering algorithm"
+			icon="icons/searchcluster.gif"
 			class="edu.isistan.reassistant.actions.CCMineActionDelegate"
+			menubarPath="edu.isistan.reassistant.editorSubMenu/additions"
+			toolbarPath="Normal/additions">
+         </action>
+         <action
+			id="edu.isistan.reassistant.actions.CCRuleMineAction"
+			label="Rule Mine CC"
+			tooltip="Mine crosscutting concerns using UIMA preprocessing file and a rule engine"
+			icon="icons/searchrule.gif"
+			class="edu.isistan.reassistant.actions.CCRuleMineActionDelegate"
 			menubarPath="edu.isistan.reassistant.editorSubMenu/additions"
 			toolbarPath="Normal/additions">
          </action>
       </editorContribution>
    </extension>
+   
+   <extension
+      id="edu.isistan.reassistant.visualiser"
+      name="REAssistant Visualiser Provider"
+      point="org.eclipse.contribution.visualiser.providers">
+      <provider
+            contentProviderClass="edu.isistan.reassistant.visualiser.REAssistantContentProvider"
+            description="Provider that shows crosscutting concerns arrange according to the source documents."
+            emptyMessage="No results"
+            id="edu.isistan.reassistant.visualiser.REAssistantVisualiser"
+            markupProviderClass="edu.isistan.reassistant.visualiser.REAssistantMarkupProvider"
+            name="REAssistant Provider"
+            priority="1"
+            title="CC Global View"/>
+   </extension>
+   
 </plugin>

@@ -45,6 +45,7 @@ import org.eclipse.ui.forms.widgets.ExpandableComposite;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.wb.swt.ResourceManager;
 
 import edu.isistan.dal.srs.model.Project;
 import edu.isistan.reassistant.components.CCSplitDialog;
@@ -155,6 +156,7 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		compositeBtn.setLayout(fl_compositeBtn);
 		
 		btnAddCC = toolkit.createButton(compositeBtn, "Add", SWT.NONE);
+		btnAddCC.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/add.gif"));
 		btnAddCC.setToolTipText("Add crosscutting concern");
 		btnAddCC.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -171,6 +173,7 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		});
 		
 		btnRemoveCC = toolkit.createButton(compositeBtn, "Remove", SWT.NONE);
+		btnRemoveCC.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/delete.gif"));
 		btnRemoveCC.setToolTipText("Remove crosscutting concern");
 		btnRemoveCC.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -193,6 +196,7 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		});
 		
 		btnJoinCC = toolkit.createButton(compositeBtn, "Join", SWT.NONE);
+		btnJoinCC.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/flat.gif"));
 		btnJoinCC.setToolTipText("Join crosscutting concerns");
 		btnJoinCC.setEnabled(false);
 		btnJoinCC.addSelectionListener(new SelectionAdapter() {
@@ -240,6 +244,7 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		});
 		
 		btnSplitCC = toolkit.createButton(compositeBtn, "Split", SWT.NONE);
+		btnSplitCC.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/hierarchical.gif"));
 		btnSplitCC.setToolTipText("Split crosscutting concern");
 		btnSplitCC.setEnabled(false);
 		btnSplitCC.addSelectionListener(new SelectionAdapter() {
@@ -357,7 +362,7 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		};
 		haction.setChecked(true);
 		haction.setToolTipText("Horizontal"); //$NON-NLS-1$
-		//haction.setImageDescriptor(UCSEditorActivator.INSTANCE.getImageDescriptor(UCSEditorActivator.IMG_HORIZONTAL));
+		haction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("edu.isistan.reassistant", "icons/horizontal.gif"));
 		Action vaction = new Action("ver", Action.AS_RADIO_BUTTON) { //$NON-NLS-1$
 			public void run() {
 				sashForm.setOrientation(SWT.VERTICAL);
@@ -366,7 +371,7 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		};
 		vaction.setChecked(false);
 		vaction.setToolTipText("Vertical"); //$NON-NLS-1$
-		//vaction.setImageDescriptor(UCSEditorActivator.INSTANCE.getImageDescriptor(UCSEditorActivator.IMG_VERTICAL));
+		vaction.setImageDescriptor(ResourceManager.getPluginImageDescriptor("edu.isistan.reassistant", "icons/vertical.gif"));
 		form.getToolBarManager().add(haction);
 		form.getToolBarManager().add(vaction);
 	}

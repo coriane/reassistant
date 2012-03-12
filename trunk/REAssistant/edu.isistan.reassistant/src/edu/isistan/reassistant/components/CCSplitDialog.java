@@ -41,6 +41,7 @@ import edu.isistan.reassistant.query.UIMAProjectQueryAdapter;
 
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.wb.swt.ResourceManager;
 
 public class CCSplitDialog extends Dialog {
 	private DataBindingContext bindingContext;
@@ -168,6 +169,7 @@ public class CCSplitDialog extends Dialog {
 		compositeBtnOp.setLayout(fl_compositeBtnOp);
 		
 		btnAdd = new Button(compositeBtnOp, SWT.NONE);
+		btnAdd.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/add.gif"));
 		btnAdd.setText("Add");
 		btnAdd.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -189,6 +191,7 @@ public class CCSplitDialog extends Dialog {
 		});
 		
 		btnRemove = new Button(compositeBtnOp, SWT.NONE);
+		btnRemove.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/delete.gif"));
 		btnRemove.setText("Remove");
 		btnRemove.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -218,6 +221,7 @@ public class CCSplitDialog extends Dialog {
 		compositeBtnMove.setLayout(fl_compositeBtnMove);
 		
 		btnUp = new Button(compositeBtnMove, SWT.NONE);
+		btnUp.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/up.gif"));
 		btnUp.setText("Up");
 		btnUp.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -247,6 +251,7 @@ public class CCSplitDialog extends Dialog {
 		});
 		
 		btnDown = new Button(compositeBtnMove, SWT.NONE);
+		btnDown.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/down.gif"));
 		btnDown.setText("Down");
 		btnDown.addSelectionListener(new SelectionAdapter() {
 			@Override

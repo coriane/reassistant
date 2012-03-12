@@ -15,9 +15,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.layout.GridData;
-import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -34,8 +32,8 @@ import edu.isistan.uima.unified.typesystems.srs.Project;
 import edu.isistan.uima.unified.typesystems.srs.Section;
 
 public class CCImpactDialog extends Dialog {
-	private ComboViewer comboViewerDocuments;
-	private ComboViewer comboViewerSections;
+	private ListViewer listViewerDocuments;
+	private ListViewer listViewerSections;
 	private ListViewer listViewerSentences;
 	
 	private Button btnOk;
@@ -57,7 +55,7 @@ public class CCImpactDialog extends Dialog {
 	 */
 	public CCImpactDialog(Shell parentShell, UIMAProjectQueryAdapter uimaRoot) {
 		super(parentShell);
-		setShellStyle(SWT.TITLE);
+		setShellStyle(SWT.RESIZE | SWT.TITLE);
 		this.uimaRoot = uimaRoot;
 		project = uimaRoot.getProject();
 		documents = uimaRoot.getDocuments(project);
@@ -66,10 +64,10 @@ public class CCImpactDialog extends Dialog {
 	public void setInitial(Document document, Section section, Sentence sentence) {
 		for(Document d : documents)
 			if(EcoreUtil.equals(d, document))
-				comboViewerDocuments.setSelection(new StructuredSelection(d), true);
+				listViewerDocuments.setSelection(new StructuredSelection(d), true);
 		for(Section s : sections)
 			if(EcoreUtil.equals(s, section))
-				comboViewerSections.setSelection(new StructuredSelection(s), true);
+				listViewerSections.setSelection(new StructuredSelection(s), true);
 		for(Sentence s : sentences)
 			if(EcoreUtil.equals(s, sentence))
 				listViewerSentences.setSelection(new StructuredSelection(s), true);
@@ -91,18 +89,18 @@ public class CCImpactDialog extends Dialog {
 		lblDocument.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
 		lblDocument.setText("Document");
 		
-		comboViewerDocuments = new ComboViewer(container, SWT.READ_ONLY);
-		Combo comboDocuments = comboViewerDocuments.getCombo();
-		comboDocuments.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		listViewerDocuments = new ListViewer(container, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+		List listDocuments = listViewerDocuments.getList();
+		listDocuments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		
 		Label lblSection = new Label(container, SWT.NONE);
 		lblSection.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_WHITE));
 		lblSection.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
 		lblSection.setText("Section");
 		
-		comboViewerSections = new ComboViewer(container, SWT.READ_ONLY);
-		Combo comboSections = comboViewerSections.getCombo();
-		comboSections.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		listViewerSections = new ListViewer(container, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+		List listSections = listViewerSections.getList();
+		listSections.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		
 		Label lblSentence = new Label(container, SWT.NONE);
 		lblSentence.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_WHITE));
@@ -113,31 +111,34 @@ public class CCImpactDialog extends Dialog {
 		List listSentences = listViewerSentences.getList();
 		listSentences.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		
-		comboViewerDocuments.addSelectionChangedListener(new ISelectionChangedListener() {
+		listViewerDocuments.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
 				StructuredSelection selection = (StructuredSelection) event.getSelection();
-				document = (Document) selection.getFirstElement();
-				sections = uimaRoot.getSections(document);
-				section = null;
-				sentences = null;
-				sentence = null;
-				comboViewerSections.setInput(new WritableList(sections, Section.class));
-				listViewerSentences.setInput(null);
-				enableBtnOk();
-				
+				if(!selection.isEmpty()) {
+					document = (Document) selection.getFirstElement();
+					sections = uimaRoot.getSections(document);
+					section = null;
+					sentences = null;
+					sentence = null;
+					listViewerSections.setInput(new WritableList(sections, Section.class));
+					listViewerSentences.setInput(null);
+					enableBtnOk();
+				}
 			}
 		});
 		
-		comboViewerSections.addSelectionChangedListener(new ISelectionChangedListener() {
+		listViewerSections.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
 				StructuredSelection selection = (StructuredSelection) event.getSelection();
-				section = (Section) selection.getFirstElement();
-				sentences = uimaRoot.getSentences(section);
-				sentence = null;
-				listViewerSentences.setInput(new WritableList(sentences, Sentence.class));
-				enableBtnOk();
+				if(!selection.isEmpty()) {
+					section = (Section) selection.getFirstElement();
+					sentences = uimaRoot.getSentences(section);
+					sentence = null;
+					listViewerSentences.setInput(new WritableList(sentences, Sentence.class));
+					enableBtnOk();
+				}
 			}
 		});
 		
@@ -145,18 +146,20 @@ public class CCImpactDialog extends Dialog {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
 				StructuredSelection selection = (StructuredSelection) event.getSelection();
-				sentence = (Sentence) selection.getFirstElement();
-				enableBtnOk();
+				if(!selection.isEmpty()) {
+					sentence = (Sentence) selection.getFirstElement();
+					enableBtnOk();
+				}
 			}
 		});
 
 		//
-		comboViewerDocuments.setContentProvider(new ObservableListContentProvider());
-		comboViewerDocuments.setLabelProvider(new DocumentLabelProvider(uimaRoot));
-		comboViewerDocuments.setInput(new WritableList(documents, Document.class));
+		listViewerDocuments.setContentProvider(new ObservableListContentProvider());
+		listViewerDocuments.setLabelProvider(new DocumentLabelProvider(uimaRoot));
+		listViewerDocuments.setInput(new WritableList(documents, Document.class));
 		//
-		comboViewerSections.setContentProvider(new ObservableListContentProvider());			
-		comboViewerSections.setLabelProvider(new SectionLabelProvider(uimaRoot));
+		listViewerSections.setContentProvider(new ObservableListContentProvider());			
+		listViewerSections.setLabelProvider(new SectionLabelProvider(uimaRoot));
 		//
 		listViewerSentences.setContentProvider(new ObservableListContentProvider());
 		listViewerSentences.setLabelProvider(new SentenceLabelProvider(uimaRoot));
@@ -181,13 +184,13 @@ public class CCImpactDialog extends Dialog {
 	 */
 	@Override
 	protected Point getInitialSize() {
-		return new Point(600, 400);
+		return new Point(900, 600);
 	}
 	
 	private void enableBtnOk() {
 		btnOk.setEnabled(
-			!comboViewerDocuments.getSelection().isEmpty() &&
-			!comboViewerSections.getSelection().isEmpty() &&
+			!listViewerDocuments.getSelection().isEmpty() &&
+			!listViewerSections.getSelection().isEmpty() &&
 			!listViewerSentences.getSelection().isEmpty()
 		);
 	}
