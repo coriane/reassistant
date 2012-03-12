@@ -16,7 +16,9 @@ public class SentenceLabelProvider extends LabelProvider {
 	@Override
 	public String getText(Object element) {
 		Sentence sentence = (Sentence) element;
+		int number = uimaRoot.indexOf(sentence, uimaRoot.getSentences());
+		String numberText = String.valueOf(number);
 		String coveredText = uimaRoot.getCoveredText(sentence);
-		return coveredText;
+		return "[" + numberText + "] " + coveredText;
 	}
 }

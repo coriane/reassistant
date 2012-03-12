@@ -43,6 +43,7 @@ import edu.isistan.reassistant.model.REAssistantProject;
 import edu.isistan.reassistant.model.provider.REAssistantModelItemProviderAdapterFactory;
 import edu.isistan.reassistant.pages.CCPage;
 import edu.isistan.reassistant.pages.CCRCTPage;
+import edu.isistan.reassistant.pages.CCTextPage;
 import edu.isistan.reassistant.query.UIMAProjectQueryAdapter;
 
 public class REAssistantEditor extends FormEditor implements IEditingDomainProvider {
@@ -53,8 +54,8 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 	
 	protected REAssistantProject modelRoot;
 	protected Project projectRoot;
-	protected UIMAProjectQueryAdapter uimaRoot;
-
+	protected UIMAProjectQueryAdapter uimaRoot;	
+	
 	public REAssistantEditor() {
 		super();
 		initializeEditingDomain();
@@ -147,11 +148,15 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 				//
 				FormPage ccPage = new CCPage(this);
 				index = addPage(ccPage);
-				setPageText(index, "Crosscutting concerns");
+				setPageText(index, "Crosscutting Concerns");
 				//
 				FormPage ccRCTPage = new CCRCTPage(this);
 				index = addPage(ccRCTPage);
-				setPageText(index, "RCT");
+				setPageText(index, "Composition Table");
+				//
+				FormPage ccTextPage = new CCTextPage(this);
+				index = addPage(ccTextPage);
+				setPageText(index, "CC Detailed View");
 				//
 				TextEditor textEditor = new TextEditor();
 				index = addPage(textEditor, getEditorInput());
@@ -172,7 +177,7 @@ public class REAssistantEditor extends FormEditor implements IEditingDomainProvi
 	
 	@Override
 	public boolean isDirty() {
-		return ((BasicCommandStack)editingDomain.getCommandStack()).isSaveNeeded();
+		return ((BasicCommandStack) editingDomain.getCommandStack()).isSaveNeeded();
 	}
 
 	@Override

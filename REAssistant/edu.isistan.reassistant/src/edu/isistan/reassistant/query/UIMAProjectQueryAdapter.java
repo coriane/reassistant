@@ -24,6 +24,7 @@ import uima.cas.CasPackage;
 import uima.tcas.Annotation;
 import uima.tcas.TCasPackage;
 
+import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 import edu.isistan.uima.unified.typesystems.TypesystemsPackage;
 import edu.isistan.uima.unified.typesystems.domain.DomainAction;
 import edu.isistan.uima.unified.typesystems.domain.DomainNumber;
@@ -176,6 +177,12 @@ public class UIMAProjectQueryAdapter {
 	
 	public EList<Sentence> getSentences(Section section) {
 		SELECT statement = new SELECT(new FROM(uimaRoots), new WHERE(cSentence.AND(cRange(section))));
+		IQueryResult result = statement.execute();
+		return fromIQueryResultToEList(result, new BasicEList<Sentence>());
+	}
+	
+	public EList<Sentence> getSentences(Document document) {
+		SELECT statement = new SELECT(new FROM(uimaRoots), new WHERE(cSentence.AND(cRange(document))));
 		IQueryResult result = statement.execute();
 		return fromIQueryResultToEList(result, new BasicEList<Sentence>());
 	}
@@ -415,6 +422,16 @@ public class UIMAProjectQueryAdapter {
 		SELECT statement = new SELECT(new FROM(uimaRoots), new WHERE(cDomainAction.AND(cRange(token))));
 		IQueryResult result = statement.execute();
 		return fromIQueryResultToEList(result, new BasicEList<DomainAction>());
+	}
+	//
+	public int indexOf(IdentifiableAnnotation annotation, EList<? extends IdentifiableAnnotation> annotations) {
+		int index = 0;
+		for(IdentifiableAnnotation ann : annotations) {
+			if(ann.getIdentification().equals(annotation.getIdentification()))
+				return index;
+			index++;
+		}
+		return -1;
 	}
 	//
 	public void test() {

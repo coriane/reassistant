@@ -38,6 +38,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.ui.forms.widgets.TableWrapData;
 import org.eclipse.ui.forms.widgets.TableWrapLayout;
+import org.eclipse.wb.swt.ResourceManager;
 
 import edu.isistan.dal.srs.model.Project;
 import edu.isistan.reassistant.components.CCImpactDialog;
@@ -205,6 +206,7 @@ public class CCDetailsPage implements IDetailsPage {
 		
 		btnAdd = toolkit.createButton(compositeBtn, "Add", SWT.NONE);
 		btnAdd.setToolTipText("Add impact");
+		btnAdd.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/add.gif"));
 		btnAdd.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -228,6 +230,7 @@ public class CCDetailsPage implements IDetailsPage {
 		
 		btnEdit = toolkit.createButton(compositeBtn, "Edit", SWT.NONE);
 		btnEdit.setToolTipText("Edit impact location (Document, Section and Sentence)");
+		btnEdit.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/properties.gif"));
 		btnEdit.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -258,6 +261,7 @@ public class CCDetailsPage implements IDetailsPage {
 		
 		btnRemove = toolkit.createButton(compositeBtn, "Remove", SWT.NONE);
 		btnRemove.setToolTipText("Remove impact");
+		btnRemove.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/delete.gif"));
 		btnRemove.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {

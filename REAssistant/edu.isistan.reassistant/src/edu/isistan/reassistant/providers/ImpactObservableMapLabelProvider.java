@@ -5,6 +5,7 @@ import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 
 import edu.isistan.reassistant.model.Impact;
 import edu.isistan.reassistant.query.UIMAProjectQueryAdapter;
+import edu.isistan.uima.unified.typesystems.nlp.Sentence;
 
 public class ImpactObservableMapLabelProvider extends ObservableMapLabelProvider {
 	private UIMAProjectQueryAdapter uimaRoot;
@@ -23,7 +24,11 @@ public class ImpactObservableMapLabelProvider extends ObservableMapLabelProvider
 		Impact impact = (Impact) element;
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("<<").append(impact.getCompositionRule().getName()).append(">>").append("\t");
-		String sentenceText = uimaRoot.getCoveredText(impact.getSentence());
+		Sentence sentence = impact.getSentence();
+		int number = uimaRoot.indexOf(sentence, uimaRoot.getSentences());
+		String numberText = String.valueOf(number);
+		buffer.append("[").append(numberText).append("] ");
+		String sentenceText = uimaRoot.getCoveredText(sentence);
 		if(sentenceText.length() > 20)
 			sentenceText = sentenceText.substring(0, 17) + "...";
 		buffer.append(sentenceText).append(" - ");

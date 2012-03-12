@@ -1,12 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: REAssistant (Requirement Engineering Assistant)
+Bundle-Name: REAssistant (Requirements Engineering Analyzer assistant)
 Bundle-SymbolicName: edu.isistan.reassistant;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: edu.isistan.reassistant.Activator
 Bundle-Vendor: Alejandro Rago
-Require-Bundle: edu.isistan.uima.unified;bundle-version="1.0.0",
+Require-Bundle: org.eclipse.contribution.visualiser;bundle-version="2.2.0",
+ edu.isistan.uima.unified;bundle-version="1.0.0",
  edu.isistan.reassistant.model.edit;bundle-version="1.0.0",
+ edu.isistan.reassistant.ccdetector;bundle-version="1.0.0",
+ edu.isistan.reassistant.ccdetector.model;bundle-version="1.0.0",
  org.eclipse.core.resources;bundle-version="3.6.0",
  org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
  org.eclipse.emf.edit.ui;bundle-version="2.6.0",
@@ -16,8 +19,12 @@ Require-Bundle: edu.isistan.uima.unified;bundle-version="1.0.0",
  org.eclipse.ui.editors;bundle-version="3.6.0",
  org.eclipse.core.runtime;bundle-version="3.6.0",
  org.eclipse.ui.forms;bundle-version="3.5.2",
- org.eclipse.ui.ide;bundle-version="3.6.2"
+ org.eclipse.ui.ide;bundle-version="3.6.2",
+ org.eclipse.jdt.core;bundle-version="3.7.3",
+ org.eclipse.jdt.ui;bundle-version="3.7.2"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: libs/grid-1.0.0.jar,
- .
+Bundle-ClassPath: .,
+ libs/grid-1.0.0.jar
+Export-Package: edu.isistan.reassistant,
+ edu.isistan.reassistant.visualiser
