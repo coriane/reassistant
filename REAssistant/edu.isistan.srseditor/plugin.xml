@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <wizard
+            id="edu.isistan.srseditor.wizards.SRSWizard"
+            name="%SRSWizard_Label"
+            class="edu.isistan.srseditor.wizards.SRSWizard"
+            category="edu.isistan.reassistant.WizardCategory"
+            icon="icons/custom/Stereotype.gif">
+         <description>%SRSWizard_Description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="edu.isistan.srseditor.editor.SRSEditor"
+            id="edu.isistan.srseditor.editor.SRSEditor"
+            name="%SRSEditor_Name"
+            extensions="%SRSEditor_FilenameExtension"
+            icon="icons/custom/Stereotype.gif"
+            contributorClass="edu.isistan.srseditor.editor.SRSEditorContributor">
+      </editor>
+   </extension>
+
+</plugin>

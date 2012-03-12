@@ -23,6 +23,7 @@ import edu.isistan.dal.srs.model.SRSModelPackage;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.wb.swt.ResourceManager;
 
 public class ArtifactComposite extends Composite {
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
@@ -89,7 +90,8 @@ public class ArtifactComposite extends Composite {
 		toolkit.adapt(lblContent, true, true);
 		lblContent.setText("Content");
 		
-		Button button = toolkit.createButton(compositeContent, "...", SWT.NONE);
+		Button button = toolkit.createButton(compositeContent, "", SWT.NONE);
+		button.setImage(ResourceManager.getPluginImage("edu.isistan.ucseditor", "icons/expandAll.gif"));
 		button.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {

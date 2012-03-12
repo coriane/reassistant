@@ -2,15 +2,12 @@
 <?eclipse version="3.2"?>
 <plugin>
    <extension point="org.eclipse.ui.newWizards">
-      <category
-            id="edu.isistan.dal.wizards.SRSWizardCategory"
-            name="%SRSWizard_Category"/>
       <wizard
             id="edu.isistan.ucseditor.wizards.UCSWizard"
             name="%UCSWizard_Label"
             class="edu.isistan.ucseditor.wizards.UCSWizard"
-            category="edu.isistan.dal.wizards.SRSWizardCategory"
-            icon="icons/file_obj.gif">
+            category="edu.isistan.reassistant.WizardCategory"
+            icon="icons/usecase.gif">
          <description>%UCSWizard_Description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
@@ -22,7 +19,7 @@
             id="edu.isistan.ucseditor.editor.UCSEditor"
             name="%UCSEditor_Name"
             extensions="%UCSEditor_FilenameExtension"
-            icon="icons/sample.gif"
+            icon="icons/usecase.gif"
             contributorClass="edu.isistan.ucseditor.editor.UCSEditorContributor">
       </editor>
    </extension>
