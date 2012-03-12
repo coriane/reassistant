@@ -7,17 +7,21 @@ import org.apache.uima.collection.CollectionException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.uimafit.component.JCasCollectionReader_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.uimafit.descriptor.ExternalResource;
 
 import edu.isistan.dal.srs.model.Document;
 import edu.isistan.dal.srs.model.Project;
 import edu.isistan.dal.srs.model.Section;
 import edu.isistan.uima.unified.analysisengines.AnnotationGenerator;
+import edu.isistan.uima.unified.sharedresources.ProgressMonitorResource;
 
 public class SRSCollectionReader extends JCasCollectionReader_ImplBase {
 	@ConfigurationParameter(name="input")
@@ -31,6 +35,10 @@ public class SRSCollectionReader extends JCasCollectionReader_ImplBase {
 	private boolean processed;
 	//
 	public static String EOL = System.getProperty("line.separator");
+	//
+	@ExternalResource(key="monitor")
+	private ProgressMonitorResource monitorResource;
+	private IProgressMonitor subMonitor;
 	//
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
@@ -54,7 +62,10 @@ public class SRSCollectionReader extends JCasCollectionReader_ImplBase {
 	@Override
 	public void getNext(JCas aJCas) throws IOException, CollectionException {
 		StringBuffer buffer = new StringBuffer();
-		
+		//
+		subMonitor = new SubProgressMonitor(monitorResource.getMonitor(), 1, SubProgressMonitor.PREPEND_MAIN_LABEL_TO_SUBTASK);
+		subMonitor.beginTask(this.getClass().getSimpleName(), project.getDocuments().size());
+		//		
 		for(Document document : project.getDocuments()) {
 			int begin = buffer.length();
 			int end = begin;
@@ -67,12 +78,16 @@ public class SRSCollectionReader extends JCasCollectionReader_ImplBase {
 				buffer.append(bufferDocument);
 				AnnotationGenerator.generateDocument(begin, end, document.getID(), document.getName(), "Document", aJCas);
 			}
+			//
+			subMonitor.worked(1);
 		}
 		
 		String text = buffer.toString();
 		aJCas.setDocumentText(text);
 		AnnotationGenerator.generateProject(0, text.length(), project.getID(), project.getName(), project.getContent(), "SRSProject", resourceURI.toString(), aJCas);
 		processed = true;
+		//
+		subMonitor.done();
 	}
 	
 	private int transverse(int begin, Section section, StringBuffer buffer, JCas aJCas) {

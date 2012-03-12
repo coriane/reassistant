@@ -15,19 +15,27 @@ import org.apache.uima.cas.text.AnnotationIndex;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubProgressMonitor;
 import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.uimafit.descriptor.ExternalResource;
 
 import edu.isistan.uima.unified.analysisengines.AnnotationGenerator;
+import edu.isistan.uima.unified.sharedresources.ProgressMonitorResource;
 import edu.isistan.uima.unified.typesystems.srs.Document;
 import edu.isistan.uima.unified.typesystems.srs.Section;
 
 public class SentenceAnnotator extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name="model")
 	private String modelName;
-	
+	//
 	protected SentenceModel model;
 	protected SentenceDetector sdetector;
+	//
+	@ExternalResource(key="monitor")
+	private ProgressMonitorResource monitorResource;
+	private IProgressMonitor subMonitor;
 	
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
@@ -57,11 +65,16 @@ public class SentenceAnnotator extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		if(sdetector == null)
 			return;
-		
+		//
+		subMonitor = new SubProgressMonitor(monitorResource.getMonitor(), 1, SubProgressMonitor.PREPEND_MAIN_LABEL_TO_SUBTASK);
+		subMonitor.subTask("Annotating sentences (OpenNLP)");
+		//
 		//String docText = aJCas.getDocumentText();
 		AnnotationIndex<Annotation> dAnnotations = aJCas.getAnnotationIndex(Document.type);
 		AnnotationIndex<Annotation> sAnnotations = aJCas.getAnnotationIndex(Section.type);
-		
+		//
+		subMonitor.beginTask(this.getClass().getSimpleName(), dAnnotations.size());
+		//
 		for(Annotation dAnnotation : dAnnotations) {
 			//Document documentAnnotation = (Document) dAnnotation;
 			//String document = dAnnotation.getCoveredText();
@@ -88,7 +101,11 @@ public class SentenceAnnotator extends JCasAnnotator_ImplBase {
 					}
 				}
 			}
+			//
+			subMonitor.worked(1);
 		}
+		//
+		subMonitor.done();
 	}
 	
 	@Override

@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Fri Aug 12 18:17:38 ART 2011
+ * Updated by JCasGen Sat Dec 10 16:39:00 ART 2011
  * @generated */
 public class Token_Type extends IdentifiableAnnotation_Type {
   /** @generated */
@@ -112,6 +112,42 @@ public class Token_Type extends IdentifiableAnnotation_Type {
     ll_cas.ll_setDoubleValue(addr, casFeatCode_probability, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_stopword;
+  /** @generated */
+  final int     casFeatCode_stopword;
+  /** @generated */ 
+  public boolean getStopword(int addr) {
+        if (featOkTst && casFeat_stopword == null)
+      jcas.throwFeatMissing("stopword", "edu.isistan.uima.unified.typesystems.nlp.Token");
+    return ll_cas.ll_getBooleanValue(addr, casFeatCode_stopword);
+  }
+  /** @generated */    
+  public void setStopword(int addr, boolean v) {
+        if (featOkTst && casFeat_stopword == null)
+      jcas.throwFeatMissing("stopword", "edu.isistan.uima.unified.typesystems.nlp.Token");
+    ll_cas.ll_setBooleanValue(addr, casFeatCode_stopword, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_stem;
+  /** @generated */
+  final int     casFeatCode_stem;
+  /** @generated */ 
+  public String getStem(int addr) {
+        if (featOkTst && casFeat_stem == null)
+      jcas.throwFeatMissing("stem", "edu.isistan.uima.unified.typesystems.nlp.Token");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_stem);
+  }
+  /** @generated */    
+  public void setStem(int addr, String v) {
+        if (featOkTst && casFeat_stem == null)
+      jcas.throwFeatMissing("stem", "edu.isistan.uima.unified.typesystems.nlp.Token");
+    ll_cas.ll_setStringValue(addr, casFeatCode_stem, v);}
+    
+  
 
 
 
@@ -136,6 +172,14 @@ public class Token_Type extends IdentifiableAnnotation_Type {
  
     casFeat_probability = jcas.getRequiredFeatureDE(casType, "probability", "uima.cas.Double", featOkTst);
     casFeatCode_probability  = (null == casFeat_probability) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_probability).getCode();
+
+ 
+    casFeat_stopword = jcas.getRequiredFeatureDE(casType, "stopword", "uima.cas.Boolean", featOkTst);
+    casFeatCode_stopword  = (null == casFeat_stopword) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_stopword).getCode();
+
+ 
+    casFeat_stem = jcas.getRequiredFeatureDE(casType, "stem", "uima.cas.String", featOkTst);
+    casFeatCode_stem  = (null == casFeat_stem) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_stem).getCode();
 
   }
 }

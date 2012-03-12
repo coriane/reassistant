@@ -11,8 +11,8 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 
 
 /** 
- * Updated by JCasGen Fri Aug 12 18:17:38 ART 2011
- * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/PredicateTypeDescriptor.xml
+ * Updated by JCasGen Sat Dec 10 16:39:00 ART 2011
+ * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/nlp/TokenTypeDescriptor.xml
  * @generated */
 public class Token extends IdentifiableAnnotation {
   /** @generated
@@ -129,6 +129,42 @@ public class Token extends IdentifiableAnnotation {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_probability == null)
       jcasType.jcas.throwFeatMissing("probability", "edu.isistan.uima.unified.typesystems.nlp.Token");
     jcasType.ll_cas.ll_setDoubleValue(addr, ((Token_Type)jcasType).casFeatCode_probability, v);}    
+   
+    
+  //*--------------*
+  //* Feature: stopword
+
+  /** getter for stopword - gets 
+   * @generated */
+  public boolean getStopword() {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_stopword == null)
+      jcasType.jcas.throwFeatMissing("stopword", "edu.isistan.uima.unified.typesystems.nlp.Token");
+    return jcasType.ll_cas.ll_getBooleanValue(addr, ((Token_Type)jcasType).casFeatCode_stopword);}
+    
+  /** setter for stopword - sets  
+   * @generated */
+  public void setStopword(boolean v) {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_stopword == null)
+      jcasType.jcas.throwFeatMissing("stopword", "edu.isistan.uima.unified.typesystems.nlp.Token");
+    jcasType.ll_cas.ll_setBooleanValue(addr, ((Token_Type)jcasType).casFeatCode_stopword, v);}    
+   
+    
+  //*--------------*
+  //* Feature: stem
+
+  /** getter for stem - gets 
+   * @generated */
+  public String getStem() {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_stem == null)
+      jcasType.jcas.throwFeatMissing("stem", "edu.isistan.uima.unified.typesystems.nlp.Token");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_stem);}
+    
+  /** setter for stem - sets  
+   * @generated */
+  public void setStem(String v) {
+    if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_stem == null)
+      jcasType.jcas.throwFeatMissing("stem", "edu.isistan.uima.unified.typesystems.nlp.Token");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Token_Type)jcasType).casFeatCode_stem, v);}    
   }
 
     

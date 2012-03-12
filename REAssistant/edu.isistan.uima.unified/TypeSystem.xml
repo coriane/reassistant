@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>ECoreTypeDescriptor</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>Alejandro Rago</vendor>
+  <imports>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/IdentifiableTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srs/ProjectTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srs/DocumentTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srs/SectionTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/nlp/SentenceTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/nlp/TokenTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/nlp/ChunkTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/nlp/CoNLLDependencyTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/nlp/SDDependencyTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/nlp/EntityTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/wordnet/SenseTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/RoleTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/StructureTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/PredicateTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/ArgumentTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/domain/DomainNumberTypeDescriptor.xml"/>
+    <import location="file:/C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/domain/DomainActionTypeDescriptor.xml"/>
+  </imports>
+</typeSystemDescription>

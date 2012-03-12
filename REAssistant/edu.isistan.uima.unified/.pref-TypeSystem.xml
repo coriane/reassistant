@@ -1,0 +1,14 @@
+#
+#Mon Mar 05 01:28:29 ART 2012
+edu.isistan.uima.unified.typesystems.nlp.Sentence.isShown=true
+edu.isistan.uima.unified.typesystems.srs.Project.style=color\=-65408;layer\=0;config\=begin;strategy\=TAG;
+edu.isistan.uima.unified.typesystems.srl.Predicate.style=color\=-16776961;layer\=0;strategy\=BRACKET;
+edu.isistan.uima.unified.typesystems.IdentifiableAnnotation.style=color\=-870730;layer\=0;strategy\=BACKGROUND;
+edu.isistan.uima.unified.typesystems.srs.Document.style=color\=-8388480;layer\=0;config\=begin;strategy\=TAG;
+edu.isistan.uima.unified.typesystems.domain.DomainAction.style=color\=-8323328;layer\=0;strategy\=BOX;
+edu.isistan.uima.unified.typesystems.domain.DomainAction.isShown=true
+edu.isistan.uima.unified.typesystems.srl.Argument.style=color\=-32576;layer\=0;strategy\=BRACKET;
+uima.tcas.DocumentAnnotation.style=color\=-856650;layer\=0;strategy\=BACKGROUND;
+edu.isistan.uima.unified.typesystems.nlp.Sentence.style=color\=-16777216;layer\=0;config\=begin;strategy\=TAG;
+edu.isistan.uima.unified.typesystems.srs.Section.style=color\=-16711936;layer\=0;config\=begin;strategy\=TAG;
+edu.isistan.uima.unified.typesystems.srl.Predicate.isShown=true

@@ -17,8 +17,11 @@ import org.apache.uima.cas.text.AnnotationIndex;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubProgressMonitor;
 import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.uimafit.descriptor.ExternalResource;
 
 import se.lth.cs.srl.corpus.Word;
 import se.lth.cs.srl.corpus.Yield;
@@ -27,6 +30,7 @@ import se.lth.cs.srl.languages.Language.L;
 import se.lth.cs.srl.pipeline.Pipeline;
 
 import edu.isistan.uima.unified.analysisengines.AnnotationGenerator;
+import edu.isistan.uima.unified.sharedresources.ProgressMonitorResource;
 import edu.isistan.uima.unified.typesystems.nlp.CoNLLDependency;
 import edu.isistan.uima.unified.typesystems.nlp.Sentence;
 import edu.isistan.uima.unified.typesystems.nlp.Token;
@@ -39,12 +43,16 @@ public class CoNLLSRLAnnotator extends JCasAnnotator_ImplBase {
 	private String propBankName;
 	@ConfigurationParameter(name="nombank")
 	private String nomBankName;
-
+	//
 	private ZipFile zipFile;
 	private Pipeline srl;
-	
+	//
 	private CoNLLSRLAnnotatorHelper helper;
-	
+	//
+	@ExternalResource(key="monitor")
+	private ProgressMonitorResource monitorResource;
+	private IProgressMonitor subMonitor;
+	//
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
 		super.initialize(aContext);
@@ -74,12 +82,17 @@ public class CoNLLSRLAnnotator extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		if(srl == null)
 			return;
-		
+		//
+		subMonitor = new SubProgressMonitor(monitorResource.getMonitor(), 1, SubProgressMonitor.PREPEND_MAIN_LABEL_TO_SUBTASK);
+		subMonitor.subTask("Annotating SRL predicates and arguments (Matetools)");
+		//
 		//String docText = aJCas.getDocumentText();
 		AnnotationIndex<Annotation> sAnnotations = aJCas.getAnnotationIndex(Sentence.type);
 		AnnotationIndex<Annotation> tAnnotations = aJCas.getAnnotationIndex(Token.type);
 		AnnotationIndex<Annotation> dAnnotations = aJCas.getAnnotationIndex(CoNLLDependency.type);
-		
+		//
+		subMonitor.beginTask(this.getClass().getSimpleName(), sAnnotations.size());
+		//
 		for(Annotation sAnnotation : sAnnotations) {
 			//Sentence sentenceAnnotation = (Sentence) sAnnotation;
 			//String sentence = sAnnotation.getCoveredText();
@@ -234,7 +247,11 @@ public class CoNLLSRLAnnotator extends JCasAnnotator_ImplBase {
 				int end = root.getEnd();
 				AnnotationGenerator.generatePredicate(begin, end, label, description, root, kind, passiveVoice, arguments, aJCas);
 			}
+			//
+			subMonitor.worked(1);
 		}
+		//
+		subMonitor.done();
 	}
 	
 	@Override

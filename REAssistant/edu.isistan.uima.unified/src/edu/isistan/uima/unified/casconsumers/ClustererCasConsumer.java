@@ -16,6 +16,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubProgressMonitor;
 import org.uimafit.component.JCasConsumer_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
 import org.uimafit.descriptor.ExternalResource;
@@ -34,6 +36,7 @@ import edu.isistan.uima.unified.algorithms.clustering.linkage.NearestNeighbour;
 import edu.isistan.uima.unified.algorithms.similarity.SimilarityMeasure;
 import edu.isistan.uima.unified.analysisengines.wordnet.JWNLInitialization;
 import edu.isistan.uima.unified.sharedresources.ClustersResource;
+import edu.isistan.uima.unified.sharedresources.ProgressMonitorResource;
 import edu.isistan.uima.unified.typesystems.nlp.Token;
 import edu.isistan.uima.unified.typesystems.srl.Role;
 import edu.isistan.uima.unified.typesystems.srl.Structure;
@@ -45,19 +48,22 @@ public class ClustererCasConsumer extends JCasConsumer_ImplBase {
 	private String jwnlName;
 	@ConfigurationParameter(name="wordnet")
 	private String wordnetName;
-	
-	@ExternalResource(key="clusters")
-	private ClustersResource clustersResource;
-	
+	//
 	@ConfigurationParameter(name="linkageType")
 	private String linkageType;
 	private LinkageMethod linkage;
-	
+	//
 	@ConfigurationParameter(name="distanceType")
 	private String distanceType;
 	private DistanceMeasure distance;
 	@ConfigurationParameter(name="minimumDistance")
 	private float minimumDistance;
+	//
+	@ExternalResource(key="monitor")
+	private ProgressMonitorResource monitorResource;
+	private IProgressMonitor subMonitor;
+	@ExternalResource(key="clusters")
+	private ClustersResource clustersResource;
 	
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
@@ -108,6 +114,10 @@ public class ClustererCasConsumer extends JCasConsumer_ImplBase {
 
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
+		//
+		subMonitor = new SubProgressMonitor(monitorResource.getMonitor(), 1, SubProgressMonitor.PREPEND_MAIN_LABEL_TO_SUBTASK);
+		subMonitor.subTask("Clustering semantically related concerns");
+		//
 		AnnotationIndex<Annotation> stAnnotations = aJCas.getAnnotationIndex(Structure.type);
 		AnnotationIndex<Annotation> rAnnotations = aJCas.getAnnotationIndex(Role.type);
 		AnnotationIndex<Annotation> seAnnotations = aJCas.getAnnotationIndex(Sense.type);
@@ -115,11 +125,13 @@ public class ClustererCasConsumer extends JCasConsumer_ImplBase {
 		Map<Cluster, Structure> mapClusters;
 		List<Cluster> initClusters;
 		List<Cluster> clusters;
-		
+		//
+		subMonitor.beginTask(this.getClass().getSimpleName(), 1);
+		//
 		mapClusters = generateClusters(stAnnotations, rAnnotations, seAnnotations, aJCas); 
 		initClusters = new ArrayList<Cluster>(mapClusters.keySet());
 		clusters = CMCMClusterer.recluster(initClusters, linkage, distance, minimumDistance);
-		
+		//
 		for (Cluster cluster : clusters) {
 			List<Structure> structureCluster = new ArrayList<Structure>();
 			List<Cluster> plain = plainCluster(cluster);
@@ -135,6 +147,9 @@ public class ClustererCasConsumer extends JCasConsumer_ImplBase {
 			}
 			clustersResource.getClusters().add(externalCluster);
 		}
+		//
+		subMonitor.worked(1);
+		subMonitor.done();
 	}
 	
 	@Override

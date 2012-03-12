@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <style type="edu.isistan.uima.unified.typesystems.domain.DomainAction" style="TAG" color="-65536" layer="0" config="begin"/>
+    <style type="edu.isistan.uima.unified.typesystems.srs.Section" style="TAG" color="-16711936" layer="0" config="begin"/>
+    <style type="edu.isistan.uima.unified.typesystems.IdentifiableAnnotation" style="BACKGROUND" color="-870730" layer="0"/>
+    <style type="edu.isistan.uima.unified.typesystems.srs.Document" style="TAG" color="-8388480" layer="0" config="begin"/>
+    <style type="edu.isistan.uima.unified.typesystems.srs.Project" style="TAG" color="-65408" layer="0" config="begin"/>
+    <style type="edu.isistan.uima.unified.typesystems.srl.Argument" style="BRACKET" color="-32576" layer="0"/>
+    <style type="edu.isistan.uima.unified.typesystems.srl.Predicate" style="BRACKET" color="-16776961" layer="0"/>
+    <style type="uima.tcas.DocumentAnnotation" style="BACKGROUND" color="-856650" layer="0"/>
+    <style type="edu.isistan.uima.unified.typesystems.nlp.Sentence" style="TAG" color="-16777216" layer="0" config="begin"/>
+    <shown type="edu.isistan.uima.unified.typesystems.domain.DomainAction" visible="true"/>
+    <shown type="edu.isistan.uima.unified.typesystems.srl.Predicate" visible="true"/>
+    <shown type="edu.isistan.uima.unified.typesystems.nlp.Sentence" visible="true"/>
+</config>

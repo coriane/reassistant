@@ -35,7 +35,7 @@ public class UIMAProcessorTester {
 	public void extractCSV() {
 		String inputExtension = ".uima";
 		String outputExtension = ".csv";
-		String outputPath = "file:///C:/Documents/Optativas/IAData/";
+		String outputPath = "file:///C:/Work/DomainActions/";
 		
 		for(String filename : filenames) {
 			String input = inputPath + filename + inputExtension;
@@ -44,20 +44,32 @@ public class UIMAProcessorTester {
 		}
 	}
 	
-	public void domainLabeling() {
+	public void domainLabelingAppend() {
 		String inputExtension = ".uima";
 		
 		for(String filename : filenames) {
 			String input = inputPath + filename + inputExtension;
 			String output = inputPath + filename + "-action" + inputExtension;
-			UIMAProcessor.getInstance().executeDomainLabeling(input, output);
+			UIMAProcessor.getInstance().executeAppendDomainLabeling(input, output);
 		}
+	}
+	
+	public void domainLabelingUpdate() {
+		String inputExtension = ".uima";
+		String filename = filenames[0];
+		
+		//for(String filename : filenames) {
+			String input = inputPath + filename + inputExtension;
+			String output = inputPath + filename + "-action" + inputExtension;
+			UIMAProcessor.getInstance().executeUpdateDomainLabeling(input, output);
+		//}
 	}
 	
 	public static void main(String[] args) {
 		UIMAProcessorTester tester = new UIMAProcessorTester();
-		tester.rebuildUIMA("HWS");
+		//tester.rebuildUIMA();
 		//tester.extractCSV();
-		//tester.domainLabeling();
+		//tester.domainLabelingAppend();
+		tester.domainLabelingUpdate();
 	}
 }
