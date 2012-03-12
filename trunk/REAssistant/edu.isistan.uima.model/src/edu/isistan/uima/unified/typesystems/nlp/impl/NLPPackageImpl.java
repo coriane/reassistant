@@ -348,6 +348,24 @@ public class NLPPackageImpl extends EPackageImpl implements NLPPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getToken_Stopword() {
+		return (EAttribute)tokenEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getToken_Stem() {
+		return (EAttribute)tokenEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public NLPFactory getNLPFactory() {
 		return (NLPFactory)getEFactoryInstance();
 	}
@@ -394,6 +412,8 @@ public class NLPPackageImpl extends EPackageImpl implements NLPPackage {
 		createEAttribute(tokenEClass, TOKEN__MORPH);
 		createEAttribute(tokenEClass, TOKEN__POS);
 		createEAttribute(tokenEClass, TOKEN__PROBABILITY);
+		createEAttribute(tokenEClass, TOKEN__STOPWORD);
+		createEAttribute(tokenEClass, TOKEN__STEM);
 	}
 
 	/**
@@ -458,6 +478,8 @@ public class NLPPackageImpl extends EPackageImpl implements NLPPackage {
 		initEAttribute(getToken_Morph(), ecorePackage.getEString(), "morph", null, 0, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToken_Pos(), ecorePackage.getEString(), "pos", null, 0, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getToken_Probability(), ecorePackage.getEDouble(), "probability", null, 0, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToken_Stopword(), ecorePackage.getEBoolean(), "stopword", null, 0, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getToken_Stem(), ecorePackage.getEString(), "stem", null, 0, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //NLPPackageImpl

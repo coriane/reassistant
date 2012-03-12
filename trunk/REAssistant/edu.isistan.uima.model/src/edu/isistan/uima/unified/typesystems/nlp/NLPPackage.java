@@ -491,13 +491,31 @@ public interface NLPPackage extends EPackage {
 	int TOKEN__PROBABILITY = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Stopword</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOKEN__STOPWORD = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Stem</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOKEN__STEM = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Token</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOKEN_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 4;
+	int TOKEN_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 6;
 
 
 	/**
@@ -693,6 +711,28 @@ public interface NLPPackage extends EPackage {
 	EAttribute getToken_Probability();
 
 	/**
+	 * Returns the meta object for the attribute '{@link edu.isistan.uima.unified.typesystems.nlp.Token#isStopword <em>Stopword</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Stopword</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.nlp.Token#isStopword()
+	 * @see #getToken()
+	 * @generated
+	 */
+	EAttribute getToken_Stopword();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.isistan.uima.unified.typesystems.nlp.Token#getStem <em>Stem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Stem</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.nlp.Token#getStem()
+	 * @see #getToken()
+	 * @generated
+	 */
+	EAttribute getToken_Stem();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -869,6 +909,22 @@ public interface NLPPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOKEN__PROBABILITY = eINSTANCE.getToken_Probability();
+
+		/**
+		 * The meta object literal for the '<em><b>Stopword</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOKEN__STOPWORD = eINSTANCE.getToken_Stopword();
+
+		/**
+		 * The meta object literal for the '<em><b>Stem</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TOKEN__STEM = eINSTANCE.getToken_Stem();
 
 	}
 

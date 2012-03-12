@@ -28,6 +28,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.impl.TokenImpl#getMorph <em>Morph</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.impl.TokenImpl#getPos <em>Pos</em>}</li>
  *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.impl.TokenImpl#getProbability <em>Probability</em>}</li>
+ *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.impl.TokenImpl#isStopword <em>Stopword</em>}</li>
+ *   <li>{@link edu.isistan.uima.unified.typesystems.nlp.impl.TokenImpl#getStem <em>Stem</em>}</li>
  * </ul>
  * </p>
  *
@@ -113,6 +115,46 @@ public class TokenImpl extends IdentifiableAnnotationImpl implements Token {
 	 * @ordered
 	 */
 	protected double probability = PROBABILITY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isStopword() <em>Stopword</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isStopword()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean STOPWORD_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isStopword() <em>Stopword</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isStopword()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean stopword = STOPWORD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStem() <em>Stem</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStem()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STEM_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getStem() <em>Stem</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStem()
+	 * @generated
+	 * @ordered
+	 */
+	protected String stem = STEM_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,6 +264,48 @@ public class TokenImpl extends IdentifiableAnnotationImpl implements Token {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isStopword() {
+		return stopword;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStopword(boolean newStopword) {
+		boolean oldStopword = stopword;
+		stopword = newStopword;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NLPPackage.TOKEN__STOPWORD, oldStopword, stopword));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getStem() {
+		return stem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStem(String newStem) {
+		String oldStem = stem;
+		stem = newStem;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NLPPackage.TOKEN__STEM, oldStem, stem));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -233,6 +317,10 @@ public class TokenImpl extends IdentifiableAnnotationImpl implements Token {
 				return getPos();
 			case NLPPackage.TOKEN__PROBABILITY:
 				return getProbability();
+			case NLPPackage.TOKEN__STOPWORD:
+				return isStopword();
+			case NLPPackage.TOKEN__STEM:
+				return getStem();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -256,6 +344,12 @@ public class TokenImpl extends IdentifiableAnnotationImpl implements Token {
 				return;
 			case NLPPackage.TOKEN__PROBABILITY:
 				setProbability((Double)newValue);
+				return;
+			case NLPPackage.TOKEN__STOPWORD:
+				setStopword((Boolean)newValue);
+				return;
+			case NLPPackage.TOKEN__STEM:
+				setStem((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -281,6 +375,12 @@ public class TokenImpl extends IdentifiableAnnotationImpl implements Token {
 			case NLPPackage.TOKEN__PROBABILITY:
 				setProbability(PROBABILITY_EDEFAULT);
 				return;
+			case NLPPackage.TOKEN__STOPWORD:
+				setStopword(STOPWORD_EDEFAULT);
+				return;
+			case NLPPackage.TOKEN__STEM:
+				setStem(STEM_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -301,6 +401,10 @@ public class TokenImpl extends IdentifiableAnnotationImpl implements Token {
 				return POS_EDEFAULT == null ? pos != null : !POS_EDEFAULT.equals(pos);
 			case NLPPackage.TOKEN__PROBABILITY:
 				return probability != PROBABILITY_EDEFAULT;
+			case NLPPackage.TOKEN__STOPWORD:
+				return stopword != STOPWORD_EDEFAULT;
+			case NLPPackage.TOKEN__STEM:
+				return STEM_EDEFAULT == null ? stem != null : !STEM_EDEFAULT.equals(stem);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -323,6 +427,10 @@ public class TokenImpl extends IdentifiableAnnotationImpl implements Token {
 		result.append(pos);
 		result.append(", probability: ");
 		result.append(probability);
+		result.append(", stopword: ");
+		result.append(stopword);
+		result.append(", stem: ");
+		result.append(stem);
 		result.append(')');
 		return result.toString();
 	}

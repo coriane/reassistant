@@ -57,6 +57,8 @@
                 <eStructuralFeatures xsi:type="ecore:EAttribute" name="pos" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
                 <eStructuralFeatures xsi:type="ecore:EAttribute" name="probability"
                     eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopword" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="stem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               </eClassifiers>
             </eSubpackages>
             <eSubpackages name="srl" nsURI="http:///edu/isistan/uima/unified/typesystems/srl.ecore"
