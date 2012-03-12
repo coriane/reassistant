@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Fri Aug 12 18:17:38 ART 2011
- * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/PredicateTypeDescriptor.xml
+ * Updated by JCasGen Sat Dec 10 16:39:00 ART 2011
+ * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/nlp/TokenTypeDescriptor.xml
  * @generated */
 public class IdentifiableAnnotation extends Annotation {
   /** @generated

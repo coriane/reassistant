@@ -264,4 +264,12 @@ public class AnnotationGenerator {
 		annotation.setChilds(array);
 		return annotation;
 	}
+
+	public static void generateStem(Token annotation, String stem, JCas aJCas) {
+		annotation.setStem(stem);
+	}
+	
+	public static void generateStopword(Token annotation, boolean stopword, JCas aJCas) {
+		annotation.setStopword(stopword);
+	}
 }

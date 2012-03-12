@@ -19,11 +19,15 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubProgressMonitor;
 import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.uimafit.descriptor.ExternalResource;
 
 import edu.isistan.uima.unified.algorithms.similarity.SimilarityMeasure;
 import edu.isistan.uima.unified.analysisengines.wordnet.JWNLInitialization;
+import edu.isistan.uima.unified.sharedresources.ProgressMonitorResource;
 import edu.isistan.uima.unified.typesystems.nlp.Sentence;
 import edu.isistan.uima.unified.typesystems.wordnet.Sense;
 
@@ -33,10 +37,14 @@ public class BanerjeeWSDAnnotator extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name="wordnet")
 	private String wordnetName;
 	protected Dictionary dictionary;
-	
+	//
 	@ConfigurationParameter(name="similarity")
 	private String similarityName;
 	protected SimilarityMeasure measure;
+	//
+	@ExternalResource(key="monitor")
+	private ProgressMonitorResource monitorResource;
+	private IProgressMonitor subMonitor;
 	
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
@@ -77,10 +85,15 @@ public class BanerjeeWSDAnnotator extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		if(dictionary == null)
 			return;
-		
+		//
+		subMonitor = new SubProgressMonitor(monitorResource.getMonitor(), 1, SubProgressMonitor.PREPEND_MAIN_LABEL_TO_SUBTASK);
+		subMonitor.subTask("Annotating word sense disambiguation (Banerjee)");
+		//
 		AnnotationIndex<Annotation> sentenceAnnotations = aJCas.getAnnotationIndex(Sentence.type);
 		AnnotationIndex<Annotation> senseAnnotations = aJCas.getAnnotationIndex(Sense.type);
-		
+		//
+		subMonitor.beginTask(this.getClass().getSimpleName(), sentenceAnnotations.size());
+		//
 		for(Annotation sAnnotation : sentenceAnnotations) {
 			//Sentence sentenceAnnotation = (Sentence) sAnnotation;
 			//String sentence = sentenceAnnotation.getCoveredText();
@@ -93,7 +106,11 @@ public class BanerjeeWSDAnnotator extends JCasAnnotator_ImplBase {
 			}
 			
 			disambiguate(senseList);
+			//
+			subMonitor.worked(1);
 		}
+		//
+		subMonitor.done();
 	}
 	
 	@Override

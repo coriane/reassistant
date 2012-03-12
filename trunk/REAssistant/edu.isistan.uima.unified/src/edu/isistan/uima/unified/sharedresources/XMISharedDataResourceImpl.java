@@ -4,7 +4,7 @@ import org.apache.uima.cas.impl.XmiSerializationSharedData;
 import org.apache.uima.resource.DataResource;
 import org.apache.uima.resource.ResourceInitializationException;
 
-public class XMISharedDataImpl implements XMISharedData {
+public class XMISharedDataResourceImpl implements XMISharedDataResource {
 	private XmiSerializationSharedData sharedData;
 
 	/**

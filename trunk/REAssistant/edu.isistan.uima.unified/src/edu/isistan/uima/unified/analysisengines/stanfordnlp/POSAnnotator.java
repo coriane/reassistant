@@ -11,10 +11,14 @@ import org.apache.uima.cas.text.AnnotationIndex;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubProgressMonitor;
 import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.uimafit.descriptor.ExternalResource;
 
 import edu.isistan.uima.unified.analysisengines.AnnotationGenerator;
+import edu.isistan.uima.unified.sharedresources.ProgressMonitorResource;
 import edu.isistan.uima.unified.typesystems.nlp.Sentence;
 import edu.isistan.uima.unified.typesystems.nlp.Token;
 import edu.stanford.nlp.ling.HasWord;
@@ -25,6 +29,10 @@ public class POSAnnotator extends JCasAnnotator_ImplBase {
 	@ConfigurationParameter(name="model")
 	private String modelName;
 	protected MaxentTagger mt;
+	//
+	@ExternalResource(key="monitor")
+	private ProgressMonitorResource monitorResource;
+	private IProgressMonitor subMonitor;
 	
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
@@ -41,11 +49,16 @@ public class POSAnnotator extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		if(mt == null)
 			return;
-		
+		//
+		subMonitor = new SubProgressMonitor(monitorResource.getMonitor(), 1, SubProgressMonitor.PREPEND_MAIN_LABEL_TO_SUBTASK);
+		subMonitor.subTask("Annotating token POS (Stanford)");
+		//
 		//String docText = aJCas.getDocumentText();
 		AnnotationIndex<Annotation> sAnnotations = aJCas.getAnnotationIndex(Sentence.type);
 		AnnotationIndex<Annotation> tAnnotations = aJCas.getAnnotationIndex(Token.type);
-		
+		//
+		subMonitor.beginTask(this.getClass().getSimpleName(), sAnnotations.size());
+		//
 		for(Annotation sAnnotation : sAnnotations) {
 			//Sentence sentenceAnnotation = (Sentence) sAnnotation;
 			//String sentence = sAnnotation.getCoveredText();
@@ -70,7 +83,11 @@ public class POSAnnotator extends JCasAnnotator_ImplBase {
 				String POSTag = taggedWord.tag();			
 				AnnotationGenerator.generatePOS(token, POSTag, aJCas);
 			}
+			//
+			subMonitor.worked(1);
 		}
+		//
+		subMonitor.done();
 	}
 	
 	@Override

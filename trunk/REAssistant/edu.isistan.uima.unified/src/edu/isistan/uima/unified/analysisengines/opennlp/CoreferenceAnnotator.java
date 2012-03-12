@@ -18,10 +18,14 @@ import org.apache.uima.cas.text.AnnotationIndex;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubProgressMonitor;
 import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.descriptor.ConfigurationParameter;
+import org.uimafit.descriptor.ExternalResource;
 
 import edu.isistan.uima.unified.analysisengines.AnnotationGenerator;
+import edu.isistan.uima.unified.sharedresources.ProgressMonitorResource;
 import edu.isistan.uima.unified.typesystems.nlp.Sentence;
 
 @SuppressWarnings("unused")
@@ -30,9 +34,13 @@ public class CoreferenceAnnotator extends JCasAnnotator_ImplBase {
 	private String parserName;
 	@ConfigurationParameter(name="linker")
 	private String linkerName;
-	
+	//
 	protected Parser parser;
 	protected TreebankLinker linker;
+	//
+	@ExternalResource(key="monitor")
+	private ProgressMonitorResource monitorResource;
+	private IProgressMonitor subMonitor;
 	
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
@@ -51,7 +59,10 @@ public class CoreferenceAnnotator extends JCasAnnotator_ImplBase {
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 		if(parser == null || linker == null)
 			return;
-		
+		//
+		subMonitor = new SubProgressMonitor(monitorResource.getMonitor(), 1, SubProgressMonitor.PREPEND_MAIN_LABEL_TO_SUBTASK);
+		subMonitor.subTask("Annotating coreferences (OpenNLP)");
+		//
 		String docText = aJCas.getDocumentText();
 		AnnotationIndex<Annotation> sAnnotations = aJCas.getAnnotationIndex(Sentence.type);
 		
@@ -66,7 +77,9 @@ public class CoreferenceAnnotator extends JCasAnnotator_ImplBase {
 		for (int i = 0; i < sentences.length; i++) {
 			sentences[i] = sentenceList.get(i);
 		}
-		
+		//
+		subMonitor.beginTask(this.getClass().getSimpleName(), sentences.length);
+		//
 		//int sentencePos = 0;
 		for(int sentenceNumber = 0; sentenceNumber < sentences.length; sentenceNumber++) {
 			String sentence = sentences[sentenceNumber];
@@ -76,7 +89,11 @@ public class CoreferenceAnnotator extends JCasAnnotator_ImplBase {
 			Mention[] extents =	linker.getMentionFinder().getMentions(dp);
 			DiscourseEntity[] discourseEntities = linker.getEntities(extents);
 			AnnotationGenerator.generateCoreference(0, 0, aJCas);
+			//
+			subMonitor.worked(1);
 		}
+		//
+		subMonitor.done();
 	}
 
 	@Override
