@@ -7,8 +7,9 @@ REAssistant helps analysts to analyze the effects of crosscutting concerns over 
 =Global visualization=
 
 The global view shows a comprehensive outlook of crosscutting concerns over all the documents. In this view we can only see approximate places in which crosscutting concerns affect the documents, but not the text involved.
-
+<p align="center">http://users.exa.unicen.edu.ar/~arago/img/REAEditor-GlobalView.png</p>
 
 =Detailed visualization=
 
 The detailed view shows a low level visualization, targetting a single document. Moreover, in this view we can appreciate the text affected by each crosscutting concern.
+<p align="center">http://users.exa.unicen.edu.ar/~arago/img/REAEditor-DetailedView.png</p>
