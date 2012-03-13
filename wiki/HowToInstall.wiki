@@ -1,27 +1,28 @@
 #summary Requisites and instructions for installating REAssistant.
 #labels Featured,Phase-Deploy
 
-= Introduction =
+= Setup =
 
 REAssitant is composed of several eclipse plugins. These plugins have been implemented using the latest version eclipse, and for that reason we need to make some things to setup REAssistant environment.
 
-= Details =
+== First Step ==
 
-First, download a clean version of Eclipse 3.7 SR2, and install the following "dependant" plugins. To do that, in Eclipse, click Help > Install New Software. Then, add the following _Update Sites_ and install them.
+Download a clean version of Eclipse 3.7 SR2, and install the following "dependant" plugins. To do that, in Eclipse, click Help > Install New Software. Then, add the following _Update Sites_ and install them.
 
   * WindowBuilder Pro - http://dl.google.com/eclipse/inst/d2wbpro/latest/3.7
   * EMF Query2 - https://hudson.eclipse.org/hudson/job/tycho-query2-nightly/lastSuccessfulBuild/artifact/targetPlatform/
   * UIMA - http://www.apache.org/dist/uima/eclipse-update-site/
 
+== Second Step ==
 
-Second, copy its *REAssistant plugin* jars (downloaded from the *Downloads* page) into the _plugins_ folder of eclipse.
+Copy *REAssistant plugin* jars (downloaded from the *Downloads* page) into the _plugins_ folder of eclipse.
 
+== Third Step ==
 
-Finally, download the _REAssistant models_ (downloaded from the *Downloads* page), uncompress them into a folder, and modify the eclipse ini file adding the following environment variable:
+Download the _REAssistant models_ (downloaded from the *Downloads* page), uncompress them into a folder, and modify the eclipse ini file adding the following environment variable:
 
   * MODELS_PATH=C:/Your/Path/REAssistant-models/ at _eclipse.ini_
 
 This way, we link the variable to the models folder.
 
-
-That's it, you now can execute and use REAssistant at your pc / mac.
+That's it, you now can execute and use REAssistant in your computer.
