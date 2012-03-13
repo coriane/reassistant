@@ -1,4 +1,4 @@
-#summary Explanation of REAssistant Crosscutting Visualizations.
+#summary Explanation of REAssistant crosscutting visualizations.
 
 =Crosscutting visualizations=
 
