@@ -31,6 +31,7 @@ import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.SaveAsDialog;
@@ -324,5 +325,12 @@ public class UCSEditor extends FormEditor implements IEditingDomainProvider {
 			 });
 		}
 		return contentOutlinePage;
+	}
+	
+	@Override
+	public void init(IEditorSite site, IEditorInput editorInput) {
+		setSite(site);
+		setInputWithNotify(editorInput);
+		setPartName(editorInput.getName());
 	}
 }

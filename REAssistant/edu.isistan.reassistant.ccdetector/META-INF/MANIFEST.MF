@@ -35,7 +35,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.query2.test;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: .
+Bundle-ClassPath: .,
+ libs/commons-logging-1.1.1.jar,
+ libs/log4j-1.2.16.jar
 Export-Package: edu.isistan.reassistant.ccdetector,
  edu.isistan.reassistant.ccdetector.gui.composite,
  edu.isistan.reassistant.ccdetector.gui.standalone,
