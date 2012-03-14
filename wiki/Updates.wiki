@@ -3,7 +3,7 @@
 
 = Recent Commits to trunk =
 
-<wiki:gadget url="http://sorryrobot.com/projecthostingupdates/com1.xml" up_projectName="reassistant" width="800"  height="100"/>
+<wiki:gadget url="http://sorryrobot.com/projecthostingupdates/com1.xml" up_projectName="reassistant" width="800"  height="250"/>
 
 = Updates to All Issues (including closed/fixed issues) =
 
