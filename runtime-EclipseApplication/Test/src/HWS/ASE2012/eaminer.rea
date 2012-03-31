@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="__uD-gJdUEeCJw7uz8Yq9BA" Name="HWS" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/ASE2012/HWS.uima">
+  <CrosscuttingConcerns ID="_828FIGJfEeGW771YwRUttQ" Name="Security (allowed)" Description="">
+    <Impacts ID="_stff4GJgEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="HWS.uima#265"/>
+    </Impacts>
+    <Impacts ID="_vxVrYGJgEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#61"/>
+      <Sentence href="HWS.uima#274"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_BJdDMGJgEeGW771YwRUttQ" Name="Persistence (assigns)" Description="">
+    <Impacts ID="_2u-y8GJgEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#133"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_GnZ5oGJgEeGW771YwRUttQ" Name="Usability (consumed)" Description="">
+    <Impacts ID="_92m88GJgEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#103"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_IWuiMGJgEeGW771YwRUttQ" Name="Fault Tolerance (error)" Description="">
+    <Impacts ID="_N-hbsGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#3"/>
+      <Sentence href="HWS.uima#114"/>
+    </Impacts>
+    <Impacts ID="_OxlQUGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#117"/>
+    </Impacts>
+    <Impacts ID="_PnIYQGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#5"/>
+      <Sentence href="HWS.uima#119"/>
+    </Impacts>
+    <Impacts ID="_QeEAQGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#6"/>
+      <Sentence href="HWS.uima#122"/>
+    </Impacts>
+    <Impacts ID="_TVeSQGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#10"/>
+      <Sentence href="HWS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_UcNQ0GJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#11"/>
+      <Sentence href="HWS.uima#142"/>
+    </Impacts>
+    <Impacts ID="_VU-E0GJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="HWS.uima#145"/>
+    </Impacts>
+    <Impacts ID="_Ww6eYGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="HWS.uima#148"/>
+    </Impacts>
+    <Impacts ID="_ZwGzYGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#16"/>
+      <Sentence href="HWS.uima#155"/>
+    </Impacts>
+    <Impacts ID="_ayKGQGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#16"/>
+      <Sentence href="HWS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_b19FkGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="HWS.uima#158"/>
+    </Impacts>
+    <Impacts ID="_cw98UGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#18"/>
+      <Sentence href="HWS.uima#160"/>
+    </Impacts>
+    <Impacts ID="_hSSycGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_iU8iQGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#184"/>
+    </Impacts>
+    <Impacts ID="_leqsQGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#187"/>
+    </Impacts>
+    <Impacts ID="_oMQT4GJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#26"/>
+      <Sentence href="HWS.uima#188"/>
+    </Impacts>
+    <Impacts ID="_qFshwGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#26"/>
+      <Sentence href="HWS.uima#189"/>
+    </Impacts>
+    <Impacts ID="_r93kUGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#190"/>
+    </Impacts>
+    <Impacts ID="_syCzQGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_vOC7oGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#33"/>
+      <Sentence href="HWS.uima#205"/>
+    </Impacts>
+    <Impacts ID="_xaI_wGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#33"/>
+      <Sentence href="HWS.uima#206"/>
+    </Impacts>
+    <Impacts ID="_040tIGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#213"/>
+    </Impacts>
+    <Impacts ID="_2UW3AGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#215"/>
+    </Impacts>
+    <Impacts ID="_5KRUMGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#40"/>
+      <Sentence href="HWS.uima#225"/>
+    </Impacts>
+    <Impacts ID="_7bnrwGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#44"/>
+      <Sentence href="HWS.uima#243"/>
+    </Impacts>
+    <Impacts ID="_9laCwGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#45"/>
+      <Sentence href="HWS.uima#245"/>
+    </Impacts>
+    <Impacts ID="_-ejRQGJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="HWS.uima#248"/>
+    </Impacts>
+    <Impacts ID="__d9f0GJhEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#251"/>
+    </Impacts>
+    <Impacts ID="_GZUIYGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#54"/>
+      <Sentence href="HWS.uima#261"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_KRtBIGJgEeGW771YwRUttQ" Name="Security (fixed)" Description="">
+    <Impacts ID="_MZVxIGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#54"/>
+      <Sentence href="HWS.uima#261"/>
+    </Impacts>
+    <Impacts ID="_PRSOoGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="HWS.uima#264"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_L0gQoGJgEeGW771YwRUttQ" Name="Performance (formatted)" Description="">
+    <Impacts ID="_ZlqogGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#112"/>
+    </Impacts>
+    <Impacts ID="_eIEcsGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#171"/>
+    </Impacts>
+    <Impacts ID="_fnmVwGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#177"/>
+    </Impacts>
+    <Impacts ID="_jSprMGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#231"/>
+    </Impacts>
+    <Impacts ID="_khmxoGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#237"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_O44noGJgEeGW771YwRUttQ" Name="Persistence (have)" Description="">
+    <Impacts ID="_yKUqEGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#28"/>
+      <Sentence href="HWS.uima#193"/>
+    </Impacts>
+    <Impacts ID="_2ajJIGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_3Qf5sGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#259"/>
+    </Impacts>
+    <Impacts ID="_7qjDIGJiEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="HWS.uima#265"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_RHGLoGJgEeGW771YwRUttQ" Name="Performance (on-line)" Description="">
+    <Impacts ID="_CgC7UGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#259"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_S2RDMGJgEeGW771YwRUttQ" Name="Security (password)" Description="">
+    <Impacts ID="_IirMIGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#150"/>
+    </Impacts>
+    <Impacts ID="_KTDkoGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#151"/>
+    </Impacts>
+    <Impacts ID="_MqbEoGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_PEONkGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#19"/>
+      <Sentence href="HWS.uima#161"/>
+    </Impacts>
+    <Impacts ID="_TLwqsGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#197"/>
+    </Impacts>
+    <Impacts ID="_VQuzIGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#219"/>
+    </Impacts>
+    <Impacts ID="_YQPRMGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#40"/>
+      <Sentence href="HWS.uima#225"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_UZESsGJgEeGW771YwRUttQ" Name="Persistence (presented)" Description="">
+    <Impacts ID="_ii7pAGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#77"/>
+    </Impacts>
+    <Impacts ID="_kcRwQGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_nZUJIGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#83"/>
+    </Impacts>
+    <Impacts ID="_rBB2sGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#112"/>
+    </Impacts>
+    <Impacts ID="_7WGAoGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#138"/>
+    </Impacts>
+    <Impacts ID="_-rG0oGJjEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#154"/>
+    </Impacts>
+    <Impacts ID="_CqxIIGJkEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#171"/>
+    </Impacts>
+    <Impacts ID="_EsVXQGJkEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#177"/>
+    </Impacts>
+    <Impacts ID="_KUvKMGJkEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#237"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_WBqBIGJgEeGW771YwRUttQ" Name="Persistence (provides)" Description="">
+    <Impacts ID="_BGzlkGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#84"/>
+    </Impacts>
+    <Impacts ID="_FjAEEGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#97"/>
+    </Impacts>
+    <Impacts ID="_I4xtEGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#128"/>
+    </Impacts>
+    <Impacts ID="_NOkBkGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#150"/>
+    </Impacts>
+    <Impacts ID="_QcCDIGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#197"/>
+    </Impacts>
+    <Impacts ID="_SAbOEGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#219"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_Xpr8oGJlEeGW771YwRUttQ" Name="Persistence (retrieves)" Description="">
+    <Impacts ID="_ldFbEGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#75"/>
+    </Impacts>
+    <Impacts ID="_mziQoGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#76"/>
+    </Impacts>
+    <Impacts ID="_p7ybAGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#78"/>
+    </Impacts>
+    <Impacts ID="_rCdvMGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#79"/>
+    </Impacts>
+    <Impacts ID="_s7fGUGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_us-5IGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#82"/>
+    </Impacts>
+    <Impacts ID="_x6ORMGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#89"/>
+    </Impacts>
+    <Impacts ID="_5BAGoGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_8HCDcGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#98"/>
+    </Impacts>
+    <Impacts ID="_96VNEGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#100"/>
+    </Impacts>
+    <Impacts ID="__Cg9IGJlEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#101"/>
+    </Impacts>
+    <Impacts ID="_Bo-pEGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#102"/>
+    </Impacts>
+    <Impacts ID="_C0NGEGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#103"/>
+    </Impacts>
+    <Impacts ID="_GFFoAGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#107"/>
+    </Impacts>
+    <Impacts ID="_JI3iEGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_LJc5wGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#110"/>
+    </Impacts>
+    <Impacts ID="_N1UDEGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#115"/>
+    </Impacts>
+    <Impacts ID="_OhDHsGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#116"/>
+    </Impacts>
+    <Impacts ID="_SLCGIGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#152"/>
+    </Impacts>
+    <Impacts ID="_TQwYEGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="HWS.uima#157"/>
+    </Impacts>
+    <Impacts ID="_VjKfkGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#168"/>
+    </Impacts>
+    <Impacts ID="_XfZiwGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#175"/>
+    </Impacts>
+    <Impacts ID="_ZH-DEGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_b0_qAGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#229"/>
+    </Impacts>
+    <Impacts ID="_d5-ZgGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#235"/>
+    </Impacts>
+    <Impacts ID="_ezvTEGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#236"/>
+    </Impacts>
+    <Impacts ID="_hS-VoGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#44"/>
+      <Sentence href="HWS.uima#242"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_XUgwIGJgEeGW771YwRUttQ" Name="Persistence (stored)" Description="">
+    <Impacts ID="_nSeZ8GJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#75"/>
+    </Impacts>
+    <Impacts ID="_re0ekGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#135"/>
+    </Impacts>
+    <Impacts ID="_sZCrIGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#136"/>
+    </Impacts>
+    <Impacts ID="_vSMCgGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="HWS.uima#143"/>
+    </Impacts>
+    <Impacts ID="_xkYHkGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#182"/>
+    </Impacts>
+    <Impacts ID="_z1kHEGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#190"/>
+    </Impacts>
+    <Impacts ID="_2shGEGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#213"/>
+    </Impacts>
+    <Impacts ID="_45zdAGJmEeGW771YwRUttQ">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#249"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_Zgb1IGJgEeGW771YwRUttQ" Name="Real Time (time)" Description="">
+    <Impacts ID="_Ch9DAGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#127"/>
+    </Impacts>
+    <Impacts ID="_GKXUIGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#55"/>
+      <Sentence href="HWS.uima#263"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_bTfHIGJgEeGW771YwRUttQ" Name="Usability (used)" Description="">
+    <Impacts ID="_PfQm8GJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#88"/>
+    </Impacts>
+    <Impacts ID="_TOxloGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#152"/>
+    </Impacts>
+    <Impacts ID="_XGL8EGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_YEleAGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#259"/>
+    </Impacts>
+    <Impacts ID="_aD2nEGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="HWS.uima#264"/>
+    </Impacts>
+    <Impacts ID="_ct_5IGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#58"/>
+      <Sentence href="HWS.uima#267"/>
+    </Impacts>
+    <Impacts ID="_d8RDEGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#58"/>
+      <Sentence href="HWS.uima#270"/>
+    </Impacts>
+    <Impacts ID="_gcKM8GJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#60"/>
+      <Sentence href="HWS.uima#273"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_cyteMGJgEeGW771YwRUttQ" Name="Security (validates)" Description="">
+    <Impacts ID="_pWeckGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_rB5ckGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#18"/>
+      <Sentence href="HWS.uima#159"/>
+    </Impacts>
+    <Impacts ID="_t1WboGJnEeGW771YwRUttQ">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#19"/>
+      <Sentence href="HWS.uima#161"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

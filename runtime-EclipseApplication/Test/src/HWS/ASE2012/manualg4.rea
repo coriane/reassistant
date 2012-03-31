@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_qxckoF8YEeGqiq5xZpNUeA" Name="Manual G4" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/HWS.uima">
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_qxckoF8YEeGqiq5xZpNUeA" Name="Manual G4" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/ASE2012/HWS.uima">
   <CrosscuttingConcerns ID="_OYG_YF_7EeGi5ZP1QDJ3XA" Name="Persistence (PE)" Description="Hace referencia al almacenamiento y lectura de datos en una lógica físicamente persistente.">
     <Impacts ID="_9KV2YF_7EeGi5ZP1QDJ3XA" Realization="Se debe verificar que la información exista, de lo contrario no se ejecutará el caso de uso. Hace referencia a la lectura de datos.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
       <Document href="HWS.uima#62"/>
