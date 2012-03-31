@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_Tm95kHanEeGQgossn6OzyA" Name="CRS" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/CRS.uima">
+  <CrosscuttingConcerns ID="_cb80oHdUEeGDn-JouGtPmw" Name="User Access Control" Description="Defines contraints regarding the access level of given user / role to carry out a particular task / operation.">
+    <Impacts ID="_cb80oXdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#72"/>
+      <Section href="CRS.uima#54"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#251"/>
+    </Impacts>
+    <Impacts ID="_ccJB4HdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#52"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_ccVPIHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#203"/>
+    </Impacts>
+    <Impacts ID="_cchcYHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#97"/>
+    </Impacts>
+    <Impacts ID="_ccsbgHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_cc8TIHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_cdH5UHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#89"/>
+    </Impacts>
+    <Impacts ID="_cdUGkHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_cdhh8HdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#79"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_cdtIIHdUEeGDn-JouGtPmw" Name="Concurrence" Description="Defines mechanisms to manage simultaneous and parallel access to resources and data.">
+    <Impacts ID="_cdtIIXdUEeGDn-JouGtPmw">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#247"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_cd4uUHdUEeGDn-JouGtPmw" Name="External Communication" Description="This concern encapsulate and specify how our system interacts with external agents. Those interactions are mainly messages that are communicated forth and backward, establishing a dialog. Several properties may emerge of this concern, such as availability and security quality attributes.">
+    <Impacts ID="_cd4uUXdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#58"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#257"/>
+    </Impacts>
+    <Impacts ID="_ceE7kHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#57"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#256"/>
+    </Impacts>
+    <Impacts ID="_ceTlEHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#72"/>
+      <Section href="CRS.uima#54"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#250"/>
+    </Impacts>
+    <Impacts ID="_cefyUHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_cerYgHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#48"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#243"/>
+    </Impacts>
+    <Impacts ID="_ce4M0HdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#48"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#242"/>
+    </Impacts>
+    <Impacts ID="_cfFoMHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#48"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#241"/>
+    </Impacts>
+    <Impacts ID="_cfR1cHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#45"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#237"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_cfge8HdUEeGDn-JouGtPmw" Name="Integrity Management" Description="Allows the system to perform conformance verifications both on the information inputted and outputted. This way, the consistency of the data is assured."/>
+  <CrosscuttingConcerns ID="_cfge8XdUEeGDn-JouGtPmw" Name="Error Management" Description="Concerns with mechanisms for managing errors and exceptions that take place while running the system.">
+    <Impacts ID="_cfge8ndUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#42"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#230"/>
+    </Impacts>
+    <Impacts ID="_cfssMHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#39"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#225"/>
+    </Impacts>
+    <Impacts ID="_cf6HkHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_cgG74HdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#209"/>
+    </Impacts>
+    <Impacts ID="_cgTwMHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#197"/>
+    </Impacts>
+    <Impacts ID="_cgf9cHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#29"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_cgsxwHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_cg4_AHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#27"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#191"/>
+    </Impacts>
+    <Impacts ID="_chFzUHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#20"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#159"/>
+    </Impacts>
+    <Impacts ID="_chSnoHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#157"/>
+    </Impacts>
+    <Impacts ID="_che04HdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_chrpMHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#14"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#128"/>
+    </Impacts>
+    <Impacts ID="_ch32cHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#13"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#126"/>
+    </Impacts>
+    <Impacts ID="_ciEDsHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#13"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#125"/>
+    </Impacts>
+    <Impacts ID="_ciPp4HdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#97"/>
+    </Impacts>
+    <Impacts ID="_cib3IHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_cindUHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#6"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#91"/>
+    </Impacts>
+    <Impacts ID="_cizDgHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#90"/>
+    </Impacts>
+    <Impacts ID="_cjEwUHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#89"/>
+    </Impacts>
+    <Impacts ID="_cjTZ0HdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#83"/>
+    </Impacts>
+    <Impacts ID="_cjgOIHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#82"/>
+    </Impacts>
+    <Impacts ID="_cjr0UHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_cj4BkHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#78"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ckEO0HdUEeGDn-JouGtPmw" Name="Persistence" Description="Allows system data to be written in an storage media. This concerns affects functionality that involves the accessing of data, and the main idea is to decouple the way data is handled.">
+    <Impacts ID="_ckEO0XdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#55"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#252"/>
+    </Impacts>
+    <Impacts ID="_ckRDIHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#52"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_ckfFkHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_cksg8HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#236"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ck6jYHdUEeGDn-JouGtPmw" Name="Presentation" Description="This concerns encapsulates functionality focused on the preprocessing and arrangement of the information before outputting in a display.">
+    <Impacts ID="_ck6jYXdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#59"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_clH-wHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#58"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#257"/>
+    </Impacts>
+    <Impacts ID="_clWBMHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#56"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#253"/>
+    </Impacts>
+    <Impacts ID="_clkqsHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#47"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#240"/>
+    </Impacts>
+    <Impacts ID="_clz7QHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#228"/>
+    </Impacts>
+    <Impacts ID="_cmAvkHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#133"/>
+    </Impacts>
+    <Impacts ID="_cmOyAHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="file:/C:/Work/runtime-EclipseApplication/Test/src/CRS/CRS.uima#101"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

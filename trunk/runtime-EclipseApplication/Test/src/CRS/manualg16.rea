@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_OI9uAHKwEeGApc-it7rrMQ" Name="CRS" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/CRS.uima">
+  <CrosscuttingConcerns ID="_gegsgHKxEeGApc-it7rrMQ" Name="Entitlement (ET)" Description="Este aspecto hace referencia a la autenticacion y autorizacion de usuarios, es fundamental para cualquier sistema que deba distinguir diferentes categorías y jerarquías de usuarios, permitiendo o no el acceso a funcionalidad o información restringida.">
+    <Impacts ID="_vgpO8HKxEeGApc-it7rrMQ">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="CRS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_zJ08IHKxEeGApc-it7rrMQ">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#43"/>
+      <Sentence href="CRS.uima#232"/>
+    </Impacts>
+    <Impacts ID="_75EkMHKxEeGApc-it7rrMQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#31"/>
+      <Sentence href="CRS.uima#198"/>
+    </Impacts>
+    <Impacts ID="_CZEGcHKyEeGApc-it7rrMQ">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#36"/>
+      <Sentence href="CRS.uima#213"/>
+    </Impacts>
+    <Impacts ID="_H4fjkHKyEeGApc-it7rrMQ">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#40"/>
+      <Sentence href="CRS.uima#226"/>
+    </Impacts>
+    <Impacts ID="_TUvkcHKyEeGApc-it7rrMQ">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#15"/>
+      <Sentence href="CRS.uima#129"/>
+    </Impacts>
+    <Impacts ID="_e9B2MHKyEeGApc-it7rrMQ">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#21"/>
+      <Sentence href="CRS.uima#160"/>
+    </Impacts>
+    <Impacts ID="_6dfLcHK7EeGApc-it7rrMQ">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#7"/>
+      <Sentence href="CRS.uima#93"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_hn5WcHKxEeGApc-it7rrMQ" Name="System Interface (SI)" Description="La interfaz de usuario debe ser consistente a lo largo de toda la aplicación para lograr una mayor usabilidad, evitando confundir al usuario. Encapsulando esta funcionalidad en un aspecto se facilita la tarea de diseño de interfaces.">
+    <Impacts ID="_-8bmgHK8EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="CRS.uima#95"/>
+    </Impacts>
+    <Impacts ID="_BEgGQHK9EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="CRS.uima#228"/>
+    </Impacts>
+    <Impacts ID="_JCw9UHK9EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#162"/>
+    </Impacts>
+    <Impacts ID="_MGXRMHK9EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#169"/>
+    </Impacts>
+    <Impacts ID="_PjT5MHK9EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#171"/>
+    </Impacts>
+    <Impacts ID="_0d78cHK-EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_AV-hcHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_RmXrMHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#200"/>
+    </Impacts>
+    <Impacts ID="_UVwpoHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_V8eIwHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#218"/>
+    </Impacts>
+    <Impacts ID="_g70yQHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#99"/>
+    </Impacts>
+    <Impacts ID="_jBHDwHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#107"/>
+    </Impacts>
+    <Impacts ID="_juH6wHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#116"/>
+    </Impacts>
+    <Impacts ID="_oFpUoHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_ous4sHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_rfFVoHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#120"/>
+    </Impacts>
+    <Impacts ID="_uk1loHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#131"/>
+    </Impacts>
+    <Impacts ID="_w66sMHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#138"/>
+    </Impacts>
+    <Impacts ID="_yv5Q0HK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_2_yYsHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#147"/>
+    </Impacts>
+    <Impacts ID="_34e7QHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_-q5qQHK_EeGApc-it7rrMQ" CompositionRule="Overlap">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#77"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ix-j8HKxEeGApc-it7rrMQ" Name="Field Validation (FV)" Description="La validación de campos sirve para especificar requerimientos o limitaciones a la hora de ingresar informacion, aportando seguridad y consistencia a los datos.">
+    <Impacts ID="_dBPWkHLAEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_pxMbAHLAEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#13"/>
+      <Sentence href="CRS.uima#125"/>
+    </Impacts>
+    <Impacts ID="_r9rgsHLAEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#14"/>
+      <Sentence href="CRS.uima#127"/>
+    </Impacts>
+    <Impacts ID="_BKL6sHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="CRS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_Bjl5MHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#20"/>
+      <Sentence href="CRS.uima#158"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_j5_78HKxEeGApc-it7rrMQ" Name="Persistency (PS)" Description="La persistencia de los datos es algo que influye en toda la aplicación, una buena práctica es aislar estas cuestiones en la etapa de requerimientos y diseño y luego resolverlo a través de un aspecto.">
+    <Impacts ID="_adlRkHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="CRS.uima#227"/>
+    </Impacts>
+    <Impacts ID="_miCh8HLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#163"/>
+    </Impacts>
+    <Impacts ID="_oXH0QHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#167"/>
+    </Impacts>
+    <Impacts ID="_qfJQsHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#169"/>
+    </Impacts>
+    <Impacts ID="_rlDI0HLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#170"/>
+    </Impacts>
+    <Impacts ID="_s_bcIHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#177"/>
+    </Impacts>
+    <Impacts ID="_ucqPIHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_vkJboHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_zAYR8HLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#25"/>
+      <Sentence href="CRS.uima#185"/>
+    </Impacts>
+    <Impacts ID="_08ARIHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#26"/>
+      <Sentence href="CRS.uima#188"/>
+    </Impacts>
+    <Impacts ID="__iHUMHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#199"/>
+    </Impacts>
+    <Impacts ID="__6PgUHLBEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#200"/>
+    </Impacts>
+    <Impacts ID="_CqnWMHLCEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#202"/>
+    </Impacts>
+    <Impacts ID="_Dz7HoHLCEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#204"/>
+    </Impacts>
+    <Impacts ID="_NlqDQHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_QpC7wHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#216"/>
+    </Impacts>
+    <Impacts ID="_Q4gUEHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#217"/>
+    </Impacts>
+    <Impacts ID="_UwBYMHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#220"/>
+    </Impacts>
+    <Impacts ID="_cvaQoHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#102"/>
+    </Impacts>
+    <Impacts ID="_fquyQHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_haVusHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#112"/>
+    </Impacts>
+    <Impacts ID="_i5GLsHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_kUzUsHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#122"/>
+    </Impacts>
+    <Impacts ID="_rn8LIHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#133"/>
+    </Impacts>
+    <Impacts ID="_tRJkoHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_u07rkHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#143"/>
+    </Impacts>
+    <Impacts ID="_wGcWwHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_xJQeoHLJEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_HUbgUHLKEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_N3e9oHLKEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="CRS.uima#88"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_lMoBcHKxEeGApc-it7rrMQ" Name="Data Dependency Validation (DDV)" Description="Este concern hace referencia a la validación de datos relacionados, que no se violen ciertas dependencias, como realizar operaciones después de finalizado el semestre.">
+    <Impacts ID="_SsYakHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#42"/>
+      <Sentence href="CRS.uima#230"/>
+    </Impacts>
+    <Impacts ID="_YoaUIHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#27"/>
+      <Sentence href="CRS.uima#190"/>
+    </Impacts>
+    <Impacts ID="_bBPMsHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="CRS.uima#196"/>
+    </Impacts>
+    <Impacts ID="_ePYjsHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#33"/>
+      <Sentence href="CRS.uima#205"/>
+    </Impacts>
+    <Impacts ID="_fQ_xsHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#207"/>
+    </Impacts>
+    <Impacts ID="_jOhXMHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="CRS.uima#210"/>
+    </Impacts>
+    <Impacts ID="_nQxEoHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#208"/>
+    </Impacts>
+    <Impacts ID="_nxhoUHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="CRS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_qtqCQHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#38"/>
+      <Sentence href="CRS.uima#223"/>
+    </Impacts>
+    <Impacts ID="_s0_iMHLLEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#39"/>
+      <Sentence href="CRS.uima#224"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_m2ce8HKxEeGApc-it7rrMQ" Name="Error Handling" Description="El manejo de errores incluye la anticipación, detección y recuperación de fallas en el sistema.">
+    <Impacts ID="_WcZTEHLMEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="CRS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_YpIQYHLMEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#29"/>
+      <Sentence href="CRS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_h9ND0HLMEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#6"/>
+      <Sentence href="CRS.uima#91"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_oNqJgHKxEeGApc-it7rrMQ" Name="Transaction" Description="Para satisfacer requerimientos de seguridad y mantener la consistencia de los datos, es necesario implementar cierto aislamiento en operaciones que podrían llegar a generar conflictos.">
+    <Impacts ID="_u8TXgHLMEeGApc-it7rrMQ" CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#80"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_pQjw8HKxEeGApc-it7rrMQ" Name="Concurrency" Description="Permite tener el control sobre las operaciones que se realizan simultaneamente, pudiendo así determinar las acciones que se deben llevar a cabo en cada situación.">
+    <Impacts ID="_BdGZMHLNEeGApc-it7rrMQ">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#76"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_lXKcgHK8EeGApc-it7rrMQ" Name="Resource Management" Description="El manejo de recursos hace referencia a la administración de memoria, el grado de multiprogramación, la cantidad de usuarios que pueden acceder simultáneamente y la planificación de tareas."/>
+</edu.isistan.reassistant:REAssistantProject>

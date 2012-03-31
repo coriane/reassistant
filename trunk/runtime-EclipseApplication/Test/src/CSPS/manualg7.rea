@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_4AN4wHKwEeGApc-it7rrMQ" Name="CSPS" ProjectURI="/Test/src/CSPS/CSPSv2.ucs" UIMAURI="/Test/src/CSPS/CSPSv2.uima">
+  <CrosscuttingConcerns ID="_AZjDgHNnEeGBWbpJEc_Odw" Name="Persistence" Description="Este concern está relacionado con el manejo del almacenamiento y recuperación de los datos persistentes utilizados por la aplicación. En general representa la capa de acceso a la información guardada en una base de datos.">
+    <Impacts ID="_8ykD0HNoEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#2"/>
+      <Sentence href="CSPSv2.uima#78"/>
+    </Impacts>
+    <Impacts ID="_CC1DkHNpEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#4"/>
+      <Sentence href="CSPSv2.uima#89"/>
+    </Impacts>
+    <Impacts ID="_HlNHAHNpEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#5"/>
+      <Sentence href="CSPSv2.uima#96"/>
+    </Impacts>
+    <Impacts ID="_W3QUwHNpEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#53"/>
+      <Section href="CSPSv2.uima#10"/>
+      <Sentence href="CSPSv2.uima#116"/>
+    </Impacts>
+    <Impacts ID="_gUnnEHNpEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#16"/>
+      <Sentence href="CSPSv2.uima#129"/>
+    </Impacts>
+    <Impacts ID="_jO18gHNpEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#17"/>
+      <Sentence href="CSPSv2.uima#131"/>
+    </Impacts>
+    <Impacts ID="_nCAFEHNpEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#17"/>
+      <Sentence href="CSPSv2.uima#132"/>
+    </Impacts>
+    <Impacts ID="_oaVxAHNpEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#17"/>
+      <Sentence href="CSPSv2.uima#134"/>
+    </Impacts>
+    <Impacts ID="_DrS8kHNxEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#56"/>
+      <Section href="CSPSv2.uima#25"/>
+      <Sentence href="CSPSv2.uima#158"/>
+    </Impacts>
+    <Impacts ID="_FbIigHNxEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#56"/>
+      <Section href="CSPSv2.uima#25"/>
+      <Sentence href="CSPSv2.uima#161"/>
+    </Impacts>
+    <Impacts ID="_KjVycHNxEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#58"/>
+      <Section href="CSPSv2.uima#31"/>
+      <Sentence href="CSPSv2.uima#190"/>
+    </Impacts>
+    <Impacts ID="_TkiGIHNxEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#58"/>
+      <Section href="CSPSv2.uima#31"/>
+      <Sentence href="CSPSv2.uima#194"/>
+    </Impacts>
+    <Impacts ID="_UrFegHNxEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#58"/>
+      <Section href="CSPSv2.uima#31"/>
+      <Sentence href="CSPSv2.uima#198"/>
+    </Impacts>
+    <Impacts ID="_XrXYoHNxEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#61"/>
+      <Section href="CSPSv2.uima#41"/>
+      <Sentence href="CSPSv2.uima#223"/>
+    </Impacts>
+    <Impacts ID="_ZrmLAHNxEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#61"/>
+      <Section href="CSPSv2.uima#41"/>
+      <Sentence href="CSPSv2.uima#226"/>
+    </Impacts>
+    <Impacts ID="_uhElEHNxEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#55"/>
+      <Section href="CSPSv2.uima#20"/>
+      <Sentence href="CSPSv2.uima#146"/>
+    </Impacts>
+    <Impacts ID="_xrsG8HNxEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#57"/>
+      <Section href="CSPSv2.uima#26"/>
+      <Sentence href="CSPSv2.uima#179"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_Bc1FcHNnEeGBWbpJEc_Odw" Name="Distribution" Description="Este concern está relacionado con el establecimiento de una conexión entre las diferentes partes de un sistema distribuido, mediante el envío y recepción de datos.">
+    <Impacts ID="_RX3k0HNyEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#3"/>
+      <Sentence href="CSPSv2.uima#82"/>
+    </Impacts>
+    <Impacts ID="_Vt1fgHNyEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#6"/>
+      <Sentence href="CSPSv2.uima#100"/>
+    </Impacts>
+    <Impacts ID="_eQ5swHNyEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#16"/>
+      <Sentence href="CSPSv2.uima#128"/>
+    </Impacts>
+    <Impacts ID="_ghDKcHNyEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#17"/>
+      <Sentence href="CSPSv2.uima#133"/>
+    </Impacts>
+    <Impacts ID="_mXicsHNyEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#56"/>
+      <Section href="CSPSv2.uima#25"/>
+      <Sentence href="CSPSv2.uima#162"/>
+    </Impacts>
+    <Impacts ID="_LEflcHN2EeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#57"/>
+      <Section href="CSPSv2.uima#26"/>
+      <Sentence href="CSPSv2.uima#169"/>
+    </Impacts>
+    <Impacts ID="_SrBR8HN2EeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#59"/>
+      <Section href="CSPSv2.uima#34"/>
+      <Sentence href="CSPSv2.uima#206"/>
+    </Impacts>
+    <Impacts ID="_VwQkkHN2EeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#60"/>
+      <Section href="CSPSv2.uima#38"/>
+      <Sentence href="CSPSv2.uima#218"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_CO9F8HNnEeGBWbpJEc_Odw" Name="Presentation" Description="Este concern está relacionado con el formateo y adaptación de los datos a ser presentados visualmente al usuario.">
+    <Impacts ID="_eMP5cHN2EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#2"/>
+      <Sentence href="CSPSv2.uima#73"/>
+    </Impacts>
+    <Impacts ID="_S19rwHN4EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#4"/>
+      <Sentence href="CSPSv2.uima#85"/>
+    </Impacts>
+    <Impacts ID="_T4s7IHN4EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#4"/>
+      <Sentence href="CSPSv2.uima#87"/>
+    </Impacts>
+    <Impacts ID="_Wa8OYHN4EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#5"/>
+      <Sentence href="CSPSv2.uima#92"/>
+    </Impacts>
+    <Impacts ID="_YgGkEHN4EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#6"/>
+      <Sentence href="CSPSv2.uima#97"/>
+    </Impacts>
+    <Impacts ID="_nyjacHN4EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#3"/>
+      <Sentence href="CSPSv2.uima#80"/>
+    </Impacts>
+    <Impacts ID="_g6vYoHN5EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#53"/>
+      <Section href="CSPSv2.uima#10"/>
+      <Sentence href="CSPSv2.uima#108"/>
+    </Impacts>
+    <Impacts ID="_hwYnMHN5EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#53"/>
+      <Section href="CSPSv2.uima#10"/>
+      <Sentence href="CSPSv2.uima#112"/>
+    </Impacts>
+    <Impacts ID="_vZp5QHN5EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#16"/>
+      <Sentence href="CSPSv2.uima#126"/>
+    </Impacts>
+    <Impacts ID="_NRGDEHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#17"/>
+      <Sentence href="CSPSv2.uima#131"/>
+    </Impacts>
+    <Impacts ID="_RKSiMHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#56"/>
+      <Section href="CSPSv2.uima#25"/>
+      <Sentence href="CSPSv2.uima#159"/>
+    </Impacts>
+    <Impacts ID="_UnJDkHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#58"/>
+      <Section href="CSPSv2.uima#31"/>
+      <Sentence href="CSPSv2.uima#196"/>
+    </Impacts>
+    <Impacts ID="_XAjyAHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#58"/>
+      <Section href="CSPSv2.uima#32"/>
+      <Sentence href="CSPSv2.uima#199"/>
+    </Impacts>
+    <Impacts ID="_nwNmMHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#61"/>
+      <Section href="CSPSv2.uima#41"/>
+      <Sentence href="CSPSv2.uima#224"/>
+    </Impacts>
+    <Impacts ID="_vjsJkHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#55"/>
+      <Section href="CSPSv2.uima#20"/>
+      <Sentence href="CSPSv2.uima#140"/>
+    </Impacts>
+    <Impacts ID="_w_QIoHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#55"/>
+      <Section href="CSPSv2.uima#20"/>
+      <Sentence href="CSPSv2.uima#142"/>
+    </Impacts>
+    <Impacts ID="_yZzbEHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#55"/>
+      <Section href="CSPSv2.uima#20"/>
+      <Sentence href="CSPSv2.uima#146"/>
+    </Impacts>
+    <Impacts ID="_4BYuoHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#57"/>
+      <Section href="CSPSv2.uima#26"/>
+      <Sentence href="CSPSv2.uima#168"/>
+    </Impacts>
+    <Impacts ID="_8BWkIHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#57"/>
+      <Section href="CSPSv2.uima#26"/>
+      <Sentence href="CSPSv2.uima#172"/>
+    </Impacts>
+    <Impacts ID="_-FF9gHN6EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#57"/>
+      <Section href="CSPSv2.uima#26"/>
+      <Sentence href="CSPSv2.uima#175"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_DsVp8HNnEeGBWbpJEc_Odw" Name="Login" Description="Este concern está relacionado con la administración del ingreso de los usuarios al sistema, mediante su identificación y autenticación.">
+    <Impacts ID="_ajOLAHN7EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#8"/>
+      <Sentence href="CSPSv2.uima#103"/>
+    </Impacts>
+    <Impacts ID="_hW9vsHN7EeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#59"/>
+      <Section href="CSPSv2.uima#36"/>
+      <Sentence href="CSPSv2.uima#211"/>
+    </Impacts>
+    <Impacts ID="_NKOP8HODEeGBWbpJEc_Odw" CompositionRule="Overlap">
+      <Document href="CSPSv2.uima#57"/>
+      <Section href="CSPSv2.uima#28"/>
+      <Sentence href="CSPSv2.uima#187"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_Ec8AcHNnEeGBWbpJEc_Odw" Name="Security" Description="Este concern está relacionado con la seguridad de la información manejada en el sistema, como cuentas bancarias y encriptación de datos.">
+    <Impacts ID="_e-sCAHOBEeGBWbpJEc_Odw">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#16"/>
+      <Sentence href="CSPSv2.uima#128"/>
+    </Impacts>
+    <Impacts ID="_vDjMwHOBEeGBWbpJEc_Odw">
+      <Document href="CSPSv2.uima#53"/>
+      <Section href="CSPSv2.uima#10"/>
+      <Sentence href="CSPSv2.uima#114"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_GQTbgHNnEeGBWbpJEc_Odw" Name="Validation" Description="Este concern está relacionado con el chequeo de reglas del negocio de la aplicación, tales como comprobaciones del dominio de datos ingresados (fechas, formatos, etc.)">
+    <Impacts ID="_0_wFcHOBEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#52"/>
+      <Section href="CSPSv2.uima#7"/>
+      <Sentence href="CSPSv2.uima#102"/>
+    </Impacts>
+    <Impacts ID="_57uQMHOBEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#16"/>
+      <Sentence href="CSPSv2.uima#129"/>
+    </Impacts>
+    <Impacts ID="___RuEHOBEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#17"/>
+      <Sentence href="CSPSv2.uima#134"/>
+    </Impacts>
+    <Impacts ID="_CokEgHOCEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#54"/>
+      <Section href="CSPSv2.uima#18"/>
+      <Sentence href="CSPSv2.uima#135"/>
+    </Impacts>
+    <Impacts ID="_H9PDIHOCEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#57"/>
+      <Section href="CSPSv2.uima#26"/>
+      <Sentence href="CSPSv2.uima#166"/>
+    </Impacts>
+    <Impacts ID="_KdbvAHOCEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#57"/>
+      <Section href="CSPSv2.uima#27"/>
+      <Sentence href="CSPSv2.uima#184"/>
+    </Impacts>
+    <Impacts ID="_RQ-fYHOCEeGBWbpJEc_Odw" CompositionRule="Override">
+      <Document href="CSPSv2.uima#59"/>
+      <Section href="CSPSv2.uima#34"/>
+      <Sentence href="CSPSv2.uima#205"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_HJOAgHNnEeGBWbpJEc_Odw" Name="Publish-Subscribe" Description="Este concern está relacionado con la administración de las subscripciones a las publicaciones del sistema que se corresponden con este patrón de diseño, específicamente la incorporación de subscriptores y el manejo de las notificaciones de nuevos contenidos enviados a los mismos.">
+    <Impacts ID="_tBVA4HOCEeGBWbpJEc_Odw">
+      <Document href="CSPSv2.uima#53"/>
+      <Section href="CSPSv2.uima#10"/>
+      <Sentence href="CSPSv2.uima#115"/>
+    </Impacts>
+    <Impacts ID="_7qoMkHOCEeGBWbpJEc_Odw">
+      <Document href="CSPSv2.uima#60"/>
+      <Section href="CSPSv2.uima#38"/>
+      <Sentence href="CSPSv2.uima#218"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

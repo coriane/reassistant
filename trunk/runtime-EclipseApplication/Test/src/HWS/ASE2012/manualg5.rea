@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_xTRS4F8YEeGqiq5xZpNUeA" Name="Manual G5" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/HWS.uima">
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_xTRS4F8YEeGqiq5xZpNUeA" Name="Manual G5" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/ASE2012/HWS.uima">
   <CrosscuttingConcerns ID="_I0_JEGB_EeGi5ZP1QDJ3XA" Name="Data Formatting" Description="Se encarga de establecer un formato de la representación de la información del sistema.&#xD;&#xA;Este aspecto se encarga del formato de salida de la información que se va a&#xD;&#xA;mostrar por pantalla, es decir, agrega un nuevo funcionamiento que se encarga de la&#xD;&#xA;visualización de la salidas.">
     <Impacts ID="_fkmUkGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
       <Document href="HWS.uima#62"/>
