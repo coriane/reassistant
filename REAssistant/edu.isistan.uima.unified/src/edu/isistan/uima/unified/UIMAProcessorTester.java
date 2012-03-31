@@ -7,8 +7,8 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import edu.isistan.dal.ucs.model.UCSModelPackage;
 
 public class UIMAProcessorTester {
-	private String[] filenames = new String[] {"HWS", "HWS-short", "CRS", "CSPSv1", "CSPSv2" };
-	private String inputPath = "file:///C:/Work/runtime-EclipseApplication/Test/src/";
+	private static String[] filenames = new String[] {"HWS-short", /*"HWS/RE2012/HWS", */"HWS/ASE2012/HWS", "AB/AB", "ATM/ATM", "CRS/CRS", "CSPS/CSPSv1", "CSPS/CSPSv2", /*"KMTQPortal/KMTQPortal", */"MSLite/MSLite" };
+	private static String inputPath = "file:///C:/Work/runtime-EclipseApplication/Test/src/";
 
 	static {
 		System.setProperty("org.uimafit.type.import_pattern", "classpath*:desc/typesystems/**/*.xml");
@@ -28,48 +28,61 @@ public class UIMAProcessorTester {
 		String outputPath = inputPath;
 
 		String input = inputPath + filename + inputExtension;
-		String output = outputPath + filename + outputExtension;
+		String output = outputPath + filename + "-rebuild" + outputExtension;
 		UIMAProcessor.getInstance().execute(input, output);
 	}
 	
 	public void extractCSV() {
+		for(String filename : filenames)
+			extractCSV(filename);
+	}
+	
+	public void extractCSV(String filename) {
 		String inputExtension = ".uima";
 		String outputExtension = ".csv";
-		String outputPath = "file:///C:/Work/DomainActions/";
+		String outputPath = "C:/Work/REAssistant-models/domain/actions/csv-original/";
 		
-		for(String filename : filenames) {
-			String input = inputPath + filename + inputExtension;
-			String output = outputPath + filename + outputExtension;
-			UIMAProcessor.getInstance().executeDomainExtraction(input, output);
-		}
+		String input = inputPath + filename + inputExtension;
+		String output = outputPath + filename + outputExtension;
+		UIMAProcessor.getInstance().executeDomainExtraction(input, output);
 	}
 	
 	public void domainLabelingAppend() {
-		String inputExtension = ".uima";
-		
-		for(String filename : filenames) {
-			String input = inputPath + filename + inputExtension;
-			String output = inputPath + filename + "-action" + inputExtension;
-			UIMAProcessor.getInstance().executeAppendDomainLabeling(input, output);
-		}
+		for(String filename : filenames)
+			domainLabelingAppend(filename);
 	}
 	
-	public void domainLabelingUpdate() {
+	public void domainLabelingAppend(String filename) {
 		String inputExtension = ".uima";
-		String filename = filenames[0];
 		
-		//for(String filename : filenames) {
-			String input = inputPath + filename + inputExtension;
-			String output = inputPath + filename + "-action" + inputExtension;
-			UIMAProcessor.getInstance().executeUpdateDomainLabeling(input, output);
-		//}
+		String input = inputPath + filename + inputExtension;
+		String output = inputPath + filename + "-action" + inputExtension;
+		UIMAProcessor.getInstance().executeAppendDomainLabeling(input, output);
+	}
+	
+	
+	public void domainLabelingUpdate() {
+		for(String filename : filenames)
+			domainLabelingUpdate(filename);
+	}
+	
+	public void domainLabelingUpdate(String filename) {
+		String inputExtension = ".uima";
+		
+		String input = inputPath + filename + inputExtension;
+		String output = inputPath + filename + "-subset2" + inputExtension;
+		UIMAProcessor.getInstance().executeUpdateDomainLabeling(input, output);
 	}
 	
 	public static void main(String[] args) {
 		UIMAProcessorTester tester = new UIMAProcessorTester();
+		// Global actions
 		//tester.rebuildUIMA();
 		//tester.extractCSV();
 		//tester.domainLabelingAppend();
 		tester.domainLabelingUpdate();
+		// Single actions
+		//tester.domainLabelingUpdate(filenames[9]);
+		//tester.extractCSV(filenames[4]);
 	}
 }

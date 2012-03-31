@@ -23,6 +23,7 @@ import org.uimafit.pipeline.SimplePipeline;
 
 import edu.isistan.uima.unified.casconsumers.ClustererCasConsumer;
 import edu.isistan.uima.unified.sharedresources.ClustersResource;
+import edu.isistan.uima.unified.sharedresources.ProgressMonitorResource;
 import edu.isistan.uima.unified.sharedresources.ProgressMonitorResourceImpl;
 
 @SuppressWarnings("unused")
@@ -54,7 +55,6 @@ public class UIMAProcessor {
 			// External Resources
 			ExternalResourceDescription sharedDataResource = factory.getXMISharedDataResource();
 			ExternalResourceDescription monitorResource = factory.getProgressMonitorResource();
-			ProgressMonitorResourceImpl.setStaticMonitor(monitor);
 			// Collection Reader
 			CollectionReader collectionReader = factory.getUCSCR(typeSystemDescription, typePriorities, monitorResource, inputFile); total++;
 			// Sentence and Token Annotators
@@ -96,6 +96,8 @@ public class UIMAProcessor {
 			AnalysisEngine sdsrlAE = factory.getSDSRLAA(typeSystemDescription, typePriorities, monitorResource); total++;
 			AnalysisEngine conllsrlAE = factory.getCoNLLSRLAA(typeSystemDescription, typePriorities, monitorResource); total++;
 			//
+			ProgressMonitorResource progressMonitorResource = (ProgressMonitorResource) collectionReader.getUimaContext().getResourceObject("monitor");
+			progressMonitorResource.setMonitor(monitor);
 			monitor.beginTask("UIMA pipeline execution", total);
 			//
 			SimplePipeline.runPipeline(
@@ -135,12 +137,13 @@ public class UIMAProcessor {
 			ExternalResourceDescription sharedDataResource = factory.getXMISharedDataResource();
 			ExternalResourceDescription clusterResource = factory.getClustersResource();
 			ExternalResourceDescription monitorResource = factory.getProgressMonitorResource();
-			ProgressMonitorResourceImpl.setStaticMonitor(monitor);
 			// Collection Reader
 			CollectionReader collectionReader = factory.getXMIReaderCR(typeSystemDescription, typePriorities, monitorResource, sharedDataResource, inputFile); total++;
 			// Clusterer Consumer
 			AnalysisEngine clustererCC = factory.getClustererCC(typeSystemDescription, typePriorities, monitorResource, clusterResource, linkageType, distanceType, minimumDistance); total++;
 			//
+			ProgressMonitorResource progressMonitorResource = (ProgressMonitorResource) collectionReader.getUimaContext().getResourceObject("monitor");
+			progressMonitorResource.setMonitor(monitor);
 			monitor.beginTask("AOIG mining execution", total);
 			//
 			SimplePipeline.runPipeline(
@@ -174,12 +177,13 @@ public class UIMAProcessor {
 			// External Resources
 			ExternalResourceDescription sharedDataResource = factory.getXMISharedDataResource();
 			ExternalResourceDescription monitorResource = factory.getProgressMonitorResource();
-			ProgressMonitorResourceImpl.setStaticMonitor(monitor);
 			// Collection Reader			
 			CollectionReader collectionReader = factory.getXMIReaderCR(typeSystemDescription, typePriorities, monitorResource, sharedDataResource, inputFile); total++;
 			// Domain Action Extractor Consumer
 			AnalysisEngine domainCSVExtractorCC = factory.getDomainCSVExtractorCC(typeSystemDescription, typePriorities, monitorResource, outputFile); total++;
 			//
+			ProgressMonitorResource progressMonitorResource = (ProgressMonitorResource) collectionReader.getUimaContext().getResourceObject("monitor");
+			progressMonitorResource.setMonitor(monitor);
 			monitor.beginTask("UIMA domain action extraction execution", total);
 			//
 			SimplePipeline.runPipeline(
@@ -209,7 +213,6 @@ public class UIMAProcessor {
 			// External Resources
 			ExternalResourceDescription sharedDataResource = factory.getXMISharedDataResource();
 			ExternalResourceDescription monitorResource = factory.getProgressMonitorResource();
-			ProgressMonitorResourceImpl.setStaticMonitor(monitor);
 			// Collection Reader
 			CollectionReader collectionReader = factory.getXMIReaderCR(typeSystemDescription, typePriorities, monitorResource, sharedDataResource, inputFile); total++;
 			// Domain Action Annotator
@@ -217,6 +220,8 @@ public class UIMAProcessor {
 			// CAS Writer Consumer
 			AnalysisEngine writerCC = factory.getXMIWriterCC(typeSystemDescription, typePriorities, monitorResource, outputFile); total++;
 			//
+			ProgressMonitorResource progressMonitorResource = (ProgressMonitorResource) collectionReader.getUimaContext().getResourceObject("monitor");
+			progressMonitorResource.setMonitor(monitor);
 			monitor.beginTask("UIMA append domain action execution", total);
 			//
 			SimplePipeline.runPipeline(
@@ -247,7 +252,6 @@ public class UIMAProcessor {
 			// External Resources
 			ExternalResourceDescription sharedDataResource = factory.getXMISharedDataResource();
 			ExternalResourceDescription monitorResource = factory.getProgressMonitorResource();
-			ProgressMonitorResourceImpl.setStaticMonitor(monitor);
 			// Collection Reader
 			CollectionReader collectionReader = factory.getXMIReaderCR(typeSystemDescription, typePriorities, monitorResource, sharedDataResource, inputFile); total++;
 			// Domain Action Annotators
@@ -256,6 +260,8 @@ public class UIMAProcessor {
 			// CAS Writer Consumer
 			AnalysisEngine writerCC = factory.getXMIWriterCC(typeSystemDescription, typePriorities, monitorResource, sharedDataResource, outputFile); total++;
 			//
+			ProgressMonitorResource progressMonitorResource = (ProgressMonitorResource) collectionReader.getUimaContext().getResourceObject("monitor");
+			progressMonitorResource.setMonitor(monitor);
 			monitor.beginTask("UIMA append domain action execution", total);
 			//
 			SimplePipeline.runPipeline(

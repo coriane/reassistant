@@ -35,11 +35,12 @@ public class CCImpactDialog extends Dialog {
 	private ListViewer listViewerDocuments;
 	private ListViewer listViewerSections;
 	private ListViewer listViewerSentences;
-	
+	//
 	private Button btnOk;
+	private Button btnNext;
 	@SuppressWarnings("unused")
 	private Button btnCancel;
-	
+	//
 	private UIMAProjectQueryAdapter uimaRoot;
 	private Project project;
 	private EList<Document> documents;
@@ -48,15 +49,22 @@ public class CCImpactDialog extends Dialog {
 	private Section section;
 	private EList<Sentence> sentences;
 	private Sentence sentence;
+	//
+	private int mode;
+	public static int MODE_ADD = 0;
+	public static int MODE_EDIT = 1;
+	//
+	public static int NEXT = 2;
 	
 	/**
 	 * Create the dialog.
 	 * @param parentShell
 	 */
-	public CCImpactDialog(Shell parentShell, UIMAProjectQueryAdapter uimaRoot) {
+	public CCImpactDialog(Shell parentShell, UIMAProjectQueryAdapter uimaRoot, int mode) {
 		super(parentShell);
 		setShellStyle(SWT.RESIZE | SWT.TITLE);
 		this.uimaRoot = uimaRoot;
+		this.mode = mode;
 		project = uimaRoot.getProject();
 		documents = uimaRoot.getDocuments(project);
 	}
@@ -174,9 +182,18 @@ public class CCImpactDialog extends Dialog {
 	@Override
 	protected void createButtonsForButtonBar(Composite parent) {
 		parent.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_WHITE));
-		btnOk = createButton(parent, IDialogConstants.OK_ID, IDialogConstants.OK_LABEL, true);
+		
+		if(mode == MODE_EDIT) {
+			btnOk = createButton(parent, IDialogConstants.OK_ID, "Change", true);
+			btnOk.setEnabled(false);
+		}
+		if(mode == MODE_ADD) {
+			btnOk = createButton(parent, IDialogConstants.OK_ID, "Add and finish", false);
+			btnOk.setEnabled(false);
+			btnNext = createButton(parent, IDialogConstants.NEXT_ID, "Add and continue", true);
+			btnNext.setEnabled(false);
+		}
 		btnCancel = createButton(parent, IDialogConstants.CANCEL_ID, IDialogConstants.CANCEL_LABEL, false);
-		btnOk.setEnabled(false);
 	}
 
 	/**
@@ -193,6 +210,13 @@ public class CCImpactDialog extends Dialog {
 			!listViewerSections.getSelection().isEmpty() &&
 			!listViewerSentences.getSelection().isEmpty()
 		);
+		if(mode == MODE_ADD) {
+			btnNext.setEnabled(
+				!listViewerDocuments.getSelection().isEmpty() &&
+				!listViewerSections.getSelection().isEmpty() &&
+				!listViewerSentences.getSelection().isEmpty()
+			);
+		}
 	}
 	
 	public Document getDocument() {
@@ -205,5 +229,17 @@ public class CCImpactDialog extends Dialog {
 	
 	public Sentence getSentence() {
 		return sentence;
+	}
+
+	protected void buttonPressed(int buttonId) {
+		if (IDialogConstants.NEXT_ID == buttonId)
+			nextPressed();
+		else
+			super.buttonPressed(buttonId);
+	}
+	
+	protected void nextPressed() {
+		setReturnCode(NEXT);
+		close();
 	}
 }

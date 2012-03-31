@@ -18,20 +18,18 @@ public class CompositeCCQuerySet extends Composite {
 	private Text textQuery;
 	private ListViewer listViewerQueries;
 	private List listQueries;
+	private Text textName;
+	private Button btnInclude;
 	private Button btnAdd;
 	private Button btnRemove;
 	private Label lblQueries;
 	private Label lblName;
+	private Label lblContent;
+	private Label lblInclude;
 	private Composite compositeName;
-	private Text textName;
 	private Composite compositeQueries;
 	private Composite compositeContent;
-	private Label lblContent;
 	private Composite compositeButtons;
-	//
-	private Composite compositeInclude;
-	private Label lblInclude;
-	private Button btnInclude;
 
 	/**
 	 * Create the composite.
@@ -71,7 +69,7 @@ public class CompositeCCQuerySet extends Composite {
 		btnRemove.setText("Remove");
 		
 		compositeName = new Composite(this, SWT.NONE);
-		compositeName.setLayout(new GridLayout(2, false));
+		compositeName.setLayout(new GridLayout(4, false));
 		compositeName.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		
 		lblName = new Label(compositeName, SWT.NONE);
@@ -83,18 +81,13 @@ public class CompositeCCQuerySet extends Composite {
 		textName = new Text(compositeName, SWT.BORDER);
 		textName.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		
-		compositeInclude = new Composite(this, SWT.NONE);
-		compositeInclude.setLayout(new GridLayout(2, false));
-		compositeInclude.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-		
-		lblInclude = new Label(compositeInclude, SWT.NONE);
-		GridData gd_lblInclude = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_lblInclude.widthHint = 100;
+		lblInclude = new Label(compositeName, SWT.NONE);
+		GridData gd_lblInclude = new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1);
 		lblInclude.setLayoutData(gd_lblInclude);
 		lblInclude.setText("Include");
 
-		btnInclude = new Button(compositeInclude, SWT.CHECK);
-		btnInclude.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, false, 1, 1));
+		btnInclude = new Button(compositeName, SWT.CHECK);
+		btnInclude.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
 		btnInclude.setAlignment(SWT.CENTER);
 
 		controller = new CompositeCCQuerySetController(this);
@@ -178,10 +171,6 @@ public class CompositeCCQuerySet extends Composite {
 	
 	public Composite getCompositeContent() {
 		return compositeContent;
-	}
-	
-	public Composite getCompositeInclude() {
-		return compositeInclude;
 	}
 	
 	public Label getLblContent() {

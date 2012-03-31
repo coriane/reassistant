@@ -56,10 +56,12 @@ public class DomainActionAnnotator extends JCasAnnotator_ImplBase {
 		FileInputStream fis = null;
 		try {
 			classifier = new MachineClassifier();
-			classifier.setDebugEnabled(true);
-			classifier.loadInstances();
-			//classifier.trainModel();
-			classifier.loadModel();
+			classifier.setDebugEnabled(false);
+			//classifier.loadFullInstances();
+			classifier.loadSubsetInstances();
+			//classifier.loadFullModel();
+			//classifier.loadSubsetModel();
+			classifier.trainModel();
 		}
 		catch (Exception e) { 
 			e.printStackTrace();
@@ -105,24 +107,26 @@ public class DomainActionAnnotator extends JCasAnnotator_ImplBase {
 					String sA0_DESC = "", sA1_DESC = "", sA2_DESC = "";
 					// Fetch data
 					FSArray array = predicateAnnotation.getArguments();
-					for(int i = 0; i < array.size(); i++) {
-						Argument argument = (Argument) array.get(i);
-						if(argument.getLabel().equalsIgnoreCase("A0")) {
-							sA0 = argument.getCoveredText().replace(';', ',');
-							if(argument.getDescription() != null)
-								sA0_DESC = argument.getDescription().replace(';', ',');
+					if(array != null) {
+						for(int i = 0; i < array.size(); i++) {
+							Argument argument = (Argument) array.get(i);
+							if(argument.getLabel().equalsIgnoreCase("A0")) {
+								sA0 = argument.getCoveredText().replace(';', ',');
+								if(argument.getDescription() != null)
+									sA0_DESC = argument.getDescription().replace(';', ',');
+							}
+							else if(argument.getLabel().equalsIgnoreCase("A1")) {
+								sA1 = argument.getCoveredText().replace(';', ',');
+								if(argument.getDescription() != null)
+									sA1_DESC = argument.getDescription().replace(';', ',');
+							}
+							else if(argument.getLabel().equalsIgnoreCase("A2")) {
+								sA2 = argument.getCoveredText().replace(';', ',');
+								if(argument.getDescription() != null)
+									sA2_DESC = argument.getDescription().replace(';', ',');
+							}
 						}
-						else if(argument.getLabel().equalsIgnoreCase("A1")) {
-							sA1 = argument.getCoveredText().replace(';', ',');
-							if(argument.getDescription() != null)
-								sA1_DESC = argument.getDescription().replace(';', ',');
-						}
-						else if(argument.getLabel().equalsIgnoreCase("A2")) {
-							sA2 = argument.getCoveredText().replace(';', ',');
-							if(argument.getDescription() != null)
-								sA2_DESC = argument.getDescription().replace(';', ',');
-						}
-					} 
+					}
 					// Classify the instance
 					try {
 						List<DomainActionNode> roots = classifier.classifyPredicate(sP, sP_DESC, sA0, sA0_DESC, sA1, sA1_DESC, sA2, sA2_DESC);

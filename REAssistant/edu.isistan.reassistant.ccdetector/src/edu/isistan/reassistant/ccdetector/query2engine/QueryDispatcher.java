@@ -29,16 +29,21 @@ import org.eclipse.emf.query2.ResultSet;
 import edu.isistan.reassistant.ccdetector.util.ReflectionHelper;
 
 public class QueryDispatcher {
-	public static Index index = IndexFactory.getInstance();
+	public static Index index;
+	@SuppressWarnings("unused")
 	private Resource resource = null;
 	private ResourceSet resourceSet = null;
 	private int maxResultSetSize = 1000000; //Unbounded
 	private int numberOfResults = -1; //Unbounded
 	
+	static {
+		IndexFactory.dumpIndexes();
+		index = IndexFactory.getInstance();
+	}
+	
 	public QueryDispatcher(ResourceSet resourceSet, Resource resource) {
 		this.resourceSet = resourceSet;
 		this.resource = resource;
-		addToIndex(this.resource);
 	}
 	
 	public void addToIndex(final Resource resource) {

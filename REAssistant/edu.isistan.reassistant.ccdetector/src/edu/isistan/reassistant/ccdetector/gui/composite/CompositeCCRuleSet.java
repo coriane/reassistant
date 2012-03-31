@@ -1,10 +1,12 @@
 package edu.isistan.reassistant.ccdetector.gui.composite;
 
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.jface.viewers.ListViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
@@ -22,6 +24,9 @@ public class CompositeCCRuleSet extends Composite {
 	private Composite compositeButtons;
 	private Button btnRemove;
 	private Button btnAdd;
+	private Label queryPreferenceLabel;
+	private ComboViewer queryPreferenceComboViewer;
+	private Combo queryPreferenceCombo;
 
 	public CompositeCCRuleSet(Composite parent, int style, AdapterFactoryEditingDomain editingDomain) {
 		super(parent, style);
@@ -54,6 +59,14 @@ public class CompositeCCRuleSet extends Composite {
 		
 		btnRemove = new Button(compositeButtons, SWT.NONE);
 		btnRemove.setText("Remove");
+		
+		queryPreferenceLabel = new Label(this, SWT.NONE);
+		queryPreferenceLabel.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, false, 2, 1));
+		queryPreferenceLabel.setText("Query preference");
+		
+		queryPreferenceComboViewer = new ComboViewer(this, SWT.READ_ONLY);
+		queryPreferenceCombo = queryPreferenceComboViewer.getCombo();
+		queryPreferenceCombo.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 2, 1));
 	}
 
 	@Override
@@ -75,6 +88,14 @@ public class CompositeCCRuleSet extends Composite {
 	
 	public Button getBtnAdd() {
 		return btnAdd;
+	}
+	
+	public ComboViewer getQueryPreferenceComboViewer() {
+		return queryPreferenceComboViewer;
+	}
+	
+	public Combo getQueryPreferenceCombo() {
+		return queryPreferenceCombo;
 	}
 
 	public CompositeCCRuleSetController getController() {

@@ -1,6 +1,7 @@
 package edu.isistan.reassistant.actions;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -99,6 +100,7 @@ public class CCRuleMineActionDelegate implements IEditorActionDelegate {
 	private void executeRuleMine(String modelUIMA, IProgressMonitor monitor) throws InterruptedException {
 		QueryEngine engine = new QueryEngine(modelUIMA);
 		engine.beginQueriesExecution(monitor);
+		//
 		EMap<CrosscuttingConcernRule, EList<EObject>> directRuleResults = engine.queryDirectRules();
 		EMap<CrosscuttingConcernRule, EList<EObject>> impactRuleResults = engine.queryImpactRules();
 		List<CrosscuttingConcern> crosscuttingConcerns = process(directRuleResults, impactRuleResults);
@@ -109,26 +111,33 @@ public class CCRuleMineActionDelegate implements IEditorActionDelegate {
 			compoundCommand.append(command);
 		}
 		editingDomain.getCommandStack().execute(compoundCommand);
-		monitor.done();
+		//
+		engine.endQueriesExecution(monitor);
 	}
 	
 	private List<CrosscuttingConcern> process(EMap<CrosscuttingConcernRule, EList<EObject>> directRuleResults, EMap<CrosscuttingConcernRule, EList<EObject>> impactRuleResults) {
 		List<CrosscuttingConcern> crosscuttingConcernsList = new ArrayList<CrosscuttingConcern>();
-		Set<CrosscuttingConcernRule> rules = directRuleResults.keySet();
+		Set<CrosscuttingConcernRule> rules = new HashSet<CrosscuttingConcernRule>();
+		rules.addAll(directRuleResults.keySet());
+		rules.addAll(impactRuleResults.keySet());
 		for(CrosscuttingConcernRule rule : rules) {
 			CrosscuttingConcern crosscuttingConcern = REAssistantModelFactory.eINSTANCE.createCrosscuttingConcern();
 			crosscuttingConcern.setName(rule.getName());
 			crosscuttingConcern.setDescription(rule.getMetadata());
 			//
 			EList<EObject> directResult = directRuleResults.get(rule);
-			for(EObject object : directResult) {
-				Impact impact = process(rule, object);
-				crosscuttingConcern.getImpacts().add(impact);
+			if(directResult != null) {
+				for(EObject object : directResult) {
+					Impact impact = process(rule, object);
+					crosscuttingConcern.getImpacts().add(impact);
+				}
 			}
 			EList<EObject> impactResult = impactRuleResults.get(rule);
-			for(EObject object : impactResult) {
-				Impact impact = process(rule, object);
-				crosscuttingConcern.getImpacts().add(impact);
+			if(impactResult != null) {
+				for(EObject object : impactResult) {
+					Impact impact = process(rule, object);
+					crosscuttingConcern.getImpacts().add(impact);
+				}
 			}
 			crosscuttingConcernsList.add(crosscuttingConcern);
 		}
