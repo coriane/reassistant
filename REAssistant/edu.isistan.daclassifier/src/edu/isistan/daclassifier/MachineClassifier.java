@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -12,6 +13,7 @@ import java.io.StringBufferInputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import edu.isistan.daclassifier.output.DomainActionNode;
@@ -54,10 +56,41 @@ public class MachineClassifier {
 	public boolean isDebugEnabled() {
 		return debugEnabled;
 	}
-
-	public void loadInstances(String[] filenames, String xmlfilename) {
+	
+	public void loadFullInstancesFromCSV(String[] filenames, String xmlfilename) {
 		try {
 			instances = ArffGenerator.readFromCSV(filenames);
+			Instances clone = new Instances(instances);
+			finstances = Filter.useFilter(clone, MachineLearner.getWordFilter(clone));
+			multilabelinstances = new MultiLabelInstances(new StringBufferInputStream(finstances.toString()), new BufferedInputStream(new FileInputStream(xmlfilename)));
+			labelsmetadata = LabelsBuilder.createLabels(xmlfilename);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void loadSubsetInstancesFromCSV(String[] filenames, String xmlfilename, int percentage) {
+		try {
+			Instances dataset = ArffGenerator.readFromCSV(filenames);
+			dataset.randomize(new Random(1));
+			int capacity = dataset.size();
+			double newPercentage = ((double) percentage) / 100d;
+			int newCapacity = (int) (newPercentage * capacity);
+			instances = new Instances(dataset, newCapacity);
+			for(int index = 0; index < newCapacity; index++)
+				instances.add(dataset.get(index));
+			Instances clone = new Instances(instances);
+			finstances = Filter.useFilter(clone, MachineLearner.getWordFilter(clone));
+			multilabelinstances = new MultiLabelInstances(new StringBufferInputStream(finstances.toString()), new BufferedInputStream(new FileInputStream(xmlfilename)));
+			labelsmetadata = LabelsBuilder.createLabels(xmlfilename);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void loadInstances(String filename, String xmlfilename) {
+		try {
+			instances = new Instances(new FileReader(filename));
 			finstances = Filter.useFilter(instances, MachineLearner.getWordFilter(instances));
 			multilabelinstances = new MultiLabelInstances(new StringBufferInputStream(finstances.toString()), new BufferedInputStream(new FileInputStream(xmlfilename)));
 			labelsmetadata = LabelsBuilder.createLabels(xmlfilename);
@@ -74,8 +107,8 @@ public class MachineClassifier {
 		learner = (MultiLabelLearner) modelReader.readObject();
 		modelReader.close();
 	}
-
-	public void saveModel(String sourcefilepath, String filterfilepath, String modelfilepath) throws InvalidDataException, Exception {
+	
+	public void saveArff(String sourcefilepath, String filterfilepath) throws InvalidDataException, Exception {
 		// Saving unfiltered source file
 		File sourceFile = new File(sourcefilepath);
 		if(!sourceFile.exists())
@@ -90,6 +123,9 @@ public class MachineClassifier {
 		BufferedWriter filterWriter = new BufferedWriter(new FileWriter(filterFile));
 		filterWriter.write(finstances.toString());
 		filterWriter.close();
+	}
+
+	public void saveModel(String modelfilepath) throws InvalidDataException, Exception {
 		// Saving model file
 		File modelFile = new File(modelfilepath);
 		if(!modelFile.exists())
@@ -240,26 +276,31 @@ public class MachineClassifier {
 		return stringBuffer.toString();
 	}
 	
-	public void loadInstances() {
-		String[] filenames = Utils.getCSVFilenames();
+	public void loadSubsetInstances() {
+		String filename = Utils.getSubsetArffSourceFilename();
 		String xmlfilename = Utils.getLabelsFilename();
-		loadInstances(filenames, xmlfilename);
+		loadInstances(filename, xmlfilename);
 	}
 	
-	public void loadModel() throws Exception {
-		String modelfilepath = Utils.getModelFilename();
+	public void loadFullInstances() {
+		String filename = Utils.getFullArffSourceFilename();
+		String xmlfilename = Utils.getLabelsFilename();
+		loadInstances(filename, xmlfilename);
+	}
+	
+	public void loadSubsetModel() throws Exception {
+		String modelfilepath = Utils.getSubsetModelFilename();
+		loadModel(modelfilepath);
+	}
+	
+	public void loadFullModel() throws Exception {
+		String modelfilepath = Utils.getFullModelFilename();
 		loadModel(modelfilepath);
 	}
 
 	public void tryClassifier() {
 		// Model Trial
 		try {
-			classifyPredicateInternal(
-					"displayed", "to present, exhibit", 
-					"", "", 
-					"The list of health units", "entity displayed", 
-					"on the employee's local display", "location");
-			//
 			List<DomainActionNode> domainActions = classifyPredicate(
 					"displayed", "to present, exhibit", 
 					"", "", 
@@ -271,13 +312,46 @@ public class MachineClassifier {
 		}
 	}
 	
-	public void saveClassifier() {
-		String sourcefilepath = Utils.getArffSourceFilename();
-		String filterfilepath = Utils.getArffFilteredFilename();
-		String modelfilepath = Utils.getModelFilename();
+	public void saveSubsetArffFiles() {
+		String sourcefilepath = Utils.getSubsetArffSourceFilename();
+		String filterfilepath = Utils.getSubsetArffFilteredFilename();
+		int percentage = 40;
 		try {
-			loadInstances();
-			saveModel(sourcefilepath, filterfilepath, modelfilepath);
+			loadSubsetInstancesFromCSV(Utils.getCSVFilenames(), Utils.getLabelsFilename(), percentage);
+			saveArff(sourcefilepath, filterfilepath);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void saveFullArffFiles() {
+		String sourcefilepath = Utils.getFullArffSourceFilename();
+		String filterfilepath = Utils.getFullArffFilteredFilename();
+		try {
+			loadFullInstancesFromCSV(Utils.getCSVFilenames(), Utils.getLabelsFilename());
+			saveArff(sourcefilepath, filterfilepath);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void saveSubsetClassifier() {
+		String modelfilepath = Utils.getSubsetModelFilename();
+		try {
+			loadInstances(Utils.getSubsetArffSourceFilename(), Utils.getLabelsFilename());
+			saveModel(modelfilepath);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void saveFullClassifier() {
+		String modelfilepath = Utils.getFullModelFilename();
+		try {
+			loadInstances(Utils.getFullArffSourceFilename(), Utils.getLabelsFilename());
+			saveModel(modelfilepath);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -286,10 +360,19 @@ public class MachineClassifier {
 	public static void main(String[] args) throws Exception {
 		MachineClassifier classifier = new MachineClassifier();
 		classifier.setDebugEnabled(true);
-		classifier.loadInstances();
-		classifier.loadModel();
-		//classifier.trainModel();
-		//classifier.saveClassifier();
+		// Full
+//		classifier.saveFullArffFiles();
+		classifier.loadFullInstances();
+		classifier.loadFullModel();
+//		classifier.trainModel();
+//		classifier.saveFullClassifier();
 		classifier.tryClassifier();
+		// Subset
+//		classifier.saveSubsetArffFiles();
+		classifier.loadSubsetInstances();
+		classifier.loadSubsetModel();
+//		classifier.trainModel();
+//		classifier.saveSubsetClassifier();
+		classifier.tryClassifier();		
 	}
 }

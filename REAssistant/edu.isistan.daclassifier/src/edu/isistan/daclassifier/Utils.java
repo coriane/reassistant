@@ -21,19 +21,9 @@ public class Utils {
 	public static String[] getCSVFilenames() {
 		String filepath = Utils.getDomainActionPath();
 		String[] filenames = { 
-				filepath + "data/HWS.csv"
-				//,filepath + "data/CRS.csv"
-				//,filepath + "data/CSPSv2.csv"
-		};
-		return filenames;
-	}
-	
-	public static String[] getCSVTrialFilenames() {
-		String filepath = Utils.getDomainActionPath();
-		String[] filenames = { 
-				filepath + "data/HWS.csv"
-				,filepath + "data/CRS.csv"
-				//,filepath + "data/CSPSv2.csv"
+				filepath + "data/HWS/HWS.csv"
+				,filepath + "data/CRS/CRS.csv"
+				,filepath + "data/CSPS/CSPSv2.csv"
 		};
 		return filenames;
 	}
@@ -44,21 +34,39 @@ public class Utils {
 		return xmlfilename;
 	}
 	
-	public static String getArffSourceFilename() {
+	public static String getFullArffSourceFilename() {
 		String filepath = Utils.getDomainActionPath();
-		String sourcefilepath = filepath + "arff/original.arff";
+		String sourcefilepath = filepath + "arff/fulloriginal.arff";
 		return sourcefilepath;
 	}
 	
-	public static String getArffFilteredFilename() {
+	public static String getFullArffFilteredFilename() {
 		String filepath = Utils.getDomainActionPath();
-		String filterfilepath = filepath + "arff/filtered.arff";
+		String filterfilepath = filepath + "arff/fullfiltered.arff";
 		return filterfilepath;
 	}
 	
-	public static String getModelFilename() {
+	public static String getFullModelFilename() {
 		String filepath = Utils.getDomainActionPath();
-		String modelfilepath = filepath + "model/domainaction.model";
+		String modelfilepath = filepath + "model/fulldomainaction.model";
+		return modelfilepath;
+	}
+	
+	public static String getSubsetArffSourceFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String sourcefilepath = filepath + "arff/subsetoriginal.arff";
+		return sourcefilepath;
+	}
+	
+	public static String getSubsetArffFilteredFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String filterfilepath = filepath + "arff/subsetfiltered.arff";
+		return filterfilepath;
+	}
+	
+	public static String getSubsetModelFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String modelfilepath = filepath + "model/subsetdomainaction.model";
 		return modelfilepath;
 	}
 	

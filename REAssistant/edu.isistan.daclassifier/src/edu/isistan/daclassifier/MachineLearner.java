@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.StringBufferInputStream;
 import java.util.ArrayList;
 import java.util.List;
-
 import au.com.bytecode.opencsv.CSVWriter;
 
 import mulan.classifier.MultiLabelLearner;
@@ -48,13 +47,20 @@ public class MachineLearner {
 
 	public void load(String[] filenames, String xmlfilename) {
 		try {
-			fullInstances = ArffGenerator.readFromCSV(filenames);
-			textInstances = Filter.useFilter(fullInstances, getAttributeFilter(fullInstances, textExpression, false));
-			srlInstances = Filter.useFilter(fullInstances, getAttributeFilter(fullInstances, srlExpression, false));
+			Instances clone;
 			//
-			fullInstancesFiltered = Filter.useFilter(fullInstances, getWordFilter(fullInstances));
-			textInstancesFiltered = Filter.useFilter(textInstances, getWordFilter(textInstances));
-			srlInstancesFiltered = Filter.useFilter(srlInstances, getWordFilter(srlInstances));
+			fullInstances = ArffGenerator.readFromCSV(filenames);
+			clone = new Instances(fullInstances);
+			textInstances = Filter.useFilter(clone, getAttributeFilter(clone, textExpression, false));
+			clone = new Instances(fullInstances);
+			srlInstances = Filter.useFilter(clone, getAttributeFilter(clone, srlExpression, false));
+			//
+			clone = new Instances(fullInstances);
+			fullInstancesFiltered = Filter.useFilter(clone, getWordFilter(clone));
+			clone = new Instances(textInstances);
+			textInstancesFiltered = Filter.useFilter(clone, getWordFilter(clone));
+			clone = new Instances(srlInstances);
+			srlInstancesFiltered = Filter.useFilter(clone, getWordFilter(clone));
 			//
 			fullDataset = new MultiLabelInstances(new StringBufferInputStream(fullInstancesFiltered.toString()), new BufferedInputStream(new FileInputStream(xmlfilename)));
 			textDataset = new MultiLabelInstances(new StringBufferInputStream(textInstancesFiltered.toString()), new BufferedInputStream(new FileInputStream(xmlfilename)));
@@ -85,12 +91,8 @@ public class MachineLearner {
 		return filter;
 	}
 	
-	public void trainAndEvalLP() {
-		
-	}
-	
-	public void trainAndEval_HMC_LP_SMO(String outputfilepath) throws Exception {
-		String learnerName = "HMC-LP-SMO";
+	public void trainAndEvalFull_HMC_LP_SMO(String outputfilepath) throws Exception {
+		String learnerName = "HMC-LP-SMO-Full";
 		String outputfilename = outputfilepath + learnerName + ".csv";
 		String[] parametersNames = new String[] { "Dataset", "Kernel", "C", "Gamma" };
 		//
@@ -122,13 +124,13 @@ public class MachineLearner {
 							((RBFKernel) kernelValue).setGamma(gamma);
 							learner = new HMC(new LabelPowerset(smo));
 							String[] parametersValues = new String[] { datasetName, kernelValue.getClass().getSimpleName(), String.valueOf(cValue), String.valueOf(gammaValue) };
-							run_HMC_LP_SMO(learner, dataset, numFolds, writer, learnerName, parametersValues);
+							runFull_HMC_LP_SMO(learner, dataset, numFolds, writer, learnerName, parametersValues);
 						}
 					}
 					else {
 						learner = new HMC(new LabelPowerset(smo));
 						String[] parametersValues = new String[] { datasetName, kernelValue.getClass().getSimpleName(), String.valueOf(cValue), String.valueOf(0) };
-						run_HMC_LP_SMO(learner, dataset, numFolds, writer, learnerName, parametersValues);
+						runFull_HMC_LP_SMO(learner, dataset, numFolds, writer, learnerName, parametersValues);
 					}
 					//
 
@@ -139,7 +141,7 @@ public class MachineLearner {
 		writer.close();
 	}
 	
-	private void run_HMC_LP_SMO(MultiLabelLearner learner, MultiLabelInstances dataset, int numFolds, CSVWriter writer, String learnerName, String[] parametersValues) throws Exception {
+	private void runFull_HMC_LP_SMO(MultiLabelLearner learner, MultiLabelInstances dataset, int numFolds, CSVWriter writer, String learnerName, String[] parametersValues) throws Exception {
 		CustomEvaluator evaluator;
 		MultipleEvaluation trainResults;
 		MultipleEvaluation testResults;
@@ -147,6 +149,80 @@ public class MachineLearner {
 		evaluator = new CustomEvaluator();
 		evaluator.setStrict(false);
 		evaluator.crossValidate(learner, dataset, numFolds);
+		trainResults = evaluator.getTrainingMultipleEvaluation();
+		testResults = evaluator.getTestingMultipleEvaluation();
+		//
+		storeExampleBasedAccuracyValues(writer, learnerName, true, trainResults, parametersValues);
+		storeExampleBasedPrecisionValues(writer, learnerName, true, trainResults, parametersValues);
+		storeExampleBasedRecallValues(writer, learnerName, true, trainResults, parametersValues);
+		storeExampleBasedFMeasureValues(writer, learnerName, true, trainResults, parametersValues);
+		//
+		storeExampleBasedAccuracyValues(writer, learnerName, false, testResults, parametersValues);
+		storeExampleBasedPrecisionValues(writer, learnerName, false, testResults, parametersValues);
+		storeExampleBasedRecallValues(writer, learnerName, false, testResults, parametersValues);
+		storeExampleBasedFMeasureValues(writer, learnerName, false, testResults, parametersValues);
+	}
+	
+	public void trainAndEvalPercentage_HMC_LP_SMO(String outputfilepath) throws Exception {
+		String learnerName = "HMC-LP-SMO-Percentage";
+		String outputfilename = outputfilepath + learnerName + ".csv";
+		String[] parametersNames = new String[] { "Dataset", "Percentage", "Increment", "Kernel", "C", "Gamma" };
+		//
+		MultiLabelInstances[] datasetValues = new MultiLabelInstances[] { fullDataset, textDataset, srlDataset };
+		String[] datasetNames = new String[] { "Full", "Text", "SRL" };
+		int[] percentageValues = new int[] { 20, 30, 40, 50 , 60 };
+		double[] cValues = new double[] { -1, 1, 3, 5, 7, 9, 11 };
+		double[] gammaValues = new double[] { -9, -7, -5, -3, -1, 1, 3 };
+		Kernel[] kernelValues = new Kernel[] { new PolyKernel(), new RBFKernel() };
+		int incrementValue = 10;
+		//
+		CSVWriter writer = new CSVWriter(new FileWriter(outputfilename), ';');
+		storeHeads(writer, parametersNames);
+		//
+		MultiLabelLearner learner;
+		SMO smo;
+		//
+		for(int datasetIndex = 0; datasetIndex < datasetValues.length; datasetIndex++) {
+			String datasetName =  datasetNames[datasetIndex];
+			MultiLabelInstances dataset = datasetValues[datasetIndex];
+			for(int percentageIndex = 0; percentageIndex < percentageValues.length; percentageIndex++) {
+				int percentageValue = percentageValues[percentageIndex];
+				smo = new SMO();
+				for(Kernel kernelValue : kernelValues) {
+					smo.setKernel(kernelValue);
+					for(double cValue : cValues) {
+						double c = Math.pow(2, cValue);
+						smo.setC(c);
+						if(kernelValue instanceof RBFKernel) {
+							for(double gammaValue : gammaValues) {
+								double gamma = Math.pow(2, gammaValue);
+								((RBFKernel) kernelValue).setGamma(gamma);
+								learner = new HMC(new LabelPowerset(smo));
+								String[] parametersValues = new String[] { datasetName, String.valueOf(percentageValue), String.valueOf(incrementValue), kernelValue.getClass().getSimpleName(), String.valueOf(cValue), String.valueOf(gammaValue) };
+								runPercentage_HMC_LP_SMO(learner, dataset, percentageValue, incrementValue, writer, learnerName, parametersValues);
+							}
+						}
+						else {
+							learner = new HMC(new LabelPowerset(smo));
+							String[] parametersValues = new String[] { datasetName, String.valueOf(percentageValue), String.valueOf(incrementValue), kernelValue.getClass().getSimpleName(), String.valueOf(cValue), String.valueOf(0) };
+							runPercentage_HMC_LP_SMO(learner, dataset, percentageValue, incrementValue, writer, learnerName, parametersValues);
+						}
+					}
+				}
+			}
+		}
+		//
+		writer.close();
+	}
+	
+	private void runPercentage_HMC_LP_SMO(MultiLabelLearner learner, MultiLabelInstances dataset, int percentage, int increment, CSVWriter writer, String learnerName, String[] parametersValues) throws Exception {
+		CustomEvaluator evaluator;
+		MultipleEvaluation trainResults;
+		MultipleEvaluation testResults;
+		//
+		evaluator = new CustomEvaluator();
+		evaluator.setStrict(false);
+		evaluator.randomPercentageValidate(learner, dataset, percentage, increment);
 		trainResults = evaluator.getTrainingMultipleEvaluation();
 		testResults = evaluator.getTestingMultipleEvaluation();
 		//
@@ -208,17 +284,33 @@ public class MachineLearner {
 		writer.writeNext(values);
 	}
 	
+	public void firstEvaluation(String outputfilepath) {
+		try {
+			this.trainAndEvalFull_HMC_LP_SMO(outputfilepath);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void secondEvaluation(String outputfilepath) {
+		try {
+			this.trainAndEvalPercentage_HMC_LP_SMO(outputfilepath);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public static void main(String[] args) {
-		//Model Evaluation
-		String[] filenames = Utils.getCSVTrialFilenames();
+		String[] filenames = Utils.getCSVFilenames();
 		String xmlfilename = Utils.getLabelsFilename();
 		String outputfilepath = Utils.getResultsFilepath();
 		MachineLearner learner = new MachineLearner();
 		learner.load(filenames, xmlfilename);
-		try {
-			learner.trainAndEval_HMC_LP_SMO(outputfilepath);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		// Select best parameters in 10 fold cross validation
+		//learner.firstEvaluation(outputfilepath);
+		// Select best subset in random selection & different percentages
+		learner.secondEvaluation(outputfilepath);
 	}
 }

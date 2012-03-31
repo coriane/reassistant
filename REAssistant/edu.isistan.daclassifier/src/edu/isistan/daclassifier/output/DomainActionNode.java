@@ -58,12 +58,12 @@ public class DomainActionNode {
 	public String toString() {
 		StringBuffer stringBuffer = new StringBuffer();
 		if(childrens.size() > 0) {
-			stringBuffer.append("[ ");
+			stringBuffer.append("[");
 			for(DomainActionNode domainAction : childrens)
 				stringBuffer.append(domainAction.toString() + " ");
 			stringBuffer.append("]");
 		}
-		String domainActionString = getLabel() + " C: " + getConfidence() + " R: " + getRanking() + stringBuffer.toString();
+		String domainActionString = getLabel() + " C: " + getConfidence() + " R: " + getRanking() + " " + stringBuffer.toString();
 		return domainActionString;
 	}
 }

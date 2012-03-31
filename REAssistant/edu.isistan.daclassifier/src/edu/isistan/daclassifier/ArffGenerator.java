@@ -58,8 +58,11 @@ public class ArffGenerator {
 	private static List<Attribute> featureAttributes = null;
 	private static List<Attribute> classAttributes = null;
 	
-	public static Instances readFromCSV(String[] filenames) throws IOException {
+	static {
 		initAttributesMap();
+	}
+	
+	public static Instances readFromCSV(String[] filenames) throws IOException {
 		Instances instances = generateTrainingSet();
 		for(String filename : filenames) {
 			CSVReader reader = new CSVReader(new FileReader(filename), ';');
@@ -325,7 +328,8 @@ public class ArffGenerator {
 		instance.setDataset(instances);
 		for(int i = 0; i < heads.length; i++) {
 			String head = heads[i];
-			String value = values[i];
+			//String value = values[i];
+			String value = clean(values[i]);
 			Attribute attribute = null;
 			if(!head.equals(sSentence)) {
 				if(head.equals(sDomainActions)) {
@@ -359,8 +363,17 @@ public class ArffGenerator {
 		return instance;
 	}
 	
+	public static String clean(String value) {
+		String output = new String(value);
+		output = output.replaceAll("\'", "");
+		output = output.replaceAll("\"", "");
+		output = output.replaceAll("´", "");
+		output = output.replaceAll("’", "");
+		return output;
+	}
+	
 	public static void main(String[] args) throws IOException {
-		String[] filenames = Utils.getCSVTrialFilenames();
+		String[] filenames = Utils.getCSVFilenames();
 		Instances instances = ArffGenerator.readFromCSV(filenames);
 		System.out.println(instances.toString());
 	}
