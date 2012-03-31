@@ -1,0 +1,916 @@
+@relation DA-TrainingSet
+
+@attribute P string
+@attribute P_DESC string
+@attribute A0 string
+@attribute A0_DESC string
+@attribute A1 string
+@attribute A1_DESC string
+@attribute A2 string
+@attribute A2_DESC string
+@attribute IO {0,1}
+@attribute Input {0,1}
+@attribute Entry {0,1}
+@attribute Selection {0,1}
+@attribute Output {0,1}
+@attribute Display {0,1}
+@attribute Notification {0,1}
+@attribute Data {0,1}
+@attribute Read {0,1}
+@attribute Single {0,1}
+@attribute Multiple {0,1}
+@attribute Write {0,1}
+@attribute Create {0,1}
+@attribute Update {0,1}
+@attribute Delete {0,1}
+@attribute Process {0,1}
+@attribute Calculation {0,1}
+@attribute Verification {0,1}
+@attribute Communication {0,1}
+@attribute Indoor {0,1}
+@attribute Outdoor {0,1}
+@attribute UseCase {0,1}
+@attribute Begin {0,1}
+@attribute Flow {0,1}
+@attribute End {0,1}
+@attribute Noise {0,1}
+
+@data
+chooses,'choose, pick','The citizen',picker,'the type of query','thing picked','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+grouped,'put into some group','by health units','agent, entity causing some grouping',specialties,'theme, thing being included in some group','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+retrieves,'get back','the system',receiver,'the list of health units stored','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stored,store,'','','health units',commodity,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the details of each health unit such as its description and specialties','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+presented,give,'','','The list of health units','thing given','to the user on their local display','given to',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+grouped,'put into some group','by specialties','agent, entity causing some grouping','health units','theme, thing being included in some group','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+retrieves,'get back','the system',receiver,'the list of registered specialties','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the details of each specialty such as its unique identifier and name','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+presented,give,'','','The list of specialties','thing given','to the user on their local display','given to',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','the system',receiver,'the list of diseases','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the details of each disease type such as its unique identifier and name','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+presented,give,'','','The list of disease','thing given','to the user on their local display','given to',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+provides,'cf give','The citizen',provider,'the data','thing provided','for the query','entity provided for  benefactive ',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+grouped,'put into some group','by health units','agent, entity causing some grouping',specialties,'theme, thing being included in some group','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out','the citizen',selector,'the health unit','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+queried,ask,'','','the health unit','oracle, answerer','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+representing,'stand for, correspond','A unique identifier','item   entity taking place of other','the selected health unit','item   entity being substituted by the other','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','A unique identifier representing the selected health unit',sent,'to the server',sent-to,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','the health unit information is consistent',guarantee,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+used,'Take advantage of, utilise','by the system',User,'The unique identifier','thing used','to search the repository for the selected health unit',purpose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+search,'search, seek','The unique identifier',searcher,'the repository for the selected health unit','Area searched','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieved,'get back','','','The details of the selected health unit','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+including,include,'','','its specialties','theme, thing being included in some group','The details of the selected health unit',group,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+returned,'come back','','','The specialties for the selected health unit','entity in motion','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+grouped,'put into some group','by specialties','agent, entity causing some grouping','health units','theme, thing being included in some group','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out','the citizen',selector,'the specialty to be queried','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+queried,ask,'','','the specialty','oracle, answerer','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+representing,'stand for, correspond','A unique identifier','item   entity taking place of other','the selected specialty','item   entity being substituted by the other','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','A unique identifier representing the selected specialty',sent,'to the server',sent-to,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','the health unit information is consistent',guarantee,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+used,'Take advantage of, utilise','','','The unique identifier','thing used','to retrieve the list of health units which are associated with the selected specialty',purpose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+retrieve,'get back','The unique identifier',receiver,'the list of health units which are associated with the selected specialty','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+associated,'include in some group','','','health units','theme, thing being included in some group','with the selected specialty','group, associated-with',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieved,'get back','','','The details of the health units and specialties','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieved,'get back','','',The,'thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+returned,'come back','','','The retrieved health units','entity in motion','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+provides,'cf give','the citizen',provider,'the complaint code','thing provided','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+representing,'stand for, correspond','The unique identifier','item   entity taking place of other','the complaint to be retrieved','item   entity being substituted by the other','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+retrieved,'get back','','','the complaint','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','The unique identifier representing the complaint to be retrieved',sent,'to the server',sent-to,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','the complaint information is consistent',guarantee,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+used,'Take advantage of, utilise','','','The unique identifier','thing used','to retrieve the complaint entry',purpose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+retrieve,'get back','The unique identifier',receiver,'the complaint entry','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+determine,'set, establish, decide','The system',decider,'the complaint type as to retrieve the appropriate information','thing determined','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+retrieve,'get back','','','the appropriate information','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieved,'get back','','','','','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+consumed,'eat, use up','','','the meal',consumed,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+ate,'',people,'','the meal, the number of sick people, etc','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+retrieved,'get back','','','the number of people who ate the meal, the number of sick people, etc','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+affected,'have an effect on','','',animals,'thing affected','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+returned,'come back','','','The complaint with all the appropriate information','entity in motion','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','the citizen',selector,'the disease to be queried','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+queried,ask,'','','the disease','oracle, answerer','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+representing,'stand for, correspond','The unique identifier','item   entity taking place of other','the disease type to be retrieved','item   entity being substituted by the other','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+retrieved,'get back','','','the disease type','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','The unique identifier representing the disease type to be retrieved',sent,'to the server',sent-to,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','the disease type information is consistent',guarantee,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+used,'Take advantage of, utilise','','','The unique identifier','thing used','to retrieve the disease type to query',purpose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+retrieve,'get back','The unique identifier',receiver,'the disease type to query','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+query,ask,'','','the disease type','oracle, answerer','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieved,'get back','','','The symptoms for the selected disease type','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+returned,'come back','','','The complete disease information','entity in motion','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+formatted,'','','','The query results','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+presented,give,'','','The query results','thing given','to the user','given to',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','A communication problem',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','','','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','retrieving the complaint data',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+retrieving,'get back','A problem',receiver,'the complaint data','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the available information','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','','','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','','','An invalid complaint code','thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message informing the user the complaint does not exist.','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+informing,'cause to know','an error message',informer,'the user the complaint does not exist.',informed,'','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+exist,be,'','','the complaint','thing existing','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+assured,'calm someones nerves','','','Consistent data cannot','assured one','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+abandons,'leave behind','The system',abandoner,'the data retrieval','thing abandoned, left behind','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+queried,ask,'','','The data','oracle, answerer','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+registered,'official record','','','The data to be queried','thing registered','on the system','registered with or for',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The citizen',selector,'the kind of complaint','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+shows,'cause to see','The system',shower,'the specific screen for each type of complaint','thing seen shown','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+registers,measure,'The system',measurer,'the kind, date and time of the complaints','thing measured','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+provides,'cf give','The citizen',provider,'the complaint specific data','thing provided','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+saves,'financial sense','The system','entity saving money','the complaint',money,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','by the user',submitter,'The information','thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','The information entered by the user',sent,'to the server',sent-to,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+parses,'','The system','','the data entered by the user','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','by the user',submitter,'the data','thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+creates,create,'The system',creator,'a new instance of the appropriate complaint type','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+generates,create,'The system',creator,'a unique identifier','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0
+assigns,'give, associate with','The system','agent, assigner',this,'thing assigned','to the new complaint','assigned to',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+parsed,'','','','The complainers address','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+saved,'collect, accrue','The complainers address',collector,'','','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+parsed,'','','','The common complaint information','','with the OPENED state','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+stored,store,'','','The common complaint information',commodity,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+extracted,'to remove or obtain','','','The specific complaint data','thing extracted','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+stored,'','','','The specific complaint data','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','the data is left in a consistent state',guarantee,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+left,'move away from','','','the data','place, person, or thing left','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+returned,'come back','','','The unique identifier','entity in motion','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+presented,give,'','','The unique identifier','thing given','to the user on their local display','given to',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','A communication problem',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','by the user',submitter,'Invalid data','thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','storing the complaint',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+storing,store,'A problem',storer,'the complaint',commodity,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ensured,promise,'','','Data consistency cannot',guarantee,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+saved,'financial sense','','','The complaint',money,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+provides,'cf give','The employee',provider,'the login and password','thing provided','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','The login and password',sent,'to the server',sent-to,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the employee details using the login as a unique identifier','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+using,'Take advantage of, utilise','the employee details',User,'the login','thing used','as a unique identifier',purpose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+validates,'to declare or make legally valid','The system',causer,'the entered password','entity validated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','','',the,'thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+presented,give,'','','The result of the login attempt','thing given','to the employee on their local display','given to',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','A communication error',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','retrieving the employee details',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+retrieving,'get back','A problem',receiver,'the employee details','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+validate,'to declare or make legally valid','The system cannot',causer,'the employee','entity validated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+validated,'to declare or make legally valid','by the system',causer,Password,'entity validated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+chooses,'choose, pick','The employee',picker,'the option to register  insert update  in one of the tables','thing picked','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+register,'official record','','','','','in one of the tables','registered with or for',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+enters,'enter, go in','The employee','entity entering','the data','place or thing entered','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+saves,'financial sense','The system','entity saving money','the data',money,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Verified,'determine truth of a proposition','','',employee.,verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Updated,'','','','data on the tables','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The employee',selector,'the update complaint option.','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+update,'make more modern','','','complaint option','thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the list of all registered complaints','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+populated,'provide inhabitants for, fill with inhabitants','','','The complaint list',area,'with general and complaint type specific data',population,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0
+returned,'come back','','','The list of complaints','entity in motion','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+formatted,'','','','The complaints','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+presented,give,'','','The complaints','thing given','to the employee','given to',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The employee',selector,'the complaint they wish to update','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+wish,wish,they,wisher,'to update','thing wished for','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+update,'make more modern',they,updated,'the complaint','thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','The complaint unique identifier',sent,'to the server',sent-to,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','the complaint data is consistent',guarantee,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the complaint entry','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+returned,'come back','','','The complaint','entity in motion','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+formatted,'','','','The complaint','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+presented,give,'','','The complaint','thing given','to the employee','given to',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+enters,'enter, go in','The employee','entity entering','the conclusion','place or thing entered','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','The conclusion',sent,'to the server',sent-to,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+set,'put, place','','','The complaint status','thing set','to closed','location or position',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+closed,shut,'','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+entered,'submit, cause to enter','','','the conclusion','thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+set,'put, place','','','the date the conclusion was entered','thing set','in addition to the employee who dealt with the complaint','location or position',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+dealt,'handle, deal with','the employee',dealer,'with the complaint','thing dealt with or in','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+ensures,promise,'The system','entity making guarantee','the complaint is left in a consistent state',guarantee,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+left,'move away from','','','the complaint','place, person, or thing left','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+updated,'make more modern','','','The complaint information','thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+store,store,'The complaint information',storer,'the new information',commodity,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','retrieving the registered complaints',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+retrieving,'get back','An error',receiver,'the registered complaints','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ensured,promise,'','','Data consistency cannot',guarantee,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','A communication error',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','storing the updated complaint',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+storing,store,'An error',storer,'the updated complaint',commodity,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+updated,'make more modern','','',the,'thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+rolled,'move in circular fashion','','','The complaint changes','thing rolled or rolling','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','','','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+registered,'official record','','','The complaint','thing registered','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+have,'own, possess','The complaint',owner,'the OPENED state',possession,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Verified,'determine truth of a proposition','','',employee.,verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+updated,'make more modern','','',Complaint,'thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The employee',selector,'the insert employee option.','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+provides,'cf give','The employee',provider,'the following information about the new employee: Name, Login ID, and Password  with second password field for confirmation .','thing provided','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+following,'be subsequent, temporally or spatially','','','','',the,'thing followed, coming before',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+' ','','','','the new employee: Name, Login ID, and Password','','with second password field for confirmation ','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+confirms,'confirm, attest the truth of a proposition','The employee',confirmer,'the operation','thing confirmed, statement or proposition','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','','',The,'thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+transmitted,'send  electronically ','','','The entered data',sent,'to the server',sent-to,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0
+verifies,'determine truth of a proposition','The system',verifier,'the entered data',verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','','',the,'thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','employee data is consistent.',guarantee,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+saves,'financial sense','The system','entity saving money','the new employees data',money,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+entered,'enter, go in','Incomplete data','entity entering','','','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+informing,'cause to know','a message',informer,'the employee of the missing incorrect data',informed,'','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','A communication error',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','','','The employee','thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Inform,'cause to know','','','the employee',informed,'that the new employee is already entered',information,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','','','the new employee','thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Abandon,'leave behind','','','the entry','thing abandoned, left behind','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+ensured,promise,'','','Data Consistency cannot',guarantee,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+informed,'cause to know','','','the employee cannot',informed,'be inserted',information,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+inserted,'to put or set into, between, or among','','','','','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','storing the new employees details',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+storing,store,'An error',storer,'the new employees details',commodity,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Verified,'determine truth of a proposition','','',employee.,verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+registered,'official record','New employee','entity registering','','','on the system','registered with or for',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+chooses,'choose, pick','The employee',picker,'the update employee option.','thing picked','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+update,'make more modern','','','employee option','thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+provides,'cf give','The employee',provider,'the data','thing provided','to be updated: Name, New password  with second password field for confirmation , and Current password','entity provided for  benefactive ',1,1,1,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+updated,'make more modern','','','','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+confirms,'confirm, attest the truth of a proposition','The employee',confirmer,'the update.','thing confirmed, statement or proposition','','',1,1,1,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+update,'make more modern','','','','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','','',The,'thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','The entered data',sent,'to the server',sent-to,1,1,1,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0
+verifies,'determine truth of a proposition','The system',verifier,'the entered data',verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+entered,'submit, cause to enter','','',the,'thing submitted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','the employee data is consistent',guarantee,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+updated,'make more modern','','',the,'thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+showed,'cause to see','','','an error message','thing seen shown','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Verified,'determine truth of a proposition','','',employee.,verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+updated,'make more modern','','','Employees data','thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+chooses,'choose, pick','The employee',picker,'the update health unit option.','thing picked','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+update,'make more modern','','',the,'thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the list of all health units','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+returned,'come back','','','The list of health units','entity in motion','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+formatted,'','','','The list of health units','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','The list of health units','entity displayed','on the employees local display',location,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The employee',selector,'the health unit','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+updated,'make more modern','','','the health unit','thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','The unique identifier for the selected health unit',sent,'to the server',sent-to,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','the health unit data is consistent',guarantee,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the data','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieved,'get back','','','is returned to the employee.','thing gotten','','',1,0,0,0,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+returned,'come back','','','','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+formatted,'','','','The health unit data','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+presented,give,'','','The health unit data','thing given','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+alters,transform,'The employee','causer of transformation','the necessary data','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+updated,'make more modern','','',The,'thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','The updated information',sent,'to the server',sent-to,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0
+ensures,promise,'The system','entity making guarantee','the health unit data is left in a consistent state',guarantee,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+left,'move away from','','','the health unit data','place, person, or thing left','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+updated,'make more modern','','',the,'thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','retrieving the health unit information',event,'','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+retrieving,'get back','A problem',receiver,'the health unit information','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+assured,'calm someones nerves','','','Data consistency cannot','assured one','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurs,'occur, take place','','','storing the updated health unit data',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+storing,store,'A problem',storer,'the updated health unit data',commodity,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+updated,'make more modern','','',the,'thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Raise,'go up quantifiably','','','an error message','Logical subject, patient, thing rising','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Verified,'determine truth of a proposition','','',employee.,verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+updated,'make more modern','','','Health units data','thing becoming more modern','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+chooses,'choose, pick','The employee',picker,'the change logged employee option','thing picked','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+logged,'to record or to navigate somewhere online','the change','recorder, logger, agent','employee option','thing recorded, internet software','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+shows,'cause to see','The system',shower,'the login screen','thing seen shown','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+follow,'adhere to, accept, pursue','the flow','acceptor, pursuer','the one described in Login','thing followed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+described,'assign a label or attribute','','','the one','thing described','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Verified,'determine truth of a proposition','','',employee.,verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+signed,'sign up: enroll, enter','','','First employee','patient enrolled','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+see,view,'The system',viewer,'if a Registration is in progress','thing viewed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','a message','entity displayed','to the Registrar',location,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+terminates,'end, stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+performed,perform,'','','The Close Registration processing cannot','performance, thing performed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+registered,'official record','three students','entity registering','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+signed,'sign up: enroll, enter','','','to teach the course offering','patient enrolled','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+teach,' try to  make learn','a professor',teacher,'the course offering',subject,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+closes,shut,'the system','person doing the closing','the course offering','thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+sends,give,'the system',sender,'a transaction',sent,'to the billing system',sent-to,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,0,1,0,0,0,0,0
+enrolled,'register membership in','','','each student','entity enrolled','in the course offering','enrolled in what',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+signed,'sign up: enroll, enter','','','less than three students','patient enrolled','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+cancel,'cause to be not valid','the system',canceller,'the course offering',cancelled,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+executed,enact,'','','The Cancel Course Offering sub-flow','thing done','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+cancels,'cause to be not valid','The system',canceller,'the course offering',cancelled,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+enrolled,'register membership in','','','each student','entity enrolled','in the cancelled course offering, system will modify the students schedule.','enrolled in what',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+cancelled,'','','',the,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+modify,change,system,'causer of transformation','the students schedule','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+substituted,'exchange one thing for another','','','The first available alternate course selection','thing being preferred, new thing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0
+cancelled,'','','',the,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+made,'earn cash or wages','','','no substitution',wages,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+returns,'come back','','',Control,'entity in motion','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+process,'do something to',Control,processor,'the next course offering for the semester','thing processed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+processed,'do something to','','','all schedules','thing processed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+notify,'tell, alert','the system','notifier, teller','all students','entity notified, told','by mail',utterance,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0
+signed,'sign up: enroll, enter','','','to teach the course offering','patient enrolled','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+teach,' try to  make learn','no professor',teacher,'the course offering',subject,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+cancel,'cause to be not valid','the system',canceller,'the course offering',cancelled,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+executed,enact,'','','The Cancel Course Offering sub-flow','thing done','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+communicate,communicate,'the system','first  or all  communicator','','','with the Billing System','other communicator s ',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,0,0,0,0,0
+attempt,try,'the system','Agent Entity Trying','to re-send the request','thing tried','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,0,0,0,0,0
+re-send,'','the system','','the request','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+continue,aspectual,'','','The system','thing continuing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+attempt,try,'The system','Agent Entity Trying','to re-send','thing tried','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,0,0,0,0,0
+re-send,'','The system','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+becomes,'change of state','','','the Billing System','entity changing',available,'new state',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+logged,'to record or to navigate somewhere online','','','onto the system','thing recorded, internet software','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+begin,start,'','','this use case','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+validates,'to declare or make legally valid','The system',causer,'the actors password and logs','entity validated','him her into the system','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the Main Form and the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+find,discovery,'the system cannot',finder,'the name or the password','thing found','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','an error message','entity displayed','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+choose,'choose, pick','','','to cancel the operation','thing picked','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cancel,'cause to be not valid','','','the operation',cancelled,'','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+selects,'to make a choice, to pick out','The Registrar',selector,'','','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+enters,'enter, go in','The Registrar','entity entering','name, date of birth, social security number, status, and department','place or thing entered','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+following,'','','',the,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+validates,'to declare or make legally valid','The system',causer,'the data','entity validated','to insure the proper data format and searches for an existing professor with the specified name','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+insure,'act like an insurance agency','','','the proper data format and searches','thing insured','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+existing,be,'','',an,'thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+specified,'set, establish, decide','','',the,'thing specified','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+creates,create,'the system',creator,'a new professor','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+assigns,'give, associate with','the system','agent, assigner','a unique system-generated id number','thing assigned','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','This number','entity displayed','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+used,'Take advantage of, utilise','','',it,'thing used','for subsequent uses of the system',purpose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+Steps,'increase incrementally','','','2-4 are repeated for each professor added to the system.','thing increasing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+repeated,'say again','','',02-abr,'utterance or action','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+added,mathematics,'','','each professor','thing being added','to the system','thing being added to',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+finished,terminate,'','','the Registrar','thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+adding,mathematics,'the Registrar',adder,professors,'thing being added','to the system the use case ends.','thing being added to',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+selects,'to make a choice, to pick out','The Registrar',selector,'','','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Modify,change,'The Registrar','causer of transformation','a professor','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+id,'','The Registrar types in the professor','','number he she wishes to modify','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+wishes,wish,'number he she',wisher,'to modify','thing wished for','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+modify,change,'number he she','causer of transformation','','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the professor information and displays it on the screen','thing gotten','','',1,0,0,0,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+modifies,change,'The Registrar','causer of transformation','one or more of the professor information fields: name, date of birth, social security number , status, and department','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','the Registrar',selector,'','','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Steps,'increase incrementally','','','2-7 are repeated for each professor the Registrar wants to modify.','thing increasing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+repeated,'say again','','',02-jul,'utterance or action','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+wants,'want, desire','the Registrar',Wanter,'to modify','thing wanted','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+modify,change,'the Registrar','causer of transformation','each professor','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+selects,'to make a choice, to pick out','The Registrar',selector,'Delete a Professor','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Delete,remove,'','','a Professor','thing being removed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+id,'','The Registrar types in the professor','',number,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+s,'','the professor','','being deleted','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+deleted,remove,'','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the professor and displays the professor information in the form','thing gotten','','',1,0,0,0,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Registrar',selector,delete,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+delete,remove,'The system displays','entity removing','verification dialog confirming the deletion','thing being removed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+confirming,'confirm, attest the truth of a proposition','verification dialog',confirmer,'the deletion','thing confirmed, statement or proposition','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Registrar',selector,yes,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+deleted,remove,'','','The professor','thing being removed','from the system','removed from',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Steps,'increase incrementally','','','2-8 are repeated for each professor the Registrar wants to modify.','thing increasing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+repeated,'say again','','',02-ago,'utterance or action','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+wants,'want, desire','the Registrar',Wanter,'to modify','thing wanted','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+modify,change,'the Registrar','causer of transformation','each professor','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+finished,terminate,'','','deleting professors','thing closing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+Add,mathematics,'','','a Professor sub-flow','thing being added','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+exists,be,'','','a professor','thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+specified,'set, establish, decide','','',the,'thing specified','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Exists,be,Professor,'','is displayed.','thing existing','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+change,transform,'The Registrar','causer of transformation','the name','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+choose,'choose, pick','','','to create another professor with the same name','thing picked','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+create,create,'','','another professor with the same name','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+cancel,'cause to be not valid','The Registrar',canceller,'the operation',cancelled,'','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','the use case','Intentional agent','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+Modify,change,'','','a Professor sub-flow or ','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Delete,remove,'','','a Professor sub-flow','thing being removed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+specified,'set, establish, decide','','',the,'thing specified','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+exist,be,'','','a professor with the specified id number','thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Found,discovery,Professor,finder,'','thing found','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+cancel,'cause to be not valid','the Registrar',canceller,'the operation at which point the use case ends.',cancelled,'','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+begins,start,'','','this use case','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+logged,'to record or to navigate somewhere online','the Registrar','recorder, logger, agent','onto the system','thing recorded, internet software','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Registrar',selector,'add student','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+enters,'enter, go in','The Registrar','entity entering','name, date of birth, social security number, status, and graduation date','place or thing entered','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+following,'','','',the,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+validates,'to declare or make legally valid','The system',causer,'the data','entity validated','to insure the proper format and searches for an existing student with the specified name','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+insure,'make sure, guarantee','the data','entity making guarantee','the proper format and searches for an existing student with the specified name',guarantee,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+existing,be,'','',an,'thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+specified,'set, establish, decide','','',the,'thing specified','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+creates,create,'the system',creator,'a new student','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+assigns,'give, associate with','the system','agent, assigner','a unique system-generated id number','thing assigned','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1,1,0,0,0,0,0,0,0,0,0
+Steps,'increase incrementally','','','2-4 are repeated for each student added to the system.','thing increasing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+repeated,'say again','','',02-abr,'utterance or action','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+added,mathematics,'','','each student','thing being added','to the system','thing being added to',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+finished,terminate,'','','the Registrar','thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+adding,mathematics,'the Registrar',adder,students,'thing being added','to the system the use case ends.','thing being added to',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+selects,'to make a choice, to pick out','The Registrar',selector,'modify student','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+id,'','The Registrar types in the student','','number he she wishes to modify','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+wishes,wish,'number he she',wisher,'to modify','thing wished for','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+modify,change,'number he she','causer of transformation','','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the student information and displays it','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+modifies,change,'The Registrar','causer of transformation','one or more of the student information fields: name, date of birth, social security number, student id number, status, and graduation date','thing changing','','',1,1,1,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+id,'',student,'','number, status, and graduation date','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out','the Registrar',selector,'','','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Steps,'increase incrementally','','','2-7 are repeated for each student the Registrar wants to modify.','thing increasing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+repeated,'say again','','',02-jul,'utterance or action','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+wants,'want, desire','the Registrar',Wanter,'to modify','thing wanted','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+modify,change,'the Registrar','causer of transformation','','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+selects,'to make a choice, to pick out','The Registrar',selector,'delete student','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+id,'','The Registrar types in the student','',number,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+s,'','the student','','being deleted','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+deleted,remove,'','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the student and displays the student information in the form','thing gotten','','',1,0,0,0,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Registrar',selector,delete,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+delete,remove,'The system displays','entity removing','verification dialog confirming the deletion','thing being removed','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+confirming,'confirm, attest the truth of a proposition','verification dialog',confirmer,'the deletion','thing confirmed, statement or proposition','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Registrar',selector,yes,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+deleted,remove,'','','The student','thing being removed','from the system','removed from',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Steps,'increase incrementally','','','2-8 are repeated for each student deleted from the system.','thing increasing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+repeated,'say again','','',02-ago,'utterance or action','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+deleted,remove,'','','each student','thing being removed','from the system','removed from',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+finished,terminate,'','','the Registrar','thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+deleting,remove,'the Registrar','entity removing',students,'thing being removed','to the system the use case ends.','removed from',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+Add,mathematics,'','','a Student','thing being added','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+finds,discovery,'the system',finder,'an existing student with the same name an error message is displayed','thing found','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+existing,be,'','',an,'thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','an error message','entity displayed','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Exists,be,' sub-flow','','','thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+change,transform,'The Registrar','causer of transformation','the name','thing changing','','',1,1,1,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+create,create,'','','a new student with the same name','thing created','','',1,1,1,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+cancel,'cause to be not valid','The Registrar',canceller,'the operation',cancelled,'','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','the use case','Intentional agent','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+Modify,change,'','','a Student','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Delete,remove,'','','a Student sub-flows','thing being removed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+sub-flows,'','','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+located,' cause to  be located in','','','the student name','institution, thing located','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+Found,discovery,Student,finder,'','thing found','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+cancel,'cause to be not valid','','','the operation at which point the use case ends',cancelled,'','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+begins,start,'','','this use case','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+logged,'to record or to navigate somewhere online','the Registrar','recorder, logger, agent','onto the system','thing recorded, internet software','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+create,create,'The Student',creator,schedule.,'thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'a list of available course offerings from the Course Catalog System','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+selects,'to make a choice, to pick out','The Student',selector,'4 primary course offerings and 2 alternate course offerings','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','','','the Student','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+submit,give,'the Student',giver,'',given,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add,say,'The ',speaker,'Course Offering sub-flow is performed at this step for each selected course offering',utterance,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+performed,perform,'','','Course Offering sub-flow','performance, thing performed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,0,0
+selected,'to make a choice, to pick out','','',each,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+saves,'financial sense','The system','entity saving money','the schedule',money,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Student',selector,'modify schedule','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,' e.g., the schedule for the current semester ','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+displays,'to present, exhibit','The system','displayer, agent','the Students current schedule','entity displayed','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'a list of all the course offerings available for the current semester from the Course Catalog System','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+modify,change,'The Student','causer of transformation','the course selections','thing changing','','',1,1,1,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+deleting,'','The Student','','new courses','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+adding,mathematics,'The Student',adder,'new courses','thing being added','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Student',selector,'the courses','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+add,mathematics,'','','the courses','thing being added','from the list of available courses','thing being added to',1,1,1,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Student',selector,'any course offerings','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+delete,remove,'The Student','entity removing','any course offerings','thing being removed','from the existing schedule','removed from',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+existing,be,'','',the,'thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+submit,give,'the Student',giver,'',given,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add,say,'The ',speaker,'Course Offering sub-flow is performed at this step for each selected course offering',utterance,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+performed,perform,'','','Course Offering sub-flow','performance, thing performed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,0,0
+selected,'to make a choice, to pick out','','',each,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+saves,'financial sense','The system','entity saving money','the schedule',money,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Student',selector,'the delete schedule activity','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the Student current schedule','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+displays,'to present, exhibit','The system','displayer, agent','the Student current schedule','entity displayed','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','The Student',selector,delete,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+prompts,'bring about, cause','The system','causer, prompter','the Student','impelled agent','to verify the deletion','impelled action',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+verify,'determine truth of a proposition','the Student',verifier,'the deletion',verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+verifies,'determine truth of a proposition','The Student',verifier,'the deletion',verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+deletes,remove,'The system','entity removing','the schedule','thing being removed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+choose,'choose, pick','the Student',picker,'to save a schedule without submitting it by selecting save','thing picked','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+save,'desperate peril sense','the Student',hero,'a schedule',victim,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+submitting,give,'the Student',giver,it,given,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+selecting,'to make a choice, to pick out','','',save,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+saved,'financial sense','','','The current schedule',money,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+added,mathematics,'','','the student','thing being added','to any of the selected course offerings','thing being added to',1,1,1,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marked,'make a mark','','','The course offerings',mark,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','','','','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+verifies,'determine truth of a proposition','The system',verifier,'that the Student has the necessary prerequisites and that the course offering is open',verified,'','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+has,'own, possess','the Student',owner,'the necessary prerequisites',possession,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+adds,mathematics,'The system',adder,'the Student','thing being added','to the selected course offering','thing being added to',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marked,'make a mark','','','as enrolled in in the schedule',mark,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Add,mathematics,'','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+determines,'set, establish, decide','the system',decider,'that the Student has not satisfied the necessary prerequisites or that the selected course offering is full','thing determined','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+satisfied,'make happy','the Student','agent, pleaser','the necessary prerequisites','patient, entity pleased','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','','',the,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','an error message','entity displayed','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+select,'to make a choice, to pick out','The Student',selector,'a different course offering','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cancel,'cause to be not valid','The Student',canceller,'the operation, at which point the use case is restarted',cancelled,'','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+restarted,'to start again or anew','','','the use case','entity restarted','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0
+Modify,change,'','causer of transformation','a Schedule or Delete a Schedule sub-flows the system is unable to retrieve the Students schedule','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+sub-flows,'','a Schedule','','the system is unable to retrieve the Students schedule','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieve,'get back','the system',receiver,'the Students schedule','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','an error message','entity displayed','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+acknowledges,admit,'The Student','admitter, claimer, speaker','the error','proposition, claim, utterance','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+restarted,'to start again or anew','','','the use case','entity restarted','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0
+communicate,communicate,'the system','first  or all  communicator','','','with the Course Catalog System','other communicator s ',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+specified,'set, establish, decide','','',a,'thing specified','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+display,'to present, exhibit','the system','displayer, agent','an error message','entity displayed','to the Student',location,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+acknowledges,admit,'The Student','admitter, claimer, speaker','the error message','proposition, claim, utterance','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+terminates,'end, stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+selects,'to make a choice, to pick out','the student',selector,'maintain schedule','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+closed,shut,'','','registration for the current semester','thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+displayed,'to present, exhibit','','','a message','entity displayed','to the Student',location,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+terminates,'end, stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+cannot,'',Students,'',register,'','for courses','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+closed,shut,'','','registration for the current semester','thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+begins,start,'this use case','beginner, Agent','the Student has logged onto the system.','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+logged,'to record or to navigate somewhere online','','','onto the system','thing recorded, internet software','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the professor is eligible to teach for the current semester.','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+displays,'to present, exhibit','The system','displayer, agent','the list of course offerings','entity displayed','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+teach,' try to  make learn','the professor',teacher,'for the current semester',subject,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+retrieves,'get back','The system',receiver,'the list of courses the professor has previously selected to teach','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+displays,'to present, exhibit','The system','displayer, agent','the list of courses the professor has previously selected to teach','entity displayed','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','the professor',selector,courses,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+teach,' try to  make learn','the professor',teacher,courses,subject,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out','The professor',selector,'the course offerings that he she wishes to teach for the upcoming semester','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+'he she','','the course offerings','','wishes to teach for the upcoming semester','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+teach,' try to  make learn','the course offerings',teacher,'for the upcoming semester',subject,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+removes,remove,'The system','entity removing','the professor','thing being removed','from teaching the de-selected course offerings','removed from',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+teaching,' try to  make learn','the professor',teacher,'the de-selected course offerings',subject,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+verifies,'determine truth of a proposition','The system',verifier,'that the selected offerings do not conflict  ',verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+conflict,'to be or come into opposition','the selected offerings','troublesome thing',' ','entity conflicted with','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+have,'own, possess','','','the same dates',possession,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+' ','',times,'','the professor has previously signed up to teach','','with each other or any offerings','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+signed,'sign up: enroll, enter','','','to teach','patient enrolled','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+teach,' try to  make learn','the professor',teacher,'','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+offering,transaction,'the course','entity offering','information for each offering the professor selects.',commodity,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+offering,transaction,'','','the professor selects.',commodity,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out','','','the professor','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+teach,' try to  make learn','the professor',teacher,'any courses',subject,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+display,'to present, exhibit','the system','displayer, agent','an error message','entity displayed','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+acknowledges,admit,'The professor','admitter, claimer, speaker','the message','proposition, claim, utterance','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+find,discovery,'the systems',finder,'a schedule conflict','thing found','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+trying,Attempt,'a schedule conflict','Agent Entity Trying',when,'thing tried','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+establish,establish,'','','the course offerings the Professor should take','thing set','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+take,'take, acquire, come to have','the Professor',Taker,'the course offerings','thing taken','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+display,'to present, exhibit','the system','displayer, agent','an error message indicating that a schedule conflict has occurred','entity displayed','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+indicating,show,'an error message',indicator,'that a schedule conflict has occurred','thing indicated','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+occurred,'occur, take place','','','a schedule conflict',event,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+indicate,show,'The system',indicator,'which are the conflicting courses','thing indicated','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+conflicting,'',the,'','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+resolve,'resolve, come to a solution','The professor','entity making resolution','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+canceling,'cause to be not valid','The professor',canceller,'his selection',cancelled,'','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+teach,' try to  make learn','','','  or cancel the operation, in which case any selections will be lost and the use case ends',subject,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+' ','','','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cancel,'cause to be not valid','','','the operation',cancelled,'','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lost,'lose, no longer have','','','any selections','thing lost','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+selects,'to make a choice, to pick out','the Professor',selector,'select courses to teach','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+teach,'','the Professor','','select courses','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+closed,shut,'','','registration for the current semester','thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','a message','entity displayed','to the Professor',location,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+terminates,'end, stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+teach,' try to  make learn',they,teacher,'','','Professors cannot change the course offerings','student s ',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+closed,shut,'','','registration for the current semester','thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+needed,need,'','','a professor change','thing needed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+closed,shut,'','',registration,'thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+handled,'hold, metaphorically deal with','','',it,'thing handled','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+begins,start,'','','this use case','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+logged,'to record or to navigate somewhere online','the Professor','recorder, logger, agent','onto the system','thing recorded, internet software','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+taught,' try to  make learn','the Professor',teacher,'','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out','The Professor',selector,'a course offering','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'a list of all students who were registered for the course offering','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+registered,'official record','','','all students','thing registered','for the course offering','registered with or for',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the grade information','thing gotten','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+assigned,'give, associate with','','','any grade','thing assigned','for the offering','assigned to',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+enters,'enter, go in','the Professor','entity entering','a grade: A, B, C, D, F, or I.','place or thing entered','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+wishes,wish,'the Professor',wisher,'to skip a particular student','thing wished for','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+skip,'to miss, omit or avoid','the Professor','omiter, skipper','a particular student','thing skipped','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+left,'move away from','','','the grade information','place, person, or thing left',blank,'attribute of arg1',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+filled,'to make or become full','','','the grade information',container,'','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+change,transform,'The Professor','causer of transformation','the grade for a student','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+entering,'enter, go in','The Professor','entity entering','a new grade','place or thing entered','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+teach,' try to  make learn','the Professor',teacher,'any course offerings in the previous semester the system displays an error message',subject,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+ends,'cause to stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+withdrew,'withdraw, remove oneself','too many students','entity removing','','','from the course','removed from',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+cancelled,'','','','the course','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+chooses,'choose, pick','the Professor',picker,'to cancel the operation the use case terminates, otherwise is restarted at step 2 of the basic flow.','thing picked','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cancel,'cause to be not valid','the Professor',canceller,'the operation the use case terminates, otherwise is restarted at step 2 of the basic flow.',cancelled,'','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+terminates,'end, stop','the use case','Intentional agent','otherwise is restarted at step 2 of the basic flow.','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+restarted,'to start again or anew','','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+begins,start,'','','this use case','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+logged,'to record or to navigate somewhere online','the Professor','recorder, logger, agent','onto the system','thing recorded, internet software','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+retrieves,'get back','The system',receiver,'the grade information for each of the courses the Student completed during the previous semester','thing gotten','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+completed,'bring to an end','','','each of the courses','task, action coming to an end','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+prepares,'prepare, make, create','The system',creator,'','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+finished,terminate,'','',Student,'thing closing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+viewing,'assign an attribute to',Student,assigner,'the Student selects close','thing labelled','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','the Student',selector,close,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+find,discovery,'the system cannot',finder,'any grade information','thing found','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','a message','entity displayed','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+acknowledges,admit,'the Student','admitter, claimer, speaker','the message the use case terminates.','proposition, claim, utterance','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+terminates,'end, stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+begins,start,'this use case','beginner, Agent','the Student has logged onto the system.','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+logged,'to record or to navigate somewhere online','','','onto the system','thing recorded, internet software','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+places,location,'The system',putter,'a story','thing put','in the editors to-do workflow queue.','where put',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+'','','the editors','','to-do workflow queue','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+defined,'assign a label or attribute','','','more than one editor','thing defined','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+used,'Take advantage of, utilise','','','a round-robin approach','thing used','to attempt to balance load',purpose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+attempt,try,'a round-robin approach','Agent Entity Trying','to balance load','thing tried','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+balance,'establish a balance','a round-robin approach','balancer, agent',load,'thing balanced','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+marked,'make a mark','','',Editors,mark,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+included,include,'','','','','in the round-robin process',group,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+views,'assign an attribute to','The editor',assigner,'the story','thing labelled','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+categorizes,'assign into a category','The editor',assigner,'the story','thing assigned','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selecting,'to make a choice, to pick out','The editor',selector,'','','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+assigned,'give, associate with','','','more than one category','thing assigned','to the story','assigned to',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+assigned,'give, associate with','','','At least one category','thing assigned','to the story','assigned to',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+marks,'','The editor','','the story','','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+approved,'assent to','','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+includes,include,'','','the story in the list of available content for paging initiation','theme, thing being included in some group','The system',group,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+triggers,begin,'The system',Agent,'initiation of paging messages','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0
+views,'assign an attribute to','The editor',assigner,'the story','thing labelled','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marks,'','The editor','','the story','','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+rejected,'reject, decline, turn down','','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+describes,'assign a label or attribute','The editor',describer,'the reason for rejection','thing described','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+notifies,'tell, alert','The system','notifier, teller','the originator of the content that the story has been rejected and includes the reason provided by the editor','entity notified, told','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+rejected,'reject, decline, turn down','','','the story','thing rejected','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+includes,include,'','','the reason provided by the editor','theme, thing being included in some group','the story',group,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+provided,'cf give','by the editor',provider,'the reason','thing provided','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+deletes,remove,'The system','entity removing','the story','thing being removed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',Editor,selector,'Modify Story','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',Editor,selector,'specific title','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+deleting,'',either,'','some categories','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+adding,mathematics,'','','other categories','thing being added','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',Editor,selector,Save.,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+re-posts,'',System,'','the story','','to the list of available content for paging initiation','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0
+triggers,begin,'The system',Agent,'initiation of paging messages','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0
+views,'assign an attribute to','The editor',assigner,'the advertising content','thing labelled','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marks,'','The editor','','it approved.','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+approved,'assent to',it,approver,'','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+includes,include,'','','the advertising content in the list of available advertising for display','theme, thing being included in some group','The system',group,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+creates,create,'The system',creator,'a preliminary billing record','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+using,'Take advantage of, utilise','The system',User,information,'thing used','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+stored,store,'','',information,commodity,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marks,signify,'The system',signifier,'the preliminary billing record as approved',signified,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+approved,'assent to','','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+views,'assign an attribute to','The editor',assigner,'the advertising content','thing labelled','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marks,'','The editor','','it rejected and provides a reason for rejection','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+rejected,'reject, decline, turn down',it,rejecter,'a reason for rejection','thing rejected','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+provides,'cf give','','','','','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+include,include,'','','account overdue, content inappropriate or not within scope of contract, or duplicate content  advertising content is already on file and being displayed ','theme, thing being included in some group',This,group,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+duplicate,'make a copy','','',content,original,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+' advertising','',content,'','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+displayed,'to present, exhibit','','','','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+notifies,'tell, alert','The system','notifier, teller','the advertiser  via email  of the rejection and the reason','entity notified, told','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+deletes,remove,'The system','entity removing','the content','thing being removed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+deleted,remove,'by another editor','entity removing','the story','thing being removed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+terminates,'end, stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+logged,'to record or to navigate somewhere online','','',Editor,'thing recorded, internet software','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+begin,start,'','','the paging process','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',User,selector,'Edit Profile','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+page,'',' personal','',me,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+' ','','','',' selections','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',User,selector,category,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+exists,be,'','','for a category  for instance','thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+have,'own, possess','a subscriber',owner,'more than one pager ',possession,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+presented,give,'','','a list of possible profiles within the category','thing given','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',User,selector,'specific profile within category','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+'','',presses,'','User updates detail','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+changed,transform,'','','includes credit card information','thing changing','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+includes,include,'','','credit card information','theme, thing being included in some group','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+validates,'to declare or make legally valid',system,causer,'new information with external credit card system','entity validated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,0,0,0,0,0
+contains,'hold inside',information,container,'pager information',contents,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+validated,'to declare or make legally valid','','','pager PIN format','entity validated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+sending,give,'','',pages,sent,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+fails,'not succeed','','','validation of credit card information','thing failing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+presented,give,'','','with a message indicating failure','thing given','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+indicating,show,'a message',indicator,failure,'thing indicated','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+presented,give,'','','with their profile for update','thing given','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+update,'make more modern','','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pay,'cf buy and sell','the use case','payer or buyer','','money or attention','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+invoked,'','','','the use case Pay Fee with Credit Card','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+receive,get,'the subscriber',receiver,pages,'thing gotten','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+needs,need,This,needer,'to be secured as credit card information may be in the profile.','thing needed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+secured,get,'','',This,'thing acquired','as credit card information may be in the profile.','source, gained from',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',Subscriber,selector,'pay fee','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+see,view,'','','if user is a current subscriber','thing viewed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+generated,create,'by the system  using any algorithm that will generate a unique number',creator,ID,'thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+' using','','the system','','any algorithm that will generate a unique number','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+generate,create,'any algorithm',creator,'a unique number','thing created','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+incrementing,'','','',a,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+see,view,'','','if current subscriber credit card information is on file','thing viewed','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+presented,give,'','','with indicator of credit card on file  using the last four digits of the card number ','thing given','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+' using','',file,'','the last four digits of the card number ','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+asked,'ask a question',user,asker,'if this card should be used',question,'','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+used,'Take advantage of, utilise','','','this card','thing used','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+prompts,'cause an event',system,'causer, prompter','subscriber for credit card number, expiration date, and  optionally  PIN.',event,'','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+verifies,'determine truth of a proposition',System,verifier,'that expiration date on credit card has not already passed',verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+passed,'go by','','','expiration date on credit card','thing passing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+sends,give,System,sender,'credit card info',sent,'to external system for charge validation and application',sent-to,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+indicate,show,'','','new expiration date','thing indicated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out',Subscriber,selector,'pay fee','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+accepts,'take willingly',User,acceptor,'information as is or updates','thing accepted','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sends,give,System,sender,'credit card info',sent,'to external system for charge validation and application',sent-to,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+indicate,show,'','','new expiration date','thing indicated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+provided,'cf give','by the subscriber',provider,'the information','thing provided','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+validated,'to declare or make legally valid','by the external system',causer,'the information provided by the subscriber','entity validated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,0,0,0,0,0
+displayed,'to present, exhibit','','','an error message','entity displayed','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+updated,'make more modern','','',' ','thing becoming more modern','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+executed,enact,'','','the last steps in the above flows','thing done','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+expired,'get to end of valid time period','','','the credit card','commodity, thing expiring','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','an error message','entity displayed','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+updated,'make more modern','','','the subscriber record','thing becoming more modern','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+identified,'label, call','','',User,'item being labelled','as a subscriber',attribute,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+has,'own, possess',User,owner,'a subscriber ID associated with them',possession,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+associated,'include in some group','','','a subscriber ID','theme, thing being included in some group','with them','group, associated-with',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+made,'bid or purchase or whatever','','','a preliminary subscriber entry','bid or purchase or whatever','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out',Advertiser,selector,'Print Reports.','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+provided,'cf give','by advertiser',provider,'all advertising content','thing provided','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',Advertiser,selector,'one or more pieces of content on which to report','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+report,'report, tell','','','one or more pieces of content','thing reported','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+based,'justified by','','','','','on advertiser contract with WebNewsOnLine',justification,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out',Advertiser,selector,'one or more reports to generate','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+generate,create,'','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',Advertiser,selector,'format  Word, Excel, or to browser window .','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+browser,'','','','window ','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+creates,create,System,creator,'first report','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+prompts,'cause an event',System,'causer, prompter','user to save or view',event,'','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+save,'collect, accrue','','',user,'thing saved, collected','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+view,watch,'','','','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',advertiser,selector,Save,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','','a message',sent,'to the browser to initiate a download of the report file',sent-to,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+initiate,begin,'','','a download of the report file','Theme -Creation ','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+select,'to make a choice, to pick out','','','location for saving the report, and the browser saves the downloaded file','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+saving,'financial sense','','','the report',money,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+saves,'financial sense','the browser','entity saving money','the downloaded file',money,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',advertiser,selector,View,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','the report','entity displayed','in the browser',location,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',advertiser,selector,'another report','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+terminates,'end, stop',advertiser,'Intentional agent','the viewing session','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+creates,create,System,creator,'next report','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0
+prompts,'cause an event',System,'causer, prompter','user to save or view',event,'','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+save,'collect, accrue','','',user,'thing saved, collected','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+view,watch,'','','','','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+repeated,'say again','','','4  through 11 ','utterance or action','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+remain,'be left behind','','','no more reports','Thing remaining','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+connected,attach,'','','as an advertiser','patient, thing s  being tied','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+validated,'to declare or make legally valid','','',User,'entity validated','as an advertiser','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+required,need,'','',' issue from Inception phase ','thing required','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+purged,'to free from impurities, purify','','','Obsolete content','entity purged','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0
+run,'operate, procede','','','No reports','machine, operation, procedure','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+purged,'to free from impurities, purify','','',content,'entity purged','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',User,selector,'Provide Feedback','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Provide,'cf give','',provider,'','',Feedback,'entity provided for  benefactive ',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+looks,vision,System,looker,'central user support phone numbers.','thing looked at or for or on','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+call,label,'','','phone numbers','item being labelled','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+gives,transfer,'System displays',giver,'the option to send email immediately','thing given','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+send,give,'','',email,sent,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+selects,'to make a choice, to pick out',User,selector,'email option.','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+looks,seeming,System,seemer,'email address of customer service','seemed like, attribute of arg0','','',0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+passes,give,System,giver,it,'thing changing hands','to the browser',getter,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+launches,'introduce, bring up, start',System,'starter, agent','email browser client','thing being launched','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+enters,'enter, go in',User,'entity entering',message,'place or thing entered','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+'','',presses,'',Send,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Send,give,presses,sender,'',sent,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+sends,give,'Browser mail client',sender,mail,sent,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+selects,'to make a choice, to pick out',Advertiser,selector,'Post Content','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+validates,'to declare or make legally valid',System,causer,'account billing information','entity validated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+ensure,promise,'','','new content will be accepted.',guarantee,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+accepted,'take willingly','','','new content','thing accepted','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+consists,'be composed of pieces','','',This,whole,'of verifying that the advertiser account is in good standing  no outstanding balance over 30 days ',parts,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+verifying,'determine truth of a proposition',This,verifier,'that the advertiser account is in good standing  no outstanding balance over 30 days ',verified,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+' ','','','','30 days','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+prompts,'bring about, cause',System,'causer, prompter','','','for name of content','impelled action',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+uploads,'',Advertiser,'',content,'','','',1,1,1,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,1,1,0,0,0,0,0,0
+acknowledges,admit,System,'admitter, claimer, speaker','successful saving of content','proposition, claim, utterance','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+maintained,'keep  up ','','',Categories,'thing maintained','as a reference list within the system',benefactive,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',Advertiser,selector,'categories for which this ad should be shown','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+shown,'cause to see','','','this ad','thing seen shown','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+maintained,'keep  up ','','',Frequencies,'thing maintained','as a reference list',benefactive,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+based,'justified by','','',prices,decision,'on advertisers contract with WebNewsOnLine',justification,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+maintained,'keep  up ','','','Pricing codes','thing maintained','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out',Advertiser,selector,'desired frequency for this ad','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+desired,'want, crave','','','frequency for this ad',wanted,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+creates,create,System,creator,'preliminary billing record for this ad based on number of categories selected, frequency, and advertisers profile','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+based,'justified by','','','this ad',decision,'on number of categories selected, frequency, and advertisers profile',justification,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selected,'to make a choice, to pick out','','',categories,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+places,location,System,putter,'to-do workflow queue for approval.','thing put','in editors','where put',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+'','','','','to-do workflow queue for approval','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+defined,'assign a label or attribute','','','more than one editor','thing defined','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+used,'Take advantage of, utilise','','','a round-robin approach','thing used','to attempt to balance load',purpose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+attempt,try,'a round-robin approach','Agent Entity Trying','to balance load','thing tried','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+balance,'establish a balance','a round-robin approach','balancer, agent',load,'thing balanced','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+marked,'make a mark','','',Editors,mark,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+included,include,'','','','','in the round-robin process',group,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out',Advertiser,selector,'Post Content','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+validates,'to declare or make legally valid',System,causer,'account billing information','entity validated','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+ensure,promise,'','','new content will be accepted.',guarantee,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+accepted,'take willingly','','','new content','thing accepted','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+prompted,'bring about, cause','','',advertiser,'impelled agent','to contact WebNewsOnLine','impelled action',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+contact,'to bring or come into contact','','',WebNewsOnLine,'entity contacted','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+presents,give,System,giver,'central phone number for advertising department  stored in system ','thing given','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stored,store,'','','central phone number for advertising department',commodity,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+connected,attach,'','','as an advertiser','patient, thing s  being tied','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+validated,'to declare or make legally valid','','',User,'entity validated','as an advertiser','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+exists,be,'','','Advertiser account','thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+displayed,'to present, exhibit','','','advertising content','entity displayed','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+scans,'look at, examine',System,'looker, examiner','archived list of content','thing examined','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+subscribed,'like a magazine subscription, or belief system',Content,subscriber,'to remains','magazine or belief system','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+viewed,'assign an attribute to','','','the story','thing labelled','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+viewed,'assign an attribute to','','','the story','thing labelled','','',1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+marked,'make a mark','','','the story',mark,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+removed,remove,'','','the story','thing being removed','from the subscribers archived category','removed from',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+moved,'change location','','','the story',moved,'into the general category',destination,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+decremented,'','','','the reference count attribute of the content object','','','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+referenced,'','by any subscribers unread','','a story','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+deletes,remove,'the system','entity removing','the story','thing being removed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+sent,give,'','',pages,sent,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+marked,'make a mark','','','the stories',mark,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+viewed,'assign an attribute to','','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+placed,location,'','','','','into the archived category','where put',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+provides,'cf give',System,provider,'the option for the user to subscribe','thing provided','','',1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+subscribe,'pledge or contribute or sign up ? ','the user',contributor,'','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+has,'own, possess','this content',owner,'a pending view count of 0',possession,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+viewed,'assign an attribute to','','','the last date','thing labelled','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+deleted,remove,'','','the content','thing being removed','','',0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+existing,be,'','',' ','thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+defined,'assign a label or attribute','by existing system ',describer,'','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+existing,be,'','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+includes,include,'','','indicating major content category  professional sports, high school sports, collegiate sports, or other ','theme, thing being included in some group',This,group,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+indicating,show,'','','','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+determine,'set, establish, decide','','','whether this content category is known by the Collegiate Sports Paging System','thing determined','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+known,understand,'by the Collegiate Sports Paging System',knower,'this content category','thing known or thought','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+known,understand,'by the Collegiate Sports Paging System',knower,categories,'thing known or thought','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+transmitted,'send  electronically ','','',stories,sent,'to the Collegiate Sports Paging System',sent-to,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+placed,location,'','',Content,'thing put','into the Collegiate Sports Paging System storage for possible paging','where put',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+categorized,'assign into a category','','','the content','thing assigned','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+placed,location,'','','to-do workflow queue.','thing put','in the editors','where put',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+'','','','','to-do workflow queue','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+defined,'assign a label or attribute','','','more than one editor','thing defined','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+used,'Take advantage of, utilise','','','a round-robin approach','thing used','to attempt to balance load',purpose,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+attempt,try,'a round-robin approach','Agent Entity Trying','to balance load','thing tried','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+balance,'establish a balance','a round-robin approach','balancer, agent',load,'thing balanced','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+marked,'make a mark','','',Editors,mark,'','',0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+included,include,'','','','','in the round-robin process',group,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+logged,'to record or to navigate somewhere online','','',Editor,'thing recorded, internet software','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Send,give,'the ',sender,Page,sent,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+invoked,'call upon','','',' use case',invoked,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+initiated,begin,'The flow',causer,'when an editor posts','Theme -Creation ','content to the system',Instrument,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
+received,get,'','','new content','thing gotten','from the existing WebNewsOnLine system','received from',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+existing,be,'','',the,'thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+determine,'set, establish, decide','','','whether any subscribers wish to be paged for this category of content','thing determined','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+wish,wish,'any subscribers',wisher,'to be paged for this category of content','thing wished for','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+paged,'notify someone via beeper','','','any subscribers','notified person','for this category of content','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+generates,create,System,creator,'a text message based on the headline','thing created','','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0
+based,'justified by','','','a text message',decision,'on the headline',justification,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+constructs,build,System,builder,'a series of email messages',construction,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+sends,give,System,sender,' who will receive these as an alphanumeric page ',sent,'to subscribers',sent-to,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0
+' ','','','','who will receive these as an alphanumeric page ','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+receive,get,'','',these,'thing gotten','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+exists,be,'','','no headline','thing existing','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+inserted,'to put or set into, between, or among','','','a system default message','entity inserted','into the email message',location,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+maintained,'keep  up ','by WebNewsOnLine staff',maintainer,'The default message','thing maintained','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+posted,'cf report','','',Content,posted,'','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
+selects,'to make a choice, to pick out','Potential Subscriber',selector,'Subscribe option.','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+looks,vision,System,looker,'current contract terms and available service options','thing looked at or for or on','','',0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+acknowledges,admit,'Potential subscriber','admitter, claimer, speaker',terms,'proposition, claim, utterance','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selects,'to make a choice, to pick out','Potential subscriber',selector,'service options','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+selected,'to make a choice, to pick out','System records',selector,'service options.','entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+page,'',' personal','',me,'','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+' ','','','',' selections','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+selects,'to make a choice, to pick out',User,selector,category,'entity selected','','',1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+'','',presses,'','User updates detail','','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+validates,'to declare or make legally valid',System,causer,data,'entity validated','as required, updates subscriber profile','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+required,need,'','',', updates subscriber profile','thing required','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+acknowledge,admit,'the potential subscriber','admitter, claimer, speaker','the contract terms','proposition, claim, utterance','','',1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+terminates,'end, stop','','','the use case','Thing ending','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0
+recorded,'make a permanent record','','','New subscriber',record,'','',0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+receive,get,'','',pages,'thing gotten','','',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
