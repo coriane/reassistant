@@ -1,24 +1,19 @@
 package edu.isistan.reassistant.pages;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.editor.FormPage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
+import org.eclipse.wb.swt.ResourceManager;
 
 import edu.isistan.dal.srs.model.Project;
 import edu.isistan.reassistant.editor.REAssistantEditor;
@@ -33,8 +28,6 @@ import edu.isistan.uima.unified.typesystems.srs.Document;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.List;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
-import org.eclipse.jface.layout.TableColumnLayout;
-import org.eclipse.jface.viewers.ColumnWeightData;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ListViewer;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
@@ -44,7 +37,8 @@ import org.eclipse.swt.custom.StyleRange;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.custom.SashForm;
-import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 
 public class CCTextPage  extends FormPage {
 	public static final String ID = "edu.isistan.reassistant.pages.CCTextPage";
@@ -59,18 +53,13 @@ public class CCTextPage  extends FormPage {
 	//
 	private EList<Document> documents;
 	private Document document;
-	private Map<CrosscuttingConcern, Color> colorMapping;
-	private Map<CrosscuttingConcern, TableItem> tableItemMapping;
-	private ArrayList<Color> colorSet;
-	//	
+	private Button btnRefresh;
+	//
 	private Composite compositeControls;
 	private ListViewer listViewerDocuments;
 	private List listDocuments;
 	private StyledText styledText;
 	private SashForm sashForm;
-	//
-	private Composite compositeColors;
-	private Table tableCCColors;
 	
 	/**
 	 * Create the form page.
@@ -96,10 +85,6 @@ public class CCTextPage  extends FormPage {
 		uimaRoot = ((REAssistantEditor)getEditor()).getUimaRoot();
 		//
 		documents = uimaRoot.getDocuments();
-		colorMapping = new HashMap<CrosscuttingConcern, Color>();
-		tableItemMapping = new HashMap<CrosscuttingConcern, TableItem>();
-		colorSet = new ArrayList<Color>();
-		initColorSet();
 	}
 
 	/**
@@ -129,19 +114,16 @@ public class CCTextPage  extends FormPage {
 		listDocuments = listViewerDocuments.getList();
 		listDocuments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		
-		compositeColors = new Composite(compositeControls, SWT.NONE);
-		compositeColors.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
-		
-		tableCCColors = new Table(compositeColors, SWT.BORDER);
-		tableCCColors.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		//tableCCColors.setEnabled(false);
-		managedForm.getToolkit().adapt(tableCCColors);
-		managedForm.getToolkit().paintBordersFor(tableCCColors);
-		TableColumn column = new TableColumn(tableCCColors, SWT.NONE);
-		column.setText("Crosscutting concerns");
-		TableColumnLayout layout = new TableColumnLayout();
-		compositeColors.setLayout(layout);
-		layout.setColumnData(column, new ColumnWeightData(100));
+		btnRefresh = toolkit.createButton(compositeControls, "Refresh", SWT.NONE);
+		btnRefresh.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/refresh.gif"));
+		btnRefresh.setToolTipText("Refresh detailed view");
+		btnRefresh.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				refreshStyleText();
+			}
+		});
+		btnRefresh.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 2));
 		
 		styledText = new StyledText(sashForm, SWT.BORDER | SWT.READ_ONLY | SWT.WRAP | SWT.V_SCROLL | SWT.MULTI);
 		styledText.setBlockSelection(true);
@@ -159,7 +141,7 @@ public class CCTextPage  extends FormPage {
 				StructuredSelection selection = (StructuredSelection) event.getSelection();
 				if(!selection.isEmpty()) {
 					document = (Document) selection.getFirstElement();
-					updateStyleText();
+					refreshStyleText();
 				}
 			}
 		});
@@ -170,83 +152,26 @@ public class CCTextPage  extends FormPage {
 	public void setActive(boolean active) {
 		super.setActive(active);
 		if(active) {
-			updateColorMapping();
-			updateStyleText();
+			refreshStyleText();
 		}
 	}
 
-	private void initColorSet() {
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_RED));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_GREEN));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_BLUE));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_CYAN));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_MAGENTA));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_YELLOW));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_GRAY));
-		//
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_RED));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_GREEN));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_BLUE));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_CYAN));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_MAGENTA));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_YELLOW));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_GRAY));
-		//
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_WHITE));
-		colorSet.add(Display.getCurrent().getSystemColor(SWT.COLOR_BLACK));
-	}
-	
-	private void updateColorMapping() {
-		for(CrosscuttingConcern concern : colorMapping.keySet()) {
-			if(!modelRoot.getCrosscuttingConcerns().contains(concern)) {
-				Color color = colorMapping.get(concern);
-				colorMapping.remove(color);
-				colorSet.add(color);
-				//
-				TableItem tableItem = tableItemMapping.get(concern);
-				int index = -1;
-				for(int i = 0; i < tableCCColors.getItemCount(); i++)
-					if(tableCCColors.getItem(i) == tableItem)
-						index = i;
-				if(index != -1)
-					tableCCColors.remove(index);
-				tableItemMapping.remove(tableItem);
-			}
-		}
-		for(CrosscuttingConcern concern : modelRoot.getCrosscuttingConcerns()) {
-			if(!colorMapping.containsKey(concern)) {
-				if(colorSet.size() > 0) {
-					Color color = colorSet.get(0);
-					colorMapping.put(concern, color);
-					colorSet.remove(color);
-					//
-					TableItem tableItem = createTableItem(concern, color);
-					tableItemMapping.put(concern, tableItem);
-				}
-			}
-		}
-	}
-	
-	private TableItem createTableItem(CrosscuttingConcern concern, Color color) {
-		TableItem tableItemCrosscuttingConcern = new TableItem(tableCCColors, SWT.CENTER);
-		tableItemCrosscuttingConcern.setText(concern.getName());
-		//lblCrosscuttingConcern.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLACK));
-		tableItemCrosscuttingConcern.setBackground(color);
-		return tableItemCrosscuttingConcern;
-	}
-
-	protected void updateStyleText() {
+	protected void refreshStyleText() {
 		if(document != null) {
+			CCTextPageHelper.init();
 			styledText.replaceStyleRanges(0, styledText.getText().length(), new StyleRange[] { });
 			String text = uimaRoot.getCoveredText(document);
 			styledText.setText(text);
 			for(CrosscuttingConcern concern : modelRoot.getCrosscuttingConcerns()) {
-				Color color = colorMapping.get(concern);
-				for(Impact impact : concern.getImpacts()) {
-					if(document.getIdentification().equals(impact.getDocument().getIdentification())) {
-						Sentence sentence = impact.getSentence();
-						StyleRange newStyleRange = createStyleRange(sentence, color);
-						setStyledRange(newStyleRange);
+				boolean active = CCTextPageHelper.getActiveFor(concern);
+				Color color = CCTextPageHelper.getColorFor(concern);
+				if(active && color != null) {
+					for(Impact impact : concern.getImpacts()) {
+						if(document.getIdentification().equals(impact.getDocument().getIdentification())) {
+							Sentence sentence = impact.getSentence();
+							StyleRange newStyleRange = createStyleRange(sentence, color);
+							setStyledRange(newStyleRange);
+						}
 					}
 				}
 			}
@@ -266,6 +191,7 @@ public class CCTextPage  extends FormPage {
 				styleRange.length = increment;
 				lastStart = lastStart + increment;
 			}
+			styledText.replaceStyleRanges(newStyleRange.start, newStyleRange.length, existingStyleRanges);
 			newStyleRange.start = lastStart;
 			newStyleRange.length = increment + incrementRest;
 		}

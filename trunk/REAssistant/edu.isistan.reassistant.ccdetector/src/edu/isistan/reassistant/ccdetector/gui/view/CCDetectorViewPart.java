@@ -107,7 +107,6 @@ public class CCDetectorViewPart extends ViewPart implements CommandStackListener
 		compositeRule.getLblCompositionGuidelines().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		
 		compositeRule.getCompositeID().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-		compositeRule.getCompositeEnabled().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeName().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeMetadata().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeCompositionRules().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
@@ -115,6 +114,7 @@ public class CCDetectorViewPart extends ViewPart implements CommandStackListener
 		
 		compositeRule.getCompositeCCQuerySetDirect().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeCCQuerySetDirect().getLblName().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		compositeRule.getCompositeCCQuerySetDirect().getLblInclude().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeCCQuerySetDirect().getCompositeName().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeCCQuerySetDirect().getLblContent().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeCCQuerySetDirect().getCompositeContent().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
@@ -124,6 +124,7 @@ public class CCDetectorViewPart extends ViewPart implements CommandStackListener
 
 		compositeRule.getCompositeCCQuerySetImpact().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeCCQuerySetImpact().getLblName().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		compositeRule.getCompositeCCQuerySetImpact().getLblInclude().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeCCQuerySetImpact().getCompositeName().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeCCQuerySetImpact().getLblContent().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeRule.getCompositeCCQuerySetImpact().getCompositeContent().setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));

@@ -80,6 +80,8 @@ public class CCDetectorModelFactoryImpl extends EFactoryImpl implements CCDetect
 		switch (eDataType.getClassifierID()) {
 			case CCDetectorModelPackage.COMPOSITION_RULE:
 				return createCompositionRuleFromString(eDataType, initialValue);
+			case CCDetectorModelPackage.QUERY_PREFERENCE:
+				return createQueryPreferenceFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -95,6 +97,8 @@ public class CCDetectorModelFactoryImpl extends EFactoryImpl implements CCDetect
 		switch (eDataType.getClassifierID()) {
 			case CCDetectorModelPackage.COMPOSITION_RULE:
 				return convertCompositionRuleToString(eDataType, instanceValue);
+			case CCDetectorModelPackage.QUERY_PREFERENCE:
+				return convertQueryPreferenceToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -157,6 +161,26 @@ public class CCDetectorModelFactoryImpl extends EFactoryImpl implements CCDetect
 	 * @generated
 	 */
 	public String convertCompositionRuleToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QueryPreference createQueryPreferenceFromString(EDataType eDataType, String initialValue) {
+		QueryPreference result = QueryPreference.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertQueryPreferenceToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

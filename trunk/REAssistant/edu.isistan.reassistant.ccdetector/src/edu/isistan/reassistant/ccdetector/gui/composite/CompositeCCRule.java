@@ -24,7 +24,6 @@ public class CompositeCCRule extends Composite {
 	private Combo comboCompositionRule;
 	private ComboViewer comboViewerCompositionRule;
 	private Composite compositeID;
-	private Composite compositeEnabled;
 	private Composite compositeName;
 	private Composite compositeMetadata;
 	private Composite compositeCompositionGuidelines;
@@ -54,24 +53,10 @@ public class CompositeCCRule extends Composite {
 		IDText = new Text(compositeID, SWT.BORDER | SWT.SINGLE);
 		IDText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		IDText.setEditable(false);
-		
-		compositeEnabled = new Composite(this, SWT.NONE);
-		compositeEnabled.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
-		compositeEnabled.setLayout(new GridLayout(2, false));
-		
-		lblEnabled = new Label(compositeEnabled, SWT.NONE);
-		GridData gd_lblEnabled = new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1);
-		gd_lblEnabled.widthHint = 100;
-		lblEnabled.setLayoutData(gd_lblEnabled);
-		lblEnabled.setText("Enabled");
-
-		enabledButton = new Button(compositeEnabled, SWT.CHECK);
-		enabledButton.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, false, 1, 1));
-		enabledButton.setAlignment(SWT.CENTER);
 
 		compositeName = new Composite(this, SWT.NONE);
 		compositeName.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
-		compositeName.setLayout(new GridLayout(2, false));
+		compositeName.setLayout(new GridLayout(4, false));
 
 		lblName = new Label(compositeName, SWT.NONE);
 		GridData gd_lblName = new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1);
@@ -81,6 +66,15 @@ public class CompositeCCRule extends Composite {
 
 		nameText = new Text(compositeName, SWT.BORDER | SWT.SINGLE);
 		nameText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+		
+		lblEnabled = new Label(compositeName, SWT.NONE);
+		GridData gd_lblEnabled = new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1);
+		lblEnabled.setLayoutData(gd_lblEnabled);
+		lblEnabled.setText("Enabled");
+
+		enabledButton = new Button(compositeName, SWT.CHECK);
+		enabledButton.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
+		enabledButton.setAlignment(SWT.CENTER);
 
 		compositeMetadata = new Composite(this, SWT.NONE);
 		compositeMetadata.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
@@ -208,10 +202,6 @@ public class CompositeCCRule extends Composite {
 	
 	public Composite getCompositeID() {
 		return compositeID;
-	}
-	
-	public Composite getCompositeEnabled() {
-		return compositeEnabled;
 	}
 	
 	public Label getLblId() {

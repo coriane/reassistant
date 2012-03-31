@@ -13,6 +13,7 @@ import edu.isistan.reassistant.ccdetector.model.CrosscuttingConcernRule;
 import edu.isistan.reassistant.ccdetector.model.CrosscuttingConcernRuleSet;
 
 import edu.isistan.reassistant.ccdetector.model.Query;
+import edu.isistan.reassistant.ccdetector.model.QueryPreference;
 import edu.isistan.reassistant.ccdetector.model.QuerySet;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -63,6 +64,13 @@ public class CCDetectorModelPackageImpl extends EPackageImpl implements CCDetect
 	 * @generated
 	 */
 	private EEnum compositionRuleEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum queryPreferenceEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -229,6 +237,15 @@ public class CCDetectorModelPackageImpl extends EPackageImpl implements CCDetect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCrosscuttingConcernRuleSet_QueryPreference() {
+		return (EAttribute)crosscuttingConcernRuleSetEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQuerySet() {
 		return querySetEClass;
 	}
@@ -292,6 +309,15 @@ public class CCDetectorModelPackageImpl extends EPackageImpl implements CCDetect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getQueryPreference() {
+		return queryPreferenceEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CCDetectorModelFactory getCCDetectorModelFactory() {
 		return (CCDetectorModelFactory)getEFactoryInstance();
 	}
@@ -327,6 +353,7 @@ public class CCDetectorModelPackageImpl extends EPackageImpl implements CCDetect
 
 		crosscuttingConcernRuleSetEClass = createEClass(CROSSCUTTING_CONCERN_RULE_SET);
 		createEReference(crosscuttingConcernRuleSetEClass, CROSSCUTTING_CONCERN_RULE_SET__RULES);
+		createEAttribute(crosscuttingConcernRuleSetEClass, CROSSCUTTING_CONCERN_RULE_SET__QUERY_PREFERENCE);
 
 		querySetEClass = createEClass(QUERY_SET);
 		createEReference(querySetEClass, QUERY_SET__QUERIES);
@@ -338,6 +365,7 @@ public class CCDetectorModelPackageImpl extends EPackageImpl implements CCDetect
 
 		// Create enums
 		compositionRuleEEnum = createEEnum(COMPOSITION_RULE);
+		queryPreferenceEEnum = createEEnum(QUERY_PREFERENCE);
 	}
 
 	/**
@@ -382,6 +410,7 @@ public class CCDetectorModelPackageImpl extends EPackageImpl implements CCDetect
 
 		initEClass(crosscuttingConcernRuleSetEClass, CrosscuttingConcernRuleSet.class, "CrosscuttingConcernRuleSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCrosscuttingConcernRuleSet_Rules(), this.getCrosscuttingConcernRule(), null, "Rules", null, 0, -1, CrosscuttingConcernRuleSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCrosscuttingConcernRuleSet_QueryPreference(), this.getQueryPreference(), "QueryPreference", null, 0, 1, CrosscuttingConcernRuleSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(querySetEClass, QuerySet.class, "QuerySet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuerySet_Queries(), this.getQuery(), null, "Queries", null, 0, -1, QuerySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -396,6 +425,11 @@ public class CCDetectorModelPackageImpl extends EPackageImpl implements CCDetect
 		addEEnumLiteral(compositionRuleEEnum, CompositionRule.WRAP);
 		addEEnumLiteral(compositionRuleEEnum, CompositionRule.OVERLAP);
 		addEEnumLiteral(compositionRuleEEnum, CompositionRule.OVERRIDE);
+
+		initEEnum(queryPreferenceEEnum, QueryPreference.class, "QueryPreference");
+		addEEnumLiteral(queryPreferenceEEnum, QueryPreference.BOTH_DIRECT_AND_IMPACT);
+		addEEnumLiteral(queryPreferenceEEnum, QueryPreference.ONLY_DIRECT);
+		addEEnumLiteral(queryPreferenceEEnum, QueryPreference.ONLY_IMPACT);
 
 		// Create resource
 		createResource(eNS_URI);

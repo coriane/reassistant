@@ -210,20 +210,36 @@ public class CCDetailsPage implements IDetailsPage {
 		btnAdd.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				CCImpactDialog dialog = new CCImpactDialog(parent.getShell(), uimaRoot);
-				dialog.create();	
+				CCImpactDialog dialog = new CCImpactDialog(parent.getShell(), uimaRoot, CCImpactDialog.MODE_ADD);
+				dialog.create();
 				dialog.open();
-				if(dialog.getReturnCode() == CCImpactDialog.OK && dialog.getDocument() != null && dialog.getSection() != null && dialog.getSentence() != null) {
-					Impact impact = REAssistantModelFactory.eINSTANCE.createImpact();
-					//impact.setID(-1);
-					impact.setDocument(dialog.getDocument());
-					impact.setSection(dialog.getSection());
-					impact.setSentence(dialog.getSentence());
+				boolean loop = true;
+				while(loop == true) {
+					edu.isistan.uima.unified.typesystems.srs.Document document = dialog.getDocument();
+					edu.isistan.uima.unified.typesystems.srs.Section section = dialog.getSection();
+					edu.isistan.uima.unified.typesystems.nlp.Sentence sentence = dialog.getSentence();
 					
-					Command command = AddCommand.create(editingDomain, crosscuttingConcern, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS, impact);
-					editingDomain.getCommandStack().execute(command);
-				
-					listViewerImpacts.setSelection(new StructuredSelection(impact));
+					if(dialog.getReturnCode() == CCImpactDialog.OK || dialog.getReturnCode() == CCImpactDialog.NEXT) {
+						Impact impact = REAssistantModelFactory.eINSTANCE.createImpact();
+						//impact.setID(-1);
+						impact.setDocument(document);
+						impact.setSection(section);
+						impact.setSentence(sentence);
+						//
+						Command command = AddCommand.create(editingDomain, crosscuttingConcern, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS, impact);
+						editingDomain.getCommandStack().execute(command);
+						//
+						listViewerImpacts.setSelection(new StructuredSelection(impact));
+						//
+					}
+					//
+					loop = dialog.getReturnCode() == CCImpactDialog.NEXT;
+					//
+					if(dialog.getReturnCode() == CCImpactDialog.NEXT) {
+						dialog.create();
+						dialog.setInitial(document, section, sentence);
+						dialog.open();
+					}
 				}
 			}
 		});
@@ -237,7 +253,7 @@ public class CCDetailsPage implements IDetailsPage {
 				StructuredSelection selection = (StructuredSelection)listViewerImpacts.getSelection();
 				if(!selection.isEmpty()) {
 					Impact impact = (Impact)selection.getFirstElement();
-					CCImpactDialog dialog = new CCImpactDialog(parent.getShell(), uimaRoot);
+					CCImpactDialog dialog = new CCImpactDialog(parent.getShell(), uimaRoot, CCImpactDialog.MODE_EDIT);
 					dialog.create();
 					dialog.setInitial(impact.getDocument(), impact.getSection(), impact.getSentence());
 					dialog.open();
@@ -245,14 +261,14 @@ public class CCDetailsPage implements IDetailsPage {
 						Command commandDocument = SetCommand.create(editingDomain, impact, REAssistantModelPackage.Literals.IMPACT__DOCUMENT, dialog.getDocument());
 						Command commandSection = SetCommand.create(editingDomain, impact, REAssistantModelPackage.Literals.IMPACT__SECTION, dialog.getSection());
 						Command commandSentence = SetCommand.create(editingDomain, impact, REAssistantModelPackage.Literals.IMPACT__SENTENCE, dialog.getSentence());
-						
+						//
 						CompoundCommand command = new CompoundCommand();
 						command.append(commandDocument);
 						command.append(commandSection);
 						command.append(commandSentence);
-						
+						//
 						editingDomain.getCommandStack().execute(command);
-					
+						//
 						listViewerImpacts.setSelection(new StructuredSelection(impact));
 					}
 				}
@@ -268,11 +284,11 @@ public class CCDetailsPage implements IDetailsPage {
 				StructuredSelection selection = (StructuredSelection)listViewerImpacts.getSelection();
 				if(!selection.isEmpty()) {
 					Impact impact = (Impact) selection.getFirstElement();
-					
+					//
 					Command command = RemoveCommand.create(editingDomain, crosscuttingConcern, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS, impact);					
-					
+					//
 					editingDomain.getCommandStack().execute(command);
-					
+					//
 					if(crosscuttingConcern.getImpacts().size() > 0)
 						listViewerImpacts.setSelection(new StructuredSelection(crosscuttingConcern.getImpacts().get(crosscuttingConcern.getImpacts().size() - 1)));
 				}

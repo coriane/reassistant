@@ -23,6 +23,7 @@ import edu.isistan.reassistant.ccdetector.model.CCDetectorModelPackage;
 import edu.isistan.reassistant.ccdetector.model.CrosscuttingConcernRule;
 import edu.isistan.reassistant.ccdetector.model.CrosscuttingConcernRuleSet;
 import edu.isistan.reassistant.ccdetector.model.Query;
+import edu.isistan.reassistant.ccdetector.model.QueryPreference;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 import edu.isistan.uima.unified.typesystems.TypesystemsPackage;
 import edu.isistan.uima.unified.typesystems.domain.DomainPackage;
@@ -50,21 +51,20 @@ public class QueryEngine {
 	public QueryEngine(String modelUIMA) {
 		this.modelUIMA = modelUIMA;
 		this.modelCCRS = CCDetector.getRuleSetPath();
-		resourceSetUIMA = new ResourceSetImpl();
-		resourceSetCCRS = new ResourceSetImpl();
 		this.createUIMAModel();
 		this.createCCRSModel();
 		dispatcher = new QueryDispatcher(resourceSetUIMA, resourceUIMA);
 	}
 	
 	public void createUIMAModel() {
-		URI fileURI = URI.createURI(modelUIMA, true);
+		URI fileURI = URI.createFileURI(modelUIMA);
 		resourceUIMA = null;
+		resourceSetUIMA = new ResourceSetImpl();
 		try {
 			resourceUIMA = resourceSetUIMA.getResource(fileURI, true);
 		}
 		catch (Exception e) {
-			resourceUIMA = resourceSetUIMA.getResource(fileURI, true);
+			resourceUIMA = resourceSetUIMA.getResource(fileURI, false);
 		}
 		uimaRoot = resourceUIMA.getContents();
 	}
@@ -72,11 +72,12 @@ public class QueryEngine {
 	public void createCCRSModel() {
 		URI fileURI = URI.createFileURI(modelCCRS);
 		resourceCCRS = null;
+		resourceSetCCRS = new ResourceSetImpl();
 		try {
 			resourceCCRS = resourceSetCCRS.getResource(fileURI, true);
 		}
 		catch (Exception e) {
-			resourceCCRS = resourceSetCCRS.getResource(fileURI, true);
+			resourceCCRS = resourceSetCCRS.getResource(fileURI, false);
 		}
 		ccrsRoot = (CrosscuttingConcernRuleSet) resourceCCRS.getContents().get(0);
 	}
@@ -100,6 +101,7 @@ public class QueryEngine {
 	}
 	
 	public void beginQueriesExecution(IProgressMonitor monitor) {
+		dispatcher.addToIndex(resourceUIMA);
 		if(monitor == null)
 			monitor = new NullProgressMonitor();
 		else
@@ -107,34 +109,41 @@ public class QueryEngine {
 		monitor.beginTask("Rule mining execution", 2);
 	}
 	
+	public void endQueriesExecution(IProgressMonitor monitor) {
+		dispatcher.removeFromIndex(resourceUIMA);
+		monitor.done();
+	}
+	
 	public EMap<CrosscuttingConcernRule, EList<EObject>> queryDirectRules() throws InterruptedException {
 		SubProgressMonitor subMonitor = new SubProgressMonitor(monitor, 1, SubProgressMonitor.PREPEND_MAIN_LABEL_TO_SUBTASK);
 		subMonitor.subTask("Querying direct rules");
 		subMonitor.beginTask("Querying direct rules", getTotalDirectQueries());
 		EMap<CrosscuttingConcernRule, EList<EObject>> results = new BasicEMap<CrosscuttingConcernRule, EList<EObject>>();
-		for(CrosscuttingConcernRule rule : ccrsRoot.getRules()) {
-			if(rule.isEnabled()) {
-				EList<EObject> ruleResultsInclude = new UniqueEList<EObject>();
-				EList<EObject> ruleResultsExclude = new UniqueEList<EObject>();
-				for(Query directQuery : rule.getDirectQuerySet().getQueries()) {
-					if(monitor.isCanceled())
-						throw new OperationCanceledException();
-					//
-					String directQueryText = directQuery.getContent();
-					EList<EObject> result = query(directQueryText);
-					if(directQuery.isInclude())
-						ruleResultsInclude.addAll(result);
-					else
-						ruleResultsExclude.addAll(result);
-					//
-					if(!(monitor instanceof NullProgressMonitor))
-						Thread.sleep(300);
-					subMonitor.worked(1);
+		if(ccrsRoot.getQueryPreference().getValue() == QueryPreference.ONLY_DIRECT_VALUE || ccrsRoot.getQueryPreference().getValue() == QueryPreference.BOTH_DIRECT_AND_IMPACT_VALUE) {
+			for(CrosscuttingConcernRule rule : ccrsRoot.getRules()) {
+				if(rule.isEnabled()) {
+					EList<EObject> ruleResultsInclude = new UniqueEList<EObject>();
+					EList<EObject> ruleResultsExclude = new UniqueEList<EObject>();
+					for(Query directQuery : rule.getDirectQuerySet().getQueries()) {
+						if(monitor.isCanceled())
+							throw new OperationCanceledException();
+						//
+						String directQueryText = directQuery.getContent();
+						EList<EObject> result = query(directQueryText);
+						if(directQuery.isInclude())
+							ruleResultsInclude.addAll(result);
+						else
+							ruleResultsExclude.addAll(result);
+						//
+						if(!(monitor instanceof NullProgressMonitor))
+							Thread.sleep(300);
+						subMonitor.worked(1);
+					}
+					EList<EObject> ruleResults = new UniqueEList<EObject>();
+					ruleResults.addAll(ruleResultsInclude);
+					ruleResults.removeAll(ruleResultsExclude);
+					results.put(rule, ruleResults);
 				}
-				EList<EObject> ruleResults = new UniqueEList<EObject>();
-				ruleResults.addAll(ruleResultsInclude);
-				ruleResults.removeAll(ruleResultsExclude);
-				results.put(rule, ruleResults);
 			}
 		}
 		subMonitor.done();
@@ -146,29 +155,31 @@ public class QueryEngine {
 		subMonitor.subTask("Querying impact rules");
 		subMonitor.beginTask("Querying impact rules", getTotalImpactQueries());
 		EMap<CrosscuttingConcernRule, EList<EObject>> results = new BasicEMap<CrosscuttingConcernRule, EList<EObject>>();
-		for(CrosscuttingConcernRule rule : ccrsRoot.getRules()) {
-			if(rule.isEnabled()) {
-				EList<EObject> ruleResultsInclude = new UniqueEList<EObject>();
-				EList<EObject> ruleResultsExclude = new UniqueEList<EObject>();
-				for(Query impactQuery : rule.getImpactQuerySet().getQueries()) {
-					if(monitor.isCanceled())
-						throw new OperationCanceledException();
-					//
-					String impactQueryText = impactQuery.getContent();
-					EList<EObject> result = query(impactQueryText);
-					if(impactQuery.isInclude())
-						ruleResultsInclude.addAll(result);
-					else
-						ruleResultsExclude.addAll(result);
-					//
-					if(!(monitor instanceof NullProgressMonitor))
-						Thread.sleep(300);
-					subMonitor.worked(1);
+		if(ccrsRoot.getQueryPreference().getValue() == QueryPreference.ONLY_IMPACT_VALUE || ccrsRoot.getQueryPreference().getValue() == QueryPreference.BOTH_DIRECT_AND_IMPACT_VALUE) {
+			for(CrosscuttingConcernRule rule : ccrsRoot.getRules()) {
+				if(rule.isEnabled()) {
+					EList<EObject> ruleResultsInclude = new UniqueEList<EObject>();
+					EList<EObject> ruleResultsExclude = new UniqueEList<EObject>();
+					for(Query impactQuery : rule.getImpactQuerySet().getQueries()) {
+						if(monitor.isCanceled())
+							throw new OperationCanceledException();
+						//
+						String impactQueryText = impactQuery.getContent();
+						EList<EObject> result = query(impactQueryText);
+						if(impactQuery.isInclude())
+							ruleResultsInclude.addAll(result);
+						else
+							ruleResultsExclude.addAll(result);
+						//
+						if(!(monitor instanceof NullProgressMonitor))
+							Thread.sleep(300);
+						subMonitor.worked(1);
+					}
+					EList<EObject> ruleResults = new UniqueEList<EObject>();
+					ruleResults.addAll(ruleResultsInclude);
+					ruleResults.removeAll(ruleResultsExclude);
+					results.put(rule, ruleResults);
 				}
-				EList<EObject> ruleResults = new UniqueEList<EObject>();
-				ruleResults.addAll(ruleResultsInclude);
-				ruleResults.removeAll(ruleResultsExclude);
-				results.put(rule, ruleResults);
 			}
 		}
 		subMonitor.done();
@@ -189,9 +200,13 @@ public class QueryEngine {
 			for(ColumnType type : resultSet.getQueryColumnTypes()) {
 				if(type.alias != null && !type.alias.isEmpty()) {
 					URI uri = resultSet.getUri(i, type.alias);
+					String trimFragmentQuery = uri.trimFragment().toString();
+					String trimFragmentUIMA = resourceUIMA.getURI().trimFragment().toString(); 
 					String fragment = uri.fragment();
-					EObject object = resourceUIMA.getEObject(fragment);
-					result.add(object);
+					if(trimFragmentQuery.equals(trimFragmentUIMA)) {
+						EObject object = resourceUIMA.getEObject(fragment);
+						result.add(object);
+					}
 				}
 			}
 		}

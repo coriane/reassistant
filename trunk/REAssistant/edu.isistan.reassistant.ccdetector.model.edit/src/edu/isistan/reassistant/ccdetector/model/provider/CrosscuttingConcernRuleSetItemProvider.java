@@ -11,6 +11,7 @@ import edu.isistan.reassistant.ccdetector.model.CCDetectorModelFactory;
 import edu.isistan.reassistant.ccdetector.model.CCDetectorModelPackage;
 import edu.isistan.reassistant.ccdetector.model.CrosscuttingConcernRuleSet;
 
+import edu.isistan.reassistant.ccdetector.model.QueryPreference;
 import java.util.Collection;
 import java.util.List;
 
@@ -21,12 +22,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -65,8 +68,31 @@ public class CrosscuttingConcernRuleSetItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addQueryPreferencePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Query Preference feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addQueryPreferencePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CrosscuttingConcernRuleSet_QueryPreference_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CrosscuttingConcernRuleSet_QueryPreference_feature", "_UI_CrosscuttingConcernRuleSet_type"),
+				 CCDetectorModelPackage.Literals.CROSSCUTTING_CONCERN_RULE_SET__QUERY_PREFERENCE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -118,7 +144,11 @@ public class CrosscuttingConcernRuleSetItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CrosscuttingConcernRuleSet_type");
+		QueryPreference labelValue = ((CrosscuttingConcernRuleSet)object).getQueryPreference();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CrosscuttingConcernRuleSet_type") :
+			getString("_UI_CrosscuttingConcernRuleSet_type") + " " + label;
 	}
 
 	/**
@@ -133,6 +163,9 @@ public class CrosscuttingConcernRuleSetItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CrosscuttingConcernRuleSet.class)) {
+			case CCDetectorModelPackage.CROSSCUTTING_CONCERN_RULE_SET__QUERY_PREFERENCE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case CCDetectorModelPackage.CROSSCUTTING_CONCERN_RULE_SET__RULES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

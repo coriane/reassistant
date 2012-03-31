@@ -2,6 +2,8 @@ package edu.isistan.reassistant.ccdetector.gui.composite;
 
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
+import org.eclipse.jface.databinding.viewers.ViewersObservables;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.wb.swt.ResourceManager;
 import org.eclipse.emf.databinding.EMFDataBindingContext;
@@ -12,9 +14,12 @@ import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import edu.isistan.reassistant.ccdetector.model.CCDetectorModelPackage.Literals;
 import edu.isistan.reassistant.ccdetector.model.CrosscuttingConcernRule;
 import edu.isistan.reassistant.ccdetector.model.CrosscuttingConcernRuleSet;
+import edu.isistan.reassistant.ccdetector.model.QueryPreference;
 
 import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 
 public class CompositeCCRuleSetController {
 	private CompositeCCRuleSet m_compositeCCRuleSet;
@@ -84,14 +89,36 @@ public class CompositeCCRuleSetController {
 						text = "<OFF>" + text;
 					return text;
 				}
-			}; 
+			};
 			m_compositeCCRuleSet.getRulesListViewer().setLabelProvider(observableMapLabelProvider);
 			//
+		}
+		if(m_compositeCCRuleSet.getQueryPreferenceComboViewer().getContentProvider() == null) {
+			m_compositeCCRuleSet.getQueryPreferenceComboViewer().setContentProvider(new ObservableListContentProvider());
+			m_compositeCCRuleSet.getQueryPreferenceComboViewer().setLabelProvider(new LabelProvider() {
+				@Override
+				public String getText(Object element) {
+					QueryPreference queryPreference = (QueryPreference) element;
+					int value = queryPreference.getValue();
+					if(value == QueryPreference.ONLY_DIRECT_VALUE)
+						return "Only Direct Queries";
+					else if(value == QueryPreference.ONLY_IMPACT_VALUE)
+						return "Only Impact Queries";
+					else if(value == QueryPreference.BOTH_DIRECT_AND_IMPACT_VALUE)
+						return "Both Direct & Impact Queries";
+					return "";
+				}
+			});
+			m_compositeCCRuleSet.getQueryPreferenceComboViewer().setInput(new WritableList(QueryPreference.VALUES, QueryPreference.class));
 		}
 		IObservableList observableList = EMFEditObservables.observeList(editingDomain, crosscuttingConcernRuleSet, Literals.CROSSCUTTING_CONCERN_RULE_SET__RULES);
 		m_compositeCCRuleSet.getRulesListViewer().setInput(observableList);
 		//
 		EMFDataBindingContext bindingContext = new EMFDataBindingContext();
+		//
+		IObservableValue queryPreferenceObserveWidget = ViewersObservables.observeSingleSelection(m_compositeCCRuleSet.getQueryPreferenceComboViewer());
+		IObservableValue queryPreferenceObserveValue = EMFEditObservables.observeValue(editingDomain, crosscuttingConcernRuleSet, Literals.CROSSCUTTING_CONCERN_RULE_SET__QUERY_PREFERENCE);
+		bindingContext.bindValue(queryPreferenceObserveWidget, queryPreferenceObserveValue, null, null);
 		//
 		return bindingContext;
 	}

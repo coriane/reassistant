@@ -145,7 +145,8 @@ public class REAssistantContentProvider extends SimpleContentProvider implements
 		REAssistantContentProvider.resetProvider();
 		REAssistantMarkupProvider.resetMarkups();
 		for(Document document : uimaRoot.getDocuments()) {
-			DocumentMember member = new DocumentMember(document);
+			int size = uimaRoot.getSentences(document).size() * 10;
+			DocumentMember member = new DocumentMember(document, size);
 			members.add(member);
 			REAssistantMarkupProvider.addResult(member, reaProject, uimaRoot);
 		}

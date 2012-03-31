@@ -2,6 +2,7 @@ package edu.isistan.reassistant.visualiser;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
@@ -39,8 +40,23 @@ public class REAssistantMarkupProvider extends SimpleMarkupProvider {
 						kindMap.put(concern, markupKind);
 					}
 					Sentence sentence = impact.getSentence();
-					Stripe stripe = new Stripe(markupKind, member.transformStart(sentence), member.transformOffset(sentence));
-					stripes.add(stripe);
+					//
+					//Stripe stripe = new Stripe(markupKind, member.transformStart(sentence), member.transformOffset(sentence));
+					int offset = uimaRoot.indexOf(sentence, uimaRoot.getSentences(member.getDocument())) * 10;
+					Stripe stripe = null;
+					Iterator<Stripe> iterator = stripes.iterator();
+					while(stripe == null && iterator.hasNext()) {
+						Stripe s = iterator.next();
+						if(s.getOffset() == offset)
+							stripe = s;
+					}
+					if(stripe == null) {
+						stripe = new Stripe(markupKind, offset, 10);
+						stripes.add(stripe);
+					}
+					else
+						if(!stripe.getKinds().contains(markupKind))
+							stripe.getKinds().add(markupKind);
 				}
 			}
 		}
@@ -49,9 +65,6 @@ public class REAssistantMarkupProvider extends SimpleMarkupProvider {
 	public static void resetMarkups() {
 		markups = new HashMap<DocumentMember, List<Stripe>>();
 		kindMap = new HashMap<CrosscuttingConcern, CrosscuttingConcernMarkupKind>();
-//		if(ProviderManager.getMarkupProvider() instanceof REAssistantMarkupProvider) {
-//			((REAssistantMarkupProvider)ProviderManager.getMarkupProvider()).resetColours();
-//		}
 	}
 
 	@Override

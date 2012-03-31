@@ -171,13 +171,22 @@ public interface CCDetectorModelPackage extends EPackage {
 	int CROSSCUTTING_CONCERN_RULE_SET__RULES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Query Preference</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN_RULE_SET__QUERY_PREFERENCE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Crosscutting Concern Rule Set</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CROSSCUTTING_CONCERN_RULE_SET_FEATURE_COUNT = 1;
+	int CROSSCUTTING_CONCERN_RULE_SET_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link edu.isistan.reassistant.ccdetector.model.impl.QuerySetImpl <em>Query Set</em>}' class.
@@ -262,6 +271,17 @@ public interface CCDetectorModelPackage extends EPackage {
 	 * @generated
 	 */
 	int COMPOSITION_RULE = 4;
+
+
+	/**
+	 * The meta object id for the '{@link edu.isistan.reassistant.ccdetector.model.QueryPreference <em>Query Preference</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.isistan.reassistant.ccdetector.model.QueryPreference
+	 * @see edu.isistan.reassistant.ccdetector.model.impl.CCDetectorModelPackageImpl#getQueryPreference()
+	 * @generated
+	 */
+	int QUERY_PREFERENCE = 5;
 
 
 	/**
@@ -384,6 +404,17 @@ public interface CCDetectorModelPackage extends EPackage {
 	EReference getCrosscuttingConcernRuleSet_Rules();
 
 	/**
+	 * Returns the meta object for the attribute '{@link edu.isistan.reassistant.ccdetector.model.CrosscuttingConcernRuleSet#getQueryPreference <em>Query Preference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Query Preference</em>'.
+	 * @see edu.isistan.reassistant.ccdetector.model.CrosscuttingConcernRuleSet#getQueryPreference()
+	 * @see #getCrosscuttingConcernRuleSet()
+	 * @generated
+	 */
+	EAttribute getCrosscuttingConcernRuleSet_QueryPreference();
+
+	/**
 	 * Returns the meta object for class '{@link edu.isistan.reassistant.ccdetector.model.QuerySet <em>Query Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -456,6 +487,16 @@ public interface CCDetectorModelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getCompositionRule();
+
+	/**
+	 * Returns the meta object for enum '{@link edu.isistan.reassistant.ccdetector.model.QueryPreference <em>Query Preference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Query Preference</em>'.
+	 * @see edu.isistan.reassistant.ccdetector.model.QueryPreference
+	 * @generated
+	 */
+	EEnum getQueryPreference();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -572,6 +613,14 @@ public interface CCDetectorModelPackage extends EPackage {
 		EReference CROSSCUTTING_CONCERN_RULE_SET__RULES = eINSTANCE.getCrosscuttingConcernRuleSet_Rules();
 
 		/**
+		 * The meta object literal for the '<em><b>Query Preference</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CROSSCUTTING_CONCERN_RULE_SET__QUERY_PREFERENCE = eINSTANCE.getCrosscuttingConcernRuleSet_QueryPreference();
+
+		/**
 		 * The meta object literal for the '{@link edu.isistan.reassistant.ccdetector.model.impl.QuerySetImpl <em>Query Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -632,6 +681,16 @@ public interface CCDetectorModelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum COMPOSITION_RULE = eINSTANCE.getCompositionRule();
+
+		/**
+		 * The meta object literal for the '{@link edu.isistan.reassistant.ccdetector.model.QueryPreference <em>Query Preference</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.isistan.reassistant.ccdetector.model.QueryPreference
+		 * @see edu.isistan.reassistant.ccdetector.model.impl.CCDetectorModelPackageImpl#getQueryPreference()
+		 * @generated
+		 */
+		EEnum QUERY_PREFERENCE = eINSTANCE.getQueryPreference();
 
 	}
 
