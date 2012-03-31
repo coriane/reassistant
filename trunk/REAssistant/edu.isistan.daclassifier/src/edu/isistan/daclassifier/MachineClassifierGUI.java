@@ -1,4 +1,5 @@
 package edu.isistan.daclassifier;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -10,6 +11,8 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import javax.swing.JLabel;
 import java.awt.Insets;
+
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
@@ -32,6 +35,8 @@ public class MachineClassifierGUI extends JFrame {
 	
 	private MachineClassifier classifier;
 	private JTextArea txtResults;
+	private JButton btnTrainFull;
+	private JButton btnTrainSubset;
 
 	/**
 	 * Launch the application.
@@ -56,11 +61,6 @@ public class MachineClassifierGUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(500, 600);
 		setTitle("Machine classifier");
-		
-		classifier = new MachineClassifier();
-		classifier.setDebugEnabled(true);
-		classifier.loadInstances();
-		classifier.trainModel();
 		
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -235,18 +235,22 @@ public class MachineClassifierGUI extends JFrame {
 		JButton btnClassifyPredicate = new JButton("Classify predicate");
 		btnClassifyPredicate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				try {
-					String output = classifier.classifyPredicate(
-							txtP.getText(), txtPdesc.getText(),
-							txtA0.getText(), txtA0desc.getText(),
-							txtA1.getText(), txtA1desc.getText(),
-							txtA2.getText(), txtA2desc.getText()
-							).toString();
-					txtResults.setText(output);
-				} catch (Exception e) {
-					e.printStackTrace();
-					txtResults.setText(e.getMessage());
+				if(classifier != null) {
+					try {
+						String output = classifier.classifyPredicate(
+								txtP.getText(), txtPdesc.getText(),
+								txtA0.getText(), txtA0desc.getText(),
+								txtA1.getText(), txtA1desc.getText(),
+								txtA2.getText(), txtA2desc.getText()
+								).toString();
+						txtResults.setText(output);
+					} catch (Exception e) {
+						e.printStackTrace();
+						txtResults.setText(e.getMessage());
+					}
 				}
+				else
+					JOptionPane.showMessageDialog(MachineClassifierGUI.this, "Train the classifier at least once.", "Classification error",  JOptionPane.ERROR_MESSAGE);
 			}
 		});
 		btnClassifyPredicate.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -269,6 +273,40 @@ public class MachineClassifierGUI extends JFrame {
 		gbc_btnClearResults.gridy = 2;
 		panelButtons.add(btnClearResults, gbc_btnClearResults);
 		
+		btnTrainFull = new JButton("Train with full dataset");
+		btnTrainFull.setEnabled(true);
+		btnTrainFull.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				initClassifier(true);
+				txtResults.setText("");
+				btnTrainFull.setEnabled(false);
+				btnTrainSubset.setEnabled(true);
+			}
+		});
+		btnTrainFull.setAlignmentX(Component.CENTER_ALIGNMENT);
+		GridBagConstraints gbc_btnTrainFull = new GridBagConstraints();
+		gbc_btnTrainFull.insets = new Insets(0, 0, 5, 0);
+		gbc_btnTrainFull.gridx = 0;
+		gbc_btnTrainFull.gridy = 3;
+		panelButtons.add(btnTrainFull, gbc_btnTrainFull);
+		
+		btnTrainSubset = new JButton("Train with subset dataset");
+		btnTrainSubset.setEnabled(true);
+		btnTrainSubset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				initClassifier(false);
+				txtResults.setText("");
+				btnTrainSubset.setEnabled(false);
+				btnTrainFull.setEnabled(true);
+			}
+		});
+		btnTrainSubset.setAlignmentX(Component.CENTER_ALIGNMENT);
+		GridBagConstraints gbc_btnTrainSubset = new GridBagConstraints();
+		gbc_btnTrainSubset.insets = new Insets(0, 0, 5, 0);
+		gbc_btnTrainSubset.gridx = 0;
+		gbc_btnTrainSubset.gridy = 4;
+		panelButtons.add(btnTrainSubset, gbc_btnTrainSubset);
+		
 		txtResults = new JTextArea();
 		txtResults.setLineWrap(true);
 		txtResults.setEditable(false);
@@ -279,5 +317,23 @@ public class MachineClassifierGUI extends JFrame {
 		gbc_txtResults.gridx = 1;
 		gbc_txtResults.gridy = 0;
 		panelOutput.add(txtResults, gbc_txtResults);
+	}
+
+	private void initClassifier(boolean full) {
+		if(classifier == null) {
+			classifier = new MachineClassifier();
+			classifier.setDebugEnabled(true);
+		}
+		try {
+			if(full)
+				classifier.loadFullInstances();
+			else
+				classifier.loadSubsetInstances();
+			classifier.trainModel();
+			//classifier.loadModel();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

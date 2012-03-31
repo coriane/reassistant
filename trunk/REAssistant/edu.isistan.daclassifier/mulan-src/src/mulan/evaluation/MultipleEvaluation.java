@@ -142,6 +142,16 @@ public class MultipleEvaluation {
     public double getMean(String measureName) {
         return mean.get(measureName);
     }
+    
+    /**
+     * Returns the standard deviation value of a measure
+     *
+     * @param measureName the name of the measure
+     * @return the standard deviation value of the measure
+     */
+    public double getStandardDeviation(String measureName) {
+        return standardDeviation.get(measureName);
+    }
 
     /**
      * Returns a CSV string representation of the results

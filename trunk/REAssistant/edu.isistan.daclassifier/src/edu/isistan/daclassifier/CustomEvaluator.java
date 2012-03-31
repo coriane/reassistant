@@ -20,7 +20,7 @@ import weka.core.Instances;
 public class CustomEvaluator {
 
     // seed for reproduction of cross-validation results
-    private int seed = 1;
+    public int seed = 1;
     // when false divisions-by-zero are ignored in certain measures
     private boolean strict = true;
 
@@ -276,4 +276,96 @@ public class CustomEvaluator {
         trainingMultipleEvaluation = new MultipleEvaluation(trainingEvaluation);
         testingMultipleEvaluation = new MultipleEvaluation(testingEvaluation);
     }
+    
+    private void checkPercentage(int randomPercentage, int increment) {
+        if (randomPercentage < 0 || randomPercentage > 100) {
+            throw new IllegalArgumentException("Percentage must be greater than zero and equal-or-less than one hundred.");
+        }
+        if(increment < 0 || increment > 100 || increment > randomPercentage) {
+        	throw new IllegalArgumentException("Increment must be greater than zero, equal-or-less than one hundred and lower than the random percentage.");
+        }
+    }
+    
+    public void randomPercentageValidate(MultiLabelLearner learner, MultiLabelInstances data, int randomPercentage, int increment)
+    {
+        checkLearner(learner);
+        checkData(data);
+        checkPercentage(randomPercentage, increment);
+
+        innerRandomPercentageValidate(learner, data, false, null, randomPercentage, increment);
+    }
+
+    /**
+     * Evaluates a {@link MultiLabelLearner} via cross-validation on given data
+     * set using given evaluation measures with defined number of folds and seed.
+     *
+     * @param learner the learner to be evaluated via cross-validation
+     * @param data the multi-label data set for cross-validation
+     * @param measures the evaluation measures to compute
+     * @param someFolds 
+     * @return a {@link MultipleEvaluation} object holding the results
+     */
+    public void randomPercentageValidate(MultiLabelLearner learner, MultiLabelInstances data, List<Measure> measures, int randomPercentage, int increment)
+    {
+        checkLearner(learner);
+        checkData(data);
+        checkMeasures(measures);
+        checkPercentage(randomPercentage, increment);
+
+        innerRandomPercentageValidate(learner, data, true, measures, randomPercentage, increment);
+    }
+
+    private void innerRandomPercentageValidate(MultiLabelLearner learner, MultiLabelInstances data, boolean hasMeasures, List<Measure> measures, int randomPercentage, int increment) {
+        List<Evaluation> trainingEvaluation = new ArrayList<Evaluation>();
+        List<Evaluation> testingEvaluation = new ArrayList<Evaluation>();
+        //
+        Instances workingSet = new Instances(data.getDataSet());
+        workingSet.randomize(new Random(seed));
+        // Calculating values for sampling according to the percentage
+        int fullCapacity = workingSet.size();
+        double newPercentage = ((double) randomPercentage) / 100d;
+        int trainCapacity = (int) (newPercentage * fullCapacity);
+        int testCapacity = (int) ((1 - newPercentage) * fullCapacity);
+        // Calculating values for different slices of the dataset for train & test
+        int pointer = 0;
+        int pointerCount = 0;
+        double newIncrement = ((double) increment) / 100d;
+        int jumpLength = (int) (newIncrement * fullCapacity);
+        //
+        while(pointer + trainCapacity < fullCapacity) {
+            System.out.println("Pointer " + (pointerCount + 1) + " / " + "Percentage " + randomPercentage);
+            try {
+            	Instances train = new Instances(data.getDataSet(), trainCapacity);
+            	Instances test = new Instances(data.getDataSet(), testCapacity);
+            	// Filling the test and train datasets with instances
+            	for(int index = 0; index < fullCapacity; index++) {
+            		Instance instance = workingSet.get(index);
+            		if(index >= pointer && index < pointer + trainCapacity)
+            			train.add(instance);
+            		else
+            			test.add(instance);
+            	}
+            	MultiLabelInstances mlTrain = new MultiLabelInstances(train, data.getLabelsMetaData());
+            	MultiLabelInstances mlTest = new MultiLabelInstances(test, data.getLabelsMetaData());
+            	MultiLabelLearner clone = learner.makeCopy();
+            	clone.build(mlTrain);
+            	if (hasMeasures) {
+            		trainingEvaluation.add(evaluate(clone, mlTrain, measures));
+            		testingEvaluation.add(evaluate(clone, mlTest, measures));
+            	}
+            	else {
+            		trainingEvaluation.add(evaluate(clone, mlTrain));
+            		testingEvaluation.add(evaluate(clone, mlTest));
+            	}
+            	pointer += jumpLength;
+            	pointerCount++;
+            }
+            catch (Exception ex) {
+            	Logger.getLogger(CustomEvaluator.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+		//
+        trainingMultipleEvaluation = new MultipleEvaluation(trainingEvaluation.toArray(new Evaluation[] { }));
+        testingMultipleEvaluation = new MultipleEvaluation(testingEvaluation.toArray(new Evaluation[] { }));
+    }   
 }

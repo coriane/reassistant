@@ -110,7 +110,8 @@ public final class LabelsBuilder {
      * @throws LabelsBuilderException if any error occur when validating XML against
      * 	schema or when creating labels data form specified input stream
      */
-    public static LabelsMetaData createLabels(InputStream inputStream) throws LabelsBuilderException {
+    @SuppressWarnings("static-access")
+	public static LabelsMetaData createLabels(InputStream inputStream) throws LabelsBuilderException {
 
         if (inputStream == null) {
             throw new ArgumentNullException("inputStream");
@@ -122,8 +123,10 @@ public final class LabelsBuilder {
 
             SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
             schemaFactory.setFeature(SCHEMA_FULL_CHECKING_FEATURE, false);
-            //Schema schema = schemaFactory.newSchema(ClassLoader.getSystemResource(LABELS_SCHEMA_SOURCE));
-            Schema schema = schemaFactory.newSchema(LabelsBuilder.class.getClassLoader().getResource(LABELS_SCHEMA_SOURCE));
+            Schema schema = schemaFactory.newSchema(ClassLoader.getSystemResource(LABELS_SCHEMA_SOURCE));
+            //TODO: PATCH to fix execution within an Eclipse RCP environment
+            if(schema == null)
+            	schema = schemaFactory.newSchema(LabelsBuilder.class.getClassLoader().getSystemResource(LABELS_SCHEMA_SOURCE));
 
             JAXBContext context = JAXBContext.newInstance(LabelsMetaDataImpl.class, LabelNodeImpl.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
