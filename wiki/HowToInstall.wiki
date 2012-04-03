@@ -3,7 +3,7 @@
 
 = Setup =
 
-REAssitant is composed of several Eclipse plugins. These plugins have been implemented using the latest version of Eclipse, and for this reason, a few steps are necessary to setup the REAssistant environment.
+REAssistant is composed of several Eclipse plugins. These plugins have been implemented using the latest version of Eclipse, and for this reason, a few steps are necessary to setup the REAssistant environment.
 
 == First Step ==
 
