@@ -1,9 +1,9 @@
-#summary Requisites and instructions for installating REAssistant.
+#summary Requirements and instructions for installating REAssistant.
 #labels Featured,Phase-Deploy
 
 = Setup =
 
-REAssitant is composed of several eclipse plugins. These plugins have been implemented using the latest version eclipse, and for that reason we need to make some things to setup REAssistant environment.
+REAssitant is composed of several Eclipse plugins. These plugins have been implemented using the latest version of Eclipse, and for this reason, a few steps are necessary to setup the REAssistant environment.
 
 == First Step ==
 
@@ -15,14 +15,14 @@ Download a clean version of Eclipse 3.7 SR2, and install the following "dependan
 
 == Second Step ==
 
-Copy *REAssistant plugin* jars (downloaded from the *Downloads* page) into the _plugins_ folder of eclipse.
+Copy *REAssistant plugin* jars (downloaded from the *Downloads* page) to the _plugins_ folder of Eclipse.
 
 == Third Step ==
 
-Download the _REAssistant models_ (downloaded from the *Downloads* page), uncompress them into a folder, and modify the eclipse ini file adding the following environment variable:
+Download the _REAssistant models_ (downloaded from the *Downloads* page), uncompress them into a folder, and modify the Eclipse ini file adding the following environment variable:
 
   * MODELS_PATH=C:/Your/Path/REAssistant-models/ at _eclipse.ini_
 
 This way, we link the variable to the models folder.
 
-That's it, you now can execute and use REAssistant in your computer.
+That's all!, you can now execute and use REAssistant in your computer.
