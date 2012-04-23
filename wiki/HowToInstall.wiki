@@ -19,7 +19,7 @@ Copy *REAssistant plugin* jars (downloaded from the *Downloads* page) to the _pl
 
 == Third Step ==
 
-Download the _REAssistant models_. One part of the models are available in the SVN, and the other is available separately (due to its size) from the following link in [https://www.dropbox.com/s/2dst5ahz3tqkqjc/REAssistant-models.zip *dropbox*]. Uncompress the zip into a folder, merge the contents with the SVN models and modify the *_eclipse.ini_* file adding the following environment variable:
+Download the _REAssistant models_. One part of the models are available in the SVN, and the other is available separately (due to its size) from the following link in dropbox: *_[https://www.dropbox.com/s/2dst5ahz3tqkqjc/REAssistant-models.zip REAssistant-models.zip]_*. Uncompress the zip into a folder, merge the contents with the SVN models and modify the *_eclipse.ini_* file adding the following environment variable:
 
   * MODELS_PATH=C:/Your/Path/REAssistant-models/ at _eclipse.ini_
 
