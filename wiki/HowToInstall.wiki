@@ -7,17 +7,21 @@ REAssistant is composed of several Eclipse plugins. These plugins have been impl
 
 == First Step ==
 
-Download a clean version of Eclipse 3.7 SR2, and install the following "dependant" plugins. To do that, in Eclipse, click Help > Install New Software. Then, add the following _Update Sites_ and install them.
+Download a clean version of Eclipse 3.7 SR2, and install the following "dependant" plugins. To do that, in Eclipse, click Help > Install New Software. 
 
-  * WindowBuilder Pro - http://dl.google.com/eclipse/inst/d2wbpro/latest/3.7
-  * EMF Query2 - https://hudson.eclipse.org/hudson/job/tycho-query2-nightly/lastSuccessfulBuild/artifact/targetPlatform/
+First, install the following plugins:
+
+  * EMF (Eclipse Modeling Framework)
+  * EMF Query
+
+The plugins above can be found at the _Eclipse Indigo Update Site_, included with eclipse.
+
+Then, add the following _Update Sites_ and install them.
+
   * UIMA - http://www.apache.org/dist/uima/eclipse-update-site/
-
-In addition, two more dependencies are needed:
-  * EMF
-  * EMF Query.
-
-The plugins above can be found at the Eclipse Indigo Update Site, included with eclipse.
+  * EMF Query2 - https://hudson.eclipse.org/hudson/job/tycho-query2-nightly/lastSuccessfulBuild/artifact/targetPlatform/
+  * AJDT - http://download.eclipse.org/tools/ajdt/37/update
+  * WindowBuilder Pro - http://dl.google.com/eclipse/inst/d2wbpro/latest/3.7
 
 == Second Step ==
 
