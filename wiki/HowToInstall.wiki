@@ -12,6 +12,13 @@ Download a clean version of Eclipse 3.7 SR2, and install the following "dependan
   * WindowBuilder Pro - http://dl.google.com/eclipse/inst/d2wbpro/latest/3.7
   * EMF Query2 - https://hudson.eclipse.org/hudson/job/tycho-query2-nightly/lastSuccessfulBuild/artifact/targetPlatform/
   * UIMA - http://www.apache.org/dist/uima/eclipse-update-site/
+  * UIMA - http://www.apache.org/dist/uima/eclipse-update-site/
+
+In addition, two more dependencies are needed:
+  * EMF
+  * EMF Query.
+
+These plugins can be found at the Eclipse Indigo Update Site, included with eclipse.
 
 == Second Step ==
 
@@ -19,7 +26,7 @@ Copy *REAssistant plugin* jars (downloaded from the *Downloads* page) to the _pl
 
 == Third Step ==
 
-Download the _REAssistant models_. One part of the models are available in the SVN, and the other is available separately (due to its size) from the following link in dropbox: *_[https://www.dropbox.com/s/2dst5ahz3tqkqjc/REAssistant-models.zip REAssistant-models.zip]_*. Uncompress the zip into a folder, merge the contents with the SVN models and modify the *_eclipse.ini_* file adding the following environment variable:
+Download the _REAssistant models_. One part of the models are available in the SVN, and the other is available separately (due to its size) from the following link in dropbox: *_[https://www.dropbox.com/s/j44e10gl8x24j6r/REAssistant-models_1.0.0.201203131454.zip REAssistant-models_1.0.0.201203131454.zip]_*. Uncompress the zip into a folder, merge the contents with the SVN models and modify the *_eclipse.ini_* file adding the following environment variable:
 
   * MODELS_PATH=C:/Your/Path/REAssistant-models/ at _eclipse.ini_
 
