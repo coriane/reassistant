@@ -12,13 +12,12 @@ Download a clean version of Eclipse 3.7 SR2, and install the following "dependan
   * WindowBuilder Pro - http://dl.google.com/eclipse/inst/d2wbpro/latest/3.7
   * EMF Query2 - https://hudson.eclipse.org/hudson/job/tycho-query2-nightly/lastSuccessfulBuild/artifact/targetPlatform/
   * UIMA - http://www.apache.org/dist/uima/eclipse-update-site/
-  * UIMA - http://www.apache.org/dist/uima/eclipse-update-site/
 
 In addition, two more dependencies are needed:
   * EMF
   * EMF Query.
 
-These plugins can be found at the Eclipse Indigo Update Site, included with eclipse.
+The plugins above can be found at the Eclipse Indigo Update Site, included with eclipse.
 
 == Second Step ==
 
