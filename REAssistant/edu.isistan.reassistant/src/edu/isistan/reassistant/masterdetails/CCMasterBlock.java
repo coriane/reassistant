@@ -41,6 +41,8 @@ import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.MasterDetailsBlock;
 import org.eclipse.ui.forms.SectionPart;
 import org.eclipse.ui.forms.editor.FormPage;
+import org.eclipse.ui.forms.events.ExpansionAdapter;
+import org.eclipse.ui.forms.events.ExpansionEvent;
 import org.eclipse.ui.forms.widgets.ExpandableComposite;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
@@ -118,6 +120,12 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		sctnCrosscuttingConcerns.setDescription("Crosscutting concerns of this system.");
 		sctnCrosscuttingConcerns.setText("Crosscutting concerns");
 		//
+		sctnCrosscuttingConcerns.addExpansionListener(new ExpansionAdapter() {
+			public void expansionStateChanged(ExpansionEvent e) {
+				managedForm.reflow(true);
+			}
+		});
+		//
 		Composite composite = toolkit.createComposite(sctnCrosscuttingConcerns, SWT.NONE);
 		toolkit.paintBordersFor(composite);
 		sctnCrosscuttingConcerns.setClient(composite);
@@ -126,12 +134,12 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		final SectionPart sctnPart = new SectionPart(sctnCrosscuttingConcerns);
 		managedForm.addPart(sctnPart);
 		
-		SashForm sashForm = new SashForm(composite, SWT.SMOOTH | SWT.VERTICAL);
-		sashForm.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		toolkit.adapt(sashForm);
-		toolkit.paintBordersFor(sashForm);
+		SashForm innerSashForm = new SashForm(composite, SWT.SMOOTH | SWT.VERTICAL);
+		innerSashForm.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		toolkit.adapt(innerSashForm);
+		toolkit.paintBordersFor(innerSashForm);
 		
-		Composite compositeCrosscuttingConcerns = new Composite(sashForm, SWT.NONE);
+		Composite compositeCrosscuttingConcerns = new Composite(innerSashForm, SWT.NONE);
 		toolkit.adapt(compositeCrosscuttingConcerns);
 		toolkit.paintBordersFor(compositeCrosscuttingConcerns);
 		compositeCrosscuttingConcerns.setLayout(new GridLayout(2, false));
@@ -213,7 +221,7 @@ public class CCMasterBlock extends MasterDetailsBlock {
 						
 						StringBuffer joinedName = new StringBuffer();
 						StringBuffer joinedDescription = new StringBuffer();
-						joinedName.append("Joined crosscutting concerns: ");
+						//joinedName.append("Joined crosscutting concerns: ");
 						
 						for(int i = 0; i < crosscuttingConcerns.size(); i++) {
 							CrosscuttingConcern joinCC = crosscuttingConcerns.get(i);
@@ -221,7 +229,9 @@ public class CCMasterBlock extends MasterDetailsBlock {
 							joinedName.append(joinCC.getName());
 							joinedDescription.append(joinCC.getDescription());
 							if(i != crosscuttingConcerns.size() - 1) {
-								joinedName.append(", ");
+								joinedName.append(" + ");
+								joinedDescription.append("\n");
+								joinedDescription.append("--- + ---");
 								joinedDescription.append("\n");
 							}
 							
@@ -321,7 +331,7 @@ public class CCMasterBlock extends MasterDetailsBlock {
 			}
 		});
 		
-		Composite compositeDocuments = toolkit.createComposite(sashForm, SWT.NONE);
+		Composite compositeDocuments = toolkit.createComposite(innerSashForm, SWT.NONE);
 		toolkit.paintBordersFor(compositeDocuments);
 		compositeDocuments.setLayout(new GridLayout(1, false));
 		
@@ -331,7 +341,8 @@ public class CCMasterBlock extends MasterDetailsBlock {
 		listViewerDocuments = new ListViewer(compositeDocuments, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		List listDocuments = listViewerDocuments.getList();
 		listDocuments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		sashForm.setWeights(new int[] {3, 1});
+		
+		innerSashForm.setWeights(new int[] {3, 1});
 		
 		initDataBindings();
 	}

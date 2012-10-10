@@ -21,16 +21,19 @@ public class REAssistantEditorContributor extends EditingDomainActionBarContribu
 	public void setTextControls(Text... texts) {
 		if(this.textControls != null)
 			for(Text text : this.textControls)
-				textActionHandler.removeText(text);
+				if(!text.isDisposed())
+					textActionHandler.removeText(text);
 
 		Collection<Text> textControls = new ArrayList<Text>();
 		for(Text text : texts)
-			textControls.add(text);
+			if(!text.isDisposed())
+				textControls.add(text);
 
 		this.textControls = textControls;
 
 		for(Text text : textControls)
-			textActionHandler.addText(text);
+			if(!text.isDisposed())
+				textActionHandler.addText(text);
 	}
 
 	public void addTextControls(Text... texts) {

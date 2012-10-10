@@ -20,7 +20,7 @@
             name="REAssistant Model"
             class="edu.isistan.reassistant.wizards.REAssistantWizard"
             category="edu.isistan.reassistant.WizardCategory"
-            icon="icons/reassistant.gif">
+            icon="icons/reaeditor.gif">
          	<description>Create a new REAssistant model file</description>
       </wizard>
    </extension>
@@ -32,7 +32,7 @@
             id="edu.isistan.reassistant.editor.REAssistantEditor"
             name="REAssistant Editor"
             extensions="rea"
-            icon="icons/reassistant.gif"
+            icon="icons/reaeditor.gif"
             contributorClass="edu.isistan.reassistant.editor.REAssistantEditorContributor">
       </editor>
    </extension>
@@ -65,7 +65,7 @@
 			id="edu.isistan.reassistant.actions.REAssistantWizardAction"
 			label="Create REA"
 			tooltip="Launchs the REAssistant Wizard over the selected resource"
-			icon="icons/reassistant.gif"
+			icon="icons/reaeditor.gif"
 			class="edu.isistan.reassistant.actions.REAssistantWizardActionDelegate"
 			menubarPath="edu.isistan.reassistant.popupSubMenu/additions"
 			enablesFor="1">
@@ -131,6 +131,15 @@
             name="REAssistant Provider"
             priority="1"
             title="CC Global View"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.perspectives">
+      <perspective
+         name="REAssistant"
+         icon="icons/reaperspective.gif"
+         class="edu.isistan.reassistant.perspective.REAssistantPerspectiveFactory"
+         id="edu.isistan.reassistant.perspective.REAssistant">
+      </perspective>
    </extension>
    
 </plugin>
