@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_hPkLcHKwEeGApc-it7rrMQ" Name="CRS" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/CRS.uima">
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_hPkLcHKwEeGApc-it7rrMQ" Name="CRS" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/ASE2012/CRS.uima">
   <CrosscuttingConcerns ID="_8Mv_QHLfEeGBWbpJEc_Odw" Name="Persistence" Description="Encapsulates the access to a data repository used to store information of the CRS">
     <Impacts ID="_lH6B4HUUEeGQgossn6OzyA">
       <Document href="CRS.uima#60"/>
