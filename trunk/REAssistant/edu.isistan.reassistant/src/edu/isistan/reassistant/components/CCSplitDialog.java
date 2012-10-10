@@ -91,10 +91,10 @@ public class CCSplitDialog extends Dialog {
 		reaFactory = REAssistantModelFactory.eINSTANCE;
 		
 		splittedLeftCC = reaFactory.createCrosscuttingConcern();
-		splittedLeftCC.setName(originalCC.getName() + " (Split left)");
+		splittedLeftCC.setName(originalCC.getName() + " #1");
 		splittedLeftCC.setDescription(originalCC.getDescription());
 		splittedRightCC = reaFactory.createCrosscuttingConcern();
-		splittedRightCC.setName(originalCC.getName() + " (Split right)");
+		splittedRightCC.setName(originalCC.getName() + " #2");
 		splittedRightCC.setDescription(originalCC.getDescription());
 		
 		splittedLeftCC.getImpacts().addAll(this.originalCC.getImpacts());

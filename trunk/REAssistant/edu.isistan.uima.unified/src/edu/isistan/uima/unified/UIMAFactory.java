@@ -150,7 +150,7 @@ public class UIMAFactory {
 		AnalysisEngineDescription aeDescription = 
 			AnalysisEngineFactory.createPrimitiveDescription(ClustererCasConsumer.class, typeSystemDescription, typePriorities, 
 			"jwnl", getModelsPath() + "jwnl/jwnl-properties.xml",
-			"wordnet", getModelsPath() + "wordnet/win/2.0/dict/",
+			"wordnet", getModelsPath() + "wordnet/unix/2.0/dict/",
 			"linkageType", linkageType,
 			"distanceType", distanceType,
 			"minimumDistance", minimumDistance);

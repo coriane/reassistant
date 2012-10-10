@@ -33,6 +33,8 @@ import org.eclipse.ui.forms.IDetailsPage;
 import org.eclipse.ui.forms.IFormPart;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormPage;
+import org.eclipse.ui.forms.events.ExpansionAdapter;
+import org.eclipse.ui.forms.events.ExpansionEvent;
 import org.eclipse.ui.forms.widgets.ExpandableComposite;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
@@ -125,11 +127,17 @@ public class CCDetailsPage implements IDetailsPage {
 	public void createContents(final Composite parent) {
 		FormToolkit toolkit = managedForm.getToolkit();
 		parent.setLayout(new FillLayout());
-		//		
+		//
 		Section sctnCrosscuttingConcern = toolkit.createSection(parent,
 				ExpandableComposite.EXPANDED | ExpandableComposite.TITLE_BAR | Section.DESCRIPTION | Section.TWISTIE);
 		sctnCrosscuttingConcern.setDescription("This section displays the crosscutting concern details.");
 		sctnCrosscuttingConcern.setText("Crosscutting concern");
+		//
+		sctnCrosscuttingConcern.addExpansionListener(new ExpansionAdapter() {
+			public void expansionStateChanged(ExpansionEvent e) {
+				managedForm.reflow(true);
+			}
+		});
 		//
 		Composite composite = toolkit.createComposite(sctnCrosscuttingConcern, SWT.NONE);
 		toolkit.paintBordersFor(composite);
@@ -145,30 +153,30 @@ public class CCDetailsPage implements IDetailsPage {
 		
 		Label lblId = new Label(compositeDetails, SWT.NONE);
 		lblId.setLayoutData(new TableWrapData(TableWrapData.CENTER, TableWrapData.MIDDLE));
-		lblId.setSize(10, 15);
+//		lblId.setSize(10, 15);
 		toolkit.adapt(lblId, true, true);
 		lblId.setText("Id");
 		
 		textId = new Text(compositeDetails, SWT.BORDER);
 		textId.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.MIDDLE));
-		textId.setSize(492, 21);
+//		textId.setSize(492, 21);
 		textId.setEnabled(false);
 		toolkit.adapt(textId, true, true);
 		
 		Label lblName = new Label(compositeDetails, SWT.NONE);
 		lblName.setLayoutData(new TableWrapData(TableWrapData.CENTER, TableWrapData.MIDDLE));
-		lblName.setSize(32, 15);
+//		lblName.setSize(32, 15);
 		toolkit.adapt(lblName, true, true);
 		lblName.setText("Name");
 		
 		textName = new Text(compositeDetails, SWT.BORDER);
 		textName.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.MIDDLE));
-		textName.setSize(492, 21);
+//		textName.setSize(492, 21);
 		toolkit.adapt(textName, true, true);
 		
 		Label lblDescription = new Label(compositeDetails, SWT.NONE);
 		lblDescription.setLayoutData(new TableWrapData(TableWrapData.CENTER, TableWrapData.MIDDLE));
-		lblDescription.setSize(60, 15);
+//		lblDescription.setSize(60, 15);
 		toolkit.adapt(lblDescription, true, true);
 		lblDescription.setText("Description");
 		
@@ -176,7 +184,7 @@ public class CCDetailsPage implements IDetailsPage {
 		TableWrapData twd_textDescription = new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.MIDDLE);
 		twd_textDescription.heightHint = 50;
 		textDescription.setLayoutData(twd_textDescription);
-		textDescription.setSize(492, 81);
+//		textDescription.setSize(492, 81);
 		toolkit.adapt(textDescription, true, true);
 		
 		lblImpacts = new Label(compositeDetails, SWT.NONE);
@@ -305,6 +313,13 @@ public class CCDetailsPage implements IDetailsPage {
 		sectionImpactDetails.setLayoutData(new TableWrapData(TableWrapData.FILL_GRAB, TableWrapData.MIDDLE));
 		toolkit.paintBordersFor(sectionImpactDetails);
 		sectionImpactDetails.setText("Impact Details");
+		//
+		sectionImpactDetails.addExpansionListener(new ExpansionAdapter() {
+			public void expansionStateChanged(ExpansionEvent e) {
+				managedForm.reflow(true);
+			}
+		});
+		//
 		
 		Composite compositeImpactDetails = toolkit.createComposite(sectionImpactDetails, SWT.NONE);
 		sectionImpactDetails.setClient(compositeImpactDetails);
