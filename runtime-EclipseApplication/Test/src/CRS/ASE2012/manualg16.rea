@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_OI9uAHKwEeGApc-it7rrMQ" Name="CRS" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/CRS.uima">
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_OI9uAHKwEeGApc-it7rrMQ" Name="CRS" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/ASE2012/CRS.uima">
   <CrosscuttingConcerns ID="_gegsgHKxEeGApc-it7rrMQ" Name="Entitlement (ET)" Description="Este aspecto hace referencia a la autenticacion y autorizacion de usuarios, es fundamental para cualquier sistema que deba distinguir diferentes categorías y jerarquías de usuarios, permitiendo o no el acceso a funcionalidad o información restringida.">
     <Impacts ID="_vgpO8HKxEeGApc-it7rrMQ">
       <Document href="CRS.uima#61"/>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_xTRS4F8YEeGqiq5xZpNUeA" Name="Manual G5" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/Master2012/HWS.uima">
+  <CrosscuttingConcerns ID="_I0_JEGB_EeGi5ZP1QDJ3XA" Name="Data Formatting" Description="Se encarga de establecer un formato de la representación de la información del sistema.&#xD;&#xA;Este aspecto se encarga del formato de salida de la información que se va a&#xD;&#xA;mostrar por pantalla, es decir, agrega un nuevo funcionamiento que se encarga de la&#xD;&#xA;visualización de la salidas.">
+    <Impacts ID="_fkmUkGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#77"/>
+    </Impacts>
+    <Impacts ID="_hxnlwGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_jkHeIGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#83"/>
+    </Impacts>
+    <Impacts ID="_mSNcEGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#112"/>
+    </Impacts>
+    <Impacts ID="_oaU_IGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#138"/>
+    </Impacts>
+    <Impacts ID="_sf67gGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#171"/>
+    </Impacts>
+    <Impacts ID="_vfdOwGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#177"/>
+    </Impacts>
+    <Impacts ID="_zcMxIGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#231"/>
+    </Impacts>
+    <Impacts ID="_0mpLAGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#237"/>
+    </Impacts>
+    <Impacts ID="_2zD_QGB_EeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#20"/>
+      <Sentence href="HWS.uima#163"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_LIxJkGB_EeGi5ZP1QDJ3XA" Name="Persistency" Description="Parte del sistema que administra la información persistente (la almacenada en la base de datos).&#xD;&#xA;Como su nombre lo indica, este aspecto se encarga de la persistencia de los datos. Basicamente se utilizará cada vez que se desee guardar, buscar, modificar, etc., un dato en la base de datos. Con esto se desliga a los casos de usos influenciados del acceso a la base de datos, dejando que se encargue el aspecto.">
+    <Impacts ID="_X7Eh8GCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#76"/>
+    </Impacts>
+    <Impacts ID="_baYhcGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#82"/>
+    </Impacts>
+    <Impacts ID="_iwqygGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#101"/>
+    </Impacts>
+    <Impacts ID="_mHztcGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#14"/>
+      <Sentence href="HWS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_nOdMcGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#129"/>
+    </Impacts>
+    <Impacts ID="_p6sJMGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#152"/>
+    </Impacts>
+    <Impacts ID="_tuvpoGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#168"/>
+    </Impacts>
+    <Impacts ID="_wnc8IGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#175"/>
+    </Impacts>
+    <Impacts ID="_zMTegGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#42"/>
+      <Sentence href="HWS.uima#227"/>
+    </Impacts>
+    <Impacts ID="_047YYGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#224"/>
+    </Impacts>
+    <Impacts ID="_3h8CAGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#52"/>
+      <Sentence href="HWS.uima#257"/>
+    </Impacts>
+    <Impacts ID="_6KZ5EGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#49"/>
+      <Sentence href="HWS.uima#253"/>
+    </Impacts>
+    <Impacts ID="_7n8OEGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#241"/>
+    </Impacts>
+    <Impacts ID="_99LAEGCAEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#22"/>
+      <Sentence href="HWS.uima#166"/>
+    </Impacts>
+    <Impacts ID="_AdTagGCBEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#20"/>
+      <Sentence href="HWS.uima#164"/>
+    </Impacts>
+    <Impacts ID="_njNfAGCBEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#88"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_NsayEGB_EeGi5ZP1QDJ3XA" Name="Consistency" Description="Parte del sistema que se encarga de garantizar la veracidad y coherencia de la información.&#xD;&#xA;Cada vez que ocurren cambios de estado debido a actualizaciones, inserciones y supresiones de información este aspecto asegura que la base de datos nunca entre en un estado de inconsistencia. Debido a esto, cuando se realizan consultas, inserciones o actualizaciones, este aspecto será el encargado de asegurar que la información es consistente.">
+    <Impacts ID="_juhFYGCBEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#87"/>
+    </Impacts>
+    <Impacts ID="_q0VRgGCBEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#93"/>
+    </Impacts>
+    <Impacts ID="_tbC1EGCBEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#99"/>
+    </Impacts>
+    <Impacts ID="_0J7u8GCBEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#108"/>
+    </Impacts>
+    <Impacts ID="_2fzaIGCBEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#137"/>
+    </Impacts>
+    <Impacts ID="_4-2PcGCBEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#201"/>
+    </Impacts>
+    <Impacts ID="_-CNboGCBEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#181"/>
+    </Impacts>
+    <Impacts ID="_AZ3PgGCCEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#223"/>
+    </Impacts>
+    <Impacts ID="_C4dY4GCCEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#234"/>
+    </Impacts>
+    <Impacts ID="_EGiVkGCCEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#240"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_PsPUwGB_EeGi5ZP1QDJ3XA" Name="Distribution" Description="Parte del sistema que se encarga del envío de información al servidor, para actualizar el repositorio.&#xD;&#xA;Este aspecto es el encargado de conocer la forma de comunicación entre el sistema y el servidor de datos, y de esta forma no es necesario que los distintos casos de uso conozcan los detalles de la comunicación, como pueden ser el lenguaje o los protocolos, delegando esto al aspecto distribution que agrega dicha funcionalidad.">
+    <Impacts ID="_N-KskGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#86"/>
+    </Impacts>
+    <Impacts ID="_Q4GHEGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#92"/>
+    </Impacts>
+    <Impacts ID="_TuIgEGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#98"/>
+    </Impacts>
+    <Impacts ID="_YNwtEGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#107"/>
+    </Impacts>
+    <Impacts ID="_bDF7cGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#130"/>
+    </Impacts>
+    <Impacts ID="_fG02oGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#151"/>
+    </Impacts>
+    <Impacts ID="_h9ED8GCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_mpkPUGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#173"/>
+    </Impacts>
+    <Impacts ID="_pPER8GCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_sO0AkGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#221"/>
+    </Impacts>
+    <Impacts ID="_uLizAGCDEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#239"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_PtcOoGB_EeGi5ZP1QDJ3XA" Name="Security" Description="Parte del sistema que se encarga de validar los accesos al sistema.&#xD;&#xA;Este aspecto abstrae la verificación de la validez de los usuarios, agregando la funcionalidad de verificación de usuarios como una pre-condición de uso del sistema, y de esta forma evitar el acceso no autorizado.">
+    <Impacts ID="_6sVaEGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#19"/>
+      <Sentence href="HWS.uima#161"/>
+    </Impacts>
+    <Impacts ID="_8GcnoGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_-V4ToGCDEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#37"/>
+      <Sentence href="HWS.uima#216"/>
+    </Impacts>
+    <Impacts ID="_BVOZoGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#29"/>
+      <Sentence href="HWS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_EDhy8GCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#41"/>
+      <Sentence href="HWS.uima#226"/>
+    </Impacts>
+    <Impacts ID="_HopfgGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#51"/>
+      <Sentence href="HWS.uima#256"/>
+    </Impacts>
+    <Impacts ID="_JwYBAGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#48"/>
+      <Sentence href="HWS.uima#252"/>
+    </Impacts>
+    <Impacts ID="_M_gPcGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#21"/>
+      <Sentence href="HWS.uima#165"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_YMuIEGB_EeGi5ZP1QDJ3XA" Name="Error Handling" Description="Parte del sistema que se encarga del manejo de las excepciones (errores).&#xD;&#xA;Este aspecto añade el manejo de errores a los casos de uso involucrados, de esta forma se evita que esta funcionalidad este dispersa en varias partes del sistema. A su vez, también se deja el manejo de errores a un componente especializado.">
+    <Impacts ID="_UbanYGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#3"/>
+      <Sentence href="HWS.uima#113"/>
+    </Impacts>
+    <Impacts ID="_Vn2lUGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#115"/>
+    </Impacts>
+    <Impacts ID="_XCDScGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#5"/>
+      <Sentence href="HWS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_YqvukGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#6"/>
+      <Sentence href="HWS.uima#120"/>
+    </Impacts>
+    <Impacts ID="_a7ozIGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#10"/>
+      <Sentence href="HWS.uima#139"/>
+    </Impacts>
+    <Impacts ID="_cAMncGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#11"/>
+      <Sentence href="HWS.uima#141"/>
+    </Impacts>
+    <Impacts ID="_eDIIgGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="HWS.uima#143"/>
+    </Impacts>
+    <Impacts ID="_ft194GCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="HWS.uima#146"/>
+    </Impacts>
+    <Impacts ID="_iOFGAGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#16"/>
+      <Sentence href="HWS.uima#155"/>
+    </Impacts>
+    <Impacts ID="_jnVX8GCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="HWS.uima#157"/>
+    </Impacts>
+    <Impacts ID="_lSLwMGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#18"/>
+      <Sentence href="HWS.uima#159"/>
+    </Impacts>
+    <Impacts ID="_pau58GCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#32"/>
+      <Sentence href="HWS.uima#203"/>
+    </Impacts>
+    <Impacts ID="_qs1bAGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#33"/>
+      <Sentence href="HWS.uima#205"/>
+    </Impacts>
+    <Impacts ID="_sj1_8GCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#34"/>
+      <Sentence href="HWS.uima#207"/>
+    </Impacts>
+    <Impacts ID="_vIbckGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="HWS.uima#210"/>
+    </Impacts>
+    <Impacts ID="_xB9xEGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#213"/>
+    </Impacts>
+    <Impacts ID="_1iLz8GCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_3VdIYGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#185"/>
+    </Impacts>
+    <Impacts ID="_710VMGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#26"/>
+      <Sentence href="HWS.uima#188"/>
+    </Impacts>
+    <Impacts ID="_9Pv8kGCEEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#190"/>
+    </Impacts>
+    <Impacts ID="_AJB20GCFEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#44"/>
+      <Sentence href="HWS.uima#242"/>
+    </Impacts>
+    <Impacts ID="_A_Y3EGCFEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#45"/>
+      <Sentence href="HWS.uima#244"/>
+    </Impacts>
+    <Impacts ID="_B5OpIGCFEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="HWS.uima#246"/>
+    </Impacts>
+    <Impacts ID="_CqfuAGCFEeGi5ZP1QDJ3XA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#249"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

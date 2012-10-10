@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_qxckoF8YEeGqiq5xZpNUeA" Name="Manual G4" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/Master2012/HWS.uima">
+  <CrosscuttingConcerns ID="_OYG_YF_7EeGi5ZP1QDJ3XA" Name="Persistence (PE)" Description="Hace referencia al almacenamiento y lectura de datos en una lógica físicamente persistente.">
+    <Impacts ID="_9KV2YF_7EeGi5ZP1QDJ3XA" Realization="Se debe verificar que la información exista, de lo contrario no se ejecutará el caso de uso. Hace referencia a la lectura de datos.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#7"/>
+      <Sentence href="HWS.uima#123"/>
+    </Impacts>
+    <Impacts ID="_J6uYoF_8EeGi5ZP1QDJ3XA" Realization="El sistema recupera la lista de unidades de salud almacenadas. Hace referencia a la lectura de datos.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#75"/>
+    </Impacts>
+    <Impacts ID="_NK5I4F_8EeGi5ZP1QDJ3XA" Realization="El sistema recupera la lista de especialidades registradas. Hace referencia a la lectura de datos.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#78"/>
+    </Impacts>
+    <Impacts ID="_Zsb94F_8EeGi5ZP1QDJ3XA" Realization="El sistema recupera la lista de enfermedades. Hace referencia a la lectura de datos.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_mo1i4F_8EeGi5ZP1QDJ3XA" Realization="El sistema recupera los detalles y las especialidades de la unidad de salud. Hace referencia a la lectura de datos.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#89"/>
+    </Impacts>
+    <Impacts ID="_vcvBcF_8EeGi5ZP1QDJ3XA" Realization="El sistema recupera la lista de unidades de salud asociadas a la especialidad seleccionada. Hace referencia a la lectura de datos.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_8aWucF_8EeGi5ZP1QDJ3XA" Realization="El sistema recupera la queja a partir del ID. Hace referencia a la lectura de datos.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#100"/>
+    </Impacts>
+    <Impacts ID="_H5wJ8F_9EeGi5ZP1QDJ3XA" Realization="El sistema recupera el tipo de enfermedad a consultar. Hace referencia a la lectura de datos.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_58lHoGAAEeGi5ZP1QDJ3XA" Realization="El sistema recupera la información que llegó a leer antes del problema.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#116"/>
+    </Impacts>
+    <Impacts ID="_-U3WgGAAEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#14"/>
+      <Sentence href="HWS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_DO3yYGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#127"/>
+    </Impacts>
+    <Impacts ID="_HMKuYGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#129"/>
+    </Impacts>
+    <Impacts ID="_JgBnYGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#135"/>
+    </Impacts>
+    <Impacts ID="_MQpU4GABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#136"/>
+    </Impacts>
+    <Impacts ID="_XHUjgGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="HWS.uima#144"/>
+    </Impacts>
+    <Impacts ID="_ZnDVUGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="HWS.uima#147"/>
+    </Impacts>
+    <Impacts ID="_clPkwGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#152"/>
+    </Impacts>
+    <Impacts ID="_gF5BAGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#22"/>
+      <Sentence href="HWS.uima#166"/>
+    </Impacts>
+    <Impacts ID="_iCIrQGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#20"/>
+      <Sentence href="HWS.uima#164"/>
+    </Impacts>
+    <Impacts ID="_lFJwUGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#28"/>
+      <Sentence href="HWS.uima#193"/>
+    </Impacts>
+    <Impacts ID="_sefVYGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#168"/>
+    </Impacts>
+    <Impacts ID="_vJrwUGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#175"/>
+    </Impacts>
+    <Impacts ID="_yimM4GABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#182"/>
+    </Impacts>
+    <Impacts ID="_188z4GABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#186"/>
+    </Impacts>
+    <Impacts ID="_4PGcsGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#191"/>
+    </Impacts>
+    <Impacts ID="_8dH8UGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#38"/>
+      <Sentence href="HWS.uima#217"/>
+    </Impacts>
+    <Impacts ID="__7wmYGABEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#224"/>
+    </Impacts>
+    <Impacts ID="_GfAQ8GACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#34"/>
+      <Sentence href="HWS.uima#208"/>
+    </Impacts>
+    <Impacts ID="_IQ0z4GACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="HWS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_KiU8cGACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_OEJdYGACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#42"/>
+      <Sentence href="HWS.uima#227"/>
+    </Impacts>
+    <Impacts ID="_SeHuUGACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#224"/>
+    </Impacts>
+    <Impacts ID="_WUPrUGACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#49"/>
+      <Sentence href="HWS.uima#253"/>
+    </Impacts>
+    <Impacts ID="_YO-SoGACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#229"/>
+    </Impacts>
+    <Impacts ID="_dPUnEGACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#235"/>
+    </Impacts>
+    <Impacts ID="_f1rlUGACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#241"/>
+    </Impacts>
+    <Impacts ID="_k8dR4GACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="HWS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_mbL5sGACEeGi5ZP1QDJ3XA" Realization="PE-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#250"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_PSQ6gF_7EeGi5ZP1QDJ3XA" Name="Presentation (PR)" Description="Involucra toda actividad relacionada con el muestreo de la información del sistema en pantalla.">
+    <Impacts ID="_PYRa4GAGEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla la lista de unidades de salud al usuario.&#xD;&#xA;Muestra una tabla de 2 columnas, en la primera contiene el nombre de la unidad de salud y en la segunda columna una pequeña descripción de la misma.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#77"/>
+    </Impacts>
+    <Impacts ID="_TyzFcGAGEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla la lista de especialidades al usuario.&#xD;&#xA;Muestra una tabla de 3 columnas, en la primera contiene el nombre de la especialidad, en la segunda columna el ID y en la tercera los síntomas de la misma.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_XO4KwGAGEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla la lista de enfermedades al usuario.&#xD;&#xA;Muestra una tabla de 3 columnas, la cual contiene en la primera el nombre de la enfermedad, en la segunda columna el ID y en la tercera una descripción de la misma.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#83"/>
+    </Impacts>
+    <Impacts ID="_VS6X4GAHEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla las especialidades para dicha unidad de salud al usuario.&#xD;&#xA;Muestra una tabla de 3 columnas, en la primera contiene el nombre de la especialidad, en la segunda columna el ID y en la tercera una descripción de la misma.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#90"/>
+    </Impacts>
+    <Impacts ID="_Z1JM8GAHEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla las unidades de salud al usuario.&#xD;&#xA;Muestra una tabla de 2 columnas, en la primera contiene el nombre de la unidad de salud y en la segunda columna una pequeña descripción de la misma.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_eIDMkGAHEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla el tipo de queja que se consultó y una tabla que va a contener la información correspondiente al tipo de queja:&#xD;&#xA;- Edad, nivel de educación y ocupación de quien realiza la queja, si es una queja especial.&#xD;&#xA;- Comida consumida, cantidad de gente que consumió la comida y cantidad de gente descompuesta, si la queja es sobre alimentos.&#xD;&#xA;- Especie animal y cantidad de animales afectados, si la queja es de animales.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#105"/>
+    </Impacts>
+    <Impacts ID="_hjpwwGAHEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla la información completa de dicho enfermedad al usuario.&#xD;&#xA;Muestra una tabla de 3 columnas, la cual contiene en la primera el nombre de la enfermedad, en la segunda columna el ID y en la tercera los síntomas de la misma.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#111"/>
+    </Impacts>
+    <Impacts ID="_itwMYGAHEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla los resultados de la consulta al usuario.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#112"/>
+    </Impacts>
+    <Impacts ID="_yyl6QGANEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla un mensaje de error indicándole al usuario que vuelva a intentar la operación porque hubo problemas en la comunicación con el servidor.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#3"/>
+      <Sentence href="HWS.uima#114"/>
+    </Impacts>
+    <Impacts ID="_2Mue0GANEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla un mensaje de error indicándole al usuario que vuelva a intentar la operación porque hubo problemas en el sistema.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#117"/>
+    </Impacts>
+    <Impacts ID="_44s84GANEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla un mensaje de error indicándole al usuario que vuelva a intentar la operación porque el código de queja ingresado no es válido.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#5"/>
+      <Sentence href="HWS.uima#119"/>
+    </Impacts>
+    <Impacts ID="_7dHaYGANEeGi5ZP1QDJ3XA" Realization="El sistema muestra por pantalla un mensaje de error indicándole al usuario que vuelva a intentar la operación porque la información estaba desactualizada.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Usabilidad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#6"/>
+      <Sentence href="HWS.uima#122"/>
+    </Impacts>
+    <Impacts ID="_AXTccGAOEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#126"/>
+    </Impacts>
+    <Impacts ID="_Dc1C8GAOEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#138"/>
+    </Impacts>
+    <Impacts ID="_79EQUGAOEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#10"/>
+      <Sentence href="HWS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_9zjQ0GAOEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#11"/>
+      <Sentence href="HWS.uima#142"/>
+    </Impacts>
+    <Impacts ID="__4_6YGAOEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="HWS.uima#145"/>
+    </Impacts>
+    <Impacts ID="_BZNI4GAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="HWS.uima#148"/>
+    </Impacts>
+    <Impacts ID="_GG2jwGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#154"/>
+    </Impacts>
+    <Impacts ID="_H-8t0GAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#16"/>
+      <Sentence href="HWS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_JLGX4GAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="HWS.uima#158"/>
+    </Impacts>
+    <Impacts ID="_Kz6IwGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#18"/>
+      <Sentence href="HWS.uima#160"/>
+    </Impacts>
+    <Impacts ID="_SZxG4GAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#171"/>
+    </Impacts>
+    <Impacts ID="_VoGrIGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#177"/>
+    </Impacts>
+    <Impacts ID="_X52EQGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#184"/>
+    </Impacts>
+    <Impacts ID="_Y3Sj8GAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#187"/>
+    </Impacts>
+    <Impacts ID="_ZmOtkGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#26"/>
+      <Sentence href="HWS.uima#189"/>
+    </Impacts>
+    <Impacts ID="_bLEkcGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_kKAOUGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#32"/>
+      <Sentence href="HWS.uima#204"/>
+    </Impacts>
+    <Impacts ID="_lI77wGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#33"/>
+      <Sentence href="HWS.uima#206"/>
+    </Impacts>
+    <Impacts ID="_pkoD8GAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="HWS.uima#212"/>
+    </Impacts>
+    <Impacts ID="_q2LLYGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#215"/>
+    </Impacts>
+    <Impacts ID="_yG9RYGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#40"/>
+      <Sentence href="HWS.uima#225"/>
+    </Impacts>
+    <Impacts ID="_1CbkAGAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#231"/>
+    </Impacts>
+    <Impacts ID="_4O448GAPEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#237"/>
+    </Impacts>
+    <Impacts ID="_BueY0GAQEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#44"/>
+      <Sentence href="HWS.uima#243"/>
+    </Impacts>
+    <Impacts ID="_DENcsGAQEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#45"/>
+      <Sentence href="HWS.uima#245"/>
+    </Impacts>
+    <Impacts ID="_D4ag0GAQEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="HWS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_EtyCkGAQEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#251"/>
+    </Impacts>
+    <Impacts ID="_MLfKQGAQEeGi5ZP1QDJ3XA" Realization="PR-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#50"/>
+      <Sentence href="HWS.uima#255"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_VTwi4F_7EeGi5ZP1QDJ3XA" Name="Consistency (CO)" Description="Este aspecto hace referencia a la coherencia de los datos.">
+    <Impacts ID="_dQduMGAQEeGi5ZP1QDJ3XA" Realization="El sistema asegura que la información de la unidad de salud sea consistente, es decir que controla que el ID de unidad de salud enviado por el sistema sea de una unidad de salud existente en el servidor.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#87"/>
+    </Impacts>
+    <Impacts ID="_hF2rYGAQEeGi5ZP1QDJ3XA" Realization="El sistema asegura que la información de la unidad de salud sea consistente, es decir que controla que el ID de unidad de salud enviado por el sistema sea de una unidad de salud existente en el servidor.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#93"/>
+    </Impacts>
+    <Impacts ID="_ktQ28GAQEeGi5ZP1QDJ3XA" Realization="El sistema se asegura que la información de la queja es consistente, es decir que controla que el ID de queja enviado por el sistema sea de una queja existente en el servidor.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#99"/>
+    </Impacts>
+    <Impacts ID="_qKbqQGAQEeGi5ZP1QDJ3XA" Realization="El sistema se asegura que la información de la enfermedad es consistente, es decir que controla que el ID de enfermedad enviado por el sistema sea de una enfermedad existente en el servidor.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#108"/>
+    </Impacts>
+    <Impacts ID="_uOiY4GAQEeGi5ZP1QDJ3XA" Realization="CO-wrap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#137"/>
+    </Impacts>
+    <Impacts ID="_3vl4YGAQEeGi5ZP1QDJ3XA" Realization="CO-wrap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#174"/>
+    </Impacts>
+    <Impacts ID="_6NAWAGAQEeGi5ZP1QDJ3XA" Realization="CO-wrap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#181"/>
+    </Impacts>
+    <Impacts ID="_8zxj8GAQEeGi5ZP1QDJ3XA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#201"/>
+    </Impacts>
+    <Impacts ID="__Qs5YGAQEeGi5ZP1QDJ3XA" Realization="CO-wrap">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#223"/>
+    </Impacts>
+    <Impacts ID="_CCd2YGAREeGi5ZP1QDJ3XA" Realization="CO-wrap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#234"/>
+    </Impacts>
+    <Impacts ID="_ES5A4GAREeGi5ZP1QDJ3XA" Realization="CO-wrap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#240"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZqsG4F_7EeGi5ZP1QDJ3XA" Name="Distribution (DI)" Description="Encapsula toda actividad concerniente a la transmisión de datos entre el servidor y las computadoras de los usuarios finales (ciudadano, empleado). Implicando cierto grado de seguridad.">
+    <Impacts ID="_f6GkIGB3EeGi5ZP1QDJ3XA" Realization="El sistema envía el ID de la unidad de salud seleccionada al servidor. Como el sistema y el servidor se encuentran en distintos lugares físicos, hay distribución a la hora de establecer una conexión segura entre el sistema y el servidor para el envío del ID.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Seguridad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#86"/>
+    </Impacts>
+    <Impacts ID="_mQHD8GB3EeGi5ZP1QDJ3XA" Realization="El sistema envía el ID de la especialidad seleccionada al servidor. Como el sistema y el servidor se encuentran en distintos lugares físicos, hay distribución a la hora de establecer una conexión segura entre el sistema y el servidor para el envío del ID.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Seguridad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#92"/>
+    </Impacts>
+    <Impacts ID="_p8eoAGB3EeGi5ZP1QDJ3XA" Realization="El sistema envía el ID de queja al servidor. Como el sistema y el servidor se encuentran en distintos lugares físicos, hay distribución a la hora de establecer una conexión segura entre el sistema y el servidor para el envío del ID.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Seguridad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#98"/>
+    </Impacts>
+    <Impacts ID="_udkNkGB3EeGi5ZP1QDJ3XA" Realization="El sistema envía el ID de la enfermedad al servidor. Como el sistema y el servidor se encuentran en distintos lugares físicos, hay distribución a la hora de establecer una conexión segura entre el sistema y el servidor para el envío del ID.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Seguridad" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#107"/>
+    </Impacts>
+    <Impacts ID="_xeQXYGB3EeGi5ZP1QDJ3XA" Realization="DI-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#130"/>
+    </Impacts>
+    <Impacts ID="_0IAn4GB3EeGi5ZP1QDJ3XA" Realization="DI-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#151"/>
+    </Impacts>
+    <Impacts ID="_2qiPAGB3EeGi5ZP1QDJ3XA" Realization="DI-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#173"/>
+    </Impacts>
+    <Impacts ID="_7Rnu4GB3EeGi5ZP1QDJ3XA" Realization="DI-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_-ou0oGB3EeGi5ZP1QDJ3XA" Realization="DI-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_B-eocGB4EeGi5ZP1QDJ3XA" Realization="DI-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#221"/>
+    </Impacts>
+    <Impacts ID="_FYc08GB4EeGi5ZP1QDJ3XA" Realization="DI-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#233"/>
+    </Impacts>
+    <Impacts ID="_HMNRkGB4EeGi5ZP1QDJ3XA" Realization="DI-overlap" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#239"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_buOE4F_7EeGi5ZP1QDJ3XA" Name="Security (SE)" Description="Provee soporte para la validación de los usuarios que ingresan al sistema.">
+    <Impacts ID="_ZVvp0GB4EeGi5ZP1QDJ3XA" Realization="SE-wrap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#19"/>
+      <Sentence href="HWS.uima#161"/>
+    </Impacts>
+    <Impacts ID="_czJk0GB4EeGi5ZP1QDJ3XA" Realization="SE-wrap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_gQenUGB4EeGi5ZP1QDJ3XA" Realization="SE-wrap">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#21"/>
+      <Sentence href="HWS.uima#165"/>
+    </Impacts>
+    <Impacts ID="_kDCS8GB4EeGi5ZP1QDJ3XA" Realization="SE-wrap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#29"/>
+      <Sentence href="HWS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_mkdG0GB4EeGi5ZP1QDJ3XA" Realization="SE-wrap">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#37"/>
+      <Sentence href="HWS.uima#216"/>
+    </Impacts>
+    <Impacts ID="_o1Hh4GB4EeGi5ZP1QDJ3XA" Realization="SE-wrap">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#41"/>
+      <Sentence href="HWS.uima#226"/>
+    </Impacts>
+    <Impacts ID="_sBcT8GB4EeGi5ZP1QDJ3XA" Realization="SE-wrap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#48"/>
+      <Sentence href="HWS.uima#252"/>
+    </Impacts>
+    <Impacts ID="_wGzm0GB4EeGi5ZP1QDJ3XA" Realization="SE-wrap">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#51"/>
+      <Sentence href="HWS.uima#256"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_dCESYF_7EeGi5ZP1QDJ3XA" Name="Error Management (ME)" Description="Lleva a cabo las tareas de verificar los datos ingresados. En caso de haber algún error realiza las operaciones correspondientes.">
+    <Impacts ID="_5jcgYGB4EeGi5ZP1QDJ3XA" Realization="El sistema detecta un problema de comunicación con el servidor cuando envía la información y cancela el envío de la misma.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Seguridad" CompositionRule="Override">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#3"/>
+      <Sentence href="HWS.uima#113"/>
+    </Impacts>
+    <Impacts ID="_9woSgGB4EeGi5ZP1QDJ3XA" Realization="El sistema detecta que ocurre un problema interno al mismo recuperando los datos de la queja y finaliza la recuperación.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad" CompositionRule="Override">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#115"/>
+    </Impacts>
+    <Impacts ID="_A5L-4GB5EeGi5ZP1QDJ3XA" Realization="El sistema detecta que ocurre un problema ingresando un código de queja inválido y finaliza la consulta.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad&#xD;&#xA;Performance" CompositionRule="Override">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#5"/>
+      <Sentence href="HWS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_EEv78GB5EeGi5ZP1QDJ3XA" Realization="El sistema detecta que ocurre un problema porque no se puede asegurar la consistencia de los datos, finaliza la consulta y actualiza la información del sistema para que quede consistente con la del servidor.&#xD;&#xA;Referencia a requerimientos suplementarios:&#xD;&#xA;Disponibilidad" CompositionRule="Override">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#6"/>
+      <Sentence href="HWS.uima#120"/>
+    </Impacts>
+    <Impacts ID="_KA2uAGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#10"/>
+      <Sentence href="HWS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_LhWQYGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#11"/>
+      <Sentence href="HWS.uima#142"/>
+    </Impacts>
+    <Impacts ID="_NcGF0GB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="HWS.uima#145"/>
+    </Impacts>
+    <Impacts ID="_OrhtYGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="HWS.uima#148"/>
+    </Impacts>
+    <Impacts ID="_R6N28GB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="HWS.uima#144"/>
+    </Impacts>
+    <Impacts ID="_TZ458GB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="HWS.uima#147"/>
+    </Impacts>
+    <Impacts ID="_XiAl4GB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#16"/>
+      <Sentence href="HWS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_ZiDyEGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="HWS.uima#158"/>
+    </Impacts>
+    <Impacts ID="_b6GngGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#18"/>
+      <Sentence href="HWS.uima#160"/>
+    </Impacts>
+    <Impacts ID="_iQGgQGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#184"/>
+    </Impacts>
+    <Impacts ID="_lJFfkGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#186"/>
+    </Impacts>
+    <Impacts ID="_mlPUgGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#187"/>
+    </Impacts>
+    <Impacts ID="_pORzUGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#26"/>
+      <Sentence href="HWS.uima#189"/>
+    </Impacts>
+    <Impacts ID="_uiuIcGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#191"/>
+    </Impacts>
+    <Impacts ID="_wWtOkGB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_6bcC4GB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#32"/>
+      <Sentence href="HWS.uima#204"/>
+    </Impacts>
+    <Impacts ID="_-DOo8GB5EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#33"/>
+      <Sentence href="HWS.uima#206"/>
+    </Impacts>
+    <Impacts ID="_AuJ-IGB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#34"/>
+      <Sentence href="HWS.uima#208"/>
+    </Impacts>
+    <Impacts ID="_DraZcGB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#34"/>
+      <Sentence href="HWS.uima#209"/>
+    </Impacts>
+    <Impacts ID="_H1IA0GB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="HWS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_Jtrd4GB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="HWS.uima#212"/>
+    </Impacts>
+    <Impacts ID="_N9588GB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_PasEAGB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#215"/>
+    </Impacts>
+    <Impacts ID="_Sm3FEGB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#40"/>
+      <Sentence href="HWS.uima#225"/>
+    </Impacts>
+    <Impacts ID="_VYOZcGB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#44"/>
+      <Sentence href="HWS.uima#243"/>
+    </Impacts>
+    <Impacts ID="_YN8pYGB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#45"/>
+      <Sentence href="HWS.uima#245"/>
+    </Impacts>
+    <Impacts ID="_agMY0GB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="HWS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_cBfMcGB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="HWS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_eNoT4GB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#250"/>
+    </Impacts>
+    <Impacts ID="_f7C38GB6EeGi5ZP1QDJ3XA" Realization="ME-override" CompositionRule="Override">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#251"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>
