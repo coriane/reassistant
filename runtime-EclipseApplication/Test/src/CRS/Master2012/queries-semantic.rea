@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_iqVrkCPREeK47KvQcRR5aA" Name="CR" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/Master2012/CRS.uima">
+  <CrosscuttingConcerns ID="_bITRUCQwEeKfoLx-Kqq1wA" Name="Error Management (SRL)" Description="Concerns with mechanisms for managing errors and exceptions that take place while running the system.">
+    <Impacts ID="_bITRUSQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#42"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#230"/>
+    </Impacts>
+    <Impacts ID="_bIZ_ACQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#39"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#225"/>
+    </Impacts>
+    <Impacts ID="_bIgssCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_bInaYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#209"/>
+    </Impacts>
+    <Impacts ID="_bIs58CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#197"/>
+    </Impacts>
+    <Impacts ID="_bIznoCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#29"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_bI6VUCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_bJAb8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#27"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#191"/>
+    </Impacts>
+    <Impacts ID="_bJJl4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#159"/>
+    </Impacts>
+    <Impacts ID="_bJPsgCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#157"/>
+    </Impacts>
+    <Impacts ID="_bJWaMCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_bJdH4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#14"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#128"/>
+    </Impacts>
+    <Impacts ID="_bJjOgCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#13"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#126"/>
+    </Impacts>
+    <Impacts ID="_bJpVICQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#13"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#125"/>
+    </Impacts>
+    <Impacts ID="_bJxQ8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#97"/>
+    </Impacts>
+    <Impacts ID="_bJ7B8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_bKCWsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#6"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#91"/>
+    </Impacts>
+    <Impacts ID="_bKIdUCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#90"/>
+    </Impacts>
+    <Impacts ID="_bKPLACQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#89"/>
+    </Impacts>
+    <Impacts ID="_bKV4sCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#83"/>
+    </Impacts>
+    <Impacts ID="_bKb_UCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#82"/>
+    </Impacts>
+    <Impacts ID="_bKiF8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_bKnlgCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#78"/>
+    </Impacts>
+    <Impacts ID="_bKu6QCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#39"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#224"/>
+    </Impacts>
+    <Impacts ID="_bK1A4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#38"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#223"/>
+    </Impacts>
+    <Impacts ID="_bK6gcCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#207"/>
+    </Impacts>
+    <Impacts ID="_bLAnECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#33"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#205"/>
+    </Impacts>
+    <Impacts ID="_bLK_ICQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#29"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_bLRs0CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_bLXzcCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#27"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#190"/>
+    </Impacts>
+    <Impacts ID="_bLd6ECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#158"/>
+    </Impacts>
+    <Impacts ID="_bLkAsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_bLquYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#14"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#127"/>
+    </Impacts>
+    <Impacts ID="_bLw1ACQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#96"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_bL27oCQwEeKfoLx-Kqq1wA" Name="User Access Control (SRL)" Description="Defines contraints regarding the access level of given user / role to carry out a particular task / operation.">
+    <Impacts ID="_bL27oSQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#72"/>
+      <Section href="CRS.uima#54"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#251"/>
+    </Impacts>
+    <Impacts ID="_bL-3cCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#52"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_bMIBYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#203"/>
+    </Impacts>
+    <Impacts ID="_bMPWICQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#97"/>
+    </Impacts>
+    <Impacts ID="_bMU1sCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_bMbjYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_bMhC8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#89"/>
+    </Impacts>
+    <Impacts ID="_bMoXsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_bMvFYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#79"/>
+    </Impacts>
+    <Impacts ID="_bM0k8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#181"/>
+    </Impacts>
+    <Impacts ID="_bM8gwCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#182"/>
+    </Impacts>
+    <Impacts ID="_bNCAUCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#26"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#187"/>
+    </Impacts>
+    <Impacts ID="_bNHf4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#203"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_bOXdECQwEeKfoLx-Kqq1wA" Name="External Communication (SRL)" Description="This concern encapsulate and specify how our system interacts with external agents. Those interactions are mainly messages that are communicated forth and backward, establishing a dialog. Several properties may emerge of this concern, such as availability and security quality attributes.">
+    <Impacts ID="_bOXdESQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#58"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#257"/>
+    </Impacts>
+    <Impacts ID="_bOdjsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#57"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#256"/>
+    </Impacts>
+    <Impacts ID="_bOicMCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#72"/>
+      <Section href="CRS.uima#54"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#250"/>
+    </Impacts>
+    <Impacts ID="_bOoi0CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_bOupcCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#48"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#243"/>
+    </Impacts>
+    <Impacts ID="_bOzh8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#48"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#242"/>
+    </Impacts>
+    <Impacts ID="_bO5okCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#48"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#241"/>
+    </Impacts>
+    <Impacts ID="_bO_IICQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#45"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#237"/>
+    </Impacts>
+    <Impacts ID="_bPEnsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#80"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_bPKuUCQwEeKfoLx-Kqq1wA" Name="Concurrence (SRL)" Description="Defines mechanisms to manage simultaneous and parallel access to resources and data.">
+    <Impacts ID="_bPKuUSQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#247"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_bPQN4CQwEeKfoLx-Kqq1wA" Name="Presentation (SRL)" Description="This concerns encapsulates functionality focused on the preprocessing and arrangement of the information before outputting in a display.">
+    <Impacts ID="_bPQN4SQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#59"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_bPVtcCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#58"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#257"/>
+    </Impacts>
+    <Impacts ID="_bPal8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#56"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#253"/>
+    </Impacts>
+    <Impacts ID="_bPgskCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#47"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#240"/>
+    </Impacts>
+    <Impacts ID="_bPmMICQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#228"/>
+    </Impacts>
+    <Impacts ID="_bPvWECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_bP3R4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#133"/>
+    </Impacts>
+    <Impacts ID="_bP_0wCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_bQF7YCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#101"/>
+    </Impacts>
+    <Impacts ID="_bQMCACQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_bQSvsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#42"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#230"/>
+    </Impacts>
+    <Impacts ID="_bQYPQCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#228"/>
+    </Impacts>
+    <Impacts ID="_bQeV4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#218"/>
+    </Impacts>
+    <Impacts ID="_bQj1cCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_bQp8ECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#210"/>
+    </Impacts>
+    <Impacts ID="_bQx34CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#200"/>
+    </Impacts>
+    <Impacts ID="_bQ3XcCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_bQ9eECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#196"/>
+    </Impacts>
+    <Impacts ID="_bRC9oCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_bRIdMCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#171"/>
+    </Impacts>
+    <Impacts ID="_bRN8wCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#169"/>
+    </Impacts>
+    <Impacts ID="_bRUDYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_bRY74CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_bRebcCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_bRkiECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_bRqBoCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#103"/>
+    </Impacts>
+    <Impacts ID="_bRvhMCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#79"/>
+    </Impacts>
+    <Impacts ID="_bR1AwCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#77"/>
+    </Impacts>
+    <Impacts ID="_bR7HYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#76"/>
+    </Impacts>
+    <Impacts ID="_bR__4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#162"/>
+    </Impacts>
+    <Impacts ID="_bSGGgCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#151"/>
+    </Impacts>
+    <Impacts ID="_bSLmECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#147"/>
+    </Impacts>
+    <Impacts ID="_bSRFoCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#138"/>
+    </Impacts>
+    <Impacts ID="_bSWlMCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#131"/>
+    </Impacts>
+    <Impacts ID="_bScr0CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#120"/>
+    </Impacts>
+    <Impacts ID="_bShkUCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#116"/>
+    </Impacts>
+    <Impacts ID="_bSnD4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#107"/>
+    </Impacts>
+    <Impacts ID="_bStKgCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#99"/>
+    </Impacts>
+    <Impacts ID="_bSyqECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#95"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_bS9pMCQwEeKfoLx-Kqq1wA" Name="Persistence (SRL)" Description="Allows system data to be written in an storage media. This concerns affects functionality that involves the accessing of data, and the main idea is to decouple the way data is handled.">
+    <Impacts ID="_bS9pMSQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#55"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#252"/>
+    </Impacts>
+    <Impacts ID="_bTDv0CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#52"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_bTJPYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_bTOu8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#236"/>
+    </Impacts>
+    <Impacts ID="_bTUOgCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#220"/>
+    </Impacts>
+    <Impacts ID="_bTZuECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#216"/>
+    </Impacts>
+    <Impacts ID="_bTf0sCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#215"/>
+    </Impacts>
+    <Impacts ID="_bTlUQCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#209"/>
+    </Impacts>
+    <Impacts ID="_bTtQECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#204"/>
+    </Impacts>
+    <Impacts ID="_bTzWsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#202"/>
+    </Impacts>
+    <Impacts ID="_bT42QCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#201"/>
+    </Impacts>
+    <Impacts ID="_bUCAMCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#27"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#191"/>
+    </Impacts>
+    <Impacts ID="_bUIG0CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#26"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#189"/>
+    </Impacts>
+    <Impacts ID="_bUNmYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#26"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#187"/>
+    </Impacts>
+    <Impacts ID="_bUTF8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#186"/>
+    </Impacts>
+    <Impacts ID="_bUZMkCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#185"/>
+    </Impacts>
+    <Impacts ID="_bUesICQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#176"/>
+    </Impacts>
+    <Impacts ID="_bUmA4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#174"/>
+    </Impacts>
+    <Impacts ID="_bUrgcCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#170"/>
+    </Impacts>
+    <Impacts ID="_bUxnECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#166"/>
+    </Impacts>
+    <Impacts ID="_bU3GoCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#164"/>
+    </Impacts>
+    <Impacts ID="_bU90UCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#163"/>
+    </Impacts>
+    <Impacts ID="_bVDT4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#89"/>
+    </Impacts>
+    <Impacts ID="_bVIzcCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#87"/>
+    </Impacts>
+    <Impacts ID="_bVOTACQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#85"/>
+    </Impacts>
+    <Impacts ID="_bVUZoCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#84"/>
+    </Impacts>
+    <Impacts ID="_bVZSICQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#83"/>
+    </Impacts>
+    <Impacts ID="_bVfYwCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_bVk4UCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_bVqX4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#79"/>
+    </Impacts>
+    <Impacts ID="_bVv3cCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#227"/>
+    </Impacts>
+    <Impacts ID="_bV1-ECQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#217"/>
+    </Impacts>
+    <Impacts ID="_bV8EsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#222"/>
+    </Impacts>
+    <Impacts ID="_bWCLUCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#212"/>
+    </Impacts>
+    <Impacts ID="_bWHq4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#172"/>
+    </Impacts>
+    <Impacts ID="_bWNKcCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#157"/>
+    </Impacts>
+    <Impacts ID="_bWSqACQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#141"/>
+    </Impacts>
+    <Impacts ID="_bWZXsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#13"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#126"/>
+    </Impacts>
+    <Impacts ID="_bWe3QCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#123"/>
+    </Impacts>
+    <Impacts ID="_bWjvwCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#113"/>
+    </Impacts>
+    <Impacts ID="_bWpPUCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#110"/>
+    </Impacts>
+    <Impacts ID="_bWvV8CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#106"/>
+    </Impacts>
+    <Impacts ID="_bW01gCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#88"/>
+    </Impacts>
+    <Impacts ID="_bW68ICQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_bXAbsCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#155"/>
+    </Impacts>
+    <Impacts ID="_bXF7QCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#154"/>
+    </Impacts>
+    <Impacts ID="_bXMB4CQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_bXT9sCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#122"/>
+    </Impacts>
+    <Impacts ID="_bXgyACQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#115"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_bXoGwCQwEeKfoLx-Kqq1wA" Name="Integrity Management (SRL)" Description="Allows the system to perform conformance verifications both on the information inputted and outputted. This way, the consistency of the data is assured.">
+    <Impacts ID="_bXoGwSQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#101"/>
+    </Impacts>
+    <Impacts ID="_bXuNYCQwEeKfoLx-Kqq1wA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/CRS/Master2012/CRS.uima#133"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>
