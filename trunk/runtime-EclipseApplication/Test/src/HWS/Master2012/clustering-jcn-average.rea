@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_eR9_wCNmEeKjZem8mLkObA" Name="Project" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/Master2012/HWS.uima">
+  <CrosscuttingConcerns ID="_ZXQj0CNnEeKjZem8mLkObA" Name="Rollback" Description="Auto-generated description">
+    <Impacts ID="_ZXQj0SNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="HWS.uima#147"/>
+    </Impacts>
+    <Impacts ID="_ZXX4kCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="HWS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_ZXfNUCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="HWS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_ZXmiECNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="HWS.uima#144"/>
+    </Impacts>
+    <Impacts ID="_ZXud4CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_ZX1LkCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#186"/>
+    </Impacts>
+    <Impacts ID="_ZX9HYCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#250"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZYGRUCNnEeKjZem8mLkObA" Name="Update" Description="Auto-generated description">
+    <Impacts ID="_ZYGRUSNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#220"/>
+    </Impacts>
+    <Impacts ID="_ZYSekCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#218"/>
+    </Impacts>
+    <Impacts ID="_ZYer0CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#228"/>
+    </Impacts>
+    <Impacts ID="_ZYmAkCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#167"/>
+    </Impacts>
+    <Impacts ID="_ZYtVUCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#30"/>
+      <Sentence href="HWS.uima#195"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZY0qECNnEeKjZem8mLkObA" Name="Should" Description="Auto-generated description">
+    <Impacts ID="_ZY0qESNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_ZY7-0CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="HWS.uima#265"/>
+    </Impacts>
+    <Impacts ID="_ZZDTkCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#28"/>
+      <Sentence href="HWS.uima#193"/>
+    </Impacts>
+    <Impacts ID="_ZZKoUCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_ZZR9ECNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#259"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZZeKUCNnEeKjZem8mLkObA" Name="Choose" Description="Auto-generated description">
+    <Impacts ID="_ZZeKUSNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#74"/>
+    </Impacts>
+    <Impacts ID="_ZZlfECNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#50"/>
+      <Sentence href="HWS.uima#254"/>
+    </Impacts>
+    <Impacts ID="_ZZuB8CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#228"/>
+    </Impacts>
+    <Impacts ID="_ZZ0voCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#218"/>
+    </Impacts>
+    <Impacts ID="_ZZ8rcCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#20"/>
+      <Sentence href="HWS.uima#162"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZaEAMCNnEeKjZem8mLkObA" Name="Provide" Description="Auto-generated description">
+    <Impacts ID="_ZaEAMSNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#150"/>
+    </Impacts>
+    <Impacts ID="_ZaL8ACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#128"/>
+    </Impacts>
+    <Impacts ID="_ZaVF8CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#61"/>
+      <Sentence href="HWS.uima#274"/>
+    </Impacts>
+    <Impacts ID="_ZaeP4CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#219"/>
+    </Impacts>
+    <Impacts ID="_ZalkoCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#97"/>
+    </Impacts>
+    <Impacts ID="_Zas5YCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#197"/>
+    </Impacts>
+    <Impacts ID="_Za01MCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="HWS.uima#265"/>
+    </Impacts>
+    <Impacts ID="_Za7i4CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#84"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZbDesCNnEeKjZem8mLkObA" Name="Use" Description="Auto-generated description">
+    <Impacts ID="_ZbDesSNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#259"/>
+    </Impacts>
+    <Impacts ID="_ZbKzcCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#58"/>
+      <Sentence href="HWS.uima#270"/>
+    </Impacts>
+    <Impacts ID="_ZbSIMCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_ZbaEACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="HWS.uima#264"/>
+    </Impacts>
+    <Impacts ID="_ZbgxsCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="HWS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_ZboGcCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#152"/>
+    </Impacts>
+    <Impacts ID="_ZbvbMCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#88"/>
+    </Impacts>
+    <Impacts ID="_Zb3XACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#60"/>
+      <Sentence href="HWS.uima#273"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_Zb_S0CNnEeKjZem8mLkObA" Name="Occur" Description="Auto-generated description">
+    <Impacts ID="_Zb_S0SNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#190"/>
+    </Impacts>
+    <Impacts ID="_ZcH1sCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#45"/>
+      <Sentence href="HWS.uima#244"/>
+    </Impacts>
+    <Impacts ID="_ZcQYkCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#3"/>
+      <Sentence href="HWS.uima#113"/>
+    </Impacts>
+    <Impacts ID="_ZcXGQCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#213"/>
+    </Impacts>
+    <Impacts ID="_ZcebACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#249"/>
+    </Impacts>
+    <Impacts ID="_ZcmW0CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#16"/>
+      <Sentence href="HWS.uima#155"/>
+    </Impacts>
+    <Impacts ID="_ZctEgCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_Zc1AUCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#10"/>
+      <Sentence href="HWS.uima#139"/>
+    </Impacts>
+    <Impacts ID="_ZdDCwCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#115"/>
+    </Impacts>
+    <Impacts ID="_ZdLloCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#26"/>
+      <Sentence href="HWS.uima#188"/>
+    </Impacts>
+    <Impacts ID="_ZdWkwCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#33"/>
+      <Sentence href="HWS.uima#205"/>
+    </Impacts>
+    <Impacts ID="_Zdd5gCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="HWS.uima#143"/>
+    </Impacts>
+    <Impacts ID="_ZdlOQCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="HWS.uima#157"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZdtKECNnEeKjZem8mLkObA" Name="Retrieve" Description="Auto-generated description">
+    <Impacts ID="_ZdtKESNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#235"/>
+    </Impacts>
+    <Impacts ID="_Zdz3wCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_Zd7zkCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#79"/>
+    </Impacts>
+    <Impacts ID="_ZeFkkCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#168"/>
+    </Impacts>
+    <Impacts ID="_ZeM5UCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#229"/>
+    </Impacts>
+    <Impacts ID="_ZeU1ICNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#82"/>
+    </Impacts>
+    <Impacts ID="_Zecw8CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#101"/>
+    </Impacts>
+    <Impacts ID="_ZekswCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_ZesBgCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#100"/>
+    </Impacts>
+    <Impacts ID="_ZezWQCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#76"/>
+    </Impacts>
+    <Impacts ID="_Ze6rACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_ZfB_wCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#116"/>
+    </Impacts>
+    <Impacts ID="_ZfJUgCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="HWS.uima#152"/>
+    </Impacts>
+    <Impacts ID="_ZfQCMCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#175"/>
+    </Impacts>
+    <Impacts ID="_ZfX-ACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_ZffSwCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#115"/>
+    </Impacts>
+    <Impacts ID="_ZfmngCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="HWS.uima#157"/>
+    </Impacts>
+    <Impacts ID="_Zft8QCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#44"/>
+      <Sentence href="HWS.uima#242"/>
+    </Impacts>
+    <Impacts ID="_Zf1RACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#78"/>
+    </Impacts>
+    <Impacts ID="_Zf7-sCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#75"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZgDTcCNnEeKjZem8mLkObA" Name="Select" Description="Auto-generated description">
+    <Impacts ID="_ZgDTcSNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#232"/>
+    </Impacts>
+    <Impacts ID="_ZgKoMCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#106"/>
+    </Impacts>
+    <Impacts ID="_ZgR88CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#172"/>
+    </Impacts>
+    <Impacts ID="_ZgZRsCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#167"/>
+    </Impacts>
+    <Impacts ID="_ZghNgCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#196"/>
+    </Impacts>
+    <Impacts ID="_ZgsMoCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#125"/>
+    </Impacts>
+    <Impacts ID="_Zg0vgCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#91"/>
+    </Impacts>
+    <Impacts ID="_Zg7dMCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#78"/>
+    </Impacts>
+    <Impacts ID="_ZhCx8CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#75"/>
+    </Impacts>
+    <Impacts ID="_ZhMi8CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#85"/>
+    </Impacts>
+    <Impacts ID="_ZhTQoCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#85"/>
+    </Impacts>
+    <Impacts ID="_ZhalYCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#91"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_Zhh6ICNnEeKjZem8mLkObA" Name="Verify/Ensure" Description="Auto-generated description">
+    <Impacts ID="_Zhh6ISNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#198"/>
+    </Impacts>
+    <Impacts ID="_ZhpO4CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#220"/>
+    </Impacts>
+    <Impacts ID="_ZhwjoCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#21"/>
+      <Sentence href="HWS.uima#165"/>
+    </Impacts>
+    <Impacts ID="_Zh6UoCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#222"/>
+    </Impacts>
+    <Impacts ID="_ZiCQcCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#51"/>
+      <Sentence href="HWS.uima#256"/>
+    </Impacts>
+    <Impacts ID="_ZiN2oCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#41"/>
+      <Sentence href="HWS.uima#226"/>
+    </Impacts>
+    <Impacts ID="_ZibSACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#48"/>
+      <Sentence href="HWS.uima#252"/>
+    </Impacts>
+    <Impacts ID="_ZilDACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#37"/>
+      <Sentence href="HWS.uima#216"/>
+    </Impacts>
+    <Impacts ID="_ZivbECNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#29"/>
+      <Sentence href="HWS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_Zi7oUCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#200"/>
+    </Impacts>
+    <Impacts ID="_ZjGncCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#93"/>
+    </Impacts>
+    <Impacts ID="_ZjQ_gCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#240"/>
+    </Impacts>
+    <Impacts ID="_ZjbXkCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="HWS.uima#223"/>
+    </Impacts>
+    <Impacts ID="_ZjqBECNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#181"/>
+    </Impacts>
+    <Impacts ID="_ZjzLACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#87"/>
+    </Impacts>
+    <Impacts ID="_Zj88ACNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#137"/>
+    </Impacts>
+    <Impacts ID="_ZkKXYCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#99"/>
+    </Impacts>
+    <Impacts ID="_ZkUIYCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#108"/>
+    </Impacts>
+    <Impacts ID="_ZkdSUCNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="HWS.uima#201"/>
+    </Impacts>
+    <Impacts ID="_ZklOICNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#174"/>
+    </Impacts>
+    <Impacts ID="_Zksi4CNnEeKjZem8mLkObA" Realization="Auto-generated realization.">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#234"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

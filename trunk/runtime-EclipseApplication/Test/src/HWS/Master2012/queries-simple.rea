@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_Z6RkICPREeK47KvQcRR5aA" Name="HW" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/Master2012/HWS.uima">
+  <CrosscuttingConcerns ID="_rlLeACQxEeKfoLx-Kqq1wA" Name="Presentation (SRL)" Description="This concerns encapsulates functionality focused on the preprocessing and arrangement of the information before outputting in a display.">
+    <Impacts ID="_rlLeASQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#61"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#274"/>
+    </Impacts>
+    <Impacts ID="_rlQ9kCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#60"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#273"/>
+    </Impacts>
+    <Impacts ID="_rlUn8CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_rlY5YCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#50"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#255"/>
+    </Impacts>
+    <Impacts ID="_rlcjwCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#237"/>
+    </Impacts>
+    <Impacts ID="_rlgOICQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#231"/>
+    </Impacts>
+    <Impacts ID="_rlkfkCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#177"/>
+    </Impacts>
+    <Impacts ID="_rloJ8CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#171"/>
+    </Impacts>
+    <Impacts ID="_rlr0UCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#154"/>
+    </Impacts>
+    <Impacts ID="_rlwFwCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#138"/>
+    </Impacts>
+    <Impacts ID="_rlzwICQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#126"/>
+    </Impacts>
+    <Impacts ID="_rl3agCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#112"/>
+    </Impacts>
+    <Impacts ID="_rl7E4CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#83"/>
+    </Impacts>
+    <Impacts ID="_rl-vQCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_rmDAsCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#77"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_rmYX4CQxEeKfoLx-Kqq1wA" Name="External Communication (SRL)" Description="This concern encapsulate and specify how our system interacts with external agents. Those interactions are mainly messages that are communicated forth and backward, establishing a dialog. Several properties may emerge of this concern, such as availability and security quality attributes.">
+    <Impacts ID="_rmYX4SQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#59"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#271"/>
+    </Impacts>
+    <Impacts ID="_rmfsoCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#264"/>
+    </Impacts>
+    <Impacts ID="_rmlMMCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_rmrS0CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#239"/>
+    </Impacts>
+    <Impacts ID="_rmu9MCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#233"/>
+    </Impacts>
+    <Impacts ID="_rmzOoCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#221"/>
+    </Impacts>
+    <Impacts ID="_rm25ACQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_rm6jYCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_rm-00CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#173"/>
+    </Impacts>
+    <Impacts ID="_rnB4ICQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#151"/>
+    </Impacts>
+    <Impacts ID="_rnFigCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#130"/>
+    </Impacts>
+    <Impacts ID="_rnKbACQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#107"/>
+    </Impacts>
+    <Impacts ID="_rnNeUCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#98"/>
+    </Impacts>
+    <Impacts ID="_rnRIsCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#92"/>
+    </Impacts>
+    <Impacts ID="_rnVaICQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#86"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_rna5sCQxEeKfoLx-Kqq1wA" Name="Persistence (SRL)" Description="Allows system data to be written in an storage media. This concerns affects functionality that involves the accessing of data, and the main idea is to decouple the way data is handled.">
+    <Impacts ID="_rna5sSQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#61"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#274"/>
+    </Impacts>
+    <Impacts ID="_rnfLICQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#250"/>
+    </Impacts>
+    <Impacts ID="_rni1gCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_rnmf4CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_rnqKQCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_rnt0oCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#186"/>
+    </Impacts>
+    <Impacts ID="_rnytICQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#169"/>
+    </Impacts>
+    <Impacts ID="_rn3loCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#22"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#166"/>
+    </Impacts>
+    <Impacts ID="_rn7QACQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#162"/>
+    </Impacts>
+    <Impacts ID="_rn_hcCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#147"/>
+    </Impacts>
+    <Impacts ID="_roGPICQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#144"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_roJ5gCQxEeKfoLx-Kqq1wA" Name="User Access Control (SRL)" Description="Defines contraints regarding the access level of given user / role to carry out a particular task / operation.">
+    <Impacts ID="_roJ5gSQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#265"/>
+    </Impacts>
+    <Impacts ID="_roM80CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#53"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_roROQCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#52"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#257"/>
+    </Impacts>
+    <Impacts ID="_roU4oCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#50"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#255"/>
+    </Impacts>
+    <Impacts ID="_roZKECQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#40"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#225"/>
+    </Impacts>
+    <Impacts ID="_roc0cCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#219"/>
+    </Impacts>
+    <Impacts ID="_roge0CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#197"/>
+    </Impacts>
+    <Impacts ID="_rokwQCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#19"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#161"/>
+    </Impacts>
+    <Impacts ID="_ropBsCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#154"/>
+    </Impacts>
+    <Impacts ID="_rossECQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_rovvYCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#152"/>
+    </Impacts>
+    <Impacts ID="_ro3rMCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#151"/>
+    </Impacts>
+    <Impacts ID="_ro78oCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#150"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_rpCqUCQxEeKfoLx-Kqq1wA" Name="Integrity Management (SRL)" Description="Allows the system to perform conformance verifications both on the information inputted and outputted. This way, the consistency of the data is assured.">
+    <Impacts ID="_rpDRYCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#246"/>
+    </Impacts>
+    <Impacts ID="_rpG7wCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#240"/>
+    </Impacts>
+    <Impacts ID="_rpJ_ECQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#234"/>
+    </Impacts>
+    <Impacts ID="_rpOQgCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#68"/>
+      <Section href="HWS.uima#39"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#223"/>
+    </Impacts>
+    <Impacts ID="_rpR64CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#210"/>
+    </Impacts>
+    <Impacts ID="_rpVlQCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#31"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#201"/>
+    </Impacts>
+    <Impacts ID="_rpZ2sCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#185"/>
+    </Impacts>
+    <Impacts ID="_rpc6ACQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#181"/>
+    </Impacts>
+    <Impacts ID="_rphLcCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#174"/>
+    </Impacts>
+    <Impacts ID="_rplc4CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#146"/>
+    </Impacts>
+    <Impacts ID="_rpogMCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#137"/>
+    </Impacts>
+    <Impacts ID="_rptYsCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#108"/>
+    </Impacts>
+    <Impacts ID="_rpxDECQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#99"/>
+    </Impacts>
+    <Impacts ID="_rp0tcCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#93"/>
+    </Impacts>
+    <Impacts ID="_rp3wwCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#87"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_rp7bICQxEeKfoLx-Kqq1wA" Name="Error Management (SRL)" Description="Concerns with mechanisms for managing errors and exceptions that take place while running the system.">
+    <Impacts ID="_rp7bISQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#250"/>
+    </Impacts>
+    <Impacts ID="_rp_FgCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#249"/>
+    </Impacts>
+    <Impacts ID="_rqDW8CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_rqHBUCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#46"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#246"/>
+    </Impacts>
+    <Impacts ID="_rqKrsCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#45"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#244"/>
+    </Impacts>
+    <Impacts ID="_rqOWECQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#44"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#242"/>
+    </Impacts>
+    <Impacts ID="_rqSAcCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_rqWR4CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#212"/>
+    </Impacts>
+    <Impacts ID="_rqZVMCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_rqc_kCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#210"/>
+    </Impacts>
+    <Impacts ID="_rqgp8CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#208"/>
+    </Impacts>
+    <Impacts ID="_rqk7YCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#207"/>
+    </Impacts>
+    <Impacts ID="_rqn-sCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#203"/>
+    </Impacts>
+    <Impacts ID="_rqs3MCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#186"/>
+    </Impacts>
+    <Impacts ID="_rqv6gCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#185"/>
+    </Impacts>
+    <Impacts ID="_rqzk4CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#159"/>
+    </Impacts>
+    <Impacts ID="_rq3PQCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#157"/>
+    </Impacts>
+    <Impacts ID="_rq65oCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#147"/>
+    </Impacts>
+    <Impacts ID="_rq_LECQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#13"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#146"/>
+    </Impacts>
+    <Impacts ID="_rrC1cCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#144"/>
+    </Impacts>
+    <Impacts ID="_rrGf0CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#143"/>
+    </Impacts>
+    <Impacts ID="_rrLYUCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#141"/>
+    </Impacts>
+    <Impacts ID="_rrPpwCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#139"/>
+    </Impacts>
+    <Impacts ID="_rrStECQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#6"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#120"/>
+    </Impacts>
+    <Impacts ID="_rrWXcCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#5"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_rrao4CQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#115"/>
+    </Impacts>
+    <Impacts ID="_rreTQCQxEeKfoLx-Kqq1wA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#3"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/HWS/Master2012/HWS.uima#113"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>
