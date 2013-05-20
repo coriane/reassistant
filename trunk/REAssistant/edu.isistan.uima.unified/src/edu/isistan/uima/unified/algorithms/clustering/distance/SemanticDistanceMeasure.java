@@ -35,11 +35,8 @@ public class SemanticDistanceMeasure implements DistanceMeasure {
 		if(s1 != null && s2 != null)
 			try {
 				double similarity = similarityMeasure.getSimilarity(s1, s2);
-				if(similarity == 0)
-					return Double.MAX_VALUE;
-				else
-					return 1.0 / similarity;
-					//return similarity;
+				double distance = SemanticDistanceMeasureConverter.logarithmic(similarity);
+				return distance;
 			}
 			catch (JWNLException e) {
 				e.printStackTrace();
