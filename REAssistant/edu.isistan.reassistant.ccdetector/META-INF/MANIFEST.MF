@@ -3,8 +3,18 @@ Bundle-ManifestVersion: 2
 Bundle-Name: REAssistant Crosscutting Concern Detector
 Bundle-SymbolicName: edu.isistan.reassistant.ccdetector;singleton:=true
 Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .,
+ libs/commons-logging-1.1.1.jar,
+ libs/log4j-1.2.16.jar
 Bundle-Activator: edu.isistan.reassistant.ccdetector.Activator
 Bundle-Vendor: Alejandro Rago
+Export-Package: edu.isistan.reassistant.ccdetector,
+ edu.isistan.reassistant.ccdetector.gui.composite,
+ edu.isistan.reassistant.ccdetector.gui.standalone,
+ edu.isistan.reassistant.ccdetector.gui.view,
+ edu.isistan.reassistant.ccdetector.query2engine,
+ edu.isistan.reassistant.ccdetector.test,
+ edu.isistan.reassistant.ccdetector.util
 Require-Bundle: org.eclipse.core.runtime,
  edu.isistan.uima.model;bundle-version="1.0.0",
  edu.isistan.uima.model.edit;bundle-version="1.0.0",
@@ -29,16 +39,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.databinding.edit;bundle-version="1.2.0",
  org.eclipse.jface.databinding;bundle-version="1.5.0",
  org.eclipse.ui;bundle-version="3.7.0",
- org.eclipse.ui.forms;bundle-version="3.5.100"
+ org.eclipse.ui.forms;bundle-version="3.5.100",
+ org.eclipse.emf.ecore
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: .,
- libs/commons-logging-1.1.1.jar,
- libs/log4j-1.2.16.jar
-Export-Package: edu.isistan.reassistant.ccdetector,
- edu.isistan.reassistant.ccdetector.gui.composite,
- edu.isistan.reassistant.ccdetector.gui.standalone,
- edu.isistan.reassistant.ccdetector.gui.view,
- edu.isistan.reassistant.ccdetector.query2engine,
- edu.isistan.reassistant.ccdetector.test,
- edu.isistan.reassistant.ccdetector.util

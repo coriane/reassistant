@@ -14,7 +14,7 @@
       </wizard>
    </extension>
    
-   <extension
+   <!--<extension
          point="org.eclipse.ui.editors">
       <editor
             id="edu.isistan.uima.editors.UIMAEditor"
@@ -24,7 +24,7 @@
             icon="icons/uima.gif"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor">
       </editor>
-   </extension>
+   </extension>-->
    
    <extension
          point="org.eclipse.ui.popupMenus">

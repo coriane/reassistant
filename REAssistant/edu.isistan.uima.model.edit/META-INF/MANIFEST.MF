@@ -9,7 +9,9 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: edu.isistan.uima.model.edit,
+ edu.isistan.uima.unified.typesystems.domain.provider,
  edu.isistan.uima.unified.typesystems.nlp.provider,
+ edu.isistan.uima.unified.typesystems.provider,
  edu.isistan.uima.unified.typesystems.srl.provider,
  edu.isistan.uima.unified.typesystems.srs.provider,
  edu.isistan.uima.unified.typesystems.wordnet.provider,
