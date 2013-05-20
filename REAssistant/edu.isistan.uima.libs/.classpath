@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry exported="true" kind="lib" path="uimaj-bootstrap.jar"/>
 	<classpathentry exported="true" kind="lib" path="aopalliance-1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="commons-io-1.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="commons-lang-2.4.jar"/>
