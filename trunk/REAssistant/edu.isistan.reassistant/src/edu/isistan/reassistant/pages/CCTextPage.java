@@ -309,6 +309,15 @@ public class CCTextPage  extends FormPage {
 						}
 					}
 				});
+				MenuItem separator2 = new MenuItem(menu, SWT.SEPARATOR);
+				separator2.setEnabled(false);
+				MenuItem copyItem = new MenuItem(menu, SWT.NONE);
+				copyItem.setText("Copy selected text");
+				copyItem.addListener(SWT.Selection, new Listener() {
+					public void handleEvent(Event e) {
+						styledText.copy();
+					}
+				});
 			}
 		});
 		
