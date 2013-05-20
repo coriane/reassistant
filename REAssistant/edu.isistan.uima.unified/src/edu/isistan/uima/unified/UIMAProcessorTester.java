@@ -8,7 +8,7 @@ import edu.isistan.dal.ucs.model.UCSModelPackage;
 
 public class UIMAProcessorTester {
 	private static String[] filenames = new String[] {"HWS-short", /*"HWS/RE2012/HWS", */"HWS/ASE2012/HWS", "AB/AB", "ATM/ATM", "CRS/CRS", "CSPS/CSPSv1", "CSPS/CSPSv2", /*"KMTQPortal/KMTQPortal", */"MSLite/MSLite" };
-	private static String inputPath = "file:///C:/Work/runtime-EclipseApplication/Test/src/";
+	private static String inputPath = "file:///Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/";
 
 	static {
 		System.setProperty("org.uimafit.type.import_pattern", "classpath*:desc/typesystems/**/*.xml");
