@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ASCII"?>
+<edu.isistan.reassistant.ccdetector:CrosscuttingConcernRuleSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant.ccdetector="http://www.users.exa.unicen.edu.ar/~arago/ccdetector" QueryPreference="OnlyImpact">
+  <Rules Metadata="Allows system data to be written in an storage media. This concerns affects functionality that involves the accessing of data, and the main idea is to decouple the way data is handled." CompositionGuidelines="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed." ID="cdcc0fed-9cf4-42dc-8be4-b99aa5877114" Name="Persistence" Enabled="true">
+    <DirectQuerySet>
+      <Queries Name="Persistence-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'database' or lemma = 'storage' or stem = 'persistent' or lemma = 'rolled-back' or lemma='table' or lemma='populate')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Data Actions" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA&#xD;&#xA;where for DA(label = 'Data')&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+      <Queries Name="Input and Communication" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA&#xD;&#xA;where for DA(label = 'Input' or label = 'Communication')&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end"/>
+    </ImpactQuerySet>
+  </Rules>
+  <Rules Metadata="Relates to the need for accuracy in number calculations. This concerns affects functionality that involves the processing of mathematical operations, in which the precision of those results is a key factor of success." CompositionGuidelines="This crosscutting concern is often composed as a Overlapping. That is, the mathematical behavior is enveloped in a context that ensures the accuracy of the results." CompositionRule="Overlap" ID="34ca0677-d880-435e-a150-1a457465a2a7" Name="Accuracy">
+    <DirectQuerySet>
+      <Queries Name="Accuracy-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'precision' or lemma = 'accurate' or lemma = 'measure')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Calculation Actions" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for DA(label = 'Calculation')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+      <Queries Name="Process Actions with Results" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for DA(label = 'Process')&#xD;&#xA;where for T(lemma = 'result')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+    </ImpactQuerySet>
+  </Rules>
+  <Rules Metadata="This concern encapsulate and specify how our system interacts with external agents. Those interactions are mainly messages that are communicated forth and backward, establishing a dialog. Several properties may emerge of this concern, such as availability and security quality attributes." CompositionGuidelines="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap" ID="f0018762-12af-4d78-98b1-633f81887d66" Name="External Communication" Enabled="true">
+    <DirectQuerySet>
+      <Queries Name="External Communication-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(stem = 'commun' or lemma = 'interaction' or lemma = 'internet' or lemma = 'external' or lemma = 'separate' or lemma = 'online' or lemma = 'server' or lemma = 'offline' or stem = 'connect')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Communication Actions" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA&#xD;&#xA;where for DA(label = 'Communication')&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+    </ImpactQuerySet>
+  </Rules>
+  <Rules Metadata="Concerns with mechanisms for managing errors and exceptions that take place while running the system." CompositionGuidelines="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override" ID="517f619f-abbe-41f8-a2df-a629e3e83cf3" Name="Error Management" Enabled="true">
+    <DirectQuerySet>
+      <Queries Name="Error-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'wrong' or lemma = 'mistake' or lemma = 'cannot' or lemma = 'invalid' or lemma = 'incomplete' or lemma = 'missing' or lemma = 'incorrect' or lemma = 'already' or lemma = 'rolled-back' or lemma = 'cancel' or lemma = 'unable' or lemma = 'problem')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Error Notifications Actions" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for DA(label = 'Notification')&#xD;&#xA;where for T(lemma = 'error')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+    </ImpactQuerySet>
+  </Rules>
+  <Rules Metadata="Defines contraints regarding the access level of given user / role to carry out a particular task / operation." CompositionGuidelines="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance." ID="e9d10094-8a55-44a5-800a-2156a6ccb62b" Name="User Access Control" Enabled="true">
+    <DirectQuerySet>
+      <Queries Name="UAC-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'password' or lemma = 'username' or lemma = 'login' or lemma = 'sign' or lemma='access' or lemma = 'credential' or lemma = 'priviledge' or lemma = 'right' or lemma = 'permission')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Verification Actions involving Actors" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for DA(label = 'Verification')&#xD;&#xA;where for T(lemma = 'user' or lemma = 'employee' or lemma = 'citizen' or lemma = 'customer' or lemma = 'student' or lemma = 'professor')&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+      <Queries Name="Data-related Sentences" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'data' or lemma = 'information' or lemma = 'result')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end"/>
+    </ImpactQuerySet>
+  </Rules>
+  <Rules Metadata="This concerns encapsulates functionality focused on the preprocessing and arrangement of the information before outputting in a display." CompositionGuidelines="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap" ID="e4d8a53b-b0e2-456a-a497-d25d4a5c47c8" Name="Presentation" Enabled="true">
+    <DirectQuerySet>
+      <Queries Name="Presentation-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'gui' or lemma = 'interface' or lemma = 'format' or lemma = 'present')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Output Actions" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA&#xD;&#xA;where for DA(label = 'Output')&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+      <Queries Name="Error-related Sentences" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'error')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end"/>
+      <Queries Name="Display Sentences (A fix for POS and SRL bug)" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'display')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </ImpactQuerySet>
+  </Rules>
+  <Rules Metadata="Allows the system to perform conformance verifications both on the information inputted and outputted. This way, the consistency of the data is assured." CompositionGuidelines="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap" ID="b1cb4e89-76b6-48ae-9edc-5f1627308d98" Name="Integrity Management" Enabled="true">
+    <DirectQuerySet>
+      <Queries Name="Integrity Management-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(stem = 'ensur' or stem = 'consist')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Verification Actions Involving Data" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for DA(label = 'Verification')&#xD;&#xA;where for T(lemma = 'data' or lemma = 'information' or lemma = 'result')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+    </ImpactQuerySet>
+  </Rules>
+  <Rules Metadata="Defines mechanisms to manage simultaneous and parallel access to resources and data." ID="f36459e6-ff17-4c32-8995-1c52b40b4c63" Name="Concurrence">
+    <DirectQuerySet>
+      <Queries Name="Concurrence-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'concurr' or stem = 'parallel' or stem = 'simultan')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Process Actions Involving Synchronism" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for DA(label = 'Process')&#xD;&#xA;where for T(stem = 'synchron' or lemma = 'sync' or lemma = 'progress' or lemma = 'task' or lemma = 'session')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+    </ImpactQuerySet>
+  </Rules>
+  <Rules Metadata="" ID="abbd604d-dbf9-40ea-8b21-5a91d1a966d6" Name="Reliability">
+    <DirectQuerySet>
+      <Queries Name="Reliability-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(stem = 'preserv' or lemma = 'timeout' or lemma = 'lost' or lemma = 'abnormal')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Communication Actions" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA&#xD;&#xA;where for DA(label = 'Communication')&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+    </ImpactQuerySet>
+  </Rules>
+  <Rules Metadata="" ID="6f84bb22-fa74-463b-875e-2d269f87582f" Name="Latency">
+    <DirectQuerySet>
+      <Queries Name="Latency-related Keywords" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for T(lemma = 'cache' or stem = 'perform' or lemma = 'second' or lemma = 'time' or lemma = 'delay' or lemma = 'deadline' or lemma =  'throughput' or lemma = 'response' or stem = 'latenc')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end" Include="true"/>
+    </DirectQuerySet>
+    <ImpactQuerySet>
+      <Queries Name="Calculation Actions involving Complex Activities" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for DA(label = 'Calculation')&#xD;&#xA;where for T(stem = 'execut' or stem = 'evalua')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+      <Queries Name="Process Actions involving Results" Content="select S&#xD;&#xA;from&#xD;&#xA;[#Sentence#] as S,&#xD;&#xA;[#DomainAction#] as DA,&#xD;&#xA;[#Token#] as T&#xD;&#xA;where for DA(label = 'Process')&#xD;&#xA;where for T(lemma = 'result' or lemma = 'value')&#xD;&#xA;where T.begin > S.begin&#xD;&#xA;where T.end &lt; S.end&#xD;&#xA;where DA.begin > S.begin&#xD;&#xA;where DA.end &lt; S.end" Include="true"/>
+    </ImpactQuerySet>
+  </Rules>
+</edu.isistan.reassistant.ccdetector:CrosscuttingConcernRuleSet>
