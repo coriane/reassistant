@@ -169,8 +169,8 @@ public class CCSplitDialog extends Dialog {
 		compositeBtnOp.setLayout(fl_compositeBtnOp);
 		
 		btnAdd = new Button(compositeBtnOp, SWT.NONE);
-		btnAdd.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/add.gif"));
-		btnAdd.setText("Add");
+		btnAdd.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/right.gif"));
+		btnAdd.setText("Move Right");
 		btnAdd.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {				
@@ -191,8 +191,8 @@ public class CCSplitDialog extends Dialog {
 		});
 		
 		btnRemove = new Button(compositeBtnOp, SWT.NONE);
-		btnRemove.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/delete.gif"));
-		btnRemove.setText("Remove");
+		btnRemove.setImage(ResourceManager.getPluginImage("edu.isistan.reassistant", "icons/left.gif"));
+		btnRemove.setText("Move Left");
 		btnRemove.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -352,7 +352,7 @@ public class CCSplitDialog extends Dialog {
 				}
 				//
 				if(splittedRightCC != null && splittedRightCC.getImpacts() != null) {
-					if(listViewerCCLeft.getContentProvider() == null) {
+					if(listViewerCCRight.getContentProvider() == null) {
 						ObservableListContentProvider listCCRightContentProvider = new ObservableListContentProvider();
 						listViewerCCRight.setContentProvider(listCCRightContentProvider);
 						//
