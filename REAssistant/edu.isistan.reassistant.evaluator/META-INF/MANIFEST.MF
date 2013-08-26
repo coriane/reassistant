@@ -6,14 +6,18 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: edu.isistan.reassistant.evaluator.Activator
 Bundle-Vendor: Alejandro Rago
 Require-Bundle: org.eclipse.ui,
+ org.eclipse.ui;bundle-version="3.7.0",
+ org.eclipse.ui.forms;bundle-version="3.5.100",
  org.eclipse.core.runtime,
+ org.eclipse.core.resources;bundle-version="3.7.100",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.7.0",
+ org.eclipse.emf.common.ui;bundle-version="2.7.0",
+ edu.isistan.uima.model;bundle-version="1.0.0",
+ edu.isistan.uima.model.edit;bundle-version="1.0.0",
+ edu.isistan.reassistant;bundle-version="1.0.0",
  edu.isistan.reassistant.model;bundle-version="1.0.0",
  edu.isistan.reassistant.model.edit;bundle-version="1.0.0",
- org.eclipse.emf.ecore.xmi;bundle-version="2.7.0",
- org.eclipse.ui.forms;bundle-version="3.5.100",
- org.eclipse.ui;bundle-version="3.7.0",
- org.eclipse.core.resources;bundle-version="3.7.100",
- org.eclipse.emf.common.ui;bundle-version="2.7.0"
+ edu.isistan.uima.unified;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
