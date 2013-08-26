@@ -31,7 +31,8 @@ Bundle-ClassPath: opennlp-models-1.5.0.jar,
  uimaj-core-2.4.0.jar,
  uimaj-cpe-2.4.0.jar,
  uimaj-document-annotation-2.4.0.jar,
- uimaj-tools-2.4.0.jar
+ uimaj-tools-2.4.0.jar,
+ uimaj-bootstrap.jar
 Export-Package: au.com.bytecode.opencsv,
  au.com.bytecode.opencsv.bean,
  edu.isistan.daclassifier,

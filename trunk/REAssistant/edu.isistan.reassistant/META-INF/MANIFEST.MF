@@ -27,4 +27,5 @@ Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
  libs/grid-1.0.0.jar
 Export-Package: edu.isistan.reassistant,
+ edu.isistan.reassistant.query,
  edu.isistan.reassistant.visualiser
