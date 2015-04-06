@@ -299,6 +299,7 @@ public class EvaluationProcessor {
 				Matching matching = new Matching(inputID, goldenID, inputCC, goldenCC);
 				readMatchings.add(matching);
 			}
+			reader.close();
 			matchings.clear();
 			matchings.addAll(readMatchings);
 		}

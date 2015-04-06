@@ -24,9 +24,21 @@ import edu.isistan.uima.unified.typesystems.srs.Document;
 import edu.isistan.uima.unified.typesystems.srs.Section;
 
 public class BaselineArtificialGenerator {
-	private String[] quadrantFileName = {"golden-q1.rea", "golden-q2.rea", "golden-q3.rea", "golden-q4.rea"};
-	private double[] quadrantPrecisionValues = {0.25, 0.25, 0.75, 0.75};
-	private double[] quadrantRecallValues = {0.25, 0.75, 0.25, 0.75};
+	private String[] quadrantFileName = {
+			"golden-q1-a.rea", "golden-q1-b.rea", 
+			"golden-q2-a.rea", "golden-q2-b.rea", 
+			"golden-q3-a.rea", "golden-q3-b.rea", 
+			"golden-q4-a.rea", "golden-q4-b.rea"};
+	private double[] quadrantPrecisionValues = {
+			0.25, 0.25, 
+			0.25, 0.25, 
+			0.75, 0.75, 
+			0.75, 0.75};
+	private double[] quadrantRecallValues = {
+			0.25, 0.25, 
+			0.75, 0.75, 
+			0.25, 0.25, 
+			0.75, 0.75};
 
 	private Resource goldenResource;
 	private REAssistantProject goldenModel;
@@ -193,8 +205,10 @@ public class BaselineArtificialGenerator {
 		EPackage.Registry.INSTANCE.put(REAssistantModelPackage.eNS_URI, REAssistantModelPackage.eINSTANCE);
 		//
 		String workspacePath = "/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication";
-		String projectPath = "/Test/src/";
-		String[] caseStudiesPath = {"CRS/EMSC2013/", "HWS/EMSC2013/", "MSLite/EMSC2013/"};
+		//String projectPath = "/Test/src/";
+		//String[] caseStudiesPath = {"CRS/EMSC2013/", "HWS/EMSC2013/", "MSLite/EMSC2013/"};
+		String projectPath = "/Test/src/UCRefactoring-PhD/";
+		String[] caseStudiesPath = {"CRS-refactored/", "HWS-refactored/", "MSLite-refactored/"};
 		//
 		for(int index = 0; index < caseStudiesPath.length; index++) {
 			BaselineArtificialGenerator generator = new BaselineArtificialGenerator();
