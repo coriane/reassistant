@@ -55,7 +55,7 @@ public class QueryDispatcher {
 					try {
 						indexer.resourceChanged(updater, resource);
 					} catch (Exception e) {
-						// Put your logging here
+						e.printStackTrace();
 					}
 				}
 			}
