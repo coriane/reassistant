@@ -18,6 +18,7 @@ import org.uimafit.factory.ExternalResourceFactory;
 import org.uimafit.factory.TypePrioritiesFactory;
 import org.uimafit.factory.TypeSystemDescriptionFactory;
 
+import edu.isistan.uima.unified.analysisengines.domain.CrosscuttingConcernMigrationAnnotator;
 import edu.isistan.uima.unified.analysisengines.domain.DomainActionAnnotator;
 import edu.isistan.uima.unified.analysisengines.domain.DomainActionCleaningAnnotator;
 import edu.isistan.uima.unified.analysisengines.domain.DomainNumberAnnotator;
@@ -82,6 +83,7 @@ public class UIMAFactory {
 			"edu.isistan.uima.unified.typesystems.srs.Project",
 			"edu.isistan.uima.unified.typesystems.srs.Document",
 			"edu.isistan.uima.unified.typesystems.srs.Section",
+			"edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern",
 			"edu.isistan.uima.unified.typesystems.nlp.Sentence",
 			"edu.isistan.uima.unified.typesystems.domain.DomainAction",
 			"edu.isistan.uima.unified.typesystems.srl.Predicate",
@@ -89,6 +91,7 @@ public class UIMAFactory {
 			"edu.isistan.uima.unified.typesystems.srl.Argument",
 			"edu.isistan.uima.unified.typesystems.nlp.SDDependency",
 			"edu.isistan.uima.unified.typesystems.nlp.Chunk",
+			"edu.isistan.uima.unified.typesystems.domain.DomainActor",
 			"edu.isistan.uima.unified.typesystems.nlp.Entity",
 			"edu.isistan.uima.unified.typesystems.srl.Role",
 			"edu.isistan.uima.unified.typesystems.domain.DomainNumber",
@@ -443,7 +446,7 @@ public class UIMAFactory {
 			AnalysisEngineDescription aeDescription = 
 				AnalysisEngineFactory.createPrimitiveDescription(JWNLWordNetAnnotator.class, typeSystemDescription, typePriorities, 
 				"jwnl", getModelsPath() + "jwnl/jwnl-properties.xml",
-			"wordnet", getModelsPath() + "wordnet/win/2.0/dict/");
+			"wordnet", getModelsPath() + "wordnet/unix/2.0/dict/");
 			ExternalResourceFactory.bindResource(aeDescription, "monitor", monitorResourceDescription);
 			AnalysisEngine analysisEngine = AnalysisEngineFactory.createPrimitive(aeDescription);
 			cache.put(key, analysisEngine);
@@ -455,7 +458,7 @@ public class UIMAFactory {
 		AnalysisEngineDescription aeDescription =  
 			AnalysisEngineFactory.createPrimitiveDescription(BanerjeeWSDAnnotator.class, typeSystemDescription, typePriorities, 
 			"jwnl", getModelsPath() + "jwnl/jwnl-properties.xml",
-			"wordnet", getModelsPath() + "wordnet/win/2.0/dict/",
+			"wordnet", getModelsPath() + "wordnet/unix/2.0/dict/",
 			"similarity", "Lesk");
 		ExternalResourceFactory.bindResource(aeDescription, "monitor", monitorResourceDescription);
 		AnalysisEngine analysisEngine = AnalysisEngineFactory.createPrimitive(aeDescription);
@@ -557,5 +560,19 @@ public class UIMAFactory {
 		ExternalResourceDescription erDescription = 
 			ExternalResourceFactory.createExternalResourceDescription("progressMonitorResource", ProgressMonitorResourceImpl.class, "");
 		return erDescription;
+	}
+	
+	public AnalysisEngine getCCMigratorAA(TypeSystemDescription typeSystemDescription, TypePriorities typePriorities, ExternalResourceDescription monitorResourceDescription, String inputFile) throws ResourceInitializationException, InvalidXMLException {
+		//Class key = CrosscuttingConcernMigrationAnnotator.class;
+		//if(!cache.containsKey(key)) {
+			AnalysisEngineDescription aeDescription = 
+				AnalysisEngineFactory.createPrimitiveDescription(CrosscuttingConcernMigrationAnnotator.class, typeSystemDescription, typePriorities,
+				"input", inputFile);
+			ExternalResourceFactory.bindResource(aeDescription, "monitor", monitorResourceDescription);
+			AnalysisEngine analysisEngine = AnalysisEngineFactory.createPrimitive(aeDescription);
+			return analysisEngine;
+			//cache.put(key, analysisEngine);
+		//}
+		//return (AnalysisEngine) cache.get(key);
 	}
 }

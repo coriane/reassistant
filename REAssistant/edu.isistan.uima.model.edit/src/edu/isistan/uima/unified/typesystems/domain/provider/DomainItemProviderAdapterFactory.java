@@ -76,6 +76,29 @@ public class DomainItemProviderAdapterFactory extends DomainAdapterFactory imple
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CrosscuttingConcernItemProvider crosscuttingConcernItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCrosscuttingConcernAdapter() {
+		if (crosscuttingConcernItemProvider == null) {
+			crosscuttingConcernItemProvider = new CrosscuttingConcernItemProvider(this);
+		}
+
+		return crosscuttingConcernItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link edu.isistan.uima.unified.typesystems.domain.DomainAction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -96,6 +119,29 @@ public class DomainItemProviderAdapterFactory extends DomainAdapterFactory imple
 		}
 
 		return domainActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.isistan.uima.unified.typesystems.domain.DomainActor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomainActorItemProvider domainActorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.isistan.uima.unified.typesystems.domain.DomainActor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDomainActorAdapter() {
+		if (domainActorItemProvider == null) {
+			domainActorItemProvider = new DomainActorItemProvider(this);
+		}
+
+		return domainActorItemProvider;
 	}
 
 	/**
@@ -220,7 +266,9 @@ public class DomainItemProviderAdapterFactory extends DomainAdapterFactory imple
 	 * @generated
 	 */
 	public void dispose() {
+		if (crosscuttingConcernItemProvider != null) crosscuttingConcernItemProvider.dispose();
 		if (domainActionItemProvider != null) domainActionItemProvider.dispose();
+		if (domainActorItemProvider != null) domainActorItemProvider.dispose();
 		if (domainNumberItemProvider != null) domainNumberItemProvider.dispose();
 	}
 

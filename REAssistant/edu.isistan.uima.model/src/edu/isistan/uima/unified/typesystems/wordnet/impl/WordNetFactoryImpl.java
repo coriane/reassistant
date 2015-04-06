@@ -31,7 +31,7 @@ public class WordNetFactoryImpl extends EFactoryImpl implements WordNetFactory {
 	 */
 	public static WordNetFactory init() {
 		try {
-			WordNetFactory theWordNetFactory = (WordNetFactory)EPackage.Registry.INSTANCE.getEFactory("http:///edu/isistan/uima/unified/typesystems/wordnet.ecore"); 
+			WordNetFactory theWordNetFactory = (WordNetFactory)EPackage.Registry.INSTANCE.getEFactory(WordNetPackage.eNS_URI);
 			if (theWordNetFactory != null) {
 				return theWordNetFactory;
 			}

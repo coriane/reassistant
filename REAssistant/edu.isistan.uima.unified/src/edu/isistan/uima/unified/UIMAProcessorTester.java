@@ -7,8 +7,11 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import edu.isistan.dal.ucs.model.UCSModelPackage;
 
 public class UIMAProcessorTester {
-	private static String[] filenames = new String[] {"HWS-short", /*"HWS/RE2012/HWS", */"HWS/ASE2012/HWS", "AB/AB", "ATM/ATM", "CRS/CRS", "CSPS/CSPSv1", "CSPS/CSPSv2", /*"KMTQPortal/KMTQPortal", */"MSLite/MSLite" };
-	private static String inputPath = "file:///Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/";
+	private static String[] filenames = 
+			//new String[] {"HWS-short", /*"HWS/RE2012/HWS", */"HWS/ASE2012/HWS", "AB/AB", "ATM/ATM", "CRS/CRS", "CSPS/CSPSv1", "CSPS/CSPSv2", /*"KMTQPortal/KMTQPortal", */"MSLite/MSLite" };
+			new String[] {/*"UCRefactoring-PhD/HWS-refactored/HWS-refactored", "UCRefactoring-PhD/CRS-refactored/CRS-refactored", */"UCRefactoring-PhD/MSLite-refactored/MSLite-refactored"};
+	private static String inputPath = 
+			"file:///Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/";
 
 	static {
 		System.setProperty("org.uimafit.type.import_pattern", "classpath*:desc/typesystems/**/*.xml");
@@ -77,10 +80,10 @@ public class UIMAProcessorTester {
 	public static void main(String[] args) {
 		UIMAProcessorTester tester = new UIMAProcessorTester();
 		// Global actions
-		//tester.rebuildUIMA();
+		tester.rebuildUIMA();
 		//tester.extractCSV();
 		//tester.domainLabelingAppend();
-		tester.domainLabelingUpdate();
+		//tester.domainLabelingUpdate();
 		// Single actions
 		//tester.domainLabelingUpdate(filenames[9]);
 		//tester.extractCSV(filenames[4]);

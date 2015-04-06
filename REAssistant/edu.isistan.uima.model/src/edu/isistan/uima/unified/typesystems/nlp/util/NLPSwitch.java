@@ -96,6 +96,16 @@ public class NLPSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case NLPPackage.COREFERENCE: {
+				Coreference coreference = (Coreference)theEObject;
+				T result = caseCoreference(coreference);
+				if (result == null) result = caseIdentifiableAnnotation(coreference);
+				if (result == null) result = caseAnnotation(coreference);
+				if (result == null) result = caseAnnotationBase(coreference);
+				if (result == null) result = caseTOP(coreference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case NLPPackage.ENTITY: {
 				Entity entity = (Entity)theEObject;
 				T result = caseEntity(entity);
@@ -167,6 +177,21 @@ public class NLPSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCoNLLDependency(CoNLLDependency object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Coreference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Coreference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCoreference(Coreference object) {
 		return null;
 	}
 

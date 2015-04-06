@@ -208,6 +208,61 @@ public interface NLPPackage extends EPackage {
 	int CO_NLL_DEPENDENCY_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link edu.isistan.uima.unified.typesystems.nlp.impl.CoreferenceImpl <em>Coreference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.isistan.uima.unified.typesystems.nlp.impl.CoreferenceImpl
+	 * @see edu.isistan.uima.unified.typesystems.nlp.impl.NLPPackageImpl#getCoreference()
+	 * @generated
+	 */
+	int COREFERENCE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Sofa</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COREFERENCE__SOFA = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__SOFA;
+
+	/**
+	 * The feature id for the '<em><b>Begin</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COREFERENCE__BEGIN = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__BEGIN;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COREFERENCE__END = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__END;
+
+	/**
+	 * The feature id for the '<em><b>Identification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COREFERENCE__IDENTIFICATION = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__IDENTIFICATION;
+
+	/**
+	 * The number of structural features of the '<em>Coreference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COREFERENCE_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link edu.isistan.uima.unified.typesystems.nlp.impl.EntityImpl <em>Entity</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -215,7 +270,7 @@ public interface NLPPackage extends EPackage {
 	 * @see edu.isistan.uima.unified.typesystems.nlp.impl.NLPPackageImpl#getEntity()
 	 * @generated
 	 */
-	int ENTITY = 2;
+	int ENTITY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Sofa</b></em>' reference.
@@ -279,7 +334,7 @@ public interface NLPPackage extends EPackage {
 	 * @see edu.isistan.uima.unified.typesystems.nlp.impl.NLPPackageImpl#getSDDependency()
 	 * @generated
 	 */
-	int SD_DEPENDENCY = 3;
+	int SD_DEPENDENCY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Sofa</b></em>' reference.
@@ -361,7 +416,7 @@ public interface NLPPackage extends EPackage {
 	 * @see edu.isistan.uima.unified.typesystems.nlp.impl.NLPPackageImpl#getSentence()
 	 * @generated
 	 */
-	int SENTENCE = 4;
+	int SENTENCE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Sofa</b></em>' reference.
@@ -416,7 +471,7 @@ public interface NLPPackage extends EPackage {
 	 * @see edu.isistan.uima.unified.typesystems.nlp.impl.NLPPackageImpl#getToken()
 	 * @generated
 	 */
-	int TOKEN = 5;
+	int TOKEN = 6;
 
 	/**
 	 * The feature id for the '<em><b>Sofa</b></em>' reference.
@@ -581,6 +636,16 @@ public interface NLPPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCoNLLDependency_Target();
+
+	/**
+	 * Returns the meta object for class '{@link edu.isistan.uima.unified.typesystems.nlp.Coreference <em>Coreference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Coreference</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.nlp.Coreference
+	 * @generated
+	 */
+	EClass getCoreference();
 
 	/**
 	 * Returns the meta object for class '{@link edu.isistan.uima.unified.typesystems.nlp.Entity <em>Entity</em>}'.
@@ -805,6 +870,16 @@ public interface NLPPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CO_NLL_DEPENDENCY__TARGET = eINSTANCE.getCoNLLDependency_Target();
+
+		/**
+		 * The meta object literal for the '{@link edu.isistan.uima.unified.typesystems.nlp.impl.CoreferenceImpl <em>Coreference</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.isistan.uima.unified.typesystems.nlp.impl.CoreferenceImpl
+		 * @see edu.isistan.uima.unified.typesystems.nlp.impl.NLPPackageImpl#getCoreference()
+		 * @generated
+		 */
+		EClass COREFERENCE = eINSTANCE.getCoreference();
 
 		/**
 		 * The meta object literal for the '{@link edu.isistan.uima.unified.typesystems.nlp.impl.EntityImpl <em>Entity</em>}' class.

@@ -31,7 +31,7 @@ public class SRSFactoryImpl extends EFactoryImpl implements SRSFactory {
 	 */
 	public static SRSFactory init() {
 		try {
-			SRSFactory theSRSFactory = (SRSFactory)EPackage.Registry.INSTANCE.getEFactory("http:///edu/isistan/uima/unified/typesystems/srs.ecore"); 
+			SRSFactory theSRSFactory = (SRSFactory)EPackage.Registry.INSTANCE.getEFactory(SRSPackage.eNS_URI);
 			if (theSRSFactory != null) {
 				return theSRSFactory;
 			}

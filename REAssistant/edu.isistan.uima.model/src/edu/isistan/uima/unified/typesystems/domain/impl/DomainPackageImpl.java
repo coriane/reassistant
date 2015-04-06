@@ -8,7 +8,9 @@ package edu.isistan.uima.unified.typesystems.domain.impl;
 
 import edu.isistan.uima.unified.typesystems.TypesystemsPackage;
 
+import edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern;
 import edu.isistan.uima.unified.typesystems.domain.DomainAction;
+import edu.isistan.uima.unified.typesystems.domain.DomainActor;
 import edu.isistan.uima.unified.typesystems.domain.DomainFactory;
 import edu.isistan.uima.unified.typesystems.domain.DomainNumber;
 import edu.isistan.uima.unified.typesystems.domain.DomainPackage;
@@ -58,7 +60,21 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass crosscuttingConcernEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass domainActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass domainActorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,6 +172,60 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCrosscuttingConcern() {
+		return crosscuttingConcernEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCrosscuttingConcern_Name() {
+		return (EAttribute)crosscuttingConcernEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCrosscuttingConcern_Kind() {
+		return (EAttribute)crosscuttingConcernEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCrosscuttingConcern_Sentence() {
+		return (EReference)crosscuttingConcernEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCrosscuttingConcern_Section() {
+		return (EReference)crosscuttingConcernEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCrosscuttingConcern_Document() {
+		return (EReference)crosscuttingConcernEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDomainAction() {
 		return domainActionEClass;
 	}
@@ -219,6 +289,33 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDomainActor() {
+		return domainActorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDomainActor_Kind() {
+		return (EAttribute)domainActorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDomainActor_Role() {
+		return (EAttribute)domainActorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDomainNumber() {
 		return domainNumberEClass;
 	}
@@ -251,6 +348,13 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		isCreated = true;
 
 		// Create classes and their features
+		crosscuttingConcernEClass = createEClass(CROSSCUTTING_CONCERN);
+		createEAttribute(crosscuttingConcernEClass, CROSSCUTTING_CONCERN__NAME);
+		createEAttribute(crosscuttingConcernEClass, CROSSCUTTING_CONCERN__KIND);
+		createEReference(crosscuttingConcernEClass, CROSSCUTTING_CONCERN__SENTENCE);
+		createEReference(crosscuttingConcernEClass, CROSSCUTTING_CONCERN__SECTION);
+		createEReference(crosscuttingConcernEClass, CROSSCUTTING_CONCERN__DOCUMENT);
+
 		domainActionEClass = createEClass(DOMAIN_ACTION);
 		createEReference(domainActionEClass, DOMAIN_ACTION__ACTION);
 		createEAttribute(domainActionEClass, DOMAIN_ACTION__LABEL);
@@ -258,6 +362,10 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		createEAttribute(domainActionEClass, DOMAIN_ACTION__RANKING);
 		createEReference(domainActionEClass, DOMAIN_ACTION__PARENT);
 		createEReference(domainActionEClass, DOMAIN_ACTION__CHILDS);
+
+		domainActorEClass = createEClass(DOMAIN_ACTOR);
+		createEAttribute(domainActorEClass, DOMAIN_ACTOR__KIND);
+		createEAttribute(domainActorEClass, DOMAIN_ACTOR__ROLE);
 
 		domainNumberEClass = createEClass(DOMAIN_NUMBER);
 	}
@@ -288,16 +396,26 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		// Obtain other dependent packages
 		TypesystemsPackage theTypesystemsPackage = (TypesystemsPackage)EPackage.Registry.INSTANCE.getEPackage(TypesystemsPackage.eNS_URI);
 		NLPPackage theNLPPackage = (NLPPackage)EPackage.Registry.INSTANCE.getEPackage(NLPPackage.eNS_URI);
+		SRSPackage theSRSPackage = (SRSPackage)EPackage.Registry.INSTANCE.getEPackage(SRSPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		crosscuttingConcernEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
 		domainActionEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
+		domainActorEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
 		domainNumberEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
 
 		// Initialize classes and features; add operations and parameters
+		initEClass(crosscuttingConcernEClass, CrosscuttingConcern.class, "CrosscuttingConcern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCrosscuttingConcern_Name(), ecorePackage.getEString(), "name", null, 0, 1, CrosscuttingConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCrosscuttingConcern_Kind(), ecorePackage.getEString(), "kind", null, 0, 1, CrosscuttingConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCrosscuttingConcern_Sentence(), theNLPPackage.getSentence(), null, "sentence", null, 0, 1, CrosscuttingConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCrosscuttingConcern_Section(), theSRSPackage.getSection(), null, "section", null, 0, 1, CrosscuttingConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCrosscuttingConcern_Document(), theSRSPackage.getDocument(), null, "document", null, 0, 1, CrosscuttingConcern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(domainActionEClass, DomainAction.class, "DomainAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomainAction_Action(), theNLPPackage.getToken(), null, "action", null, 0, 1, DomainAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainAction_Label(), ecorePackage.getEString(), "label", null, 0, 1, DomainAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -305,6 +423,10 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		initEAttribute(getDomainAction_Ranking(), ecorePackage.getEInt(), "ranking", null, 0, 1, DomainAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomainAction_Parent(), this.getDomainAction(), null, "parent", null, 0, 1, DomainAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomainAction_Childs(), this.getDomainAction(), null, "childs", null, 0, -1, DomainAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(domainActorEClass, DomainActor.class, "DomainActor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDomainActor_Kind(), ecorePackage.getEString(), "kind", null, 0, 1, DomainActor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomainActor_Role(), ecorePackage.getEString(), "role", null, 0, 1, DomainActor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainNumberEClass, DomainNumber.class, "DomainNumber", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

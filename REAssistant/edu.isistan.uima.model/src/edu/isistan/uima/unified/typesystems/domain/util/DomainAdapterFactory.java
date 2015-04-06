@@ -79,8 +79,16 @@ public class DomainAdapterFactory extends AdapterFactoryImpl {
 	protected DomainSwitch<Adapter> modelSwitch =
 		new DomainSwitch<Adapter>() {
 			@Override
+			public Adapter caseCrosscuttingConcern(CrosscuttingConcern object) {
+				return createCrosscuttingConcernAdapter();
+			}
+			@Override
 			public Adapter caseDomainAction(DomainAction object) {
 				return createDomainActionAdapter();
+			}
+			@Override
+			public Adapter caseDomainActor(DomainActor object) {
+				return createDomainActorAdapter();
 			}
 			@Override
 			public Adapter caseDomainNumber(DomainNumber object) {
@@ -123,6 +131,20 @@ public class DomainAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
+	 * Creates a new adapter for an object of class '{@link edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern <em>Crosscutting Concern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern
+	 * @generated
+	 */
+	public Adapter createCrosscuttingConcernAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link edu.isistan.uima.unified.typesystems.domain.DomainAction <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -133,6 +155,20 @@ public class DomainAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDomainActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.isistan.uima.unified.typesystems.domain.DomainActor <em>Actor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.isistan.uima.unified.typesystems.domain.DomainActor
+	 * @generated
+	 */
+	public Adapter createDomainActorAdapter() {
 		return null;
 	}
 

@@ -62,6 +62,106 @@ public interface DomainPackage extends EPackage {
 	DomainPackage eINSTANCE = edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link edu.isistan.uima.unified.typesystems.domain.impl.CrosscuttingConcernImpl <em>Crosscutting Concern</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.isistan.uima.unified.typesystems.domain.impl.CrosscuttingConcernImpl
+	 * @see edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl#getCrosscuttingConcern()
+	 * @generated
+	 */
+	int CROSSCUTTING_CONCERN = 0;
+
+	/**
+	 * The feature id for the '<em><b>Sofa</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN__SOFA = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__SOFA;
+
+	/**
+	 * The feature id for the '<em><b>Begin</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN__BEGIN = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__BEGIN;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN__END = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__END;
+
+	/**
+	 * The feature id for the '<em><b>Identification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN__IDENTIFICATION = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__IDENTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN__NAME = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN__KIND = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Sentence</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN__SENTENCE = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Section</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN__SECTION = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Document</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN__DOCUMENT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Crosscutting Concern</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CROSSCUTTING_CONCERN_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 5;
+
+	/**
 	 * The meta object id for the '{@link edu.isistan.uima.unified.typesystems.domain.impl.DomainActionImpl <em>Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,7 +169,7 @@ public interface DomainPackage extends EPackage {
 	 * @see edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl#getDomainAction()
 	 * @generated
 	 */
-	int DOMAIN_ACTION = 0;
+	int DOMAIN_ACTION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Sofa</b></em>' reference.
@@ -171,6 +271,79 @@ public interface DomainPackage extends EPackage {
 	int DOMAIN_ACTION_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 6;
 
 	/**
+	 * The meta object id for the '{@link edu.isistan.uima.unified.typesystems.domain.impl.DomainActorImpl <em>Actor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.isistan.uima.unified.typesystems.domain.impl.DomainActorImpl
+	 * @see edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl#getDomainActor()
+	 * @generated
+	 */
+	int DOMAIN_ACTOR = 2;
+
+	/**
+	 * The feature id for the '<em><b>Sofa</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ACTOR__SOFA = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__SOFA;
+
+	/**
+	 * The feature id for the '<em><b>Begin</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ACTOR__BEGIN = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__BEGIN;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ACTOR__END = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__END;
+
+	/**
+	 * The feature id for the '<em><b>Identification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ACTOR__IDENTIFICATION = TypesystemsPackage.IDENTIFIABLE_ANNOTATION__IDENTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ACTOR__KIND = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ACTOR__ROLE = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Actor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ACTOR_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link edu.isistan.uima.unified.typesystems.domain.impl.DomainNumberImpl <em>Number</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -178,7 +351,7 @@ public interface DomainPackage extends EPackage {
 	 * @see edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl#getDomainNumber()
 	 * @generated
 	 */
-	int DOMAIN_NUMBER = 1;
+	int DOMAIN_NUMBER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Sofa</b></em>' reference.
@@ -225,6 +398,71 @@ public interface DomainPackage extends EPackage {
 	 */
 	int DOMAIN_NUMBER_FEATURE_COUNT = TypesystemsPackage.IDENTIFIABLE_ANNOTATION_FEATURE_COUNT + 0;
 
+
+	/**
+	 * Returns the meta object for class '{@link edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern <em>Crosscutting Concern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Crosscutting Concern</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern
+	 * @generated
+	 */
+	EClass getCrosscuttingConcern();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getName()
+	 * @see #getCrosscuttingConcern()
+	 * @generated
+	 */
+	EAttribute getCrosscuttingConcern_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getKind <em>Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Kind</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getKind()
+	 * @see #getCrosscuttingConcern()
+	 * @generated
+	 */
+	EAttribute getCrosscuttingConcern_Kind();
+
+	/**
+	 * Returns the meta object for the reference '{@link edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getSentence <em>Sentence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Sentence</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getSentence()
+	 * @see #getCrosscuttingConcern()
+	 * @generated
+	 */
+	EReference getCrosscuttingConcern_Sentence();
+
+	/**
+	 * Returns the meta object for the reference '{@link edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getSection <em>Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Section</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getSection()
+	 * @see #getCrosscuttingConcern()
+	 * @generated
+	 */
+	EReference getCrosscuttingConcern_Section();
+
+	/**
+	 * Returns the meta object for the reference '{@link edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getDocument <em>Document</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Document</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern#getDocument()
+	 * @see #getCrosscuttingConcern()
+	 * @generated
+	 */
+	EReference getCrosscuttingConcern_Document();
 
 	/**
 	 * Returns the meta object for class '{@link edu.isistan.uima.unified.typesystems.domain.DomainAction <em>Action</em>}'.
@@ -303,6 +541,38 @@ public interface DomainPackage extends EPackage {
 	EReference getDomainAction_Childs();
 
 	/**
+	 * Returns the meta object for class '{@link edu.isistan.uima.unified.typesystems.domain.DomainActor <em>Actor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Actor</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.domain.DomainActor
+	 * @generated
+	 */
+	EClass getDomainActor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.isistan.uima.unified.typesystems.domain.DomainActor#getKind <em>Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Kind</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.domain.DomainActor#getKind()
+	 * @see #getDomainActor()
+	 * @generated
+	 */
+	EAttribute getDomainActor_Kind();
+
+	/**
+	 * Returns the meta object for the attribute '{@link edu.isistan.uima.unified.typesystems.domain.DomainActor#getRole <em>Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Role</em>'.
+	 * @see edu.isistan.uima.unified.typesystems.domain.DomainActor#getRole()
+	 * @see #getDomainActor()
+	 * @generated
+	 */
+	EAttribute getDomainActor_Role();
+
+	/**
 	 * Returns the meta object for class '{@link edu.isistan.uima.unified.typesystems.domain.DomainNumber <em>Number</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -334,6 +604,56 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link edu.isistan.uima.unified.typesystems.domain.impl.CrosscuttingConcernImpl <em>Crosscutting Concern</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.isistan.uima.unified.typesystems.domain.impl.CrosscuttingConcernImpl
+		 * @see edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl#getCrosscuttingConcern()
+		 * @generated
+		 */
+		EClass CROSSCUTTING_CONCERN = eINSTANCE.getCrosscuttingConcern();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CROSSCUTTING_CONCERN__NAME = eINSTANCE.getCrosscuttingConcern_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Kind</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CROSSCUTTING_CONCERN__KIND = eINSTANCE.getCrosscuttingConcern_Kind();
+
+		/**
+		 * The meta object literal for the '<em><b>Sentence</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CROSSCUTTING_CONCERN__SENTENCE = eINSTANCE.getCrosscuttingConcern_Sentence();
+
+		/**
+		 * The meta object literal for the '<em><b>Section</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CROSSCUTTING_CONCERN__SECTION = eINSTANCE.getCrosscuttingConcern_Section();
+
+		/**
+		 * The meta object literal for the '<em><b>Document</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CROSSCUTTING_CONCERN__DOCUMENT = eINSTANCE.getCrosscuttingConcern_Document();
+
 		/**
 		 * The meta object literal for the '{@link edu.isistan.uima.unified.typesystems.domain.impl.DomainActionImpl <em>Action</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -391,6 +711,32 @@ public interface DomainPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN_ACTION__CHILDS = eINSTANCE.getDomainAction_Childs();
+
+		/**
+		 * The meta object literal for the '{@link edu.isistan.uima.unified.typesystems.domain.impl.DomainActorImpl <em>Actor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.isistan.uima.unified.typesystems.domain.impl.DomainActorImpl
+		 * @see edu.isistan.uima.unified.typesystems.domain.impl.DomainPackageImpl#getDomainActor()
+		 * @generated
+		 */
+		EClass DOMAIN_ACTOR = eINSTANCE.getDomainActor();
+
+		/**
+		 * The meta object literal for the '<em><b>Kind</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOMAIN_ACTOR__KIND = eINSTANCE.getDomainActor_Kind();
+
+		/**
+		 * The meta object literal for the '<em><b>Role</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOMAIN_ACTOR__ROLE = eINSTANCE.getDomainActor_Role();
 
 		/**
 		 * The meta object literal for the '{@link edu.isistan.uima.unified.typesystems.domain.impl.DomainNumberImpl <em>Number</em>}' class.

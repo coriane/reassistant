@@ -87,6 +87,10 @@ public class NLPAdapterFactory extends AdapterFactoryImpl {
 				return createCoNLLDependencyAdapter();
 			}
 			@Override
+			public Adapter caseCoreference(Coreference object) {
+				return createCoreferenceAdapter();
+			}
+			@Override
 			public Adapter caseEntity(Entity object) {
 				return createEntityAdapter();
 			}
@@ -163,6 +167,20 @@ public class NLPAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCoNLLDependencyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.isistan.uima.unified.typesystems.nlp.Coreference <em>Coreference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.isistan.uima.unified.typesystems.nlp.Coreference
+	 * @generated
+	 */
+	public Adapter createCoreferenceAdapter() {
 		return null;
 	}
 

@@ -31,7 +31,7 @@ public class TCasFactoryImpl extends EFactoryImpl implements TCasFactory {
 	 */
 	public static TCasFactory init() {
 		try {
-			TCasFactory theTCasFactory = (TCasFactory)EPackage.Registry.INSTANCE.getEFactory("http:///uima/tcas.ecore"); 
+			TCasFactory theTCasFactory = (TCasFactory)EPackage.Registry.INSTANCE.getEFactory(TCasPackage.eNS_URI);
 			if (theTCasFactory != null) {
 				return theTCasFactory;
 			}

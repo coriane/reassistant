@@ -76,6 +76,16 @@ public class DomainSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case DomainPackage.CROSSCUTTING_CONCERN: {
+				CrosscuttingConcern crosscuttingConcern = (CrosscuttingConcern)theEObject;
+				T result = caseCrosscuttingConcern(crosscuttingConcern);
+				if (result == null) result = caseIdentifiableAnnotation(crosscuttingConcern);
+				if (result == null) result = caseAnnotation(crosscuttingConcern);
+				if (result == null) result = caseAnnotationBase(crosscuttingConcern);
+				if (result == null) result = caseTOP(crosscuttingConcern);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case DomainPackage.DOMAIN_ACTION: {
 				DomainAction domainAction = (DomainAction)theEObject;
 				T result = caseDomainAction(domainAction);
@@ -83,6 +93,16 @@ public class DomainSwitch<T> extends Switch<T> {
 				if (result == null) result = caseAnnotation(domainAction);
 				if (result == null) result = caseAnnotationBase(domainAction);
 				if (result == null) result = caseTOP(domainAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DomainPackage.DOMAIN_ACTOR: {
+				DomainActor domainActor = (DomainActor)theEObject;
+				T result = caseDomainActor(domainActor);
+				if (result == null) result = caseIdentifiableAnnotation(domainActor);
+				if (result == null) result = caseAnnotation(domainActor);
+				if (result == null) result = caseAnnotationBase(domainActor);
+				if (result == null) result = caseTOP(domainActor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -101,6 +121,21 @@ public class DomainSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Crosscutting Concern</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Crosscutting Concern</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCrosscuttingConcern(CrosscuttingConcern object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -112,6 +147,21 @@ public class DomainSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDomainAction(DomainAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Actor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Actor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDomainActor(DomainActor object) {
 		return null;
 	}
 

@@ -31,7 +31,7 @@ public class NLPFactoryImpl extends EFactoryImpl implements NLPFactory {
 	 */
 	public static NLPFactory init() {
 		try {
-			NLPFactory theNLPFactory = (NLPFactory)EPackage.Registry.INSTANCE.getEFactory("http:///edu/isistan/uima/unified/typesystems/nlp.ecore"); 
+			NLPFactory theNLPFactory = (NLPFactory)EPackage.Registry.INSTANCE.getEFactory(NLPPackage.eNS_URI);
 			if (theNLPFactory != null) {
 				return theNLPFactory;
 			}
@@ -62,6 +62,7 @@ public class NLPFactoryImpl extends EFactoryImpl implements NLPFactory {
 		switch (eClass.getClassifierID()) {
 			case NLPPackage.CHUNK: return createChunk();
 			case NLPPackage.CO_NLL_DEPENDENCY: return createCoNLLDependency();
+			case NLPPackage.COREFERENCE: return createCoreference();
 			case NLPPackage.ENTITY: return createEntity();
 			case NLPPackage.SD_DEPENDENCY: return createSDDependency();
 			case NLPPackage.SENTENCE: return createSentence();
@@ -89,6 +90,16 @@ public class NLPFactoryImpl extends EFactoryImpl implements NLPFactory {
 	public CoNLLDependency createCoNLLDependency() {
 		CoNLLDependencyImpl coNLLDependency = new CoNLLDependencyImpl();
 		return coNLLDependency;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Coreference createCoreference() {
+		CoreferenceImpl coreference = new CoreferenceImpl();
+		return coreference;
 	}
 
 	/**

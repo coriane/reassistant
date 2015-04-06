@@ -22,5 +22,7 @@
     <import location="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/ArgumentTypeDescriptor.xml"/>
     <import location="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.unified/desc/typesystems/domain/DomainNumberTypeDescriptor.xml"/>
     <import location="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.unified/desc/typesystems/domain/DomainActionTypeDescriptor.xml"/>
+    <import location="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.unified/desc/typesystems/domain/DomainActorTypeDescriptor.xml"/>
+    <import location="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.unified/desc/typesystems/domain/CrosscuttingConcernTypeDescriptor.xml"/>
   </imports>
 </typeSystemDescription>

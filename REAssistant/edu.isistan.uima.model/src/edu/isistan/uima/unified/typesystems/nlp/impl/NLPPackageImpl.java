@@ -14,6 +14,7 @@ import edu.isistan.uima.unified.typesystems.impl.TypesystemsPackageImpl;
 
 import edu.isistan.uima.unified.typesystems.nlp.Chunk;
 import edu.isistan.uima.unified.typesystems.nlp.CoNLLDependency;
+import edu.isistan.uima.unified.typesystems.nlp.Coreference;
 import edu.isistan.uima.unified.typesystems.nlp.Entity;
 import edu.isistan.uima.unified.typesystems.nlp.NLPFactory;
 import edu.isistan.uima.unified.typesystems.nlp.NLPPackage;
@@ -68,6 +69,13 @@ public class NLPPackageImpl extends EPackageImpl implements NLPPackage {
 	 * @generated
 	 */
 	private EClass coNLLDependencyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass coreferenceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,6 +248,15 @@ public class NLPPackageImpl extends EPackageImpl implements NLPPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCoreference() {
+		return coreferenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEntity() {
 		return entityEClass;
 	}
@@ -397,6 +414,8 @@ public class NLPPackageImpl extends EPackageImpl implements NLPPackage {
 		createEReference(coNLLDependencyEClass, CO_NLL_DEPENDENCY__SOURCE);
 		createEReference(coNLLDependencyEClass, CO_NLL_DEPENDENCY__TARGET);
 
+		coreferenceEClass = createEClass(COREFERENCE);
+
 		entityEClass = createEClass(ENTITY);
 		createEAttribute(entityEClass, ENTITY__KIND);
 
@@ -449,6 +468,7 @@ public class NLPPackageImpl extends EPackageImpl implements NLPPackage {
 		// Add supertypes to classes
 		chunkEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
 		coNLLDependencyEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
+		coreferenceEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
 		entityEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
 		sdDependencyEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
 		sentenceEClass.getESuperTypes().add(theTypesystemsPackage.getIdentifiableAnnotation());
@@ -462,6 +482,8 @@ public class NLPPackageImpl extends EPackageImpl implements NLPPackage {
 		initEAttribute(getCoNLLDependency_Relation(), ecorePackage.getEString(), "relation", null, 0, 1, CoNLLDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCoNLLDependency_Source(), this.getToken(), null, "source", null, 0, 1, CoNLLDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCoNLLDependency_Target(), this.getToken(), null, "target", null, 0, 1, CoNLLDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(coreferenceEClass, Coreference.class, "Coreference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntity_Kind(), ecorePackage.getEString(), "kind", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

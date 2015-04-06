@@ -10,6 +10,7 @@ import org.apache.uima.jcas.cas.StringArray;
 import edu.isistan.uima.unified.typesystems.srs.Project;
 import edu.isistan.uima.unified.typesystems.srs.Document;
 import edu.isistan.uima.unified.typesystems.srs.Section;
+import edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern;
 import edu.isistan.uima.unified.typesystems.domain.DomainAction;
 import edu.isistan.uima.unified.typesystems.domain.DomainNumber;
 import edu.isistan.uima.unified.typesystems.nlp.Chunk;
@@ -271,5 +272,18 @@ public class AnnotationGenerator {
 	
 	public static void generateStopword(Token annotation, boolean stopword, JCas aJCas) {
 		annotation.setStopword(stopword);
+	}
+	
+	public static void generateCrosscuttingConcern(int begin, int end, String name, String kind, Document document, Section section, Sentence sentence, JCas aJCas) {
+		CrosscuttingConcern annotation = new CrosscuttingConcern(aJCas);
+		annotation.setIdentification(UUID.randomUUID().toString());
+		annotation.setBegin(begin);
+		annotation.setEnd(end);
+		annotation.setName(name);
+		annotation.setKind(kind);
+		annotation.setDocument(document);
+		annotation.setSection(section);
+		annotation.setSentence(sentence);
+		annotation.addToIndexes();
 	}
 }

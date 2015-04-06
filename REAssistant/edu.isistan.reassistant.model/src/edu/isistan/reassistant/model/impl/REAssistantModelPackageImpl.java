@@ -19,6 +19,7 @@ import edu.isistan.reassistant.model.REAssistantModelFactory;
 import edu.isistan.reassistant.model.REAssistantModelPackage;
 import edu.isistan.reassistant.model.REAssistantProject;
 
+import edu.isistan.uima.unified.typesystems.TypesystemsPackage;
 import edu.isistan.uima.unified.typesystems.nlp.NLPPackage;
 
 import edu.isistan.uima.unified.typesystems.srl.SRLPackage;
@@ -150,10 +151,7 @@ public class REAssistantModelPackageImpl extends EPackageImpl implements REAssis
 
 		// Initialize simple dependencies
 		SRSModelPackage.eINSTANCE.eClass();
-		NLPPackage.eINSTANCE.eClass();
-		SRLPackage.eINSTANCE.eClass();
-		SRSPackage.eINSTANCE.eClass();
-		WordNetPackage.eINSTANCE.eClass();
+		TypesystemsPackage.eINSTANCE.eClass();
 		CasPackage.eINSTANCE.eClass();
 		TCasPackage.eINSTANCE.eClass();
 
@@ -515,7 +513,7 @@ public class REAssistantModelPackageImpl extends EPackageImpl implements REAssis
 
 		initEClass(impactEClass, Impact.class, "Impact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImpact_Realization(), ecorePackage.getEString(), "Realization", null, 0, 1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getImpact_CompositionRule(), this.getCompositionRules(), "CompositionRule", "", 0, 1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImpact_CompositionRule(), this.getCompositionRules(), "CompositionRule", "Wrap", 0, 1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImpact_Document(), theSRSPackage.getDocument(), null, "Document", null, 0, 1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImpact_Section(), theSRSPackage.getSection(), null, "Section", null, 0, 1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImpact_Sentence(), theNLPPackage.getSentence(), null, "Sentence", null, 0, 1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

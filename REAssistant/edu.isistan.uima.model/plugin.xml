@@ -32,6 +32,13 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
+            uri="http:///edu/isistan/uima/unified/typesystems.ecore"
+            class="edu.isistan.uima.unified.typesystems.TypesystemsPackage"
+            genModel="model/uima.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
             uri="http:///edu/isistan/uima/unified/typesystems/domain.ecore"
             class="edu.isistan.uima.unified.typesystems.domain.DomainPackage"
             genModel="model/uima.genmodel"/>

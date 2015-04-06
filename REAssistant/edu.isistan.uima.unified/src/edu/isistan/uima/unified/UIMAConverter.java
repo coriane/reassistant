@@ -44,6 +44,6 @@ public class UIMAConverter {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		UIMAConverter.createEcore("c:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/ECoreTypeDescriptor.xml", "c:/Work/REAssistant/edu.isistan.uima.model/model/uima.ecore");
+		UIMAConverter.createEcore("/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.unified/desc/typesystems/ECoreTypeDescriptor.xml", "/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.model/model/uima.ecore");
 	}
 }
