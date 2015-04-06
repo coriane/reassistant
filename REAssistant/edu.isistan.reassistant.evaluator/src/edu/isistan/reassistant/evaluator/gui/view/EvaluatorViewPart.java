@@ -1,5 +1,6 @@
 package edu.isistan.reassistant.evaluator.gui.view;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -119,7 +120,7 @@ public class EvaluatorViewPart extends ViewPart {
 		lblManualInput.setText("Manual Input");
 		toolkit.adapt(lblManualInput, true, true);
 		
-		listViewerManualInput = new ListViewer(compositeManualInput, SWT.BORDER | SWT.V_SCROLL);
+		listViewerManualInput = new ListViewer(compositeManualInput, SWT.BORDER | SWT.V_SCROLL | SWT.MULTI);
 		listViewerManualInput.getList().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		listViewerManualInput.setContentProvider(new InputContentProvider());
 		listViewerManualInput.setLabelProvider(new InputLabelProvider());
@@ -155,8 +156,8 @@ public class EvaluatorViewPart extends ViewPart {
 //    				listViewerManualInput.refresh();
 //                }
                 //
-                FileDialog fileDialog = new FileDialog(Display.getCurrent().getActiveShell(), SWT.OPEN);
-                fileDialog.setText("Open manual input");
+                FileDialog fileDialog = new FileDialog(Display.getCurrent().getActiveShell(), SWT.MULTI);
+                fileDialog.setText("Open manual inputs");
                 String filterPath = ResourcesPlugin.getWorkspace().getRoot().getLocation().toFile().getPath().toString();
                 fileDialog.setFilterPath(filterPath);
                 String[] filterExt = { "*.rea", "*.*" };
@@ -164,8 +165,15 @@ public class EvaluatorViewPart extends ViewPart {
                 String manualInputModelPath = fileDialog.open();
                 //
                 if(manualInputModelPath != null && !manualInputModelPath.isEmpty()) {
-                	EvaluationProcessor.getInstance().loadManualInputModelFile(manualInputModelPath);
-                	filesManualInput.add(manualInputModelPath);
+                	String[] manualInputModelFileNames = fileDialog.getFileNames();
+                	for(String manualInputModelFileName : manualInputModelFileNames) {
+                		String singleManualInputModelPath = fileDialog.getFilterPath();
+                        if(singleManualInputModelPath.charAt(singleManualInputModelPath.length() - 1) != File.separatorChar)
+                        	singleManualInputModelPath += File.separatorChar;
+                        singleManualInputModelPath += manualInputModelFileName;
+                        EvaluationProcessor.getInstance().loadManualInputModelFile(singleManualInputModelPath);
+                    	filesManualInput.add(singleManualInputModelPath);
+                	}
                 	listViewerManualInput.refresh();
                 }
 			}
@@ -209,7 +217,7 @@ public class EvaluatorViewPart extends ViewPart {
 		lblToolInput.setText("Tool Input");
 		toolkit.adapt(lblToolInput, true, true);
 		
-		listViewerToolInput = new ListViewer(compositeToolInput, SWT.BORDER | SWT.V_SCROLL);
+		listViewerToolInput = new ListViewer(compositeToolInput, SWT.BORDER | SWT.V_SCROLL | SWT.MULTI);
 		listViewerToolInput.getList().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		listViewerToolInput.setContentProvider(new InputContentProvider());
 		listViewerToolInput.setLabelProvider(new InputLabelProvider());
@@ -220,7 +228,7 @@ public class EvaluatorViewPart extends ViewPart {
 		btnToolInputLoad.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				FileDialog fileDialog = new FileDialog(Display.getCurrent().getActiveShell(), SWT.OPEN);
+				FileDialog fileDialog = new FileDialog(Display.getCurrent().getActiveShell(), SWT.MULTI);
 		        fileDialog.setText("Open tool input");
 		        String filterPath = ResourcesPlugin.getWorkspace().getRoot().getLocation().toFile().getPath().toString();
 		        fileDialog.setFilterPath(filterPath);
@@ -228,9 +236,16 @@ public class EvaluatorViewPart extends ViewPart {
 		        fileDialog.setFilterExtensions(filterExt);
 		        String toolInputModelPath = fileDialog.open();
 		        if(toolInputModelPath != null && !toolInputModelPath.isEmpty()) {
-			        EvaluationProcessor.getInstance().loadToolInputModelFile(toolInputModelPath);
-			        filesToolInput.add(toolInputModelPath);
-			        listViewerToolInput.refresh();
+		        	String[] toolInputModelFileNames = fileDialog.getFileNames();
+                	for(String toolInputModelFileName : toolInputModelFileNames) {
+                		String singleToolInputModelPath = fileDialog.getFilterPath();
+                        if(singleToolInputModelPath.charAt(singleToolInputModelPath.length() - 1) != File.separatorChar)
+                        	singleToolInputModelPath += File.separatorChar;
+                        singleToolInputModelPath += toolInputModelFileName;
+                        EvaluationProcessor.getInstance().loadManualInputModelFile(singleToolInputModelPath);
+                    	filesToolInput.add(singleToolInputModelPath);
+                	}
+                	listViewerToolInput.refresh();
 		        }
 			}
 		});
