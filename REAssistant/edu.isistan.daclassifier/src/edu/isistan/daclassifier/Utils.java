@@ -70,6 +70,48 @@ public class Utils {
 		return modelfilepath;
 	}
 	
+	public static String getWordnetArffFilteredFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String filterfilepath = filepath + "arff/wordnet.arff";
+		return filterfilepath;
+	}
+	
+	public static String getWikipediaArffFilteredFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String filterfilepath = filepath + "arff/wikipedia.arff";
+		return filterfilepath;
+	}
+	
+	public static String getJoinWordnetArffFilteredFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String filterfilepath = filepath + "arff/join-wordnet.arff";
+		return filterfilepath;
+	}
+	
+	public static String getJoinWikipediaArffFilteredFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String filterfilepath = filepath + "arff/join-wikipedia.arff";
+		return filterfilepath;
+	}
+	
+	public static String getTextArffFilteredFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String filterfilepath = filepath + "arff/text.arff";
+		return filterfilepath;
+	}
+	
+	public static String getSRLArffFilteredFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String filterfilepath = filepath + "arff/srl.arff";
+		return filterfilepath;
+	}
+	
+	public static String getTextSRLArffFilteredFilename() {
+		String filepath = Utils.getDomainActionPath();
+		String filterfilepath = filepath + "arff/text+srl.arff";
+		return filterfilepath;
+	}
+	
 	public static String getResultsFilepath() {
 		String filepath = Utils.getDomainActionPath();
 		String xmlfilename = filepath + "results/";
