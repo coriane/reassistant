@@ -26,6 +26,15 @@ public interface DomainFactory extends EFactory {
 	DomainFactory eINSTANCE = edu.isistan.uima.unified.typesystems.domain.impl.DomainFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Crosscutting Concern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Crosscutting Concern</em>'.
+	 * @generated
+	 */
+	CrosscuttingConcern createCrosscuttingConcern();
+
+	/**
 	 * Returns a new object of class '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -33,6 +42,15 @@ public interface DomainFactory extends EFactory {
 	 * @generated
 	 */
 	DomainAction createDomainAction();
+
+	/**
+	 * Returns a new object of class '<em>Actor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Actor</em>'.
+	 * @generated
+	 */
+	DomainActor createDomainActor();
 
 	/**
 	 * Returns a new object of class '<em>Number</em>'.

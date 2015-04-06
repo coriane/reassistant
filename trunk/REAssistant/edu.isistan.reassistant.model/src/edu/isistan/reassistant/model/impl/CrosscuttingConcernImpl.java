@@ -107,8 +107,6 @@ public class CrosscuttingConcernImpl extends IdentifiableImpl implements Crosscu
 	 */
 	protected CrosscuttingConcernImpl() {
 		super();
-		DerivedAttributeAdapter adapter = new DerivedAttributeAdapter(this, REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__DOCUMENTS);
-		adapter.addNavigatedDependency(REAssistantModelPackage.Literals.CROSSCUTTING_CONCERN__IMPACTS, REAssistantModelPackage.Literals.IMPACT__DOCUMENT);
 	}
 
 	/**

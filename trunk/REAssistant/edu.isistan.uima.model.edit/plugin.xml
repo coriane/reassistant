@@ -3,6 +3,32 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated uima -->
+      <factory
+            uri="http:///edu/isistan/uima/unified/typesystems.ecore"
+            class="edu.isistan.uima.unified.typesystems.provider.TypesystemsItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated uima -->
+      <factory
+            uri="http:///edu/isistan/uima/unified/typesystems/domain.ecore"
+            class="edu.isistan.uima.unified.typesystems.domain.provider.DomainItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http:///edu/isistan/uima/unified/typesystems/nlp.ecore"
             class="edu.isistan.uima.unified.typesystems.nlp.provider.NLPItemProviderAdapterFactory"

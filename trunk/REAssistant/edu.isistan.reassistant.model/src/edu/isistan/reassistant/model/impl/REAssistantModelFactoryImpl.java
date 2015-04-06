@@ -32,7 +32,7 @@ public class REAssistantModelFactoryImpl extends EFactoryImpl implements REAssis
 	 */
 	public static REAssistantModelFactory init() {
 		try {
-			REAssistantModelFactory theREAssistantModelFactory = (REAssistantModelFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.users.exa.unicen.edu.ar/~arago/reassistant"); 
+			REAssistantModelFactory theREAssistantModelFactory = (REAssistantModelFactory)EPackage.Registry.INSTANCE.getEFactory(REAssistantModelPackage.eNS_URI);
 			if (theREAssistantModelFactory != null) {
 				return theREAssistantModelFactory;
 			}

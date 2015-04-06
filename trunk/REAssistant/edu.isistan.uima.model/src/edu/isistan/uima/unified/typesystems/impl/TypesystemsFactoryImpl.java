@@ -31,7 +31,7 @@ public class TypesystemsFactoryImpl extends EFactoryImpl implements TypesystemsF
 	 */
 	public static TypesystemsFactory init() {
 		try {
-			TypesystemsFactory theTypesystemsFactory = (TypesystemsFactory)EPackage.Registry.INSTANCE.getEFactory("http:///edu/isistan/uima/unified/typesystems.ecore"); 
+			TypesystemsFactory theTypesystemsFactory = (TypesystemsFactory)EPackage.Registry.INSTANCE.getEFactory(TypesystemsPackage.eNS_URI);
 			if (theTypesystemsFactory != null) {
 				return theTypesystemsFactory;
 			}

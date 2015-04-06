@@ -59,7 +59,7 @@ public interface Impact extends Identifiable {
 
 	/**
 	 * Returns the value of the '<em><b>Composition Rule</b></em>' attribute.
-	 * The default value is <code>""</code>.
+	 * The default value is <code>"Wrap"</code>.
 	 * The literals are from the enumeration {@link edu.isistan.reassistant.model.CompositionRules}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -71,7 +71,7 @@ public interface Impact extends Identifiable {
 	 * @see edu.isistan.reassistant.model.CompositionRules
 	 * @see #setCompositionRule(CompositionRules)
 	 * @see edu.isistan.reassistant.model.REAssistantModelPackage#getImpact_CompositionRule()
-	 * @model default=""
+	 * @model default="Wrap"
 	 * @generated
 	 */
 	CompositionRules getCompositionRule();

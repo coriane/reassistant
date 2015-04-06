@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model"
-    nsURI="http://www.users.exa.unicen.edu.ar/~arago/reassistant" nsPrefix="edu.isistan.reassistant">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://www.users.exa.unicen.edu.ar/~arago/reassistant"
+    nsPrefix="edu.isistan.reassistant">
   <eClassifiers xsi:type="ecore:EClass" name="Identifiable" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
@@ -32,7 +31,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Realization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CompositionRule" eType="#//CompositionRules"
-        defaultValueLiteral=""/>
+        defaultValueLiteral="Wrap"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Document" eType="ecore:EClass ../../edu.isistan.uima.model/model/uima.ecore#/0/isistan/uima/unified/typesystems/srs/Document"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Section" eType="ecore:EClass ../../edu.isistan.uima.model/model/uima.ecore#/0/isistan/uima/unified/typesystems/srs/Section"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Sentence" eType="ecore:EClass ../../edu.isistan.uima.model/model/uima.ecore#/0/isistan/uima/unified/typesystems/nlp/Sentence"/>

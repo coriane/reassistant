@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
   <ecore:EPackage name="edu" nsURI="http:///edu.ecore" nsPrefix="edu">
     <eSubpackages name="isistan" nsURI="http:///edu/isistan.ecore" nsPrefix="isistan">
@@ -16,6 +15,13 @@
             </eClassifiers>
             <eSubpackages name="domain" nsURI="http:///edu/isistan/uima/unified/typesystems/domain.ecore"
                 nsPrefix="domain">
+              <eClassifiers xsi:type="ecore:EClass" name="CrosscuttingConcern" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="sentence" eType="#/0/isistan/uima/unified/typesystems/nlp/Sentence"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="section" eType="#/0/isistan/uima/unified/typesystems/srs/Section"/>
+                <eStructuralFeatures xsi:type="ecore:EReference" name="document" eType="#/0/isistan/uima/unified/typesystems/srs/Document"/>
+              </eClassifiers>
               <eClassifiers xsi:type="ecore:EClass" name="DomainAction" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
                 <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
                 <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -30,6 +36,10 @@
                   </eAnnotations>
                 </eStructuralFeatures>
               </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="DomainActor" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+                <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+              </eClassifiers>
               <eClassifiers xsi:type="ecore:EClass" name="DomainNumber" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation"/>
             </eSubpackages>
             <eSubpackages name="nlp" nsURI="http:///edu/isistan/uima/unified/typesystems/nlp.ecore"
@@ -42,6 +52,7 @@
                 <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
                 <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#/0/isistan/uima/unified/typesystems/nlp/Token"/>
               </eClassifiers>
+              <eClassifiers xsi:type="ecore:EClass" name="Coreference" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation"/>
               <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#/0/isistan/uima/unified/typesystems/IdentifiableAnnotation">
                 <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
               </eClassifiers>

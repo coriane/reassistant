@@ -122,6 +122,29 @@ public class NLPItemProviderAdapterFactory extends NLPAdapterFactory implements 
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.isistan.uima.unified.typesystems.nlp.Coreference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CoreferenceItemProvider coreferenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.isistan.uima.unified.typesystems.nlp.Coreference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCoreferenceAdapter() {
+		if (coreferenceItemProvider == null) {
+			coreferenceItemProvider = new CoreferenceItemProvider(this);
+		}
+
+		return coreferenceItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link edu.isistan.uima.unified.typesystems.nlp.Entity} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,6 +337,7 @@ public class NLPItemProviderAdapterFactory extends NLPAdapterFactory implements 
 	public void dispose() {
 		if (chunkItemProvider != null) chunkItemProvider.dispose();
 		if (coNLLDependencyItemProvider != null) coNLLDependencyItemProvider.dispose();
+		if (coreferenceItemProvider != null) coreferenceItemProvider.dispose();
 		if (entityItemProvider != null) entityItemProvider.dispose();
 		if (sdDependencyItemProvider != null) sdDependencyItemProvider.dispose();
 		if (sentenceItemProvider != null) sentenceItemProvider.dispose();

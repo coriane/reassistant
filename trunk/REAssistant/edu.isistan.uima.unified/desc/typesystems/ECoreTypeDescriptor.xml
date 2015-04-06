@@ -14,6 +14,7 @@
     <import location="nlp/ChunkTypeDescriptor.xml"/>
     <import location="nlp/CoNLLDependencyTypeDescriptor.xml"/>
     <import location="nlp/SDDependencyTypeDescriptor.xml"/>
+    <import location="nlp/CoreferenceTypeDescriptor.xml"/>
     <import location="nlp/EntityTypeDescriptor.xml"/>
     <import location="wordnet/SenseTypeDescriptor.xml"/>
     <import location="srl/RoleTypeDescriptor.xml"/>
@@ -22,5 +23,7 @@
     <import location="srl/ArgumentTypeDescriptor.xml"/>
     <import location="domain/DomainNumberTypeDescriptor.xml"/>
     <import location="domain/DomainActionTypeDescriptor.xml"/>
+    <import location="domain/DomainActorTypeDescriptor.xml"/>
+    <import location="domain/CrosscuttingConcernTypeDescriptor.xml"/>
   </imports>
 </typeSystemDescription>

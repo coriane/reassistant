@@ -31,7 +31,7 @@ public class CasFactoryImpl extends EFactoryImpl implements CasFactory {
 	 */
 	public static CasFactory init() {
 		try {
-			CasFactory theCasFactory = (CasFactory)EPackage.Registry.INSTANCE.getEFactory("http:///uima/cas.ecore"); 
+			CasFactory theCasFactory = (CasFactory)EPackage.Registry.INSTANCE.getEFactory(CasPackage.eNS_URI);
 			if (theCasFactory != null) {
 				return theCasFactory;
 			}

@@ -31,7 +31,7 @@ public class SRLFactoryImpl extends EFactoryImpl implements SRLFactory {
 	 */
 	public static SRLFactory init() {
 		try {
-			SRLFactory theSRLFactory = (SRLFactory)EPackage.Registry.INSTANCE.getEFactory("http:///edu/isistan/uima/unified/typesystems/srl.ecore"); 
+			SRLFactory theSRLFactory = (SRLFactory)EPackage.Registry.INSTANCE.getEFactory(SRLPackage.eNS_URI);
 			if (theSRLFactory != null) {
 				return theSRLFactory;
 			}
