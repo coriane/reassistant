@@ -6,7 +6,6 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: edu.isistan.reassistant.Activator
 Bundle-Vendor: Alejandro Rago
 Require-Bundle: org.eclipse.contribution.visualiser;bundle-version="2.2.0",
- edu.isistan.uima.unified;bundle-version="1.0.0",
  edu.isistan.reassistant.model.edit;bundle-version="1.0.0",
  edu.isistan.reassistant.ccdetector;bundle-version="1.0.0",
  edu.isistan.reassistant.ccdetector.model;bundle-version="1.0.0",
@@ -25,7 +24,8 @@ Require-Bundle: org.eclipse.contribution.visualiser;bundle-version="2.2.0",
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
- libs/grid-1.0.0.jar
+ libs/grid-1.0.0.jar,
+ libs/opencsv-2.4.jar
 Export-Package: edu.isistan.reassistant,
  edu.isistan.reassistant.query,
  edu.isistan.reassistant.visualiser
