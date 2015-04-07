@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Fri Mar 11 15:23:09 ART 2011 */
+/* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
 package edu.isistan.uima.unified.typesystems.srs;
 
 import org.apache.uima.jcas.JCas;
@@ -14,10 +14,13 @@ import org.apache.uima.cas.Feature;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Fri Mar 11 15:23:09 ART 2011
+ * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
  * @generated */
 public class Project_Type extends IdentifiableAnnotation_Type {
-  /** @generated */
+  /** @generated 
+   * @return the generator for this type
+   */
+  @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
   /** @generated */
   private final FSGenerator fsGenerator = 
@@ -36,22 +39,30 @@ public class Project_Type extends IdentifiableAnnotation_Type {
   	  }
     };
   /** @generated */
+  @SuppressWarnings ("hiding")
   public final static int typeIndexID = Project.typeIndexID;
   /** @generated 
      @modifiable */
+  @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.isistan.uima.unified.typesystems.srs.Project");
  
   /** @generated */
   final Feature casFeat_id;
   /** @generated */
   final int     casFeatCode_id;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getId(int addr) {
         if (featOkTst && casFeat_id == null)
       jcas.throwFeatMissing("id", "edu.isistan.uima.unified.typesystems.srs.Project");
     return ll_cas.ll_getStringValue(addr, casFeatCode_id);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setId(int addr, String v) {
         if (featOkTst && casFeat_id == null)
       jcas.throwFeatMissing("id", "edu.isistan.uima.unified.typesystems.srs.Project");
@@ -63,13 +74,19 @@ public class Project_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_name;
   /** @generated */
   final int     casFeatCode_name;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getName(int addr) {
         if (featOkTst && casFeat_name == null)
       jcas.throwFeatMissing("name", "edu.isistan.uima.unified.typesystems.srs.Project");
     return ll_cas.ll_getStringValue(addr, casFeatCode_name);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setName(int addr, String v) {
         if (featOkTst && casFeat_name == null)
       jcas.throwFeatMissing("name", "edu.isistan.uima.unified.typesystems.srs.Project");
@@ -81,13 +98,19 @@ public class Project_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_content;
   /** @generated */
   final int     casFeatCode_content;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getContent(int addr) {
         if (featOkTst && casFeat_content == null)
       jcas.throwFeatMissing("content", "edu.isistan.uima.unified.typesystems.srs.Project");
     return ll_cas.ll_getStringValue(addr, casFeatCode_content);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setContent(int addr, String v) {
         if (featOkTst && casFeat_content == null)
       jcas.throwFeatMissing("content", "edu.isistan.uima.unified.typesystems.srs.Project");
@@ -99,13 +122,19 @@ public class Project_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_kind;
   /** @generated */
   final int     casFeatCode_kind;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getKind(int addr) {
         if (featOkTst && casFeat_kind == null)
       jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.srs.Project");
     return ll_cas.ll_getStringValue(addr, casFeatCode_kind);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setKind(int addr, String v) {
         if (featOkTst && casFeat_kind == null)
       jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.srs.Project");
@@ -117,13 +146,19 @@ public class Project_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_URI;
   /** @generated */
   final int     casFeatCode_URI;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getURI(int addr) {
         if (featOkTst && casFeat_URI == null)
       jcas.throwFeatMissing("URI", "edu.isistan.uima.unified.typesystems.srs.Project");
     return ll_cas.ll_getStringValue(addr, casFeatCode_URI);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setURI(int addr, String v) {
         if (featOkTst && casFeat_URI == null)
       jcas.throwFeatMissing("URI", "edu.isistan.uima.unified.typesystems.srs.Project");
@@ -134,7 +169,10 @@ public class Project_Type extends IdentifiableAnnotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+	 * @generated
+	 * @param jcas JCas
+	 * @param casType Type 
+	 */
   public Project_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());

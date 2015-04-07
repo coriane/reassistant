@@ -1,7 +1,7 @@
 
 
 /* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
-package edu.isistan.uima.unified.typesystems.nlp;
+package edu.isistan.uima.unified.typesystems.domain;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -14,12 +14,12 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
  * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
  * XML source: /Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.unified/desc/typesystems/ECoreTypeDescriptor.xml
  * @generated */
-public class Entity extends IdentifiableAnnotation {
+public class DomainActor extends IdentifiableAnnotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Entity.class);
+  public final static int typeIndexID = JCasRegistry.register(DomainActor.class);
   /** @generated
    * @ordered 
    */
@@ -33,14 +33,14 @@ public class Entity extends IdentifiableAnnotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Entity() {/* intentionally empty block */}
+  protected DomainActor() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
-  public Entity(int addr, TOP_Type type) {
+  public DomainActor(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
@@ -48,7 +48,7 @@ public class Entity extends IdentifiableAnnotation {
   /** @generated
    * @param jcas JCas to which this Feature Structure belongs 
    */
-  public Entity(JCas jcas) {
+  public DomainActor(JCas jcas) {
     super(jcas);
     readObject();   
   } 
@@ -58,7 +58,7 @@ public class Entity extends IdentifiableAnnotation {
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
   */  
-  public Entity(JCas jcas, int begin, int end) {
+  public DomainActor(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);
@@ -84,18 +84,40 @@ public class Entity extends IdentifiableAnnotation {
    * @return value of the feature 
    */
   public String getKind() {
-    if (Entity_Type.featOkTst && ((Entity_Type)jcasType).casFeat_kind == null)
-      jcasType.jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.nlp.Entity");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((Entity_Type)jcasType).casFeatCode_kind);}
+    if (DomainActor_Type.featOkTst && ((DomainActor_Type)jcasType).casFeat_kind == null)
+      jcasType.jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.domain.DomainActor");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((DomainActor_Type)jcasType).casFeatCode_kind);}
     
   /** setter for kind - sets  
    * @generated
    * @param v value to set into the feature 
    */
   public void setKind(String v) {
-    if (Entity_Type.featOkTst && ((Entity_Type)jcasType).casFeat_kind == null)
-      jcasType.jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.nlp.Entity");
-    jcasType.ll_cas.ll_setStringValue(addr, ((Entity_Type)jcasType).casFeatCode_kind, v);}    
+    if (DomainActor_Type.featOkTst && ((DomainActor_Type)jcasType).casFeat_kind == null)
+      jcasType.jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.domain.DomainActor");
+    jcasType.ll_cas.ll_setStringValue(addr, ((DomainActor_Type)jcasType).casFeatCode_kind, v);}    
+   
+    
+  //*--------------*
+  //* Feature: role
+
+  /** getter for role - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public String getRole() {
+    if (DomainActor_Type.featOkTst && ((DomainActor_Type)jcasType).casFeat_role == null)
+      jcasType.jcas.throwFeatMissing("role", "edu.isistan.uima.unified.typesystems.domain.DomainActor");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((DomainActor_Type)jcasType).casFeatCode_role);}
+    
+  /** setter for role - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setRole(String v) {
+    if (DomainActor_Type.featOkTst && ((DomainActor_Type)jcasType).casFeat_role == null)
+      jcasType.jcas.throwFeatMissing("role", "edu.isistan.uima.unified.typesystems.domain.DomainActor");
+    jcasType.ll_cas.ll_setStringValue(addr, ((DomainActor_Type)jcasType).casFeatCode_role, v);}    
   }
 
     

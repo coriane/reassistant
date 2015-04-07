@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Fri Mar 11 15:22:48 ART 2011 */
+/* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
 package edu.isistan.uima.unified.typesystems.srl;
 
 import org.apache.uima.jcas.JCas; 
@@ -13,39 +13,53 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 
 
 /** 
- * Updated by JCasGen Fri Aug 12 18:17:38 ART 2011
- * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/PredicateTypeDescriptor.xml
+ * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
+ * XML source: /Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.unified/desc/typesystems/ECoreTypeDescriptor.xml
  * @generated */
 public class Argument extends IdentifiableAnnotation {
   /** @generated
    * @ordered 
    */
+  @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(Argument.class);
   /** @generated
    * @ordered 
    */
+  @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated  */
+  /** @generated
+   * @return index of the type  
+   */
+  @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Argument() {}
+  protected Argument() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated */
+   * @generated
+   * @param addr low level Feature Structure reference
+   * @param type the type of this Feature Structure 
+   */
   public Argument(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
-  /** @generated */
+  /** @generated
+   * @param jcas JCas to which this Feature Structure belongs 
+   */
   public Argument(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
-  /** @generated */  
+  /** @generated
+   * @param jcas JCas to which this Feature Structure belongs
+   * @param begin offset to the begin spot in the SofA
+   * @param end offset to the end spot in the SofA 
+  */  
   public Argument(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
@@ -53,11 +67,14 @@ public class Argument extends IdentifiableAnnotation {
     readObject();
   }   
 
-  /** <!-- begin-user-doc -->
-    * Write your own initialization here
-    * <!-- end-user-doc -->
-  @generated modifiable */
-  private void readObject() {}
+  /** 
+   * <!-- begin-user-doc -->
+   * Write your own initialization here
+   * <!-- end-user-doc -->
+   *
+   * @generated modifiable 
+   */
+  private void readObject() {/*default - does nothing empty block */}
      
  
     
@@ -65,14 +82,18 @@ public class Argument extends IdentifiableAnnotation {
   //* Feature: label
 
   /** getter for label - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public String getLabel() {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_label == null)
       jcasType.jcas.throwFeatMissing("label", "edu.isistan.uima.unified.typesystems.srl.Argument");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Argument_Type)jcasType).casFeatCode_label);}
     
   /** setter for label - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setLabel(String v) {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_label == null)
       jcasType.jcas.throwFeatMissing("label", "edu.isistan.uima.unified.typesystems.srl.Argument");
@@ -83,14 +104,18 @@ public class Argument extends IdentifiableAnnotation {
   //* Feature: description
 
   /** getter for description - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public String getDescription() {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_description == null)
       jcasType.jcas.throwFeatMissing("description", "edu.isistan.uima.unified.typesystems.srl.Argument");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Argument_Type)jcasType).casFeatCode_description);}
     
   /** setter for description - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setDescription(String v) {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_description == null)
       jcasType.jcas.throwFeatMissing("description", "edu.isistan.uima.unified.typesystems.srl.Argument");
@@ -101,14 +126,18 @@ public class Argument extends IdentifiableAnnotation {
   //* Feature: root
 
   /** getter for root - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public Token getRoot() {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_root == null)
       jcasType.jcas.throwFeatMissing("root", "edu.isistan.uima.unified.typesystems.srl.Argument");
     return (Token)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_root)));}
     
   /** setter for root - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setRoot(Token v) {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_root == null)
       jcasType.jcas.throwFeatMissing("root", "edu.isistan.uima.unified.typesystems.srl.Argument");
@@ -119,21 +148,28 @@ public class Argument extends IdentifiableAnnotation {
   //* Feature: yield
 
   /** getter for yield - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public FSArray getYield() {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_yield == null)
       jcasType.jcas.throwFeatMissing("yield", "edu.isistan.uima.unified.typesystems.srl.Argument");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_yield)));}
     
   /** setter for yield - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setYield(FSArray v) {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_yield == null)
       jcasType.jcas.throwFeatMissing("yield", "edu.isistan.uima.unified.typesystems.srl.Argument");
     jcasType.ll_cas.ll_setRefValue(addr, ((Argument_Type)jcasType).casFeatCode_yield, jcasType.ll_cas.ll_getFSRef(v));}    
     
   /** indexed getter for yield - gets an indexed value - 
-   * @generated */
+   * @generated
+   * @param i index in the array to get
+   * @return value of the element at index i 
+   */
   public Token getYield(int i) {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_yield == null)
       jcasType.jcas.throwFeatMissing("yield", "edu.isistan.uima.unified.typesystems.srl.Argument");
@@ -141,7 +177,10 @@ public class Argument extends IdentifiableAnnotation {
     return (Token)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_yield), i)));}
 
   /** indexed setter for yield - sets an indexed value - 
-   * @generated */
+   * @generated
+   * @param i index in the array to set
+   * @param v value to set into the array 
+   */
   public void setYield(int i, Token v) { 
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_yield == null)
       jcasType.jcas.throwFeatMissing("yield", "edu.isistan.uima.unified.typesystems.srl.Argument");

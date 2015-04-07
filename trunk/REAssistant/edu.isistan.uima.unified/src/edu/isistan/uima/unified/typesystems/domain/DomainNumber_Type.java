@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Wed Jun 01 16:54:23 ART 2011 */
+/* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
 package edu.isistan.uima.unified.typesystems.domain;
 
 import org.apache.uima.jcas.JCas;
@@ -12,10 +12,13 @@ import org.apache.uima.cas.Type;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Wed Jun 01 16:56:12 ART 2011
+ * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
  * @generated */
 public class DomainNumber_Type extends IdentifiableAnnotation_Type {
-  /** @generated */
+  /** @generated 
+   * @return the generator for this type
+   */
+  @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
   /** @generated */
   private final FSGenerator fsGenerator = 
@@ -34,13 +37,20 @@ public class DomainNumber_Type extends IdentifiableAnnotation_Type {
   	  }
     };
   /** @generated */
+  @SuppressWarnings ("hiding")
   public final static int typeIndexID = DomainNumber.typeIndexID;
   /** @generated 
      @modifiable */
+  @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.isistan.uima.unified.typesystems.domain.DomainNumber");
- 
+
+
+
   /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+	 * @generated
+	 * @param jcas JCas
+	 * @param casType Type 
+	 */
   public DomainNumber_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());

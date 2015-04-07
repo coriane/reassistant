@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Mon Mar 14 19:00:52 ART 2011 */
+/* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
 package edu.isistan.uima.unified.typesystems.srl;
 
 import org.apache.uima.jcas.JCas; 
@@ -11,39 +11,53 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation;
 
 
 /** 
- * Updated by JCasGen Mon Mar 14 19:00:52 ART 2011
- * XML source: C:/Work/REAssistant/edu.isistan.uima.unified/desc/typesystems/srl/StructureTypeDescriptor.xml
+ * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
+ * XML source: /Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/REAssistant/edu.isistan.uima.unified/desc/typesystems/ECoreTypeDescriptor.xml
  * @generated */
 public class Structure extends IdentifiableAnnotation {
   /** @generated
    * @ordered 
    */
+  @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(Structure.class);
   /** @generated
    * @ordered 
    */
+  @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated  */
+  /** @generated
+   * @return index of the type  
+   */
+  @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Structure() {}
+  protected Structure() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated */
+   * @generated
+   * @param addr low level Feature Structure reference
+   * @param type the type of this Feature Structure 
+   */
   public Structure(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
-  /** @generated */
+  /** @generated
+   * @param jcas JCas to which this Feature Structure belongs 
+   */
   public Structure(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
-  /** @generated */  
+  /** @generated
+   * @param jcas JCas to which this Feature Structure belongs
+   * @param begin offset to the begin spot in the SofA
+   * @param end offset to the end spot in the SofA 
+  */  
   public Structure(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
@@ -51,11 +65,14 @@ public class Structure extends IdentifiableAnnotation {
     readObject();
   }   
 
-  /** <!-- begin-user-doc -->
-    * Write your own initialization here
-    * <!-- end-user-doc -->
-  @generated modifiable */
-  private void readObject() {}
+  /** 
+   * <!-- begin-user-doc -->
+   * Write your own initialization here
+   * <!-- end-user-doc -->
+   *
+   * @generated modifiable 
+   */
+  private void readObject() {/*default - does nothing empty block */}
      
  
     
@@ -63,14 +80,18 @@ public class Structure extends IdentifiableAnnotation {
   //* Feature: subject
 
   /** getter for subject - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public Role getSubject() {
     if (Structure_Type.featOkTst && ((Structure_Type)jcasType).casFeat_subject == null)
       jcasType.jcas.throwFeatMissing("subject", "edu.isistan.uima.unified.typesystems.srl.Structure");
     return (Role)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Structure_Type)jcasType).casFeatCode_subject)));}
     
   /** setter for subject - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setSubject(Role v) {
     if (Structure_Type.featOkTst && ((Structure_Type)jcasType).casFeat_subject == null)
       jcasType.jcas.throwFeatMissing("subject", "edu.isistan.uima.unified.typesystems.srl.Structure");
@@ -81,14 +102,18 @@ public class Structure extends IdentifiableAnnotation {
   //* Feature: verb
 
   /** getter for verb - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public Role getVerb() {
     if (Structure_Type.featOkTst && ((Structure_Type)jcasType).casFeat_verb == null)
       jcasType.jcas.throwFeatMissing("verb", "edu.isistan.uima.unified.typesystems.srl.Structure");
     return (Role)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Structure_Type)jcasType).casFeatCode_verb)));}
     
   /** setter for verb - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setVerb(Role v) {
     if (Structure_Type.featOkTst && ((Structure_Type)jcasType).casFeat_verb == null)
       jcasType.jcas.throwFeatMissing("verb", "edu.isistan.uima.unified.typesystems.srl.Structure");
@@ -99,14 +124,18 @@ public class Structure extends IdentifiableAnnotation {
   //* Feature: directObject
 
   /** getter for directObject - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public Role getDirectObject() {
     if (Structure_Type.featOkTst && ((Structure_Type)jcasType).casFeat_directObject == null)
       jcasType.jcas.throwFeatMissing("directObject", "edu.isistan.uima.unified.typesystems.srl.Structure");
     return (Role)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Structure_Type)jcasType).casFeatCode_directObject)));}
     
   /** setter for directObject - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setDirectObject(Role v) {
     if (Structure_Type.featOkTst && ((Structure_Type)jcasType).casFeat_directObject == null)
       jcasType.jcas.throwFeatMissing("directObject", "edu.isistan.uima.unified.typesystems.srl.Structure");
@@ -117,14 +146,18 @@ public class Structure extends IdentifiableAnnotation {
   //* Feature: indirectObject
 
   /** getter for indirectObject - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public Role getIndirectObject() {
     if (Structure_Type.featOkTst && ((Structure_Type)jcasType).casFeat_indirectObject == null)
       jcasType.jcas.throwFeatMissing("indirectObject", "edu.isistan.uima.unified.typesystems.srl.Structure");
     return (Role)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Structure_Type)jcasType).casFeatCode_indirectObject)));}
     
   /** setter for indirectObject - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setIndirectObject(Role v) {
     if (Structure_Type.featOkTst && ((Structure_Type)jcasType).casFeat_indirectObject == null)
       jcasType.jcas.throwFeatMissing("indirectObject", "edu.isistan.uima.unified.typesystems.srl.Structure");

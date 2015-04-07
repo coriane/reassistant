@@ -1,6 +1,6 @@
 
 /* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
-package edu.isistan.uima.unified.typesystems.nlp;
+package edu.isistan.uima.unified.typesystems.domain;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -16,7 +16,7 @@ import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 /** 
  * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
  * @generated */
-public class Entity_Type extends IdentifiableAnnotation_Type {
+public class DomainActor_Type extends IdentifiableAnnotation_Type {
   /** @generated 
    * @return the generator for this type
    */
@@ -26,25 +26,25 @@ public class Entity_Type extends IdentifiableAnnotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Entity_Type.this.useExistingInstance) {
+  			 if (DomainActor_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Entity_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = DomainActor_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Entity(addr, Entity_Type.this);
-  			   Entity_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new DomainActor(addr, DomainActor_Type.this);
+  			   DomainActor_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Entity(addr, Entity_Type.this);
+        } else return new DomainActor(addr, DomainActor_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Entity.typeIndexID;
+  public final static int typeIndexID = DomainActor.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.isistan.uima.unified.typesystems.nlp.Entity");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.isistan.uima.unified.typesystems.domain.DomainActor");
  
   /** @generated */
   final Feature casFeat_kind;
@@ -56,7 +56,7 @@ public class Entity_Type extends IdentifiableAnnotation_Type {
    */ 
   public String getKind(int addr) {
         if (featOkTst && casFeat_kind == null)
-      jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.nlp.Entity");
+      jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.domain.DomainActor");
     return ll_cas.ll_getStringValue(addr, casFeatCode_kind);
   }
   /** @generated
@@ -65,8 +65,32 @@ public class Entity_Type extends IdentifiableAnnotation_Type {
    */    
   public void setKind(int addr, String v) {
         if (featOkTst && casFeat_kind == null)
-      jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.nlp.Entity");
+      jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.domain.DomainActor");
     ll_cas.ll_setStringValue(addr, casFeatCode_kind, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_role;
+  /** @generated */
+  final int     casFeatCode_role;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getRole(int addr) {
+        if (featOkTst && casFeat_role == null)
+      jcas.throwFeatMissing("role", "edu.isistan.uima.unified.typesystems.domain.DomainActor");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_role);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setRole(int addr, String v) {
+        if (featOkTst && casFeat_role == null)
+      jcas.throwFeatMissing("role", "edu.isistan.uima.unified.typesystems.domain.DomainActor");
+    ll_cas.ll_setStringValue(addr, casFeatCode_role, v);}
     
   
 
@@ -77,13 +101,17 @@ public class Entity_Type extends IdentifiableAnnotation_Type {
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */
-  public Entity_Type(JCas jcas, Type casType) {
+  public DomainActor_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
     casFeat_kind = jcas.getRequiredFeatureDE(casType, "kind", "uima.cas.String", featOkTst);
     casFeatCode_kind  = (null == casFeat_kind) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_kind).getCode();
+
+ 
+    casFeat_role = jcas.getRequiredFeatureDE(casType, "role", "uima.cas.String", featOkTst);
+    casFeatCode_role  = (null == casFeat_role) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_role).getCode();
 
   }
 }

@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Fri Mar 11 15:23:15 ART 2011 */
+/* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
 package edu.isistan.uima.unified.typesystems.wordnet;
 
 import org.apache.uima.jcas.JCas;
@@ -14,10 +14,13 @@ import org.apache.uima.cas.Feature;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Fri Mar 11 15:23:15 ART 2011
+ * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
  * @generated */
 public class Sense_Type extends IdentifiableAnnotation_Type {
-  /** @generated */
+  /** @generated 
+   * @return the generator for this type
+   */
+  @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
   /** @generated */
   private final FSGenerator fsGenerator = 
@@ -36,22 +39,30 @@ public class Sense_Type extends IdentifiableAnnotation_Type {
   	  }
     };
   /** @generated */
+  @SuppressWarnings ("hiding")
   public final static int typeIndexID = Sense.typeIndexID;
   /** @generated 
      @modifiable */
+  @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.isistan.uima.unified.typesystems.wordnet.Sense");
  
   /** @generated */
   final Feature casFeat_pos;
   /** @generated */
   final int     casFeatCode_pos;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getPos(int addr) {
         if (featOkTst && casFeat_pos == null)
       jcas.throwFeatMissing("pos", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
     return ll_cas.ll_getStringValue(addr, casFeatCode_pos);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setPos(int addr, String v) {
         if (featOkTst && casFeat_pos == null)
       jcas.throwFeatMissing("pos", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
@@ -63,13 +74,19 @@ public class Sense_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_sense;
   /** @generated */
   final int     casFeatCode_sense;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getSense(int addr) {
         if (featOkTst && casFeat_sense == null)
       jcas.throwFeatMissing("sense", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
     return ll_cas.ll_getStringValue(addr, casFeatCode_sense);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setSense(int addr, String v) {
         if (featOkTst && casFeat_sense == null)
       jcas.throwFeatMissing("sense", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
@@ -81,13 +98,19 @@ public class Sense_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_gloss;
   /** @generated */
   final int     casFeatCode_gloss;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getGloss(int addr) {
         if (featOkTst && casFeat_gloss == null)
       jcas.throwFeatMissing("gloss", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
     return ll_cas.ll_getStringValue(addr, casFeatCode_gloss);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setGloss(int addr, String v) {
         if (featOkTst && casFeat_gloss == null)
       jcas.throwFeatMissing("gloss", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
@@ -99,29 +122,43 @@ public class Sense_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_senses;
   /** @generated */
   final int     casFeatCode_senses;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public int getSenses(int addr) {
         if (featOkTst && casFeat_senses == null)
       jcas.throwFeatMissing("senses", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
     return ll_cas.ll_getRefValue(addr, casFeatCode_senses);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setSenses(int addr, int v) {
         if (featOkTst && casFeat_senses == null)
       jcas.throwFeatMissing("senses", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
     ll_cas.ll_setRefValue(addr, casFeatCode_senses, v);}
     
-   /** @generated */
+   /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @return value at index i in the array 
+   */
   public String getSenses(int addr, int i) {
         if (featOkTst && casFeat_senses == null)
       jcas.throwFeatMissing("senses", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
     if (lowLevelTypeChecks)
       return ll_cas.ll_getStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_senses), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_senses), i);
-	return ll_cas.ll_getStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_senses), i);
+  return ll_cas.ll_getStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_senses), i);
   }
    
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @param v value to set
+   */ 
   public void setSenses(int addr, int i, String v) {
         if (featOkTst && casFeat_senses == null)
       jcas.throwFeatMissing("senses", "edu.isistan.uima.unified.typesystems.wordnet.Sense");
@@ -135,7 +172,10 @@ public class Sense_Type extends IdentifiableAnnotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+	 * @generated
+	 * @param jcas JCas
+	 * @param casType Type 
+	 */
   public Sense_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());

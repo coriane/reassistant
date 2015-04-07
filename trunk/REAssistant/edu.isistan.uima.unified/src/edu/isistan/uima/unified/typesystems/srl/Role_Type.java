@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Mon Mar 14 19:00:43 ART 2011 */
+/* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
 package edu.isistan.uima.unified.typesystems.srl;
 
 import org.apache.uima.jcas.JCas;
@@ -14,10 +14,13 @@ import org.apache.uima.cas.Feature;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Mon Mar 14 19:00:52 ART 2011
+ * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
  * @generated */
 public class Role_Type extends IdentifiableAnnotation_Type {
-  /** @generated */
+  /** @generated 
+   * @return the generator for this type
+   */
+  @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
   /** @generated */
   private final FSGenerator fsGenerator = 
@@ -36,22 +39,30 @@ public class Role_Type extends IdentifiableAnnotation_Type {
   	  }
     };
   /** @generated */
+  @SuppressWarnings ("hiding")
   public final static int typeIndexID = Role.typeIndexID;
   /** @generated 
      @modifiable */
+  @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.isistan.uima.unified.typesystems.srl.Role");
  
   /** @generated */
   final Feature casFeat_kind;
   /** @generated */
   final int     casFeatCode_kind;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getKind(int addr) {
         if (featOkTst && casFeat_kind == null)
       jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.srl.Role");
     return ll_cas.ll_getStringValue(addr, casFeatCode_kind);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setKind(int addr, String v) {
         if (featOkTst && casFeat_kind == null)
       jcas.throwFeatMissing("kind", "edu.isistan.uima.unified.typesystems.srl.Role");
@@ -63,19 +74,29 @@ public class Role_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_descriptions;
   /** @generated */
   final int     casFeatCode_descriptions;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public int getDescriptions(int addr) {
         if (featOkTst && casFeat_descriptions == null)
       jcas.throwFeatMissing("descriptions", "edu.isistan.uima.unified.typesystems.srl.Role");
     return ll_cas.ll_getRefValue(addr, casFeatCode_descriptions);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setDescriptions(int addr, int v) {
         if (featOkTst && casFeat_descriptions == null)
       jcas.throwFeatMissing("descriptions", "edu.isistan.uima.unified.typesystems.srl.Role");
     ll_cas.ll_setRefValue(addr, casFeatCode_descriptions, v);}
     
-   /** @generated */
+   /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @return value at index i in the array 
+   */
   public String getDescriptions(int addr, int i) {
         if (featOkTst && casFeat_descriptions == null)
       jcas.throwFeatMissing("descriptions", "edu.isistan.uima.unified.typesystems.srl.Role");
@@ -85,7 +106,11 @@ public class Role_Type extends IdentifiableAnnotation_Type {
   return ll_cas.ll_getStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_descriptions), i);
   }
    
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @param v value to set
+   */ 
   public void setDescriptions(int addr, int i, String v) {
         if (featOkTst && casFeat_descriptions == null)
       jcas.throwFeatMissing("descriptions", "edu.isistan.uima.unified.typesystems.srl.Role");
@@ -100,19 +125,29 @@ public class Role_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_ocurrencies;
   /** @generated */
   final int     casFeatCode_ocurrencies;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public int getOcurrencies(int addr) {
         if (featOkTst && casFeat_ocurrencies == null)
       jcas.throwFeatMissing("ocurrencies", "edu.isistan.uima.unified.typesystems.srl.Role");
     return ll_cas.ll_getRefValue(addr, casFeatCode_ocurrencies);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setOcurrencies(int addr, int v) {
         if (featOkTst && casFeat_ocurrencies == null)
       jcas.throwFeatMissing("ocurrencies", "edu.isistan.uima.unified.typesystems.srl.Role");
     ll_cas.ll_setRefValue(addr, casFeatCode_ocurrencies, v);}
     
-   /** @generated */
+   /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @return value at index i in the array 
+   */
   public int getOcurrencies(int addr, int i) {
         if (featOkTst && casFeat_ocurrencies == null)
       jcas.throwFeatMissing("ocurrencies", "edu.isistan.uima.unified.typesystems.srl.Role");
@@ -122,7 +157,11 @@ public class Role_Type extends IdentifiableAnnotation_Type {
   return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_ocurrencies), i);
   }
    
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @param v value to set
+   */ 
   public void setOcurrencies(int addr, int i, int v) {
         if (featOkTst && casFeat_ocurrencies == null)
       jcas.throwFeatMissing("ocurrencies", "edu.isistan.uima.unified.typesystems.srl.Role");
@@ -136,7 +175,10 @@ public class Role_Type extends IdentifiableAnnotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+	 * @generated
+	 * @param jcas JCas
+	 * @param casType Type 
+	 */
   public Role_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());

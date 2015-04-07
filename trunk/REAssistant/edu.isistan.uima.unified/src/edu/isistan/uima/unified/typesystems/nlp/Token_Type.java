@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Fri Mar 11 15:22:20 ART 2011 */
+/* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
 package edu.isistan.uima.unified.typesystems.nlp;
 
 import org.apache.uima.jcas.JCas;
@@ -14,10 +14,13 @@ import org.apache.uima.cas.Feature;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Sat Dec 10 16:39:00 ART 2011
+ * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
  * @generated */
 public class Token_Type extends IdentifiableAnnotation_Type {
-  /** @generated */
+  /** @generated 
+   * @return the generator for this type
+   */
+  @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
   /** @generated */
   private final FSGenerator fsGenerator = 
@@ -36,22 +39,30 @@ public class Token_Type extends IdentifiableAnnotation_Type {
   	  }
     };
   /** @generated */
+  @SuppressWarnings ("hiding")
   public final static int typeIndexID = Token.typeIndexID;
   /** @generated 
      @modifiable */
+  @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.isistan.uima.unified.typesystems.nlp.Token");
  
   /** @generated */
   final Feature casFeat_lemma;
   /** @generated */
   final int     casFeatCode_lemma;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getLemma(int addr) {
         if (featOkTst && casFeat_lemma == null)
       jcas.throwFeatMissing("lemma", "edu.isistan.uima.unified.typesystems.nlp.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_lemma);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setLemma(int addr, String v) {
         if (featOkTst && casFeat_lemma == null)
       jcas.throwFeatMissing("lemma", "edu.isistan.uima.unified.typesystems.nlp.Token");
@@ -63,13 +74,19 @@ public class Token_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_morph;
   /** @generated */
   final int     casFeatCode_morph;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getMorph(int addr) {
         if (featOkTst && casFeat_morph == null)
       jcas.throwFeatMissing("morph", "edu.isistan.uima.unified.typesystems.nlp.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_morph);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setMorph(int addr, String v) {
         if (featOkTst && casFeat_morph == null)
       jcas.throwFeatMissing("morph", "edu.isistan.uima.unified.typesystems.nlp.Token");
@@ -81,13 +98,19 @@ public class Token_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_pos;
   /** @generated */
   final int     casFeatCode_pos;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getPos(int addr) {
         if (featOkTst && casFeat_pos == null)
       jcas.throwFeatMissing("pos", "edu.isistan.uima.unified.typesystems.nlp.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_pos);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setPos(int addr, String v) {
         if (featOkTst && casFeat_pos == null)
       jcas.throwFeatMissing("pos", "edu.isistan.uima.unified.typesystems.nlp.Token");
@@ -99,13 +122,19 @@ public class Token_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_probability;
   /** @generated */
   final int     casFeatCode_probability;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public double getProbability(int addr) {
         if (featOkTst && casFeat_probability == null)
       jcas.throwFeatMissing("probability", "edu.isistan.uima.unified.typesystems.nlp.Token");
     return ll_cas.ll_getDoubleValue(addr, casFeatCode_probability);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setProbability(int addr, double v) {
         if (featOkTst && casFeat_probability == null)
       jcas.throwFeatMissing("probability", "edu.isistan.uima.unified.typesystems.nlp.Token");
@@ -117,13 +146,19 @@ public class Token_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_stopword;
   /** @generated */
   final int     casFeatCode_stopword;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public boolean getStopword(int addr) {
         if (featOkTst && casFeat_stopword == null)
       jcas.throwFeatMissing("stopword", "edu.isistan.uima.unified.typesystems.nlp.Token");
     return ll_cas.ll_getBooleanValue(addr, casFeatCode_stopword);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setStopword(int addr, boolean v) {
         if (featOkTst && casFeat_stopword == null)
       jcas.throwFeatMissing("stopword", "edu.isistan.uima.unified.typesystems.nlp.Token");
@@ -135,13 +170,19 @@ public class Token_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_stem;
   /** @generated */
   final int     casFeatCode_stem;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getStem(int addr) {
         if (featOkTst && casFeat_stem == null)
       jcas.throwFeatMissing("stem", "edu.isistan.uima.unified.typesystems.nlp.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_stem);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setStem(int addr, String v) {
         if (featOkTst && casFeat_stem == null)
       jcas.throwFeatMissing("stem", "edu.isistan.uima.unified.typesystems.nlp.Token");
@@ -152,7 +193,10 @@ public class Token_Type extends IdentifiableAnnotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+	 * @generated
+	 * @param jcas JCas
+	 * @param casType Type 
+	 */
   public Token_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
