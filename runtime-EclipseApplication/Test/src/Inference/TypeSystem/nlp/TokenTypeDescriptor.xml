@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>TokenTypeDescriptor</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>Alejandro Rago</vendor>
+  <imports>
+    <import location="../IdentifiableTypeDescriptor.xml"/>
+  </imports>
+  <types>
+    <typeDescription>
+      <name>edu.isistan.uima.unified.typesystems.nlp.Token</name>
+      <description/>
+      <supertypeName>edu.isistan.uima.unified.typesystems.IdentifiableAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>lemma</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>morph</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>pos</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>probability</name>
+          <description/>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>stopword</name>
+          <description/>
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>stem</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

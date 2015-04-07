@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_hPkLcHKwEeGApc-it7rrMQ" Name="CRS" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/EMSC2013/CRS.uima">
+  <CrosscuttingConcerns ID="_8Mv_QHLfEeGBWbpJEc_Odw" Name="Persistence" Description="Encapsulates the access to a data repository used to store information of the CRS">
+    <Impacts ID="_O368MHUVEeGQgossn6OzyA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#102"/>
+    </Impacts>
+    <Impacts ID="_RNDnkHUVEeGQgossn6OzyA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_S5YmgHUVEeGQgossn6OzyA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#112"/>
+    </Impacts>
+    <Impacts ID="_YNM0EHUWEeGQgossn6OzyA">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#122"/>
+    </Impacts>
+    <Impacts ID="_BtflcHUZEeGQgossn6OzyA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#133"/>
+    </Impacts>
+    <Impacts ID="_EmrZEHUZEeGQgossn6OzyA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#141"/>
+    </Impacts>
+    <Impacts ID="_HmVBEHUZEeGQgossn6OzyA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_I_OGoHUZEeGQgossn6OzyA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="CRS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_FU0UoHUdEeGQgossn6OzyA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#172"/>
+    </Impacts>
+    <Impacts ID="_e_hYQHUdEeGQgossn6OzyA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#25"/>
+      <Sentence href="CRS.uima#185"/>
+    </Impacts>
+    <Impacts ID="_YOzyEHUgEeGQgossn6OzyA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_aa0WoHUgEeGQgossn6OzyA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#204"/>
+    </Impacts>
+    <Impacts ID="_a-Uj8HUuEeGQgossn6OzyA">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="CRS.uima#236"/>
+    </Impacts>
+    <Impacts ID="_fqXcUHUuEeGQgossn6OzyA">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#52"/>
+      <Sentence href="CRS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_qq-iAA4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#136"/>
+    </Impacts>
+    <Impacts ID="_qsVM4A4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#174"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_9kf1UHLfEeGBWbpJEc_Odw" Name="Entitlement" Description="Ensures that users are logged and authenticated before accessing any system functionality, and additionally verifying users&#xD;&#xA;have enough permissions to execute certain tasks">
+    <Impacts ID="_fTi2kHUUEeGQgossn6OzyA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#7"/>
+      <Sentence href="CRS.uima#93"/>
+    </Impacts>
+    <Impacts ID="_s5zQ4HUUEeGQgossn6OzyA">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="CRS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_u14jEHUUEeGQgossn6OzyA">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_B-D7kHUaEeGQgossn6OzyA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#21"/>
+      <Sentence href="CRS.uima#160"/>
+    </Impacts>
+    <Impacts ID="_qr8LUA4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#133"/>
+    </Impacts>
+    <Impacts ID="_qsI_oA4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#201"/>
+    </Impacts>
+    <Impacts ID="_qshaIA4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#150"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_C8gb0HLgEeGBWbpJEc_Odw" Name="Communication" Description="Handles all communications performed with other systems, such as the existing legacy system and the billing system">
+    <Impacts ID="_KxiyIHUUEeGQgossn6OzyA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#6"/>
+      <Sentence href="CRS.uima#91"/>
+    </Impacts>
+    <Impacts ID="_7th00HUdEeGQgossn6OzyA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#29"/>
+      <Sentence href="CRS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_rq1kkHUuEeGQgossn6OzyA">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#45"/>
+      <Sentence href="CRS.uima#237"/>
+    </Impacts>
+    <Impacts ID="_r73DIHUuEeGQgossn6OzyA">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#45"/>
+      <Sentence href="CRS.uima#238"/>
+    </Impacts>
+    <Impacts ID="_5vyGAHUuEeGQgossn6OzyA">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#52"/>
+      <Sentence href="CRS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_9VuR8HUuEeGQgossn6OzyA">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#56"/>
+      <Sentence href="CRS.uima#253"/>
+    </Impacts>
+    <Impacts ID="_qrXjkA4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#100"/>
+    </Impacts>
+    <Impacts ID="_qrjw0A4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="CRS.uima#196"/>
+    </Impacts>
+    <Impacts ID="_qrv-EA4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#148"/>
+    </Impacts>
+    <Impacts ID="_qstnYA4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#124"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_IF3iUHLgEeGBWbpJEc_Odw" Name="Ease-of-use" Description="It is in charge of providing several facilities to improve the user experience of CRS (such as cancellation, message confirmations, among others)">
+    <Impacts ID="_1LbzEHUYEeGQgossn6OzyA">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#147"/>
+    </Impacts>
+    <Impacts ID="_h3bcsHUhEeGQgossn6OzyA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="CRS.uima#210"/>
+    </Impacts>
+    <Impacts ID="_wHGJ8HUtEeGQgossn6OzyA">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_qrKvQA4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#15"/>
+      <Sentence href="CRS.uima#129"/>
+    </Impacts>
+    <Impacts ID="_qs6bsA4BEeOqnuTdOM5D5Q">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#42"/>
+      <Sentence href="CRS.uima#231"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_L_MkUHLgEeGBWbpJEc_Odw" Name="Data validation" Description="Manages the validation of certain kind of input data (formatting, invalid characters, etc.)"/>
+  <CrosscuttingConcerns ID="_OUQ-QHLgEeGBWbpJEc_Odw" Name="Error handling" Description="Deals with the treatment of unexpected outputs and incorrect behavior within the CRS">
+    <Impacts ID="_WtDh4HUUEeGQgossn6OzyA">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#6"/>
+      <Sentence href="CRS.uima#91"/>
+    </Impacts>
+    <Impacts ID="_5uzzcHUfEeGQgossn6OzyA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#27"/>
+      <Sentence href="CRS.uima#190"/>
+    </Impacts>
+    <Impacts ID="_78yt8HUfEeGQgossn6OzyA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="CRS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_8PbWEHUfEeGQgossn6OzyA">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="CRS.uima#193"/>
+    </Impacts>
+    <Impacts ID="_zbUKMHUhEeGQgossn6OzyA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#207"/>
+    </Impacts>
+    <Impacts ID="_0O3uEHUhEeGQgossn6OzyA">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#209"/>
+    </Impacts>
+    <Impacts ID="_TsswcHUuEeGQgossn6OzyA">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="CRS.uima#234"/>
+    </Impacts>
+    <Impacts ID="_UXv4kHUuEeGQgossn6OzyA">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="CRS.uima#235"/>
+    </Impacts>
+    <Impacts ID="_SHxkkHUvEeGQgossn6OzyA">
+      <Document href="CRS.uima#70"/>
+      <Section href="CRS.uima#50"/>
+      <Sentence href="CRS.uima#246"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_il58AHUQEeGQgossn6OzyA" Name="Synchronization" Description=""/>
+</edu.isistan.reassistant:REAssistantProject>

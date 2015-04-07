@@ -1,0 +1,34 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST TokenList = {"gui", "interface", "format", "present"}; 
+
+//Simple Query - Presentation-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Presentation", "kind" = "Simple/Direct")} <- {
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "gui" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "interface" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "format" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "present"
+    );
+};
+
+//Advanced Query #1 - Output Actions
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Presentation", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Output"
+    };
+};
+
+//Advanced Query #2 - Display Sentences (A fix for POS and SRL bug)
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Presentation", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.nlp.Token{
+        Token.lemma == "display"
+    };
+};
+
+//Filtering Error-related Sentences
+CrosscuttingConcern{CrosscuttingConcern.name == "Presentation" -> UNMARK(CrosscuttingConcern)} <- {
+    edu.isistan.uima.unified.typesystems.nlp.Token{
+        Token.lemma == "error"
+    };
+};

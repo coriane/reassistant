@@ -1,0 +1,41 @@
+PACKAGE edu.isistan.textmarker;
+
+TYPESYSTEM edu.isistan.uima.unified.typesystems.nlp.SentenceTypeDescriptor;
+TYPESYSTEM edu.isistan.uima.unified.typesystems.nlp.TokenTypeDescriptor;
+TYPESYSTEM edu.isistan.uima.unified.typesystems.domain.DomainNumberTypeDescriptor;
+
+DECLARE Step;
+DECLARE StepNumber;
+DECLARE StepSeparator;
+DECLARE StepJoiner;
+DECLARE StepClosure;
+
+//Shift exiting sentences to the DomainNumber boundaries
+DomainNumber Sentence{ -> SHIFT(Sentence,1,2)};
+Document{ -> RETAINTYPE(BREAK)};
+BREAK ANY[1,10]? Sentence{ -> SHIFT(Sentence,2,3)};
+Document{ -> FILTERTYPE(BREAK)};
+//Remove existing DomainNumber annotations
+DomainNumber{ -> UNMARK(DomainNumber)};
+//Remove spaces in sentences lead and tail
+Sentence{->TRIM(SPACE)};
+
+//Find potential numbers using regular expressions and mark them using the PotentialNumber annotation
+//Sentence{REGEXP("(\\t+|\\s+)?(\\d((\\.|\\-|,)(\\d|x))*(\\s(and|or)\\s)?)+(\\.|:|\\-|\\))?(\t+|\\s+)?") -> MARK(PotentialNumber)};
+
+Document{ -> RETAINTYPE(COMMA,PERIOD,NUM,COLON,SPACE,NBSP)};
+(PERIOD| "-" |COMMA) {->MARK(StepSeparator)};
+(PERIOD|COLON|"-") {->MARK(StepClosure)};
+COMMA? SPACE ("and"|"or") SPACE {->MARK(StepJoiner)};
+//NUM (StepSeparator (NUM | "x"))*? {->MARK(StepNumber(1,2))};
+//StepNumber (StepJoiner StepNumber)*? (StepClosure|SPACE) {-> MARK(Step(1,3))};
+
+//Mark a DomainNumber annotation when a PotentialNumber starts the sentence.
+//Sentence{STARTSWITH(Step) -> MARK(DomainNumber)};
+
+//Remove temporal annotations
+//PotentialNumber{ -> UNMARK(PotentialNumber)};
+
+//Trim the sentences removing the domain numbers detected
+//Sentence{->TRIM(DomainNumber)};
+//Sentence{->TRIM(SPACE)};

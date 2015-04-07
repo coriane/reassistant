@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>CrosscuttingConcernTypeDescriptor</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>Alejandro Rago</vendor>
+  <imports>
+    <import location="../IdentifiableTypeDescriptor.xml"/>
+    <import location="../nlp/SentenceTypeDescriptor.xml"/>
+    <import location="../srs/SectionTypeDescriptor.xml"/>
+    <import location="../srs/DocumentTypeDescriptor.xml"/>
+  </imports>
+  <types>
+    <typeDescription>
+      <name>edu.isistan.uima.unified.typesystems.domain.CrosscuttingConcern</name>
+      <description/>
+      <supertypeName>edu.isistan.uima.unified.typesystems.IdentifiableAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>name</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>kind</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>sentence</name>
+          <description/>
+          <rangeTypeName>edu.isistan.uima.unified.typesystems.nlp.Sentence</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>section</name>
+          <description/>
+          <rangeTypeName>edu.isistan.uima.unified.typesystems.srs.Section</rangeTypeName>
+        </featureDescription>
+      <featureDescription>
+          <name>document</name>
+          <description/>
+          <rangeTypeName>edu.isistan.uima.unified.typesystems.srs.Document</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

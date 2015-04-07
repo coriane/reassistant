@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_1UF_sLk9EeOWMqLFD1nuCQ" Name="HWS-refactored." ProjectURI="/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.ucs" UIMAURI="/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima">
+  <CrosscuttingConcerns ID="_0UTJoLnMEeO8R8fL4Ejrzg" Name="External Communication (DA)" Description="This concern encapsulate and specify how our system interacts with external agents. Those interactions are mainly messages that are communicated forth and backward, establishing a dialog. Several properties may emerge of this concern, such as availability and security quality attributes.">
+    <Impacts ID="_0UTJobnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#66"/>
+      <Section href="HWS-refactored.uima#49"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#232"/>
+    </Impacts>
+    <Impacts ID="_0UYCILnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#66"/>
+      <Section href="HWS-refactored.uima#46"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#225"/>
+    </Impacts>
+    <Impacts ID="_0UbFcLnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#66"/>
+      <Section href="HWS-refactored.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#219"/>
+    </Impacts>
+    <Impacts ID="_0Uev0LnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#65"/>
+      <Section href="HWS-refactored.uima#42"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#217"/>
+    </Impacts>
+    <Impacts ID="_0UiaMLnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#65"/>
+      <Section href="HWS-refactored.uima#42"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#211"/>
+    </Impacts>
+    <Impacts ID="_0UldgLnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#58"/>
+      <Section href="HWS-refactored.uima#24"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#167"/>
+    </Impacts>
+    <Impacts ID="_0UpH4LnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#57"/>
+      <Section href="HWS-refactored.uima#19"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#153"/>
+    </Impacts>
+    <Impacts ID="_0UsyQLnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#54"/>
+      <Section href="HWS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#130"/>
+    </Impacts>
+    <Impacts ID="_0Uv1kLnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#53"/>
+      <Section href="HWS-refactored.uima#6"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#117"/>
+    </Impacts>
+    <Impacts ID="_0U0HALnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#102"/>
+    </Impacts>
+    <Impacts ID="_0U3KULnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#93"/>
+    </Impacts>
+    <Impacts ID="_0U6NoLnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#87"/>
+    </Impacts>
+    <Impacts ID="_0U94ALnMEeO8R8fL4Ejrzg" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#81"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_0VBiYLnMEeO8R8fL4Ejrzg" Name="Presentation (DA)" Description="This concerns encapsulates functionality focused on the preprocessing and arrangement of the information before outputting in a display.">
+    <Impacts ID="_0VBiYbnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#66"/>
+      <Section href="HWS-refactored.uima#51"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#235"/>
+    </Impacts>
+    <Impacts ID="_0VElsLnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#66"/>
+      <Section href="HWS-refactored.uima#50"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#234"/>
+    </Impacts>
+    <Impacts ID="_0VJeMLnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#66"/>
+      <Section href="HWS-refactored.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#219"/>
+    </Impacts>
+    <Impacts ID="_0VMhgLnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#65"/>
+      <Section href="HWS-refactored.uima#42"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#215"/>
+    </Impacts>
+    <Impacts ID="_0VPk0LnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#65"/>
+      <Section href="HWS-refactored.uima#42"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#209"/>
+    </Impacts>
+    <Impacts ID="_0VVEYLnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#54"/>
+      <Section href="HWS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#133"/>
+    </Impacts>
+    <Impacts ID="_0VYuwLnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#53"/>
+      <Section href="HWS-refactored.uima#6"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#125"/>
+    </Impacts>
+    <Impacts ID="_0VdAMLnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#107"/>
+    </Impacts>
+    <Impacts ID="_0VgqkLnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#78"/>
+    </Impacts>
+    <Impacts ID="_0Vjt4LnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#75"/>
+    </Impacts>
+    <Impacts ID="_0Vn_ULnMEeO8R8fL4Ejrzg" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#72"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_0VrpsbnMEeO8R8fL4Ejrzg" Name="Persistence (DA)" Description="Allows system data to be written in an storage media. This concerns affects functionality that involves the accessing of data, and the main idea is to decouple the way data is handled.">
+    <Impacts ID="_0VrpsrnMEeO8R8fL4Ejrzg" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="HWS-refactored.uima#66"/>
+      <Section href="HWS-refactored.uima#51"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#235"/>
+    </Impacts>
+    <Impacts ID="_0VutALnMEeO8R8fL4Ejrzg" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="HWS-refactored.uima#61"/>
+      <Section href="HWS-refactored.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#187"/>
+    </Impacts>
+    <Impacts ID="_0Vy-cLnMEeO8R8fL4Ejrzg" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="HWS-refactored.uima#61"/>
+      <Section href="HWS-refactored.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#183"/>
+    </Impacts>
+    <Impacts ID="_0V2BwLnMEeO8R8fL4Ejrzg" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="HWS-refactored.uima#56"/>
+      <Section href="HWS-refactored.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#144"/>
+    </Impacts>
+    <Impacts ID="_0V5FELnMEeO8R8fL4Ejrzg" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="HWS-refactored.uima#55"/>
+      <Section href="HWS-refactored.uima#14"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#141"/>
+    </Impacts>
+    <Impacts ID="_0V8vcLnMEeO8R8fL4Ejrzg" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="HWS-refactored.uima#55"/>
+      <Section href="HWS-refactored.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#137"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_0V_ywLnMEeO8R8fL4Ejrzg" Name="Integrity Management (DA)" Description="Allows the system to perform conformance verifications both on the information inputted and outputted. This way, the consistency of the data is assured.">
+    <Impacts ID="_0V_ywbnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#65"/>
+      <Section href="HWS-refactored.uima#42"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#218"/>
+    </Impacts>
+    <Impacts ID="_0WC2ELnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#65"/>
+      <Section href="HWS-refactored.uima#42"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#212"/>
+    </Impacts>
+    <Impacts ID="_0WHHgLnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#62"/>
+      <Section href="HWS-refactored.uima#36"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#192"/>
+    </Impacts>
+    <Impacts ID="_0WKK0LnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#62"/>
+      <Section href="HWS-refactored.uima#36"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#189"/>
+    </Impacts>
+    <Impacts ID="_0WN1MLnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#58"/>
+      <Section href="HWS-refactored.uima#24"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#169"/>
+    </Impacts>
+    <Impacts ID="_0WRfkLnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#57"/>
+      <Section href="HWS-refactored.uima#19"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#155"/>
+    </Impacts>
+    <Impacts ID="_0WUi4LnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#53"/>
+      <Section href="HWS-refactored.uima#6"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#124"/>
+    </Impacts>
+    <Impacts ID="_0WXmMLnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#103"/>
+    </Impacts>
+    <Impacts ID="_0WbQkLnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#94"/>
+    </Impacts>
+    <Impacts ID="_0WeT4LnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#88"/>
+    </Impacts>
+    <Impacts ID="_0Wh-QLnMEeO8R8fL4Ejrzg" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#82"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_0WlooLnMEeO8R8fL4Ejrzg" Name="Error Management (DA)" Description="Concerns with mechanisms for managing errors and exceptions that take place while running the system.">
+    <Impacts ID="_0WloobnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#64"/>
+      <Section href="HWS-refactored.uima#41"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#206"/>
+    </Impacts>
+    <Impacts ID="_0WpTALnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#64"/>
+      <Section href="HWS-refactored.uima#40"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#204"/>
+    </Impacts>
+    <Impacts ID="_0WsWULnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#64"/>
+      <Section href="HWS-refactored.uima#40"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#202"/>
+    </Impacts>
+    <Impacts ID="_0WvZoLnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#63"/>
+      <Section href="HWS-refactored.uima#38"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#199"/>
+    </Impacts>
+    <Impacts ID="_0WzEALnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#63"/>
+      <Section href="HWS-refactored.uima#38"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#196"/>
+    </Impacts>
+    <Impacts ID="_0W2HULnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#62"/>
+      <Section href="HWS-refactored.uima#36"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#189"/>
+    </Impacts>
+    <Impacts ID="_0W6_0LnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#61"/>
+      <Section href="HWS-refactored.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#185"/>
+    </Impacts>
+    <Impacts ID="_0W-DILnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#57"/>
+      <Section href="HWS-refactored.uima#21"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#160"/>
+    </Impacts>
+    <Impacts ID="_0XBGcLnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#57"/>
+      <Section href="HWS-refactored.uima#21"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#159"/>
+    </Impacts>
+    <Impacts ID="_0XEw0LnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#57"/>
+      <Section href="HWS-refactored.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#157"/>
+    </Impacts>
+    <Impacts ID="_0XIbMLnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#54"/>
+      <Section href="HWS-refactored.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#134"/>
+    </Impacts>
+    <Impacts ID="_0XNTsLnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#53"/>
+      <Section href="HWS-refactored.uima#7"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#126"/>
+    </Impacts>
+    <Impacts ID="_0XQXALnMEeO8R8fL4Ejrzg" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="HWS-refactored.uima#52"/>
+      <Section href="HWS-refactored.uima#3"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#108"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_0XlHIbnMEeO8R8fL4Ejrzg" Name="User Access Control (DA)" Description="Defines contraints regarding the access level of given user / role to carry out a particular task / operation.">
+    <Impacts ID="_0XlHIrnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#66"/>
+      <Section href="HWS-refactored.uima#46"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#226"/>
+    </Impacts>
+    <Impacts ID="_0XoKcLnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#66"/>
+      <Section href="HWS-refactored.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#219"/>
+    </Impacts>
+    <Impacts ID="_0Xsb4LnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#60"/>
+      <Section href="HWS-refactored.uima#33"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#182"/>
+    </Impacts>
+    <Impacts ID="_0XxUYLnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#60"/>
+      <Section href="HWS-refactored.uima#31"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#180"/>
+    </Impacts>
+    <Impacts ID="_0X0XsLnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#58"/>
+      <Section href="HWS-refactored.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#171"/>
+    </Impacts>
+    <Impacts ID="_0X3bALnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#58"/>
+      <Section href="HWS-refactored.uima#24"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#165"/>
+    </Impacts>
+    <Impacts ID="_0X6eULnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#57"/>
+      <Section href="HWS-refactored.uima#19"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#151"/>
+    </Impacts>
+    <Impacts ID="_0X9hoLnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#54"/>
+      <Section href="HWS-refactored.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#136"/>
+    </Impacts>
+    <Impacts ID="_0YBMALnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#54"/>
+      <Section href="HWS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#133"/>
+    </Impacts>
+    <Impacts ID="_0YE2YLnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#54"/>
+      <Section href="HWS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#132"/>
+    </Impacts>
+    <Impacts ID="_0YHSoLnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#54"/>
+      <Section href="HWS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#131"/>
+    </Impacts>
+    <Impacts ID="_0YKV8LnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#54"/>
+      <Section href="HWS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#130"/>
+    </Impacts>
+    <Impacts ID="_0YNZQLnMEeO8R8fL4Ejrzg" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="HWS-refactored.uima#54"/>
+      <Section href="HWS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/HWS-refactored/HWS-refactored.uima#129"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

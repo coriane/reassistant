@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="__uD-gJdUEeCJw7uz8Yq9BA" Name="HWS" ProjectURI="/Test/src/HWS/HWS.ucs" UIMAURI="/Test/src/HWS/EMSC2013/HWS.uima">
+  <CrosscuttingConcerns ID="_Wk58EGCHEeGUj8PECRXuBA" Name="Data Formatting" Description="Deals with the presentation and formatting of several outputs of the HWS">
+    <Impacts ID="_FseNAGFQEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_cyJIEGFQEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#126"/>
+    </Impacts>
+    <Impacts ID="_pKZeMGFQEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#170"/>
+    </Impacts>
+    <Impacts ID="_t5g4sGFQEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#23"/>
+      <Sentence href="HWS.uima#176"/>
+    </Impacts>
+    <Impacts ID="_1rBGIGFQEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#230"/>
+    </Impacts>
+    <Impacts ID="_VxjkwGFREeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#236"/>
+    </Impacts>
+    <Impacts ID="_XAmKwGFREeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#43"/>
+      <Sentence href="HWS.uima#237"/>
+    </Impacts>
+    <Impacts ID="_1F1DgGFSEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#50"/>
+      <Sentence href="HWS.uima#255"/>
+    </Impacts>
+    <Impacts ID="_zI7wUA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#186"/>
+    </Impacts>
+    <Impacts ID="_zJ714A4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#34"/>
+      <Sentence href="HWS.uima#208"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_aFNaEGCHEeGUj8PECRXuBA" Name="Persistence" Description="Handles all operations within the HWS that need to be stored and accessed through a data store">
+    <Impacts ID="_FA5ZEGFTEeGU0_sN32KNxA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#7"/>
+      <Sentence href="HWS.uima#123"/>
+    </Impacts>
+    <Impacts ID="_KErcAGFTEeGU0_sN32KNxA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#78"/>
+    </Impacts>
+    <Impacts ID="_PMMIYGFTEeGU0_sN32KNxA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_RG_oMGFTEeGU0_sN32KNxA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#82"/>
+    </Impacts>
+    <Impacts ID="_wHwKgGFTEeGU0_sN32KNxA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#103"/>
+    </Impacts>
+    <Impacts ID="_383FkGFTEeGU0_sN32KNxA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#115"/>
+    </Impacts>
+    <Impacts ID="_BGjN8GFUEeGU0_sN32KNxA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#14"/>
+      <Sentence href="HWS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_EuDgIGFUEeGU0_sN32KNxA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#129"/>
+    </Impacts>
+    <Impacts ID="_QRzQIGFUEeGU0_sN32KNxA">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#136"/>
+    </Impacts>
+    <Impacts ID="_glkZkGFUEeGU0_sN32KNxA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="HWS.uima#157"/>
+    </Impacts>
+    <Impacts ID="_o4pqEGFUEeGU0_sN32KNxA">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#20"/>
+      <Sentence href="HWS.uima#164"/>
+    </Impacts>
+    <Impacts ID="_s4nfkGFUEeGU0_sN32KNxA">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#28"/>
+      <Sentence href="HWS.uima#193"/>
+    </Impacts>
+    <Impacts ID="_lH_mcGFVEeGU0_sN32KNxA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#49"/>
+      <Sentence href="HWS.uima#253"/>
+    </Impacts>
+    <Impacts ID="_2b1s0GFVEeGU0_sN32KNxA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#44"/>
+      <Sentence href="HWS.uima#242"/>
+    </Impacts>
+    <Impacts ID="_6NvRIGFVEeGU0_sN32KNxA">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#249"/>
+    </Impacts>
+    <Impacts ID="_GbC7gGFWEeGU0_sN32KNxA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#61"/>
+      <Sentence href="HWS.uima#274"/>
+    </Impacts>
+    <Impacts ID="_zI1psA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_zJHWgA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#111"/>
+    </Impacts>
+    <Impacts ID="_zJaRcA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#35"/>
+      <Sentence href="HWS.uima#210"/>
+    </Impacts>
+    <Impacts ID="_zJrXMA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#98"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_x_higBxJEeGewbV9oo7PSQ" Name="Consistency" Description="Is in charge of verifying that inputs of the HWS system are consistent">
+    <Impacts ID="_eFoaIGFZEeGU0_sN32KNxA">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#99"/>
+    </Impacts>
+    <Impacts ID="_zJB28A4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#184"/>
+    </Impacts>
+    <Impacts ID="_zJTjwA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#214"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_BM1-EBxGEeGewbV9oo7PSQ" Name="Distribution" Description="Manages all the interaction between distributed clients and the main server of the system">
+    <Impacts ID="_V6AAAGFaEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#86"/>
+    </Impacts>
+    <Impacts ID="_kFvF8GFaEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#9"/>
+      <Sentence href="HWS.uima#130"/>
+    </Impacts>
+    <Impacts ID="_qPJUMGFaEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#16"/>
+      <Sentence href="HWS.uima#155"/>
+    </Impacts>
+    <Impacts ID="_EW6HQGFbEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#45"/>
+      <Sentence href="HWS.uima#244"/>
+    </Impacts>
+    <Impacts ID="_PL7JAGFbEeGU0_sN32KNxA" CompositionRule="Overlap">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#59"/>
+      <Sentence href="HWS.uima#272"/>
+    </Impacts>
+    <Impacts ID="_zJlQkA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_zKBVcA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#116"/>
+    </Impacts>
+    <Impacts ID="_zKG1AA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#70"/>
+      <Section href="HWS.uima#50"/>
+      <Sentence href="HWS.uima#254"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_bBFzgGCHEeGUj8PECRXuBA" Name="Access Control" Description="Addresses the task of ensuring that only authenticated users (employees) can execute restricted functionality">
+    <Impacts ID="_aSTnkGFbEeGU0_sN32KNxA">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#19"/>
+      <Sentence href="HWS.uima#161"/>
+    </Impacts>
+    <Impacts ID="_hFS-UGFbEeGU0_sN32KNxA">
+      <Document href="HWS.uima#65"/>
+      <Section href="HWS.uima#21"/>
+      <Sentence href="HWS.uima#165"/>
+    </Impacts>
+    <Impacts ID="_rfhPkGFdEeGU0_sN32KNxA">
+      <Document href="HWS.uima#71"/>
+      <Section href="HWS.uima#56"/>
+      <Sentence href="HWS.uima#265"/>
+    </Impacts>
+    <Impacts ID="_zJfxAA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#111"/>
+    </Impacts>
+    <Impacts ID="_zJw2wA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#17"/>
+      <Sentence href="HWS.uima#158"/>
+    </Impacts>
+    <Impacts ID="_zJ2WUA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#117"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_8CYkABxIEeGewbV9oo7PSQ" Name="Error Handling" Description="Manages the behavior of the HWS system when an error occurs">
+    <Impacts ID="_GLSZgGFcEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#3"/>
+      <Sentence href="HWS.uima#113"/>
+    </Impacts>
+    <Impacts ID="_G2R3QGFcEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#3"/>
+      <Sentence href="HWS.uima#114"/>
+    </Impacts>
+    <Impacts ID="_JBOr4GFcEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#4"/>
+      <Sentence href="HWS.uima#117"/>
+    </Impacts>
+    <Impacts ID="_SB-6sGFcEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#10"/>
+      <Sentence href="HWS.uima#139"/>
+    </Impacts>
+    <Impacts ID="_gxSnwGFcEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#63"/>
+      <Section href="HWS.uima#10"/>
+      <Sentence href="HWS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_xEOqwGFcEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#64"/>
+      <Section href="HWS.uima#18"/>
+      <Sentence href="HWS.uima#160"/>
+    </Impacts>
+    <Impacts ID="_0qKPoGFcEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#24"/>
+      <Sentence href="HWS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_6_7e4GFcEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#185"/>
+    </Impacts>
+    <Impacts ID="_7pn8IGFcEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#25"/>
+      <Sentence href="HWS.uima#187"/>
+    </Impacts>
+    <Impacts ID="_BkEhUGFdEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#66"/>
+      <Section href="HWS.uima#27"/>
+      <Sentence href="HWS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_JVfPMGFdEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#33"/>
+      <Sentence href="HWS.uima#206"/>
+    </Impacts>
+    <Impacts ID="_OF1_0GFdEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#34"/>
+      <Sentence href="HWS.uima#208"/>
+    </Impacts>
+    <Impacts ID="_Ufsd0GFdEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#67"/>
+      <Section href="HWS.uima#36"/>
+      <Sentence href="HWS.uima#215"/>
+    </Impacts>
+    <Impacts ID="_iF3_oGFdEeGU0_sN32KNxA" CompositionRule="Override">
+      <Document href="HWS.uima#69"/>
+      <Section href="HWS.uima#47"/>
+      <Sentence href="HWS.uima#249"/>
+    </Impacts>
+    <Impacts ID="_zJNdIA4CEeOSQPB65hyzUw">
+      <Document href="HWS.uima#62"/>
+      <Section href="HWS.uima#2"/>
+      <Sentence href="HWS.uima#104"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

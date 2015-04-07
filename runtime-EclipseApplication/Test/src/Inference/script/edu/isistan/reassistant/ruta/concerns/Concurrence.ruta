@@ -1,0 +1,25 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST TokenList = {"concurr", "parallel", "simultan"}; 
+
+//Simple Query - Concurrence-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Concurrence", "kind" = "Simple/Direct")} <- {
+    (edu.isistan.uima.unified.typesystems.nlp.Token.stem == "concurr" |
+    edu.isistan.uima.unified.typesystems.nlp.Token.stem == "parallel" |
+    edu.isistan.uima.unified.typesystems.nlp.Token.stem == "simultan");
+};
+
+//Advanced Query - Process Actions Involving Synchronism
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Concurrence", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainActor{
+        DomainActor.kind == "SYSTEM"
+    } %
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Process"
+    } %
+    (edu.isistan.uima.unified.typesystems.nlp.Token.stem == "synchron" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "sync" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "progress" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "task" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "session");
+};

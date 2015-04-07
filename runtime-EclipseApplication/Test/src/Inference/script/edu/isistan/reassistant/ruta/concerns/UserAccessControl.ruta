@@ -1,0 +1,38 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST TokenList = {"password", "username", "login", "sign", "access", "credential", "priviledge", "right", "permission"};
+
+//Simple Query - UAC-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "User Access Control", "kind" = "Simple/Direct")} <- {
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "password" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "username" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "login" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "sign" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "access" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "credential" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "priviledge" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "right" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "permission"
+    );
+};
+
+
+//Advanced Query - Verification Actions involving Actors
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "User Access Control", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainActor{
+        DomainActor.kind == "HUMAN"
+    } %
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Verification"
+    };
+};
+
+//Filtering Data-related Sentences
+CrosscuttingConcern{CrosscuttingConcern.name == "User Access Control" -> UNMARK(CrosscuttingConcern)} <- {
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.lemma == "data"} |
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.lemma == "information"} |
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.lemma == "result"} 
+    );
+};

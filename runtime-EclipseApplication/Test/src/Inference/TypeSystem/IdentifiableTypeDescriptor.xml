@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>IdentifiableTypeDescriptor</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>Alejandro Rago</vendor>
+  <types>
+    <typeDescription>
+      <name>edu.isistan.uima.unified.typesystems.IdentifiableAnnotation</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>identification</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

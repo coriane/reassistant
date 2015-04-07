@@ -1,0 +1,20 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST TokenList = {"preserv", "timeout", "lost", "abnormal"}; 
+
+//Simple Query - Reliability-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Reliability", "kind" = "Simple/Direct")} <- {
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token.stem == "preserv" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "timeout" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "lost" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "abnormal"
+    );
+};
+
+//Advanced Query - Communication Actions
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Reliability", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Communication"
+    };
+};

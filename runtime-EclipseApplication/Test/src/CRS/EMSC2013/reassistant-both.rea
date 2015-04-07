@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_Tm95kHanEeGQgossn6OzyA" Name="CRS" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/EMSC2013/CRS.uima">
+  <CrosscuttingConcerns ID="_YsQPwHdUEeGDn-JouGtPmw" Name="Integrity Management" Description="Allows the system to perform conformance verifications both on the information inputted and outputted. This way, the consistency of the data is assured.">
+    <Impacts ID="_YsQPwXdUEeGDn-JouGtPmw" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#133"/>
+    </Impacts>
+    <Impacts ID="_YsdEEHdUEeGDn-JouGtPmw" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#101"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_Ysp4YHdUEeGDn-JouGtPmw" Name="Error Management" Description="Concerns with mechanisms for managing errors and exceptions that take place while running the system.">
+    <Impacts ID="_YsqfcHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#42"/>
+      <Sentence href="CRS.uima#230"/>
+    </Impacts>
+    <Impacts ID="_Ys2FoHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#39"/>
+      <Sentence href="CRS.uima#225"/>
+    </Impacts>
+    <Impacts ID="_YtCS4HdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="CRS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_YtOgIHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#209"/>
+    </Impacts>
+    <Impacts ID="_YtatYHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="CRS.uima#197"/>
+    </Impacts>
+    <Impacts ID="_Ytm6oHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#29"/>
+      <Sentence href="CRS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_Yt0WAHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="CRS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_YuAjQHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#27"/>
+      <Sentence href="CRS.uima#191"/>
+    </Impacts>
+    <Impacts ID="_YuMwgHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#20"/>
+      <Sentence href="CRS.uima#159"/>
+    </Impacts>
+    <Impacts ID="_YuY9wHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="CRS.uima#157"/>
+    </Impacts>
+    <Impacts ID="_YulLAHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="CRS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_Yux_UHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#14"/>
+      <Sentence href="CRS.uima#128"/>
+    </Impacts>
+    <Impacts ID="_Yu9lgHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#13"/>
+      <Sentence href="CRS.uima#126"/>
+    </Impacts>
+    <Impacts ID="_YvJywHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#13"/>
+      <Sentence href="CRS.uima#125"/>
+    </Impacts>
+    <Impacts ID="_YvWAAHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#97"/>
+    </Impacts>
+    <Impacts ID="_Yvi0UHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_YvvooHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#6"/>
+      <Sentence href="CRS.uima#91"/>
+    </Impacts>
+    <Impacts ID="_Yv714HdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="CRS.uima#90"/>
+    </Impacts>
+    <Impacts ID="_YwHcEHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="CRS.uima#89"/>
+    </Impacts>
+    <Impacts ID="_YwTpUHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="CRS.uima#83"/>
+    </Impacts>
+    <Impacts ID="_YwhEsHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="CRS.uima#82"/>
+    </Impacts>
+    <Impacts ID="_Ywt5AHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="CRS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_Yw6tUHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#78"/>
+    </Impacts>
+    <Impacts ID="_YxHhoHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_YxUV8HdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="CRS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_YxhxUHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#27"/>
+      <Sentence href="CRS.uima#190"/>
+    </Impacts>
+    <Impacts ID="_YxuloHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="CRS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_Yx6y4HdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#29"/>
+      <Sentence href="CRS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_YyIOQHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#33"/>
+      <Sentence href="CRS.uima#205"/>
+    </Impacts>
+    <Impacts ID="_YyVCkHdUEeGDn-JouGtPmw" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#207"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_YyhP0HdUEeGDn-JouGtPmw" Name="User Access Control" Description="Defines contraints regarding the access level of given user / role to carry out a particular task / operation.">
+    <Impacts ID="_YyhP0XdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#72"/>
+      <Section href="CRS.uima#54"/>
+      <Sentence href="CRS.uima#251"/>
+    </Impacts>
+    <Impacts ID="_YytdEHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#52"/>
+      <Sentence href="CRS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_Yy6RYHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#203"/>
+    </Impacts>
+    <Impacts ID="_YzGeoHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#97"/>
+    </Impacts>
+    <Impacts ID="_YzSE0HdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_YzdrAHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="CRS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_YzqfUHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#5"/>
+      <Sentence href="CRS.uima#89"/>
+    </Impacts>
+    <Impacts ID="_Yz3ToHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#3"/>
+      <Sentence href="CRS.uima#81"/>
+    </Impacts>
+    <Impacts ID="_Y0Dg4HdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#79"/>
+    </Impacts>
+    <Impacts ID="_Y0QVMHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#79"/>
+    </Impacts>
+    <Impacts ID="_Y0flwHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_Y0vdYHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#181"/>
+    </Impacts>
+    <Impacts ID="_Y09f0HdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#182"/>
+    </Impacts>
+    <Impacts ID="_Y1JtEHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#26"/>
+      <Sentence href="CRS.uima#187"/>
+    </Impacts>
+    <Impacts ID="_Y1WhYHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#27"/>
+      <Sentence href="CRS.uima#190"/>
+    </Impacts>
+    <Impacts ID="_Y1jVsHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="CRS.uima#196"/>
+    </Impacts>
+    <Impacts ID="_Y1vi8HdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="CRS.uima#197"/>
+    </Impacts>
+    <Impacts ID="_Y18XQHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#31"/>
+      <Sentence href="CRS.uima#198"/>
+    </Impacts>
+    <Impacts ID="_Y2IkgHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#203"/>
+    </Impacts>
+    <Impacts ID="_Y2UKsHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="CRS.uima#210"/>
+    </Impacts>
+    <Impacts ID="_Y2g_AHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="CRS.uima#211"/>
+    </Impacts>
+    <Impacts ID="_Y2tMQHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="CRS.uima#212"/>
+    </Impacts>
+    <Impacts ID="_Y25ZgHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#36"/>
+      <Sentence href="CRS.uima#213"/>
+    </Impacts>
+    <Impacts ID="_Y3FmwHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#216"/>
+    </Impacts>
+    <Impacts ID="_Y3R0AHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#39"/>
+      <Sentence href="CRS.uima#224"/>
+    </Impacts>
+    <Impacts ID="_Y3fPYHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#40"/>
+      <Sentence href="CRS.uima#226"/>
+    </Impacts>
+    <Impacts ID="_Y3sDsHdUEeGDn-JouGtPmw" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#43"/>
+      <Sentence href="CRS.uima#232"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_Y344AHdUEeGDn-JouGtPmw" Name="Presentation" Description="This concerns encapsulates functionality focused on the preprocessing and arrangement of the information before outputting in a display.">
+    <Impacts ID="_Y344AXdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#59"/>
+      <Sentence href="CRS.uima#258"/>
+    </Impacts>
+    <Impacts ID="_Y4FFQHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#58"/>
+      <Sentence href="CRS.uima#257"/>
+    </Impacts>
+    <Impacts ID="_Y4R5kHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#56"/>
+      <Sentence href="CRS.uima#253"/>
+    </Impacts>
+    <Impacts ID="_Y4et4HdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#47"/>
+      <Sentence href="CRS.uima#240"/>
+    </Impacts>
+    <Impacts ID="_Y4q7IHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="CRS.uima#228"/>
+    </Impacts>
+    <Impacts ID="_Y43IYHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#133"/>
+    </Impacts>
+    <Impacts ID="_Y5DVoHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#101"/>
+    </Impacts>
+    <Impacts ID="_Y5Pi4HdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#42"/>
+      <Sentence href="CRS.uima#230"/>
+    </Impacts>
+    <Impacts ID="_Y5bwIHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="CRS.uima#229"/>
+    </Impacts>
+    <Impacts ID="_Y5n9YHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="CRS.uima#210"/>
+    </Impacts>
+    <Impacts ID="_Y51YwHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#208"/>
+    </Impacts>
+    <Impacts ID="_Y6GegHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#200"/>
+    </Impacts>
+    <Impacts ID="_Y6VIAHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_Y6jKcHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="CRS.uima#196"/>
+    </Impacts>
+    <Impacts ID="_Y6zCEHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_Y7EH0HdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#169"/>
+    </Impacts>
+    <Impacts ID="_Y7UmgHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#103"/>
+    </Impacts>
+    <Impacts ID="_Y7lFMHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="CRS.uima#87"/>
+    </Impacts>
+    <Impacts ID="_Y72yAHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#77"/>
+    </Impacts>
+    <Impacts ID="_Y8Ie0HdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="CRS.uima#228"/>
+    </Impacts>
+    <Impacts ID="_Y8ZkkHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#218"/>
+    </Impacts>
+    <Impacts ID="_Y8pcMHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_Y84swHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#171"/>
+    </Impacts>
+    <Impacts ID="_Y9H9UHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#162"/>
+    </Impacts>
+    <Impacts ID="_Y9XN4HdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#151"/>
+    </Impacts>
+    <Impacts ID="_Y9mecHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_Y91vAHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#147"/>
+    </Impacts>
+    <Impacts ID="_Y-FmoHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_Y-X6gHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#138"/>
+    </Impacts>
+    <Impacts ID="_Y-sDkHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#131"/>
+    </Impacts>
+    <Impacts ID="_Y-8iQHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#120"/>
+    </Impacts>
+    <Impacts ID="_Y_NA8HdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_Y_etwHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#116"/>
+    </Impacts>
+    <Impacts ID="_Y_vMcHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_Y_-dAHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#107"/>
+    </Impacts>
+    <Impacts ID="_ZAMfcHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#99"/>
+    </Impacts>
+    <Impacts ID="_ZBtiYHdUEeGDn-JouGtPmw" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="CRS.uima#95"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZB_PMHdUEeGDn-JouGtPmw" Name="External Communication" Description="This concern encapsulate and specify how our system interacts with external agents. Those interactions are mainly messages that are communicated forth and backward, establishing a dialog. Several properties may emerge of this concern, such as availability and security quality attributes.">
+    <Impacts ID="_ZB_PMXdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#58"/>
+      <Sentence href="CRS.uima#257"/>
+    </Impacts>
+    <Impacts ID="_ZCPG0HdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#57"/>
+      <Sentence href="CRS.uima#256"/>
+    </Impacts>
+    <Impacts ID="_ZCeXYHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#72"/>
+      <Section href="CRS.uima#54"/>
+      <Sentence href="CRS.uima#250"/>
+    </Impacts>
+    <Impacts ID="_ZCwrQHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="CRS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_ZDAi4HdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#48"/>
+      <Sentence href="CRS.uima#243"/>
+    </Impacts>
+    <Impacts ID="_ZDRBkHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#48"/>
+      <Sentence href="CRS.uima#242"/>
+    </Impacts>
+    <Impacts ID="_ZDjVcHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#69"/>
+      <Section href="CRS.uima#48"/>
+      <Sentence href="CRS.uima#241"/>
+    </Impacts>
+    <Impacts ID="_ZDzNEHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#45"/>
+      <Sentence href="CRS.uima#237"/>
+    </Impacts>
+    <Impacts ID="_ZEES0HdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#25"/>
+      <Sentence href="CRS.uima#184"/>
+    </Impacts>
+    <Impacts ID="_ZEXNwHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#175"/>
+    </Impacts>
+    <Impacts ID="_ZEo6kHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#165"/>
+    </Impacts>
+    <Impacts ID="_ZE71gHdUEeGDn-JouGtPmw" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#80"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZFMUMHdUEeGDn-JouGtPmw" Name="Persistence" Description="Allows system data to be written in an storage media. This concerns affects functionality that involves the accessing of data, and the main idea is to decouple the way data is handled.">
+    <Impacts ID="_ZFMUMXdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#55"/>
+      <Sentence href="CRS.uima#252"/>
+    </Impacts>
+    <Impacts ID="_ZFdZ8HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#52"/>
+      <Sentence href="CRS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_ZFvGwHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="CRS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_ZF--YHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="CRS.uima#236"/>
+    </Impacts>
+    <Impacts ID="_ZGQEIHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="CRS.uima#236"/>
+    </Impacts>
+    <Impacts ID="_ZGhJ4HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#42"/>
+      <Sentence href="CRS.uima#230"/>
+    </Impacts>
+    <Impacts ID="_ZGxokHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="CRS.uima#228"/>
+    </Impacts>
+    <Impacts ID="_ZHDVYHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="CRS.uima#227"/>
+    </Impacts>
+    <Impacts ID="_ZHTNAHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#221"/>
+    </Impacts>
+    <Impacts ID="_ZHidkHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#217"/>
+    </Impacts>
+    <Impacts ID="_ZHy8QHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#216"/>
+    </Impacts>
+    <Impacts ID="_ZIFQIHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#35"/>
+      <Sentence href="CRS.uima#212"/>
+    </Impacts>
+    <Impacts ID="_ZIYLEHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#207"/>
+    </Impacts>
+    <Impacts ID="_ZIopwHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#202"/>
+    </Impacts>
+    <Impacts ID="_ZI36UHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_ZJGj0HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="CRS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_ZJWbcHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#26"/>
+      <Sentence href="CRS.uima#189"/>
+    </Impacts>
+    <Impacts ID="_ZJovUHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_ZJ7qQHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_ZKN-IHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#177"/>
+    </Impacts>
+    <Impacts ID="_ZKd1wHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#172"/>
+    </Impacts>
+    <Impacts ID="_ZKwJoHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#170"/>
+    </Impacts>
+    <Impacts ID="_ZLAoUHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#169"/>
+    </Impacts>
+    <Impacts ID="_ZLP44HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#167"/>
+    </Impacts>
+    <Impacts ID="_ZLg-oHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#163"/>
+    </Impacts>
+    <Impacts ID="_ZLwPMHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#161"/>
+    </Impacts>
+    <Impacts ID="_ZL_fwHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#19"/>
+      <Sentence href="CRS.uima#156"/>
+    </Impacts>
+    <Impacts ID="_ZMP-cHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#155"/>
+    </Impacts>
+    <Impacts ID="_ZMhrQHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#154"/>
+    </Impacts>
+    <Impacts ID="_ZMyJ8HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_ZNCBkHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#151"/>
+    </Impacts>
+    <Impacts ID="_ZNSgQHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_ZNi-8HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#148"/>
+    </Impacts>
+    <Impacts ID="_ZN154HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#144"/>
+    </Impacts>
+    <Impacts ID="_ZOI00HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#141"/>
+    </Impacts>
+    <Impacts ID="_ZObIsHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_ZOqZQHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#139"/>
+    </Impacts>
+    <Impacts ID="_ZO8GEHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#136"/>
+    </Impacts>
+    <Impacts ID="_ZPNL0HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#135"/>
+    </Impacts>
+    <Impacts ID="_ZPdDcHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#134"/>
+    </Impacts>
+    <Impacts ID="_ZPtiIHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#124"/>
+    </Impacts>
+    <Impacts ID="_ZP9ZwHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#123"/>
+    </Impacts>
+    <Impacts ID="_ZQMqUHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#122"/>
+    </Impacts>
+    <Impacts ID="_ZQdJAHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#120"/>
+    </Impacts>
+    <Impacts ID="_ZQtAoHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_ZQ8RMHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#117"/>
+    </Impacts>
+    <Impacts ID="_ZRNW8HdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#113"/>
+    </Impacts>
+    <Impacts ID="_ZRd1oHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#110"/>
+    </Impacts>
+    <Impacts ID="_ZRuUUHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_ZSAoMHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#108"/>
+    </Impacts>
+    <Impacts ID="_ZSSVAHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#105"/>
+    </Impacts>
+    <Impacts ID="_ZSg-gHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#104"/>
+    </Impacts>
+    <Impacts ID="_ZSxdMHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#102"/>
+    </Impacts>
+    <Impacts ID="_ZTDKAHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_ZTWsAHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#6"/>
+      <Sentence href="CRS.uima#92"/>
+    </Impacts>
+    <Impacts ID="_ZTnKsHdUEeGDn-JouGtPmw" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="CRS.uima#84"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ZT5ekHdUEeGDn-JouGtPmw" Name="Concurrence" Description="Defines mechanisms to manage simultaneous and parallel access to resources and data.">
+    <Impacts ID="_ZT5ekXdUEeGDn-JouGtPmw">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="CRS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_ZULycHdUEeGDn-JouGtPmw">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#78"/>
+    </Impacts>
+    <Impacts ID="_ZUeGUHdUEeGDn-JouGtPmw">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#76"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

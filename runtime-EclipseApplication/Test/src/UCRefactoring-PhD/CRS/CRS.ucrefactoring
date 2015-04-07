@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="ASCII"?>
+<edu.unicen.ucrefactoring:UseCaseModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:edu.unicen.ucrefactoring="http://ucrefactoring/1.0" description="The Course Registration System (CRS) is a distributed system to be used within a university intranet. It was developed by IBM to demonstrate their case tools. Some artifacts were available, such as use case specification, some analysis classes and unfinished design documents.&#xD;&#xA;The CRS arises as a replacement of an old educational institution system. There are two main actors. The first are Students, which can apply to courses and obtain their grade reports. And second the Professors, which can register new courses and report student grades." name="CRS">
+  <actors name="User" description=""/>
+  <actors name="Student" description=""/>
+  <actors name="Professor" description=""/>
+  <actors name="Registrar" description=""/>
+  <actors name="Course Catalog" description="" type="UNKNOWN"/>
+  <actors name="Billing System" description="" type="UNKNOWN"/>
+  <actors name="System" description="El actor que representa al sistema" type="SYSTEM"/>
+  <useCases name="Close Registration" description="This use case allows a Registrar to close the registration process. Course offerings that do not have enough students are cancelled. Course offerings must have a minimum of three students in them. The billing system is notified for each student in each course offering that is not cancelled, so the student can be billed for the course offering.&#xD;&#xA;The main actor of this use case is the Registrar. The Billing System is an actor involved within this use case.&#xD;&#xA;The use case begins when the Registrar selects the &quot;close registration&quot; activity from the Main Form." primaryActor="#//@actors.3">
+    <context>
+      <preconditions name="Login" description="The Registrar must be logged onto the system in order for this use case to begin.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow - Successful Close Registration">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system checks to see if a Registration is in progress." number="1" eventId="1">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="see"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="If it is, then a message is displayed to the Registrar and the use case terminates." number="2" eventId="2">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="displayed"/>
+        <actionClasses name="End" confidence="0.5" ranking="19" predicate="terminates"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Close Registration processing cannot be performed if registration is in progress." number="3" eventId="3">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="performed"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="For each open course offering, the system checks if three students have registered and a professor has signed up to teach the course offering." number="4" eventId="4">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="registered"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="signed"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="teach"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="If so, the system closes the course offering and sends a transaction to the billing system for each student enrolled in the course offering." number="5" eventId="5" subject="#//@actors.6">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="closes"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sends"/>
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="enrolled"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Login" description="This use case describes how a user logs into the Course Registration System.&#xD;&#xA;The actors starting this use case are Student, Professor, and Registrar.&#xD;&#xA;The use case begins when the actor types his/her name and password on the login form." primaryActor="#//@actors.0">
+    <context/>
+    <flows name="Basic Flow - Login">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system validates the actor&#x2019;s password and logs him/her into the system." number="1" eventId="1." subject="#//@actors.6">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="validates"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays the Main Form and the use case ends." number="2" eventId="2. ">
+        <actionClasses name="End" confidence="0.5" ranking="19" predicate="ends"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Maintain Professor Information" description="This use case allows the Registrar to maintain professor information in the registration system. This includes adding, modifying, and deleting professors from the system.&#xD;&#xA;The actor of this use case is the Registrar.&#xD;&#xA;The use case begins when the Registrar selects the &quot;maintain professor&quot; activity from the Main Form." primaryActor="#//@actors.3">
+    <context>
+      <preconditions name="Log In" description="Before this use case begins the Registrar has logged onto the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow - Add a Professor">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;add a professor&quot;." number="1" eventId="1." subject="#//@actors.3">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a blank professor form." number="2" eventId="2. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar enters the following information for the professor: name, date of birth, social security number, status, and department." number="3" eventId="3. " subject="#//@actors.3">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="enters"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="following"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system validates the data to insure the proper data format and searches for an existing professor with the specified name." number="4" eventId="4. " subject="#//@actors.6">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="validates"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="insure"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="existing"/>
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="specified"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="If the data is valid the system creates a new professor and assigns a unique system-generated id number." number="5" eventId="4. " subject="#//@actors.6">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="creates"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="assigns"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="This number is displayed, so it can be used for subsequent uses of the system." number="6" eventId="5. ">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="displayed"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="used"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Steps 2-4 are repeated for each professor added to the system." number="7" eventId="5. ">
+        <actionClasses name="Flow" confidence="0.5" ranking="19" predicate="Steps"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="added"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="When the Registrar is finished adding professors to the system the use case ends." number="8" eventId="5. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="finished"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="adding"/>
+        <actionClasses name="End" confidence="0.5" ranking="19" predicate="ends"/>
+      </events>
+    </flows>
+    <flows name="Modify a Professor">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;Modify a professor&quot;." number="1" eventId="1.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="Modify"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a blank professor form." number="2" eventId="2. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar types in the professor id number he/she wishes to modify" number="3" eventId="3. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="id"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="wishes"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="modify"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the professor information and displays it on the screen" number="4" eventId="4. ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar modifies one or more of the professor information fields: name, date of birth, social security number , status, and department." number="5" eventId="5. ">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="modifies"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="When changes are complete, the Registrar selects &quot;save&quot;." number="6" eventId="6.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system updates the professor information." number="7" eventId="7. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Steps 2-7 are repeated for each professor the Registrar wants to modify." number="8" eventId="8. ">
+        <actionClasses name="Flow" confidence="0.5" ranking="19" predicate="Steps"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="wants"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="modify"/>
+      </events>
+    </flows>
+    <flows name="Delete a Professor">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;Delete a Professor&quot;." number="1" eventId="1.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="Delete"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a blank professor form." number="2" eventId="2. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar types in the professor id number for the professor that&#x2019;s being deleted." number="3" eventId="3. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="id"/>
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="&#x2019;s"/>
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="deleted"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the professor and displays the professor information in the form." number="4" eventId="4. ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;delete&quot;." number="5" eventId="5. ">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a delete verification dialog confirming the deletion." number="6" eventId="6.">
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="delete"/>
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="confirming"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;yes&quot;." number="7" eventId="7. ">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The professor is deleted from the system." number="8" eventId="8. ">
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="deleted"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Steps 2-8 are repeated for each professor the Registrar wants to modify." number="9" eventId="9. ">
+        <actionClasses name="Flow" confidence="0.5" ranking="19" predicate="Steps"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="wants"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="modify"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Maintain Student Information" description="This use case allows the Registrar to maintain student information in the registration system. This includes adding, modifying, and deleting students from the system.&#xD;&#xA;The actor for this use case is the Registrar.&#xD;&#xA;The use case begins when the Registrar selects the &quot;maintain student&quot; activity from the Main Form." primaryActor="#//@actors.3">
+    <context>
+      <preconditions name="Log In" description="Before this use case begins the Registrar has logged onto the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow - Add Student">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;add student&quot;." number="1" eventId="1." subject="#//@actors.3">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a blank student form." number="2" eventId="2. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar enters the following information for the student: name, date of birth, social security number, status, and graduation date." number="3" eventId="3. " subject="#//@actors.3">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="enters"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="following"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system validates the data to insure the proper format and searches for an existing student with the specified name." number="4" eventId="4. " subject="#//@actors.6">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="validates"/>
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="insure"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="existing"/>
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="specified"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="If the data is valid the system creates a new student and assigns a unique system-generated id number." number="5" eventId="5. " subject="#//@actors.6">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="creates"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="assigns"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Steps 2-4 are repeated for each student added to the system." number="6" eventId="5. ">
+        <actionClasses name="Flow" confidence="0.5" ranking="19" predicate="Steps"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="added"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="When the Registrar is finished adding students to the system the use case ends." number="7" eventId="5. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="finished"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="adding"/>
+        <actionClasses name="End" confidence="0.5" ranking="19" predicate="ends"/>
+      </events>
+    </flows>
+    <flows name="Modify a Student">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;modify student&quot;." number="1" eventId="1.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a blank student form." number="2" eventId="2. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar types in the student id number he/she wishes to modify." number="3" eventId="3. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="id"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="wishes"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="modify"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the student information and displays it on the screen." number="4" eventId="4. ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar modifies one or more of the student information fields: name, date of birth, social security number, student id number, status, and graduation date." number="5" eventId="5. ">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="modifies"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="id"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="When changes are complete, the Registrar selects &quot;save&quot;." number="6" eventId="6.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system updates the student information." number="7" eventId="7. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Steps 2-7 are repeated for each student the Registrar wants to modify." number="8" eventId="8. ">
+        <actionClasses name="Flow" confidence="0.5" ranking="19" predicate="Steps"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="wants"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="modify"/>
+      </events>
+    </flows>
+    <flows name="Delete a Student">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;delete student&quot;." number="1" eventId="1.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a blank student form." number="2" eventId="2. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar types in the student id number for the student that&#x2019;s being deleted." number="3" eventId="3. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="id"/>
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="&#x2019;s"/>
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="deleted"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the student and displays the student information in the form." number="4" eventId="4. ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;delete&quot;." number="5" eventId="5. ">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a delete verification dialog confirming the deletion." number="6" eventId="6.">
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="delete"/>
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="confirming"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Registrar selects &quot;yes&quot;." number="7" eventId="7. ">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The student is deleted from the system." number="8" eventId="8. ">
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="deleted"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Steps 2-8 are repeated for each student deleted from the system." number="9" eventId="9. ">
+        <actionClasses name="Flow" confidence="0.5" ranking="19" predicate="Steps"/>
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="deleted"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Register for Courses" description="This use case allows a Student to register for course offerings in the current semester. The Student can also modify or delete course selections if changes are made within the add/drop period at the beginning of the semester. The Course Catalog System provides a list of all the course offerings for the current semester.&#xD;&#xA;The main actor of this use case is the Student. The Course Catalog System is an actor within the use case.&#xD;&#xA;The use case begins when the Student selects the &quot;maintain schedule&quot; activity from the Main Form." primaryActor="#//@actors.1">
+    <context>
+      <preconditions name="Login" description="Before this use case begins the Student has logged onto the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow - Create a Schedule">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Student selects &quot;create schedule.&quot;" number="1" eventId="1." subject="#//@actors.1">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="create"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a blank schedule form." number="2" eventId="2. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves a list of available course offerings from the Course Catalog System." number="3" eventId="3. " subject="#//@actors.6">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Student selects 4 primary course offerings and 2 alternate course offerings from the list of available offerings." number="4" eventId="4. " subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Once the selections are complete the Student selects &quot;submit.&quot;" number="5" eventId="5. " subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="submit"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The &quot;Add Course Offering&quot; sub-flow is performed at this step for each selected course offering." number="6" eventId="5. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="performed"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system saves the schedule." number="7" eventId="6." subject="#//@actors.6">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="saves"/>
+      </events>
+    </flows>
+    <flows name="Modify a Schedule">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Student selects &quot;modify schedule&quot;." number="1" eventId="1.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves and displays the Student&#x2019;s current schedule (e.g., the schedule for the current semester)." number="2" eventId="2. ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="displays"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves a list of all the course offerings available for the current semester from the Course Catalog System." number="3" eventId="3. ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays the list to the Student." number="4" eventId="4. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Student can then modify the course selections by deleting and adding new courses." number="5" eventId="5. ">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="modify"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="deleting"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="adding"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Student selects the courses to add from the list of available courses." number="6" eventId="6.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="add"/>
+      </events>
+    </flows>
+    <flows name="Delete a Schedule">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Student selects the &quot;delete schedule&quot; activity." number="1" eventId="1.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves and displays the Student current schedule." number="2" eventId="2. ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="displays"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Student selects &quot;delete&quot;." number="3" eventId="3. ">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system prompts the Student to verify the deletion." number="4" eventId="4. ">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="prompts"/>
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="verify"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Student verifies the deletion." number="5" eventId="5. ">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="verifies"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system deletes the schedule." number="6" eventId="6.">
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="deletes"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Select Courses to Teach" description="This use case allows a professor to select the course offerings (date and time specific courses will be given) from the course catalog for the courses that he/she is eligible for and wishes to teach in the upcoming semester.&#xD;&#xA;The actor starting this use case is the Professor. The Course Catalog System is an actor within the use case.&#xD;&#xA;The use case begins when the professor selects the &quot;select courses to teach&quot; activity from the Main Form." primaryActor="#//@actors.2">
+    <context>
+      <preconditions name="Login" description="Before this use case begins the Professor has logged onto the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow - Select Courses to Teach">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves and displays the list of course offerings the professor is eligible to teach for the current semester." number="1" eventId="1." subject="#//@actors.6">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="displays"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="teach"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system also retrieves and displays the list of courses the professor has previously selected to teach." number="2" eventId="2. " subject="#//@actors.6">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="displays"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="teach"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The professor selects and/or de-selects the course offerings that he/she wishes to teach for the upcoming semester." number="3" eventId="2. " subject="#//@actors.2">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="he/she"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="teach"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system removes the professor from teaching the de-selected course offerings." number="4" eventId="3. " subject="#//@actors.6">
+        <actionClasses name="Delete" confidence="0.5" ranking="16" predicate="removes"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="teaching"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system verifies that the selected offerings do not conflict (i.e., have the same dates and times) with each other or any offerings the professor has previously signed up to teach." number="5" eventId="4. " subject="#//@actors.6">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="verifies"/>
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="conflict"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="have"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate=")"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="signed"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="teach"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="If there is no conflict, the system updates the course offering information for each offering the professor selects." number="6" eventId="4. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="offering"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="offering"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Submit Grades" description="This use case allows a Professor to submit student grades for one or more classes completed in the previous semester.&#xD;&#xA;The actor in this use case is the Professor.&#xD;&#xA;The use case begins when the Professor selects the &quot;submit grades&quot; activity from the Main Form." primaryActor="#//@actors.2">
+    <context>
+      <preconditions name="Login" description="Before this use case begins the Professor has logged onto the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow - Submit Grades">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays a list of course offerings the Professor taught in the previous semester." number="1" eventId="1.">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="taught"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Professor selects a course offering." number="2" eventId="2. " subject="#//@actors.2">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves a list of all students who were registered for the course offering." number="3" eventId="3. " subject="#//@actors.6">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="registered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system also retrieves the grade information for each student in the offering." number="4" eventId="4. " subject="#//@actors.6">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system displays each student and any grade that was previously assigned for the offering." number="5" eventId="4. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="assigned"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="For each student on the list, the Professor enters a grade: A, B, C, D, F, or I." number="6" eventId="5. " subject="#//@actors.2">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="enters"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system records the student&#x2019;s grade for the course offering." number="7" eventId="5. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="If the Professor wishes to skip a particular student, the grade information can be left blank and filled in at a later time." number="8" eventId="5. " subject="#//@actors.2">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="wishes"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="skip"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="left"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="filled"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The Professor may also change the grade for a student by entering a new grade." number="9" eventId="5. " subject="#//@actors.2">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="change"/>
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entering"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="View Report Card" description="This use case allows a Student to view his/her report card for the previously completed semester.&#xD;&#xA;The Student is the actor of this use case.&#xD;&#xA;The use case begins when the Student selects the &quot;view report card&quot; activity from the Main Form." primaryActor="#//@actors.1">
+    <context>
+      <preconditions name="Login" description="Before this use case begins the Student has logged onto the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow - View Report Card">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the grade information for each of the courses the Student completed during the previous semester." number="1" eventId="1." subject="#//@actors.6">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="completed"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system prepares, formats, and displays the grade information." number="2" eventId="2. " subject="#//@actors.6">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="prepares"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="When Student is finished viewing the grade information the Student selects &quot;close&quot;." number="3" eventId="3. " subject="#//@actors.1">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="finished"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="viewing"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+    </flows>
+  </useCases>
+</edu.unicen.ucrefactoring:UseCaseModel>

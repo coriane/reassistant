@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_g4zVoL8vEeOHQNlUhDDL9A" Name="CRS-refactore" ProjectURI="/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.ucs" UIMAURI="/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima">
+  <CrosscuttingConcerns ID="_yM0bIL8vEeOHQNlUhDDL9A" Name="Persistence" Description="">
+    <Impacts ID="_rLdWkL9CEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="CRS-refactored.uima#123"/>
+    </Impacts>
+    <Impacts ID="_sMk1UL9CEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="CRS-refactored.uima#127"/>
+    </Impacts>
+    <Impacts ID="_3oAW0L9CEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#20"/>
+      <Sentence href="CRS-refactored.uima#143"/>
+    </Impacts>
+    <Impacts ID="_8s83YL9CEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="CRS-refactored.uima#161"/>
+    </Impacts>
+    <Impacts ID="_9UagAL9CEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="CRS-refactored.uima#164"/>
+    </Impacts>
+    <Impacts ID="_AC4RYL9DEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#29"/>
+      <Sentence href="CRS-refactored.uima#171"/>
+    </Impacts>
+    <Impacts ID="_IZ4YkL9DEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#66"/>
+      <Section href="CRS-refactored.uima#34"/>
+      <Sentence href="CRS-refactored.uima#191"/>
+    </Impacts>
+    <Impacts ID="_2eFbMCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#8"/>
+      <Sentence href="CRS-refactored.uima#101"/>
+    </Impacts>
+    <Impacts ID="_2eo00CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#76"/>
+      <Section href="CRS-refactored.uima#45"/>
+      <Sentence href="CRS-refactored.uima#234"/>
+    </Impacts>
+    <Impacts ID="_2fqIgCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#71"/>
+      <Section href="CRS-refactored.uima#39"/>
+      <Sentence href="CRS-refactored.uima#215"/>
+    </Impacts>
+    <Impacts ID="_2f4yACrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#77"/>
+      <Section href="CRS-refactored.uima#48"/>
+      <Sentence href="CRS-refactored.uima#239"/>
+    </Impacts>
+    <Impacts ID="_2gRzkCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#10"/>
+      <Sentence href="CRS-refactored.uima#109"/>
+    </Impacts>
+    <Impacts ID="_2gZIUCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#69"/>
+      <Section href="CRS-refactored.uima#37"/>
+      <Sentence href="CRS-refactored.uima#206"/>
+    </Impacts>
+    <Impacts ID="_2hSgMCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#6"/>
+      <Sentence href="CRS-refactored.uima#99"/>
+    </Impacts>
+    <Impacts ID="_2hwaQCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="CRS-refactored.uima#87"/>
+    </Impacts>
+    <Impacts ID="_2jBlkCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#26"/>
+      <Sentence href="CRS-refactored.uima#167"/>
+    </Impacts>
+    <Impacts ID="_2jQPECrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#24"/>
+      <Sentence href="CRS-refactored.uima#157"/>
+    </Impacts>
+    <Impacts ID="_2je4kCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#9"/>
+      <Sentence href="CRS-refactored.uima#104"/>
+    </Impacts>
+    <Impacts ID="_2jmNUCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="CRS-refactored.uima#178"/>
+    </Impacts>
+    <Impacts ID="_2j7kgCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#56"/>
+      <Sentence href="CRS-refactored.uima#250"/>
+    </Impacts>
+    <Impacts ID="_2kK1ECrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="CRS-refactored.uima#120"/>
+    </Impacts>
+    <Impacts ID="_2kSJ0CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#58"/>
+      <Sentence href="CRS-refactored.uima#253"/>
+    </Impacts>
+    <Impacts ID="_2knhACrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#8"/>
+      <Sentence href="CRS-refactored.uima#102"/>
+    </Impacts>
+    <Impacts ID="_2k-GUCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#72"/>
+      <Section href="CRS-refactored.uima#40"/>
+      <Sentence href="CRS-refactored.uima#218"/>
+    </Impacts>
+    <Impacts ID="_2lFbECrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#14"/>
+      <Sentence href="CRS-refactored.uima#131"/>
+    </Impacts>
+    <Impacts ID="_2l-L4CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#71"/>
+      <Section href="CRS-refactored.uima#39"/>
+      <Sentence href="CRS-refactored.uima#216"/>
+    </Impacts>
+    <Impacts ID="_2mvn8CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#69"/>
+      <Section href="CRS-refactored.uima#37"/>
+      <Sentence href="CRS-refactored.uima#208"/>
+    </Impacts>
+    <Impacts ID="_2nU2wCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#15"/>
+      <Sentence href="CRS-refactored.uima#134"/>
+    </Impacts>
+    <Impacts ID="_2o6LICrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="CRS-refactored.uima#184"/>
+    </Impacts>
+    <Impacts ID="_2pKCwCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#4"/>
+      <Sentence href="CRS-refactored.uima#92"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_y_o_ML8vEeOHQNlUhDDL9A" Name="Entitlement" Description="">
+    <Impacts ID="_o0d78L9AEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#9"/>
+      <Sentence href="CRS-refactored.uima#104"/>
+    </Impacts>
+    <Impacts ID="_pLhxEL9AEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#9"/>
+      <Sentence href="CRS-refactored.uima#103"/>
+    </Impacts>
+    <Impacts ID="_22578L9AEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#19"/>
+      <Sentence href="CRS-refactored.uima#142"/>
+    </Impacts>
+    <Impacts ID="_4683UL9AEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#31"/>
+      <Sentence href="CRS-refactored.uima#176"/>
+    </Impacts>
+    <Impacts ID="_2k2xkCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#70"/>
+      <Section href="CRS-refactored.uima#38"/>
+      <Sentence href="CRS-refactored.uima#213"/>
+    </Impacts>
+    <Impacts ID="_2lMv0CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#70"/>
+      <Section href="CRS-refactored.uima#38"/>
+      <Sentence href="CRS-refactored.uima#211"/>
+    </Impacts>
+    <Impacts ID="_2maQwCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="CRS-refactored.uima#84"/>
+    </Impacts>
+    <Impacts ID="_2mg-cCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#71"/>
+      <Section href="CRS-refactored.uima#39"/>
+      <Sentence href="CRS-refactored.uima#217"/>
+    </Impacts>
+    <Impacts ID="_2nMT4CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="CRS-refactored.uima#180"/>
+    </Impacts>
+    <Impacts ID="_2n--ECrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#73"/>
+      <Section href="CRS-refactored.uima#41"/>
+      <Sentence href="CRS-refactored.uima#223"/>
+    </Impacts>
+    <Impacts ID="_2oi-wCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#72"/>
+      <Section href="CRS-refactored.uima#40"/>
+      <Sentence href="CRS-refactored.uima#221"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_0xCEUL8vEeOHQNlUhDDL9A" Name="Communication" Description="">
+    <Impacts ID="_BqH2oL8wEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#4"/>
+      <Sentence href="CRS-refactored.uima#95"/>
+    </Impacts>
+    <Impacts ID="_EZ9hAL8wEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#6"/>
+      <Sentence href="CRS-refactored.uima#99"/>
+    </Impacts>
+    <Impacts ID="_Y-zeEL8wEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#17"/>
+      <Sentence href="CRS-refactored.uima#138"/>
+    </Impacts>
+    <Impacts ID="_jmAGQL8wEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#55"/>
+      <Sentence href="CRS-refactored.uima#248"/>
+    </Impacts>
+    <Impacts ID="_2e1CECrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#8"/>
+      <Sentence href="CRS-refactored.uima#102"/>
+    </Impacts>
+    <Impacts ID="_2gwUsCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#19"/>
+      <Sentence href="CRS-refactored.uima#142"/>
+    </Impacts>
+    <Impacts ID="_2hLLcCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#74"/>
+      <Section href="CRS-refactored.uima#42"/>
+      <Sentence href="CRS-refactored.uima#226"/>
+    </Impacts>
+    <Impacts ID="_2jI6UCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="CRS-refactored.uima#194"/>
+    </Impacts>
+    <Impacts ID="_2kDgUCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="CRS-refactored.uima#123"/>
+    </Impacts>
+    <Impacts ID="_2kgzUCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="CRS-refactored.uima#160"/>
+    </Impacts>
+    <Impacts ID="_2kwD4CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="CRS-refactored.uima#163"/>
+    </Impacts>
+    <Impacts ID="_2lUEkCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#74"/>
+      <Section href="CRS-refactored.uima#42"/>
+      <Sentence href="CRS-refactored.uima#227"/>
+    </Impacts>
+    <Impacts ID="_2lr4ACrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#66"/>
+      <Section href="CRS-refactored.uima#34"/>
+      <Sentence href="CRS-refactored.uima#189"/>
+    </Impacts>
+    <Impacts ID="_2m2VoCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#77"/>
+      <Section href="CRS-refactored.uima#48"/>
+      <Sentence href="CRS-refactored.uima#240"/>
+    </Impacts>
+    <Impacts ID="_2m9DUCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="CRS-refactored.uima#125"/>
+    </Impacts>
+    <Impacts ID="_2n2bMCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#69"/>
+      <Section href="CRS-refactored.uima#37"/>
+      <Sentence href="CRS-refactored.uima#207"/>
+    </Impacts>
+    <Impacts ID="_2oyPUCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#76"/>
+      <Section href="CRS-refactored.uima#47"/>
+      <Sentence href="CRS-refactored.uima#237"/>
+    </Impacts>
+    <Impacts ID="_2pCuACrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#68"/>
+      <Section href="CRS-refactored.uima#36"/>
+      <Sentence href="CRS-refactored.uima#204"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_1e7FEL8vEeOHQNlUhDDL9A" Name="Ease-of-use" Description="">
+    <Impacts ID="_1s2hcL8xEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="CRS-refactored.uima#115"/>
+    </Impacts>
+    <Impacts ID="_35takL8xEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="CRS-refactored.uima#123"/>
+    </Impacts>
+    <Impacts ID="_-_l4IL8xEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#23"/>
+      <Sentence href="CRS-refactored.uima#154"/>
+    </Impacts>
+    <Impacts ID="__sqZgL8xEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#20"/>
+      <Sentence href="CRS-refactored.uima#144"/>
+    </Impacts>
+    <Impacts ID="_Cye68L8yEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="CRS-refactored.uima#162"/>
+    </Impacts>
+    <Impacts ID="_2fQf4CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="CRS-refactored.uima#160"/>
+    </Impacts>
+    <Impacts ID="_2hDPoCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#23"/>
+      <Sentence href="CRS-refactored.uima#156"/>
+    </Impacts>
+    <Impacts ID="_2hZN4CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="CRS-refactored.uima#199"/>
+    </Impacts>
+    <Impacts ID="_2hpFgCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="CRS-refactored.uima#195"/>
+    </Impacts>
+    <Impacts ID="_2ieL8CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="CRS-refactored.uima#183"/>
+    </Impacts>
+    <Impacts ID="_2i6Q0CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#29"/>
+      <Sentence href="CRS-refactored.uima#173"/>
+    </Impacts>
+    <Impacts ID="_2lcAYCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#19"/>
+      <Sentence href="CRS-refactored.uima#142"/>
+    </Impacts>
+    <Impacts ID="_2moTMCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#75"/>
+      <Section href="CRS-refactored.uima#44"/>
+      <Sentence href="CRS-refactored.uima#233"/>
+    </Impacts>
+    <Impacts ID="_2nvGcCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="CRS-refactored.uima#163"/>
+    </Impacts>
+    <Impacts ID="_2oU8UCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#56"/>
+      <Sentence href="CRS-refactored.uima#250"/>
+    </Impacts>
+    <Impacts ID="_2oqTgCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#79"/>
+      <Section href="CRS-refactored.uima#53"/>
+      <Sentence href="CRS-refactored.uima#245"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_3pkXsL8vEeOHQNlUhDDL9A" Name="Data validation" Description="">
+    <Impacts ID="_68KUYL8wEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="CRS-refactored.uima#86"/>
+    </Impacts>
+    <Impacts ID="_8K_fAL8wEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#8"/>
+      <Sentence href="CRS-refactored.uima#101"/>
+    </Impacts>
+    <Impacts ID="_B5BY0L8xEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="CRS-refactored.uima#126"/>
+    </Impacts>
+    <Impacts ID="_kDZ-gL8xEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="CRS-refactored.uima#179"/>
+    </Impacts>
+    <Impacts ID="_2gKe0CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#16"/>
+      <Sentence href="CRS-refactored.uima#136"/>
+    </Impacts>
+    <Impacts ID="_2iVCACrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#23"/>
+      <Sentence href="CRS-refactored.uima#156"/>
+    </Impacts>
+    <Impacts ID="_2iy8ECrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#10"/>
+      <Sentence href="CRS-refactored.uima#109"/>
+    </Impacts>
+    <Impacts ID="_2j0PwCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="CRS-refactored.uima#159"/>
+    </Impacts>
+    <Impacts ID="_2kZekCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#75"/>
+      <Section href="CRS-refactored.uima#44"/>
+      <Sentence href="CRS-refactored.uima#232"/>
+    </Impacts>
+    <Impacts ID="_2lzMwCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#57"/>
+      <Sentence href="CRS-refactored.uima#252"/>
+    </Impacts>
+    <Impacts ID="_2nkHUCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="CRS-refactored.uima#118"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_4eAsYL8vEeOHQNlUhDDL9A" Name="Error handling" Description="">
+    <Impacts ID="_S6dtUL9BEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#16"/>
+      <Sentence href="CRS-refactored.uima#136"/>
+    </Impacts>
+    <Impacts ID="_WbSvwL9BEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#17"/>
+      <Sentence href="CRS-refactored.uima#139"/>
+    </Impacts>
+    <Impacts ID="_kd_OcL9BEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#75"/>
+      <Section href="CRS-refactored.uima#43"/>
+      <Sentence href="CRS-refactored.uima#228"/>
+    </Impacts>
+    <Impacts ID="_lwDTQL9BEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#75"/>
+      <Section href="CRS-refactored.uima#43"/>
+      <Sentence href="CRS-refactored.uima#231"/>
+    </Impacts>
+    <Impacts ID="_2fDrkCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#69"/>
+      <Section href="CRS-refactored.uima#37"/>
+      <Sentence href="CRS-refactored.uima#208"/>
+    </Impacts>
+    <Impacts ID="_2fd7QCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#72"/>
+      <Section href="CRS-refactored.uima#40"/>
+      <Sentence href="CRS-refactored.uima#221"/>
+    </Impacts>
+    <Impacts ID="_2ggdECrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="CRS-refactored.uima#180"/>
+    </Impacts>
+    <Impacts ID="_2gnx0CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="CRS-refactored.uima#195"/>
+    </Impacts>
+    <Impacts ID="_2g5eoCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#69"/>
+      <Section href="CRS-refactored.uima#37"/>
+      <Sentence href="CRS-refactored.uima#206"/>
+    </Impacts>
+    <Impacts ID="_2hhwwCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#71"/>
+      <Section href="CRS-refactored.uima#39"/>
+      <Sentence href="CRS-refactored.uima#217"/>
+    </Impacts>
+    <Impacts ID="_2h3vACrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="CRS-refactored.uima#123"/>
+    </Impacts>
+    <Impacts ID="_2h_DwCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#14"/>
+      <Sentence href="CRS-refactored.uima#133"/>
+    </Impacts>
+    <Impacts ID="_2iGYgCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#29"/>
+      <Sentence href="CRS-refactored.uima#172"/>
+    </Impacts>
+    <Impacts ID="_2iNtQCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#3"/>
+      <Sentence href="CRS-refactored.uima#89"/>
+    </Impacts>
+    <Impacts ID="_2iqZMCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#4"/>
+      <Sentence href="CRS-refactored.uima#95"/>
+    </Impacts>
+    <Impacts ID="_2jYK4CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#13"/>
+      <Sentence href="CRS-refactored.uima#129"/>
+    </Impacts>
+    <Impacts ID="_2jtiECrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="CRS-refactored.uima#117"/>
+    </Impacts>
+    <Impacts ID="_2lj8MCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="CRS-refactored.uima#181"/>
+    </Impacts>
+    <Impacts ID="_2mE5kCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#66"/>
+      <Section href="CRS-refactored.uima#34"/>
+      <Sentence href="CRS-refactored.uima#190"/>
+    </Impacts>
+    <Impacts ID="_2mLnQCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="CRS-refactored.uima#164"/>
+    </Impacts>
+    <Impacts ID="_2mS8ACrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#78"/>
+      <Section href="CRS-refactored.uima#51"/>
+      <Sentence href="CRS-refactored.uima#243"/>
+    </Impacts>
+    <Impacts ID="_2nEYECrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#20"/>
+      <Sentence href="CRS-refactored.uima#148"/>
+    </Impacts>
+    <Impacts ID="_2ncykCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#56"/>
+      <Sentence href="CRS-refactored.uima#250"/>
+    </Impacts>
+    <Impacts ID="_2oG54CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#70"/>
+      <Section href="CRS-refactored.uima#38"/>
+      <Sentence href="CRS-refactored.uima#210"/>
+    </Impacts>
+    <Impacts ID="_2oNnkCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="CRS-refactored.uima#198"/>
+    </Impacts>
+    <Impacts ID="_2obqACrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#77"/>
+      <Section href="CRS-refactored.uima#48"/>
+      <Sentence href="CRS-refactored.uima#240"/>
+    </Impacts>
+    <Impacts ID="_2pR-kCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="CRS-refactored.uima#194"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_5VzQAL8vEeOHQNlUhDDL9A" Name="Synchronization" Description="">
+    <Impacts ID="_ydOJcL9BEeOHQNlUhDDL9A">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="CRS-refactored.uima#83"/>
+    </Impacts>
+    <Impacts ID="_2gB78CrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#71"/>
+      <Section href="CRS-refactored.uima#39"/>
+      <Sentence href="CRS-refactored.uima#216"/>
+    </Impacts>
+    <Impacts ID="_2pcWoCrLEeSI__8Vsd1dmw">
+      <Document href="CRS-refactored.uima#78"/>
+      <Section href="CRS-refactored.uima#52"/>
+      <Sentence href="CRS-refactored.uima#244"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

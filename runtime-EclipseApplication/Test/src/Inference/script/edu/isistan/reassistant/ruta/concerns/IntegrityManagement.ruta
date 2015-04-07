@@ -1,0 +1,24 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST TokenList = {"ensur", "consist"};
+
+//Simple Query - Integrity Management-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Integrity Management", "kind" = "Simple/Direct")} <- {
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token.stem == "ensur" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.stem == "consist"
+    );
+};
+
+
+//Advanced Query - Verification Actions Involving Data
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Integrity Management", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Verification"
+    } %
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.lemma == "data"} |
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.lemma == "information"} |
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.lemma == "result"}
+    );
+};

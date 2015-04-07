@@ -1,0 +1,41 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST TokenList = {"cache", "perform", "second", "time", "delay", "deadline", "throughput", "response", "latenc"}; 
+
+//Simple Query - Latency-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Latency", "kind" = "Simple/Direct")} <- {
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "cache" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.stem == "perform" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "second" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "time" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "delay" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "deadline" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "throughput" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "response" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.stem == "latenc"
+    );
+};
+
+
+//Advanced Query #1 - Calculation Actions involving Complex Activities
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Latency", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Calculation"
+    } %
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.stem == "execut"} |
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.stem == "evalua"}
+    );
+};
+
+//Advanced Query #2 - Process Actions involving Results
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Latency", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Process"
+    } %
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.lemma == "result"} |
+        edu.isistan.uima.unified.typesystems.nlp.Token{Token.lemma == "value"}
+    );
+};
