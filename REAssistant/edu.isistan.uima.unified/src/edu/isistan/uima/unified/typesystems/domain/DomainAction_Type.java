@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Tue May 03 10:45:54 ART 2011 */
+/* First created by JCasGen Mon Dec 29 18:34:55 ART 2014 */
 package edu.isistan.uima.unified.typesystems.domain;
 
 import org.apache.uima.jcas.JCas;
@@ -14,10 +14,13 @@ import org.apache.uima.cas.Feature;
 import edu.isistan.uima.unified.typesystems.IdentifiableAnnotation_Type;
 
 /** 
- * Updated by JCasGen Mon Jun 13 12:00:10 ART 2011
+ * Updated by JCasGen Tue Dec 30 11:22:03 ART 2014
  * @generated */
 public class DomainAction_Type extends IdentifiableAnnotation_Type {
-  /** @generated */
+  /** @generated 
+   * @return the generator for this type
+   */
+  @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
   /** @generated */
   private final FSGenerator fsGenerator = 
@@ -36,22 +39,30 @@ public class DomainAction_Type extends IdentifiableAnnotation_Type {
   	  }
     };
   /** @generated */
+  @SuppressWarnings ("hiding")
   public final static int typeIndexID = DomainAction.typeIndexID;
   /** @generated 
      @modifiable */
+  @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.isistan.uima.unified.typesystems.domain.DomainAction");
  
   /** @generated */
   final Feature casFeat_action;
   /** @generated */
   final int     casFeatCode_action;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public int getAction(int addr) {
         if (featOkTst && casFeat_action == null)
       jcas.throwFeatMissing("action", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
     return ll_cas.ll_getRefValue(addr, casFeatCode_action);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setAction(int addr, int v) {
         if (featOkTst && casFeat_action == null)
       jcas.throwFeatMissing("action", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
@@ -63,13 +74,19 @@ public class DomainAction_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_label;
   /** @generated */
   final int     casFeatCode_label;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public String getLabel(int addr) {
         if (featOkTst && casFeat_label == null)
       jcas.throwFeatMissing("label", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
     return ll_cas.ll_getStringValue(addr, casFeatCode_label);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setLabel(int addr, String v) {
         if (featOkTst && casFeat_label == null)
       jcas.throwFeatMissing("label", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
@@ -81,13 +98,19 @@ public class DomainAction_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_confidence;
   /** @generated */
   final int     casFeatCode_confidence;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public double getConfidence(int addr) {
         if (featOkTst && casFeat_confidence == null)
       jcas.throwFeatMissing("confidence", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
     return ll_cas.ll_getDoubleValue(addr, casFeatCode_confidence);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setConfidence(int addr, double v) {
         if (featOkTst && casFeat_confidence == null)
       jcas.throwFeatMissing("confidence", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
@@ -99,13 +122,19 @@ public class DomainAction_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_ranking;
   /** @generated */
   final int     casFeatCode_ranking;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public int getRanking(int addr) {
         if (featOkTst && casFeat_ranking == null)
       jcas.throwFeatMissing("ranking", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
     return ll_cas.ll_getIntValue(addr, casFeatCode_ranking);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setRanking(int addr, int v) {
         if (featOkTst && casFeat_ranking == null)
       jcas.throwFeatMissing("ranking", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
@@ -117,13 +146,19 @@ public class DomainAction_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_parent;
   /** @generated */
   final int     casFeatCode_parent;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public int getParent(int addr) {
         if (featOkTst && casFeat_parent == null)
       jcas.throwFeatMissing("parent", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
     return ll_cas.ll_getRefValue(addr, casFeatCode_parent);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setParent(int addr, int v) {
         if (featOkTst && casFeat_parent == null)
       jcas.throwFeatMissing("parent", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
@@ -135,19 +170,29 @@ public class DomainAction_Type extends IdentifiableAnnotation_Type {
   final Feature casFeat_childs;
   /** @generated */
   final int     casFeatCode_childs;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public int getChilds(int addr) {
         if (featOkTst && casFeat_childs == null)
       jcas.throwFeatMissing("childs", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
     return ll_cas.ll_getRefValue(addr, casFeatCode_childs);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setChilds(int addr, int v) {
         if (featOkTst && casFeat_childs == null)
       jcas.throwFeatMissing("childs", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
     ll_cas.ll_setRefValue(addr, casFeatCode_childs, v);}
     
-   /** @generated */
+   /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @return value at index i in the array 
+   */
   public int getChilds(int addr, int i) {
         if (featOkTst && casFeat_childs == null)
       jcas.throwFeatMissing("childs", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
@@ -157,7 +202,11 @@ public class DomainAction_Type extends IdentifiableAnnotation_Type {
   return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_childs), i);
   }
    
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @param v value to set
+   */ 
   public void setChilds(int addr, int i, int v) {
         if (featOkTst && casFeat_childs == null)
       jcas.throwFeatMissing("childs", "edu.isistan.uima.unified.typesystems.domain.DomainAction");
@@ -171,7 +220,10 @@ public class DomainAction_Type extends IdentifiableAnnotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+	 * @generated
+	 * @param jcas JCas
+	 * @param casType Type 
+	 */
   public DomainAction_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
