@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_g4zVoL8vEeOHQNlUhDDL9A" Name="CRS-refactore" ProjectURI="/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.ucs" UIMAURI="/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima">
+  <CrosscuttingConcerns ID="_eOZQ8L9HEeOq-4PN0zJPNA" Name="User Access Control (DA)" Description="Defines contraints regarding the access level of given user / role to carry out a particular task / operation.">
+    <Impacts ID="_eOZQ8b9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#79"/>
+      <Section href="CRS-refactored.uima#53"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#246"/>
+    </Impacts>
+    <Impacts ID="_eOhz0L9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#78"/>
+      <Section href="CRS-refactored.uima#51"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#243"/>
+    </Impacts>
+    <Impacts ID="_eOohgL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#147"/>
+    </Impacts>
+    <Impacts ID="_eOxrcL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#104"/>
+    </Impacts>
+    <Impacts ID="_eO5AML9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#103"/>
+    </Impacts>
+    <Impacts ID="_ePA8AL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#8"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#101"/>
+    </Impacts>
+    <Impacts ID="_ePHCoL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#5"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#96"/>
+    </Impacts>
+    <Impacts ID="_ePNwUL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#3"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#88"/>
+    </Impacts>
+    <Impacts ID="_ePTP4L9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#86"/>
+    </Impacts>
+    <Impacts ID="_ePdn8L9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#86"/>
+    </Impacts>
+    <Impacts ID="_ePk8sL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#87"/>
+    </Impacts>
+    <Impacts ID="_ePtfkL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#125"/>
+    </Impacts>
+    <Impacts ID="_eP1bYL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#126"/>
+    </Impacts>
+    <Impacts ID="_eP6T4L9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#14"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#131"/>
+    </Impacts>
+    <Impacts ID="_eP_MYL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#134"/>
+    </Impacts>
+    <Impacts ID="_eQDd0L9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#140"/>
+    </Impacts>
+    <Impacts ID="_eQI9YL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#141"/>
+    </Impacts>
+    <Impacts ID="_eQPEAL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#19"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#142"/>
+    </Impacts>
+    <Impacts ID="_eQVxsL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#147"/>
+    </Impacts>
+    <Impacts ID="_eQaqML9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#154"/>
+    </Impacts>
+    <Impacts ID="_eQgJwL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#155"/>
+    </Impacts>
+    <Impacts ID="_eQlCQL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#156"/>
+    </Impacts>
+    <Impacts ID="_eQrI4L9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#24"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#157"/>
+    </Impacts>
+    <Impacts ID="_eQxPgL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#160"/>
+    </Impacts>
+    <Impacts ID="_eQ1g8L9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#27"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#168"/>
+    </Impacts>
+    <Impacts ID="_eQ7AgL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#28"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#170"/>
+    </Impacts>
+    <Impacts ID="_eRAgEL9HEeOq-4PN0zJPNA" Realization="This concern is composed with the Wrap operator. The core functionality is surrounded with access control policies, enabling (or restricting) users from executing a particular behavior according to their access clearance.">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#31"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#176"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_eUmmoL9HEeOq-4PN0zJPNA" Name="Error Management (DA)" Description="Concerns with mechanisms for managing errors and exceptions that take place while running the system.">
+    <Impacts ID="_eUmmob9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#68"/>
+      <Section href="CRS-refactored.uima#36"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#205"/>
+    </Impacts>
+    <Impacts ID="_eUvJgL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#30"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#174"/>
+    </Impacts>
+    <Impacts ID="_eU2eQL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#27"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#169"/>
+    </Impacts>
+    <Impacts ID="_eU_BIL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#155"/>
+    </Impacts>
+    <Impacts ID="_eVG88L9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#22"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#153"/>
+    </Impacts>
+    <Impacts ID="_eVQG4L9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#141"/>
+    </Impacts>
+    <Impacts ID="_eVZQ0L9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#17"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#138"/>
+    </Impacts>
+    <Impacts ID="_eViawL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#16"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#136"/>
+    </Impacts>
+    <Impacts ID="_eVq9oL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#135"/>
+    </Impacts>
+    <Impacts ID="_eV0uoL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#104"/>
+    </Impacts>
+    <Impacts ID="_eV8qcL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#103"/>
+    </Impacts>
+    <Impacts ID="_eWEmQL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#6"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#98"/>
+    </Impacts>
+    <Impacts ID="_eWMiEL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#5"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#97"/>
+    </Impacts>
+    <Impacts ID="_eWW6IL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#5"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#96"/>
+    </Impacts>
+    <Impacts ID="_eWfdAL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#90"/>
+    </Impacts>
+    <Impacts ID="_eWmKsL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#3"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#89"/>
+    </Impacts>
+    <Impacts ID="_eWxJ0L9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#3"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#88"/>
+    </Impacts>
+    <Impacts ID="_eW7h4L9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#85"/>
+    </Impacts>
+    <Impacts ID="_eXEEwL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#103"/>
+    </Impacts>
+    <Impacts ID="_eXMnoL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#15"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#134"/>
+    </Impacts>
+    <Impacts ID="_eXUjcL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#16"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#136"/>
+    </Impacts>
+    <Impacts ID="_eXeUcL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#17"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#138"/>
+    </Impacts>
+    <Impacts ID="_eXm3UL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#21"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#149"/>
+    </Impacts>
+    <Impacts ID="_eXuMEL9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#22"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#151"/>
+    </Impacts>
+    <Impacts ID="_eX2u8L9HEeOq-4PN0zJPNA" Realization="Frequently, this concerns is composed with requirements as an Override, in which the crosscutting concern replaces the behavior in case of an exception." CompositionRule="Override">
+      <Document href="CRS-refactored.uima#68"/>
+      <Section href="CRS-refactored.uima#36"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#204"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_eX-qwL9HEeOq-4PN0zJPNA" Name="External Communication (DA)" Description="This concern encapsulate and specify how our system interacts with external agents. Those interactions are mainly messages that are communicated forth and backward, establishing a dialog. Several properties may emerge of this concern, such as availability and security quality attributes.">
+    <Impacts ID="_eX-qwb9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#57"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#252"/>
+    </Impacts>
+    <Impacts ID="_eYHNoL9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#56"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#251"/>
+    </Impacts>
+    <Impacts ID="_eYOiYL9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#79"/>
+      <Section href="CRS-refactored.uima#53"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#245"/>
+    </Impacts>
+    <Impacts ID="_eYV3IL9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#78"/>
+      <Section href="CRS-refactored.uima#50"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#242"/>
+    </Impacts>
+    <Impacts ID="_eYdL4L9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#76"/>
+      <Section href="CRS-refactored.uima#47"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#238"/>
+    </Impacts>
+    <Impacts ID="_eYm84L9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#76"/>
+      <Section href="CRS-refactored.uima#47"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#237"/>
+    </Impacts>
+    <Impacts ID="_eYvfwL9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#76"/>
+      <Section href="CRS-refactored.uima#47"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#236"/>
+    </Impacts>
+    <Impacts ID="_eY20gL9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#75"/>
+      <Section href="CRS-refactored.uima#44"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#232"/>
+    </Impacts>
+    <Impacts ID="_eY9iML9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#13"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#128"/>
+    </Impacts>
+    <Impacts ID="_eZH6QL9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#119"/>
+    </Impacts>
+    <Impacts ID="_eZRrQL9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#109"/>
+    </Impacts>
+    <Impacts ID="_eZbcQL9HEeOq-4PN0zJPNA" Realization="This concern is usually composed as overlap, in which the communication behavior augments the core functionality to enable external interactions." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#87"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_eZkmML9HEeOq-4PN0zJPNA" Name="Persistence (DA)" Description="Allows system data to be written in an storage media. This concerns affects functionality that involves the accessing of data, and the main idea is to decouple the way data is handled.">
+    <Impacts ID="_eZkmMb9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#54"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#247"/>
+    </Impacts>
+    <Impacts ID="_eZqs0L9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#78"/>
+      <Section href="CRS-refactored.uima#51"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#243"/>
+    </Impacts>
+    <Impacts ID="_eZwMYL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#78"/>
+      <Section href="CRS-refactored.uima#50"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#242"/>
+    </Impacts>
+    <Impacts ID="_eZ0d0L9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#75"/>
+      <Section href="CRS-refactored.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#231"/>
+    </Impacts>
+    <Impacts ID="_eZ59YL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#75"/>
+      <Section href="CRS-refactored.uima#43"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#231"/>
+    </Impacts>
+    <Impacts ID="_eZ_c8L9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#72"/>
+      <Section href="CRS-refactored.uima#40"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#220"/>
+    </Impacts>
+    <Impacts ID="_eaGxsL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#71"/>
+      <Section href="CRS-refactored.uima#39"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#216"/>
+    </Impacts>
+    <Impacts ID="_eaNfYL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#71"/>
+      <Section href="CRS-refactored.uima#39"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#214"/>
+    </Impacts>
+    <Impacts ID="_eaVbML9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#70"/>
+      <Section href="CRS-refactored.uima#38"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#211"/>
+    </Impacts>
+    <Impacts ID="_eaelIL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#69"/>
+      <Section href="CRS-refactored.uima#37"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#207"/>
+    </Impacts>
+    <Impacts ID="_eakrwL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#68"/>
+      <Section href="CRS-refactored.uima#36"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#204"/>
+    </Impacts>
+    <Impacts ID="_eapkQL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#200"/>
+    </Impacts>
+    <Impacts ID="_eat1sL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#199"/>
+    </Impacts>
+    <Impacts ID="_eayHIL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#196"/>
+    </Impacts>
+    <Impacts ID="_ea3msL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#195"/>
+    </Impacts>
+    <Impacts ID="_ea8fML9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#66"/>
+      <Section href="CRS-refactored.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#192"/>
+    </Impacts>
+    <Impacts ID="_ebBXsL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#66"/>
+      <Section href="CRS-refactored.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#189"/>
+    </Impacts>
+    <Impacts ID="_ebIscL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#66"/>
+      <Section href="CRS-refactored.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#188"/>
+    </Impacts>
+    <Impacts ID="_ebR2YL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#66"/>
+      <Section href="CRS-refactored.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#187"/>
+    </Impacts>
+    <Impacts ID="_ebaZQL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#185"/>
+    </Impacts>
+    <Impacts ID="_ebfRwL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#184"/>
+    </Impacts>
+    <Impacts ID="_ebkKQL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#181"/>
+    </Impacts>
+    <Impacts ID="_ebpCwL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#30"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#174"/>
+    </Impacts>
+    <Impacts ID="_ebt7QL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#29"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#172"/>
+    </Impacts>
+    <Impacts ID="_ebyzwL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#29"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#171"/>
+    </Impacts>
+    <Impacts ID="_eb3FML9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#165"/>
+    </Impacts>
+    <Impacts ID="_eb9L0L9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#161"/>
+    </Impacts>
+    <Impacts ID="_ecBdQL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#160"/>
+    </Impacts>
+    <Impacts ID="_ecGVwL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#156"/>
+    </Impacts>
+    <Impacts ID="_ecL1UL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#22"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#151"/>
+    </Impacts>
+    <Impacts ID="_ecQt0L9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#146"/>
+    </Impacts>
+    <Impacts ID="_ecVmUL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#143"/>
+    </Impacts>
+    <Impacts ID="_ecae0L9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#16"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#136"/>
+    </Impacts>
+    <Impacts ID="_ecf-YL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#14"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#133"/>
+    </Impacts>
+    <Impacts ID="_ecmFAL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#127"/>
+    </Impacts>
+    <Impacts ID="_ecrkkL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#123"/>
+    </Impacts>
+    <Impacts ID="_ecwdEL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#121"/>
+    </Impacts>
+    <Impacts ID="_ec18oL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#116"/>
+    </Impacts>
+    <Impacts ID="_ec61IL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#114"/>
+    </Impacts>
+    <Impacts ID="_edA7wL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#113"/>
+    </Impacts>
+    <Impacts ID="_edFNML9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#111"/>
+    </Impacts>
+    <Impacts ID="_edKFsL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#107"/>
+    </Impacts>
+    <Impacts ID="_edO-ML9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#105"/>
+    </Impacts>
+    <Impacts ID="_edUdwL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#9"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#103"/>
+    </Impacts>
+    <Impacts ID="_edom0L9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#6"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#99"/>
+    </Impacts>
+    <Impacts ID="_edxwwL9HEeOq-4PN0zJPNA" Realization="This crosscutting concern is commonly composed as a Wrapping, in which some behavior is introduced before and(or) after the data-related behavior is executed.">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#91"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ed3QUL9HEeOq-4PN0zJPNA" Name="Presentation (DA)" Description="This concerns encapsulates functionality focused on the preprocessing and arrangement of the information before outputting in a display.">
+    <Impacts ID="_ed3QUb9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#58"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#253"/>
+    </Impacts>
+    <Impacts ID="_ed9-AL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#57"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#252"/>
+    </Impacts>
+    <Impacts ID="_eeEEoL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#80"/>
+      <Section href="CRS-refactored.uima#55"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#248"/>
+    </Impacts>
+    <Impacts ID="_eeKLQL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#76"/>
+      <Section href="CRS-refactored.uima#46"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#235"/>
+    </Impacts>
+    <Impacts ID="_eeQR4L9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#179"/>
+    </Impacts>
+    <Impacts ID="_eeXmoL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#29"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#172"/>
+    </Impacts>
+    <Impacts ID="_eedtQL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#182"/>
+    </Impacts>
+    <Impacts ID="_eelCAL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#30"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#174"/>
+    </Impacts>
+    <Impacts ID="_eervsL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#29"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#173"/>
+    </Impacts>
+    <Impacts ID="_eezrgL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#23"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#154"/>
+    </Impacts>
+    <Impacts ID="_ee6ZML9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#144"/>
+    </Impacts>
+    <Impacts ID="_efAf0L9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#62"/>
+      <Section href="CRS-refactored.uima#20"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#143"/>
+    </Impacts>
+    <Impacts ID="_efF_YL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#18"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#140"/>
+    </Impacts>
+    <Impacts ID="_efMtEL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#12"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#123"/>
+    </Impacts>
+    <Impacts ID="_efUB0L9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#113"/>
+    </Impacts>
+    <Impacts ID="_efaIcL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#4"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#94"/>
+    </Impacts>
+    <Impacts ID="_efgPEL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#84"/>
+    </Impacts>
+    <Impacts ID="_efoK4L9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#198"/>
+    </Impacts>
+    <Impacts ID="_efuRgL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#196"/>
+    </Impacts>
+    <Impacts ID="_ef0_ML9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#67"/>
+      <Section href="CRS-refactored.uima#35"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#194"/>
+    </Impacts>
+    <Impacts ID="_ef7s4L9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#66"/>
+      <Section href="CRS-refactored.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#188"/>
+    </Impacts>
+    <Impacts ID="_egDosL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#66"/>
+      <Section href="CRS-refactored.uima#34"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#186"/>
+    </Impacts>
+    <Impacts ID="_egH6IL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#177"/>
+    </Impacts>
+    <Impacts ID="_egMyoL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#64"/>
+      <Section href="CRS-refactored.uima#29"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#172"/>
+    </Impacts>
+    <Impacts ID="_egUHYL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#162"/>
+    </Impacts>
+    <Impacts ID="_egbcIL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#63"/>
+      <Section href="CRS-refactored.uima#25"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#158"/>
+    </Impacts>
+    <Impacts ID="_egiJ0L9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#11"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#115"/>
+    </Impacts>
+    <Impacts ID="_egpekL9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#61"/>
+      <Section href="CRS-refactored.uima#10"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#106"/>
+    </Impacts>
+    <Impacts ID="_egvlML9HEeOq-4PN0zJPNA" Realization="In general, this concern is composed using the Overlap composition rule. In this way, the concern adds specific behavior to process and organize the output." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#60"/>
+      <Section href="CRS-refactored.uima#8"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#102"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_egz2oL9HEeOq-4PN0zJPNA" Name="Concurrence (DA)" Description="Defines mechanisms to manage simultaneous and parallel access to resources and data.">
+    <Impacts ID="_egz2ob9HEeOq-4PN0zJPNA">
+      <Document href="CRS-refactored.uima#78"/>
+      <Section href="CRS-refactored.uima#50"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#242"/>
+    </Impacts>
+    <Impacts ID="_eg4vIL9HEeOq-4PN0zJPNA">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#85"/>
+    </Impacts>
+    <Impacts ID="_eg_c0L9HEeOq-4PN0zJPNA">
+      <Document href="CRS-refactored.uima#59"/>
+      <Section href="CRS-refactored.uima#2"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#83"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ehYeYL9HEeOq-4PN0zJPNA" Name="Integrity Management (DA)" Description="Allows the system to perform conformance verifications both on the information inputted and outputted. This way, the consistency of the data is assured.">
+    <Impacts ID="_ehYeYb9HEeOq-4PN0zJPNA" Realization="In general, is weaven with the Overlap composition rule, in which the concern imposes additional checks and validations to insure the integrity of the data." CompositionRule="Overlap">
+      <Document href="CRS-refactored.uima#65"/>
+      <Section href="CRS-refactored.uima#32"/>
+      <Sentence href="file:/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/CRS-refactored/CRS-refactored.uima#179"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

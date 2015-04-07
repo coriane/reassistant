@@ -1,0 +1,19 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST SystemList = {"system"}; 
+STRINGLIST HumanList = {"client", "user", "manager", "person", "employee", "student", "citizen"}; 
+STRINGLIST HardwareList = {"hardware", "device"}; 
+STRINGLIST SoftwareList = {"system", "database", "server"};
+
+edu.isistan.uima.unified.typesystems.srl.Argument{OR(Argument.label == "A0", Argument.label == "A1")} <- {
+    edu.isistan.uima.unified.typesystems.nlp.Token{INLIST(SystemList) -> CREATE(DomainActor, "kind" = "SYSTEM", "role" = "PRIMARY")};
+};
+edu.isistan.uima.unified.typesystems.srl.Argument{OR(Argument.label == "A0", Argument.label == "A1")} <- {
+    edu.isistan.uima.unified.typesystems.nlp.Token{INLIST(HumanList) -> CREATE(DomainActor, "kind" = "HUMAN", "role" = "PRIMARY")};
+};
+edu.isistan.uima.unified.typesystems.srl.Argument{Argument.label == "A2"} <- {
+    edu.isistan.uima.unified.typesystems.nlp.Token{INLIST(HardwareList) -> CREATE(DomainActor, "kind" = "HARDWARE", "role" = "SECONDARY")};
+};
+edu.isistan.uima.unified.typesystems.srl.Argument{Argument.label == "A2"} <- {
+    edu.isistan.uima.unified.typesystems.nlp.Token{OR(INLIST(SoftwareList), CONTAINS(CAP)) -> CREATE(DomainActor, "kind" = "SOFTWARE", "role" = "SECONDARY")};
+};

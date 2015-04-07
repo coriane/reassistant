@@ -1,0 +1,25 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST TokenList = {"commun", "interaction", "internet", "external", "separate", "online", "server", "offline", "connect"}; 
+
+//Simple Query - External Communication-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "External Communication", "kind" = "Simple/Direct")} <- {
+    (
+	    edu.isistan.uima.unified.typesystems.nlp.Token.stem == "commun" |
+	    edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "interaction" |
+	    edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "internet" |
+	    edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "external" |
+	    edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "separate" |
+	    edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "online" |
+	    edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "server" |
+	    edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "offline" |
+	    edu.isistan.uima.unified.typesystems.nlp.Token.stem == "connect"
+    );
+};
+
+//Advanced Query - Communication Actions
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "External Communication", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Communication"
+    };
+};

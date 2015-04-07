@@ -1,0 +1,31 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST TokenList = {"wrong", "mistake", "cannot", "invalid", "incomplete", "missing", "incorrect", "already", "rolled-back", "cancel", "unable", "problem"}; 
+
+//Simple Query - Error-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Error Management", "kind" = "Simple/Direct")} <- {
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "wrong" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "mistake" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "cannot" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "invalid" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "incomplete" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "missing" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "incorrect" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "already" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "rolled-back" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "cancel" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "unable" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "problem"
+    );
+};
+
+//Advanced Query - Error Notifications Actions
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Error Management", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Notification"
+    } %
+    edu.isistan.uima.unified.typesystems.nlp.Token{
+        Token.lemma == "error"
+    };
+};

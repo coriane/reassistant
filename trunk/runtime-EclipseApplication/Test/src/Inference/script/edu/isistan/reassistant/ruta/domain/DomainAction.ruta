@@ -1,0 +1,6 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem; 
+
+//Filtering domain actions ending in -ing
+edu.isistan.uima.unified.typesystems.domain.DomainAction{ -> UNMARK(DomainAction)} <- {
+    edu.isistan.uima.unified.typesystems.nlp.Token { Token.pos == "VBG"};
+};

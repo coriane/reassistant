@@ -1,0 +1,28 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem; 
+
+STRINGLIST TokenList = {"database", "storage", "rolled-back", "table", "populate"}; 
+
+//Simple Query - Persistence-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Persistence", "kind" = "Simple/Direct")} <- {
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "database" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "storage" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "rolled-back" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "table" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "populate"
+    );
+};
+
+//Advanced Query - Data Actions
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Persistence", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainActor{
+        AND(DomainActor.kind == "SYSTEM", DomainActor.role == "PRIMARY")} %
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Data"};
+};
+
+//Filtering Input and Communication Actions
+CrosscuttingConcern{CrosscuttingConcern.name == "Persistence" -> UNMARK(CrosscuttingConcern)} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        OR(DomainAction.label == "Input", DomainAction.label == "Communication")};
+};

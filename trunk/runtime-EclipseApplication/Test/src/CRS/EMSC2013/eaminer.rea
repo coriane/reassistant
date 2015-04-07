@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_6kLHoCKWEeKDTP_I8Gw5NQ" Name="Project" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/EMSC2013/CRS.uima">
+  <CrosscuttingConcerns ID="_DyIE8CKXEeKDTP_I8Gw5NQ" Name="Persistence (enrol)" Description="">
+    <Impacts ID="_tLR-cCKXEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_yYsegCKXEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="CRS.uima#84"/>
+    </Impacts>
+    <Impacts ID="_JKQVUCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#26"/>
+      <Sentence href="CRS.uima#189"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_FAdgUCKXEeKDTP_I8Gw5NQ" Name="Fault Tolerance (available)" Description="">
+    <Impacts ID="_0C-2ECKXEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="CRS.uima#85"/>
+    </Impacts>
+    <Impacts ID="_0g0ooCKXEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#4"/>
+      <Sentence href="CRS.uima#86"/>
+    </Impacts>
+    <Impacts ID="_6WKrYCKXEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#6"/>
+      <Sentence href="CRS.uima#92"/>
+    </Impacts>
+    <Impacts ID="_3xFqECKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#163"/>
+    </Impacts>
+    <Impacts ID="_6KBQUCKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#164"/>
+    </Impacts>
+    <Impacts ID="_AHIvACKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#170"/>
+    </Impacts>
+    <Impacts ID="_DM4X8CKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#173"/>
+    </Impacts>
+    <Impacts ID="_14t9wCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#45"/>
+      <Sentence href="CRS.uima#237"/>
+    </Impacts>
+    <Impacts ID="_9ntCsCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#70"/>
+      <Section href="CRS.uima#49"/>
+      <Sentence href="CRS.uima#244"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_J7wVoCKXEeKDTP_I8Gw5NQ" Name="Security (log)" Description="">
+    <Impacts ID="_7hbkoCKXEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#7"/>
+      <Sentence href="CRS.uima#93"/>
+    </Impacts>
+    <Impacts ID="_Agrs4CKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="CRS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_byJ6ACKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#15"/>
+      <Sentence href="CRS.uima#129"/>
+    </Impacts>
+    <Impacts ID="_t2UDACKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#21"/>
+      <Sentence href="CRS.uima#160"/>
+    </Impacts>
+    <Impacts ID="_Qkw_ECKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#31"/>
+      <Sentence href="CRS.uima#198"/>
+    </Impacts>
+    <Impacts ID="_bOfW0CKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#36"/>
+      <Sentence href="CRS.uima#213"/>
+    </Impacts>
+    <Impacts ID="_jvGtACKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#40"/>
+      <Sentence href="CRS.uima#226"/>
+    </Impacts>
+    <Impacts ID="_u0klkCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#43"/>
+      <Sentence href="CRS.uima#232"/>
+    </Impacts>
+    <Impacts ID="_ySfd8CKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="CRS.uima#233"/>
+    </Impacts>
+    <Impacts ID="_0QmJYCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="CRS.uima#236"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_LmQIkCKXEeKDTP_I8Gw5NQ" Name="Security (password)" Description="">
+    <Impacts ID="_AxNcMCKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="CRS.uima#94"/>
+    </Impacts>
+    <Impacts ID="_Cm7AoCKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_DN0okCKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#97"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_NmqhICKXEeKDTP_I8Gw5NQ" Name="Security (security)" Description="">
+    <Impacts ID="_UWHmQCKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#100"/>
+    </Impacts>
+    <Impacts ID="_XsuVsCKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#110"/>
+    </Impacts>
+    <Impacts ID="_nXF80CKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#132"/>
+    </Impacts>
+    <Impacts ID="_qoqbQCKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#141"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_PRr4gCKXEeKDTP_I8Gw5NQ" Name="Persistence (retrieval)" Description="">
+    <Impacts ID="_XLOLICKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_Zp5NACKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_pz9A0CKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_rxN-wCKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_4R54ICKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#163"/>
+    </Impacts>
+    <Impacts ID="_8lS_8CKYEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#169"/>
+    </Impacts>
+    <Impacts ID="_A2wOECKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#170"/>
+    </Impacts>
+    <Impacts ID="_FLwfcCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_O6oYgCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#28"/>
+      <Sentence href="CRS.uima#192"/>
+    </Impacts>
+    <Impacts ID="_VR_jMCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_VtGK0CKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#200"/>
+    </Impacts>
+    <Impacts ID="_g5ntoCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#216"/>
+    </Impacts>
+    <Impacts ID="_hRolACKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#217"/>
+    </Impacts>
+    <Impacts ID="_sRhaACKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="CRS.uima#227"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_Y3WLMCKXEeKDTP_I8Gw5NQ" Name="Persistence (database)" Description="">
+    <Impacts ID="_0qq2QCKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#68"/>
+      <Section href="CRS.uima#44"/>
+      <Sentence href="CRS.uima#236"/>
+    </Impacts>
+    <Impacts ID="_EAlQUCKaEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#51"/>
+      <Sentence href="CRS.uima#247"/>
+    </Impacts>
+    <Impacts ID="_EuTR8CKaEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#71"/>
+      <Section href="CRS.uima#52"/>
+      <Sentence href="CRS.uima#248"/>
+    </Impacts>
+    <Impacts ID="_Ilm6sCKaEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#73"/>
+      <Section href="CRS.uima#55"/>
+      <Sentence href="CRS.uima#252"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_ap34wCKXEeKDTP_I8Gw5NQ" Name="Fault Tolerance (failure)" Description="">
+    <Impacts ID="_-T0h0CKZEeKDTP_I8Gw5NQ">
+      <Document href="CRS.uima#70"/>
+      <Section href="CRS.uima#50"/>
+      <Sentence href="CRS.uima#246"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

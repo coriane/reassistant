@@ -1,0 +1,837 @@
+InputID;NameCC;Perspective;Measure Name;Measure Value
+manualg1.rea;Security;Input;TruePositive;7,0
+manualg1.rea;Security;Input;FalsePositive;1,0
+manualg1.rea;Security;Input;FalseNegative;3,0
+manualg1.rea;Security;Input;TrueNegative;172,0
+manualg1.rea;Security;Input;Precision;0,875
+manualg1.rea;Security;Input;Recall;0,7
+manualg1.rea;Security;Input;Accuracy;0,9781420765027322
+manualg1.rea;Security;Input;FMeasure-1;0,7777777777777777
+manualg1.rea;Security;Input;WeightedFMeasure-0.5;1,9444444444444442
+manualg1.rea;Security;Input;WeightedFMeasure-2.0;0,48611111111111105
+manualg1.rea;Security;Input;TrueNegativeRate;0,9942196531791907
+manualg1.rea;Error Control;Input;TruePositive;8,0
+manualg1.rea;Error Control;Input;FalsePositive;9,0
+manualg1.rea;Error Control;Input;FalseNegative;26,0
+manualg1.rea;Error Control;Input;TrueNegative;140,0
+manualg1.rea;Error Control;Input;Precision;0,47058823529411764
+manualg1.rea;Error Control;Input;Recall;0,23529411764705882
+manualg1.rea;Error Control;Input;Accuracy;0,8087431693989071
+manualg1.rea;Error Control;Input;FMeasure-1;0,3137254901960785
+manualg1.rea;Error Control;Input;WeightedFMeasure-0.5;0,7843137254901962
+manualg1.rea;Error Control;Input;WeightedFMeasure-2.0;0,19607843137254904
+manualg1.rea;Error Control;Input;TrueNegativeRate;0,9395973154362416
+manualg1.rea;Data Validation;Input;TruePositive;2,0
+manualg1.rea;Data Validation;Input;FalsePositive;0,0
+manualg1.rea;Data Validation;Input;FalseNegative;6,0
+manualg1.rea;Data Validation;Input;TrueNegative;175,0
+manualg1.rea;Data Validation;Input;Precision;1,0
+manualg1.rea;Data Validation;Input;Recall;0,25
+manualg1.rea;Data Validation;Input;Accuracy;0,9672131147540983
+manualg1.rea;Data Validation;Input;FMeasure-1;0,4
+manualg1.rea;Data Validation;Input;WeightedFMeasure-0.5;1,0
+manualg1.rea;Data Validation;Input;WeightedFMeasure-2.0;0,25
+manualg1.rea;Data Validation;Input;TrueNegativeRate;1,0
+manualg1.rea;Synchronization;Input;TruePositive;1,0
+manualg1.rea;Synchronization;Input;FalsePositive;0,0
+manualg1.rea;Synchronization;Input;FalseNegative;2,0
+manualg1.rea;Synchronization;Input;TrueNegative;180,0
+manualg1.rea;Synchronization;Input;Precision;1,0
+manualg1.rea;Synchronization;Input;Recall;0,3333333333333333
+manualg1.rea;Synchronization;Input;Accuracy;0,9890710382513661
+manualg1.rea;Synchronization;Input;FMeasure-1;0,5
+manualg1.rea;Synchronization;Input;WeightedFMeasure-0.5;1,25
+manualg1.rea;Synchronization;Input;WeightedFMeasure-2.0;0,3125
+manualg1.rea;Synchronization;Input;TrueNegativeRate;1,0
+manualg1.rea;Persistence;Input;TruePositive;18,0
+manualg1.rea;Persistence;Input;FalsePositive;3,0
+manualg1.rea;Persistence;Input;FalseNegative;26,0
+manualg1.rea;Persistence;Input;TrueNegative;136,0
+manualg1.rea;Persistence;Input;Precision;0,8571428571428571
+manualg1.rea;Persistence;Input;Recall;0,4090909090909091
+manualg1.rea;Persistence;Input;Accuracy;0,8415300546448088
+manualg1.rea;Persistence;Input;FMeasure-1;0,5538461538461539
+manualg1.rea;Persistence;Input;WeightedFMeasure-0.5;1,3846153846153846
+manualg1.rea;Persistence;Input;WeightedFMeasure-2.0;0,34615384615384615
+manualg1.rea;Persistence;Input;TrueNegativeRate;0,9784172661870504
+manualg1.rea;Integration;Input;TruePositive;4,0
+manualg1.rea;Integration;Input;FalsePositive;4,0
+manualg1.rea;Integration;Input;FalseNegative;9,0
+manualg1.rea;Integration;Input;TrueNegative;166,0
+manualg1.rea;Integration;Input;Precision;0,5
+manualg1.rea;Integration;Input;Recall;0,3076923076923077
+manualg1.rea;Integration;Input;Accuracy;0,9289617486338798
+manualg1.rea;Integration;Input;FMeasure-1;0,380952380952381
+manualg1.rea;Integration;Input;WeightedFMeasure-0.5;0,9523809523809524
+manualg1.rea;Integration;Input;WeightedFMeasure-2.0;0,2380952380952381
+manualg1.rea;Integration;Input;TrueNegativeRate;0,9764705882352941
+manualg1.rea;Persistence;Golden;TruePositive;18,0
+manualg1.rea;Persistence;Golden;FalsePositive;3,0
+manualg1.rea;Persistence;Golden;FalseNegative;26,0
+manualg1.rea;Persistence;Golden;TrueNegative;136,0
+manualg1.rea;Persistence;Golden;Precision;0,8571428571428571
+manualg1.rea;Persistence;Golden;Recall;0,4090909090909091
+manualg1.rea;Persistence;Golden;Accuracy;0,8415300546448088
+manualg1.rea;Persistence;Golden;FMeasure-1;0,5538461538461539
+manualg1.rea;Persistence;Golden;WeightedFMeasure-0.5;1,3846153846153846
+manualg1.rea;Persistence;Golden;WeightedFMeasure-2.0;0,34615384615384615
+manualg1.rea;Persistence;Golden;TrueNegativeRate;0,9784172661870504
+manualg1.rea;Entitlement;Golden;TruePositive;7,0
+manualg1.rea;Entitlement;Golden;FalsePositive;1,0
+manualg1.rea;Entitlement;Golden;FalseNegative;3,0
+manualg1.rea;Entitlement;Golden;TrueNegative;172,0
+manualg1.rea;Entitlement;Golden;Precision;0,875
+manualg1.rea;Entitlement;Golden;Recall;0,7
+manualg1.rea;Entitlement;Golden;Accuracy;0,9781420765027322
+manualg1.rea;Entitlement;Golden;FMeasure-1;0,7777777777777777
+manualg1.rea;Entitlement;Golden;WeightedFMeasure-0.5;1,9444444444444442
+manualg1.rea;Entitlement;Golden;WeightedFMeasure-2.0;0,48611111111111105
+manualg1.rea;Entitlement;Golden;TrueNegativeRate;0,9942196531791907
+manualg1.rea;Communication;Golden;TruePositive;4,0
+manualg1.rea;Communication;Golden;FalsePositive;4,0
+manualg1.rea;Communication;Golden;FalseNegative;9,0
+manualg1.rea;Communication;Golden;TrueNegative;166,0
+manualg1.rea;Communication;Golden;Precision;0,5
+manualg1.rea;Communication;Golden;Recall;0,3076923076923077
+manualg1.rea;Communication;Golden;Accuracy;0,9289617486338798
+manualg1.rea;Communication;Golden;FMeasure-1;0,380952380952381
+manualg1.rea;Communication;Golden;WeightedFMeasure-0.5;0,9523809523809524
+manualg1.rea;Communication;Golden;WeightedFMeasure-2.0;0,2380952380952381
+manualg1.rea;Communication;Golden;TrueNegativeRate;0,9764705882352941
+manualg1.rea;Ease-of-use;Golden;TruePositive;0,0
+manualg1.rea;Ease-of-use;Golden;FalsePositive;0,0
+manualg1.rea;Ease-of-use;Golden;FalseNegative;31,0
+manualg1.rea;Ease-of-use;Golden;TrueNegative;152,0
+manualg1.rea;Ease-of-use;Golden;Precision;0,0
+manualg1.rea;Ease-of-use;Golden;Recall;0,0
+manualg1.rea;Ease-of-use;Golden;Accuracy;0,8306010928961749
+manualg1.rea;Ease-of-use;Golden;FMeasure-1;0,0
+manualg1.rea;Ease-of-use;Golden;WeightedFMeasure-0.5;0,0
+manualg1.rea;Ease-of-use;Golden;WeightedFMeasure-2.0;0,0
+manualg1.rea;Ease-of-use;Golden;TrueNegativeRate;1,0
+manualg1.rea;Data validation;Golden;TruePositive;2,0
+manualg1.rea;Data validation;Golden;FalsePositive;0,0
+manualg1.rea;Data validation;Golden;FalseNegative;6,0
+manualg1.rea;Data validation;Golden;TrueNegative;175,0
+manualg1.rea;Data validation;Golden;Precision;1,0
+manualg1.rea;Data validation;Golden;Recall;0,25
+manualg1.rea;Data validation;Golden;Accuracy;0,9672131147540983
+manualg1.rea;Data validation;Golden;FMeasure-1;0,4
+manualg1.rea;Data validation;Golden;WeightedFMeasure-0.5;1,0
+manualg1.rea;Data validation;Golden;WeightedFMeasure-2.0;0,25
+manualg1.rea;Data validation;Golden;TrueNegativeRate;1,0
+manualg1.rea;Error handling;Golden;TruePositive;8,0
+manualg1.rea;Error handling;Golden;FalsePositive;9,0
+manualg1.rea;Error handling;Golden;FalseNegative;26,0
+manualg1.rea;Error handling;Golden;TrueNegative;140,0
+manualg1.rea;Error handling;Golden;Precision;0,47058823529411764
+manualg1.rea;Error handling;Golden;Recall;0,23529411764705882
+manualg1.rea;Error handling;Golden;Accuracy;0,8087431693989071
+manualg1.rea;Error handling;Golden;FMeasure-1;0,3137254901960785
+manualg1.rea;Error handling;Golden;WeightedFMeasure-0.5;0,7843137254901962
+manualg1.rea;Error handling;Golden;WeightedFMeasure-2.0;0,19607843137254904
+manualg1.rea;Error handling;Golden;TrueNegativeRate;0,9395973154362416
+manualg1.rea;Synchronization;Golden;TruePositive;1,0
+manualg1.rea;Synchronization;Golden;FalsePositive;0,0
+manualg1.rea;Synchronization;Golden;FalseNegative;2,0
+manualg1.rea;Synchronization;Golden;TrueNegative;180,0
+manualg1.rea;Synchronization;Golden;Precision;1,0
+manualg1.rea;Synchronization;Golden;Recall;0,3333333333333333
+manualg1.rea;Synchronization;Golden;Accuracy;0,9890710382513661
+manualg1.rea;Synchronization;Golden;FMeasure-1;0,5
+manualg1.rea;Synchronization;Golden;WeightedFMeasure-0.5;1,25
+manualg1.rea;Synchronization;Golden;WeightedFMeasure-2.0;0,3125
+manualg1.rea;Synchronization;Golden;TrueNegativeRate;1,0
+manualg1.rea;N/A;N/A;TruePositive;40,0
+manualg1.rea;N/A;N/A;FalsePositive;17,0
+manualg1.rea;N/A;N/A;FalseNegative;134,0
+manualg1.rea;N/A;N/A;TrueNegative;1121,0
+manualg1.rea;N/A;N/A;Precision;0,7017543859649122
+manualg1.rea;N/A;N/A;Recall;0,22988505747126436
+manualg1.rea;N/A;N/A;Accuracy;0,8849085365853658
+manualg1.rea;N/A;N/A;FMeasure-1;0,34632034632034636
+manualg1.rea;N/A;N/A;WeightedFMeasure-0.5;0,8658008658008659
+manualg1.rea;N/A;N/A;WeightedFMeasure-2.0;0,21645021645021648
+manualg1.rea;N/A;N/A;TrueNegativeRate;0,9850615114235501
+manualg16.rea;Entitlement (ET);Input;TruePositive;8,0
+manualg16.rea;Entitlement (ET);Input;FalsePositive;0,0
+manualg16.rea;Entitlement (ET);Input;FalseNegative;2,0
+manualg16.rea;Entitlement (ET);Input;TrueNegative;173,0
+manualg16.rea;Entitlement (ET);Input;Precision;1,0
+manualg16.rea;Entitlement (ET);Input;Recall;0,8
+manualg16.rea;Entitlement (ET);Input;Accuracy;0,9890710382513661
+manualg16.rea;Entitlement (ET);Input;FMeasure-1;0,888888888888889
+manualg16.rea;Entitlement (ET);Input;WeightedFMeasure-0.5;2,2222222222222223
+manualg16.rea;Entitlement (ET);Input;WeightedFMeasure-2.0;0,5555555555555556
+manualg16.rea;Entitlement (ET);Input;TrueNegativeRate;1,0
+manualg16.rea;System Interface (SI);Input;TruePositive;22,0
+manualg16.rea;System Interface (SI);Input;FalsePositive;0,0
+manualg16.rea;System Interface (SI);Input;FalseNegative;9,0
+manualg16.rea;System Interface (SI);Input;TrueNegative;152,0
+manualg16.rea;System Interface (SI);Input;Precision;1,0
+manualg16.rea;System Interface (SI);Input;Recall;0,7096774193548387
+manualg16.rea;System Interface (SI);Input;Accuracy;0,9508196721311475
+manualg16.rea;System Interface (SI);Input;FMeasure-1;0,8301886792452831
+manualg16.rea;System Interface (SI);Input;WeightedFMeasure-0.5;2,0754716981132075
+manualg16.rea;System Interface (SI);Input;WeightedFMeasure-2.0;0,5188679245283019
+manualg16.rea;System Interface (SI);Input;TrueNegativeRate;1,0
+manualg16.rea;Field Validation (FV);Input;TruePositive;0,0
+manualg16.rea;Field Validation (FV);Input;FalsePositive;5,0
+manualg16.rea;Field Validation (FV);Input;FalseNegative;8,0
+manualg16.rea;Field Validation (FV);Input;TrueNegative;170,0
+manualg16.rea;Field Validation (FV);Input;Precision;0,0
+manualg16.rea;Field Validation (FV);Input;Recall;0,0
+manualg16.rea;Field Validation (FV);Input;Accuracy;0,9289617486338798
+manualg16.rea;Field Validation (FV);Input;FMeasure-1;0,0
+manualg16.rea;Field Validation (FV);Input;WeightedFMeasure-0.5;0,0
+manualg16.rea;Field Validation (FV);Input;WeightedFMeasure-2.0;0,0
+manualg16.rea;Field Validation (FV);Input;TrueNegativeRate;0,9714285714285714
+manualg16.rea;Persistency (PS);Input;TruePositive;27,0
+manualg16.rea;Persistency (PS);Input;FalsePositive;3,0
+manualg16.rea;Persistency (PS);Input;FalseNegative;17,0
+manualg16.rea;Persistency (PS);Input;TrueNegative;136,0
+manualg16.rea;Persistency (PS);Input;Precision;0,9
+manualg16.rea;Persistency (PS);Input;Recall;0,6136363636363636
+manualg16.rea;Persistency (PS);Input;Accuracy;0,8907103825136612
+manualg16.rea;Persistency (PS);Input;FMeasure-1;0,7297297297297297
+manualg16.rea;Persistency (PS);Input;WeightedFMeasure-0.5;1,8243243243243243
+manualg16.rea;Persistency (PS);Input;WeightedFMeasure-2.0;0,4560810810810811
+manualg16.rea;Persistency (PS);Input;TrueNegativeRate;0,9784172661870504
+manualg16.rea;Data Dependency Validation (DDV);Input;TruePositive;0,0
+manualg16.rea;Data Dependency Validation (DDV);Input;FalsePositive;10,0
+manualg16.rea;Data Dependency Validation (DDV);Input;FalseNegative;8,0
+manualg16.rea;Data Dependency Validation (DDV);Input;TrueNegative;165,0
+manualg16.rea;Data Dependency Validation (DDV);Input;Precision;0,0
+manualg16.rea;Data Dependency Validation (DDV);Input;Recall;0,0
+manualg16.rea;Data Dependency Validation (DDV);Input;Accuracy;0,9016393442622951
+manualg16.rea;Data Dependency Validation (DDV);Input;FMeasure-1;0,0
+manualg16.rea;Data Dependency Validation (DDV);Input;WeightedFMeasure-0.5;0,0
+manualg16.rea;Data Dependency Validation (DDV);Input;WeightedFMeasure-2.0;0,0
+manualg16.rea;Data Dependency Validation (DDV);Input;TrueNegativeRate;0,9428571428571428
+manualg16.rea;Error Handling;Input;TruePositive;3,0
+manualg16.rea;Error Handling;Input;FalsePositive;0,0
+manualg16.rea;Error Handling;Input;FalseNegative;31,0
+manualg16.rea;Error Handling;Input;TrueNegative;149,0
+manualg16.rea;Error Handling;Input;Precision;1,0
+manualg16.rea;Error Handling;Input;Recall;0,08823529411764706
+manualg16.rea;Error Handling;Input;Accuracy;0,8306010928961749
+manualg16.rea;Error Handling;Input;FMeasure-1;0,1621621621621622
+manualg16.rea;Error Handling;Input;WeightedFMeasure-0.5;0,4054054054054055
+manualg16.rea;Error Handling;Input;WeightedFMeasure-2.0;0,10135135135135137
+manualg16.rea;Error Handling;Input;TrueNegativeRate;1,0
+manualg16.rea;Transaction;Input;TruePositive;0,0
+manualg16.rea;Transaction;Input;FalsePositive;1,0
+manualg16.rea;Transaction;Input;FalseNegative;44,0
+manualg16.rea;Transaction;Input;TrueNegative;138,0
+manualg16.rea;Transaction;Input;Precision;0,0
+manualg16.rea;Transaction;Input;Recall;0,0
+manualg16.rea;Transaction;Input;Accuracy;0,7540983606557377
+manualg16.rea;Transaction;Input;FMeasure-1;0,0
+manualg16.rea;Transaction;Input;WeightedFMeasure-0.5;0,0
+manualg16.rea;Transaction;Input;WeightedFMeasure-2.0;0,0
+manualg16.rea;Transaction;Input;TrueNegativeRate;0,9928057553956835
+manualg16.rea;Concurrency;Input;TruePositive;1,0
+manualg16.rea;Concurrency;Input;FalsePositive;0,0
+manualg16.rea;Concurrency;Input;FalseNegative;2,0
+manualg16.rea;Concurrency;Input;TrueNegative;180,0
+manualg16.rea;Concurrency;Input;Precision;1,0
+manualg16.rea;Concurrency;Input;Recall;0,3333333333333333
+manualg16.rea;Concurrency;Input;Accuracy;0,9890710382513661
+manualg16.rea;Concurrency;Input;FMeasure-1;0,5
+manualg16.rea;Concurrency;Input;WeightedFMeasure-0.5;1,25
+manualg16.rea;Concurrency;Input;WeightedFMeasure-2.0;0,3125
+manualg16.rea;Concurrency;Input;TrueNegativeRate;1,0
+manualg16.rea;Resource Management;Input;TruePositive;0,0
+manualg16.rea;Resource Management;Input;FalsePositive;0,0
+manualg16.rea;Resource Management;Input;FalseNegative;3,0
+manualg16.rea;Resource Management;Input;TrueNegative;180,0
+manualg16.rea;Resource Management;Input;Precision;0,0
+manualg16.rea;Resource Management;Input;Recall;0,0
+manualg16.rea;Resource Management;Input;Accuracy;0,9836065573770492
+manualg16.rea;Resource Management;Input;FMeasure-1;0,0
+manualg16.rea;Resource Management;Input;WeightedFMeasure-0.5;0,0
+manualg16.rea;Resource Management;Input;WeightedFMeasure-2.0;0,0
+manualg16.rea;Resource Management;Input;TrueNegativeRate;1,0
+manualg16.rea;Persistence;Golden;TruePositive;27,0
+manualg16.rea;Persistence;Golden;FalsePositive;3,0
+manualg16.rea;Persistence;Golden;FalseNegative;17,0
+manualg16.rea;Persistence;Golden;TrueNegative;136,0
+manualg16.rea;Persistence;Golden;Precision;0,9
+manualg16.rea;Persistence;Golden;Recall;0,6136363636363636
+manualg16.rea;Persistence;Golden;Accuracy;0,8907103825136612
+manualg16.rea;Persistence;Golden;FMeasure-1;0,7297297297297297
+manualg16.rea;Persistence;Golden;WeightedFMeasure-0.5;1,8243243243243243
+manualg16.rea;Persistence;Golden;WeightedFMeasure-2.0;0,4560810810810811
+manualg16.rea;Persistence;Golden;TrueNegativeRate;0,9784172661870504
+manualg16.rea;Entitlement;Golden;TruePositive;8,0
+manualg16.rea;Entitlement;Golden;FalsePositive;0,0
+manualg16.rea;Entitlement;Golden;FalseNegative;2,0
+manualg16.rea;Entitlement;Golden;TrueNegative;173,0
+manualg16.rea;Entitlement;Golden;Precision;1,0
+manualg16.rea;Entitlement;Golden;Recall;0,8
+manualg16.rea;Entitlement;Golden;Accuracy;0,9890710382513661
+manualg16.rea;Entitlement;Golden;FMeasure-1;0,888888888888889
+manualg16.rea;Entitlement;Golden;WeightedFMeasure-0.5;2,2222222222222223
+manualg16.rea;Entitlement;Golden;WeightedFMeasure-2.0;0,5555555555555556
+manualg16.rea;Entitlement;Golden;TrueNegativeRate;1,0
+manualg16.rea;Communication;Golden;TruePositive;0,0
+manualg16.rea;Communication;Golden;FalsePositive;0,0
+manualg16.rea;Communication;Golden;FalseNegative;13,0
+manualg16.rea;Communication;Golden;TrueNegative;170,0
+manualg16.rea;Communication;Golden;Precision;0,0
+manualg16.rea;Communication;Golden;Recall;0,0
+manualg16.rea;Communication;Golden;Accuracy;0,9289617486338798
+manualg16.rea;Communication;Golden;FMeasure-1;0,0
+manualg16.rea;Communication;Golden;WeightedFMeasure-0.5;0,0
+manualg16.rea;Communication;Golden;WeightedFMeasure-2.0;0,0
+manualg16.rea;Communication;Golden;TrueNegativeRate;1,0
+manualg16.rea;Ease-of-use;Golden;TruePositive;22,0
+manualg16.rea;Ease-of-use;Golden;FalsePositive;0,0
+manualg16.rea;Ease-of-use;Golden;FalseNegative;9,0
+manualg16.rea;Ease-of-use;Golden;TrueNegative;152,0
+manualg16.rea;Ease-of-use;Golden;Precision;1,0
+manualg16.rea;Ease-of-use;Golden;Recall;0,7096774193548387
+manualg16.rea;Ease-of-use;Golden;Accuracy;0,9508196721311475
+manualg16.rea;Ease-of-use;Golden;FMeasure-1;0,8301886792452831
+manualg16.rea;Ease-of-use;Golden;WeightedFMeasure-0.5;2,0754716981132075
+manualg16.rea;Ease-of-use;Golden;WeightedFMeasure-2.0;0,5188679245283019
+manualg16.rea;Ease-of-use;Golden;TrueNegativeRate;1,0
+manualg16.rea;Data validation;Golden;TruePositive;0,0
+manualg16.rea;Data validation;Golden;FalsePositive;15,0
+manualg16.rea;Data validation;Golden;FalseNegative;8,0
+manualg16.rea;Data validation;Golden;TrueNegative;160,0
+manualg16.rea;Data validation;Golden;Precision;0,0
+manualg16.rea;Data validation;Golden;Recall;0,0
+manualg16.rea;Data validation;Golden;Accuracy;0,8743169398907104
+manualg16.rea;Data validation;Golden;FMeasure-1;0,0
+manualg16.rea;Data validation;Golden;WeightedFMeasure-0.5;0,0
+manualg16.rea;Data validation;Golden;WeightedFMeasure-2.0;0,0
+manualg16.rea;Data validation;Golden;TrueNegativeRate;0,9142857142857143
+manualg16.rea;Error handling;Golden;TruePositive;3,0
+manualg16.rea;Error handling;Golden;FalsePositive;0,0
+manualg16.rea;Error handling;Golden;FalseNegative;31,0
+manualg16.rea;Error handling;Golden;TrueNegative;149,0
+manualg16.rea;Error handling;Golden;Precision;1,0
+manualg16.rea;Error handling;Golden;Recall;0,08823529411764706
+manualg16.rea;Error handling;Golden;Accuracy;0,8306010928961749
+manualg16.rea;Error handling;Golden;FMeasure-1;0,1621621621621622
+manualg16.rea;Error handling;Golden;WeightedFMeasure-0.5;0,4054054054054055
+manualg16.rea;Error handling;Golden;WeightedFMeasure-2.0;0,10135135135135137
+manualg16.rea;Error handling;Golden;TrueNegativeRate;1,0
+manualg16.rea;Synchronization;Golden;TruePositive;1,0
+manualg16.rea;Synchronization;Golden;FalsePositive;0,0
+manualg16.rea;Synchronization;Golden;FalseNegative;2,0
+manualg16.rea;Synchronization;Golden;TrueNegative;180,0
+manualg16.rea;Synchronization;Golden;Precision;1,0
+manualg16.rea;Synchronization;Golden;Recall;0,3333333333333333
+manualg16.rea;Synchronization;Golden;Accuracy;0,9890710382513661
+manualg16.rea;Synchronization;Golden;FMeasure-1;0,5
+manualg16.rea;Synchronization;Golden;WeightedFMeasure-0.5;1,25
+manualg16.rea;Synchronization;Golden;WeightedFMeasure-2.0;0,3125
+manualg16.rea;Synchronization;Golden;TrueNegativeRate;1,0
+manualg16.rea;N/A;N/A;TruePositive;61,0
+manualg16.rea;N/A;N/A;FalsePositive;18,0
+manualg16.rea;N/A;N/A;FalseNegative;95,0
+manualg16.rea;N/A;N/A;TrueNegative;1120,0
+manualg16.rea;N/A;N/A;Precision;0,7721518987341772
+manualg16.rea;N/A;N/A;Recall;0,391025641025641
+manualg16.rea;N/A;N/A;Accuracy;0,9126738794435858
+manualg16.rea;N/A;N/A;FMeasure-1;0,5191489361702127
+manualg16.rea;N/A;N/A;WeightedFMeasure-0.5;1,297872340425532
+manualg16.rea;N/A;N/A;WeightedFMeasure-2.0;0,324468085106383
+manualg16.rea;N/A;N/A;TrueNegativeRate;0,984182776801406
+reassistant-direct.rea;User Access Control;Input;TruePositive;3,0
+reassistant-direct.rea;User Access Control;Input;FalsePositive;6,0
+reassistant-direct.rea;User Access Control;Input;FalseNegative;7,0
+reassistant-direct.rea;User Access Control;Input;TrueNegative;167,0
+reassistant-direct.rea;User Access Control;Input;Precision;0,3333333333333333
+reassistant-direct.rea;User Access Control;Input;Recall;0,3
+reassistant-direct.rea;User Access Control;Input;Accuracy;0,9289617486338798
+reassistant-direct.rea;User Access Control;Input;FMeasure-1;0,3157894736842105
+reassistant-direct.rea;User Access Control;Input;WeightedFMeasure-0.5;0,7894736842105263
+reassistant-direct.rea;User Access Control;Input;WeightedFMeasure-2.0;0,19736842105263158
+reassistant-direct.rea;User Access Control;Input;TrueNegativeRate;0,9653179190751445
+reassistant-direct.rea;Concurrence;Input;TruePositive;1,0
+reassistant-direct.rea;Concurrence;Input;FalsePositive;0,0
+reassistant-direct.rea;Concurrence;Input;FalseNegative;2,0
+reassistant-direct.rea;Concurrence;Input;TrueNegative;180,0
+reassistant-direct.rea;Concurrence;Input;Precision;1,0
+reassistant-direct.rea;Concurrence;Input;Recall;0,3333333333333333
+reassistant-direct.rea;Concurrence;Input;Accuracy;0,9890710382513661
+reassistant-direct.rea;Concurrence;Input;FMeasure-1;0,5
+reassistant-direct.rea;Concurrence;Input;WeightedFMeasure-0.5;1,25
+reassistant-direct.rea;Concurrence;Input;WeightedFMeasure-2.0;0,3125
+reassistant-direct.rea;Concurrence;Input;TrueNegativeRate;1,0
+reassistant-direct.rea;External Communication;Input;TruePositive;2,0
+reassistant-direct.rea;External Communication;Input;FalsePositive;6,0
+reassistant-direct.rea;External Communication;Input;FalseNegative;11,0
+reassistant-direct.rea;External Communication;Input;TrueNegative;164,0
+reassistant-direct.rea;External Communication;Input;Precision;0,25
+reassistant-direct.rea;External Communication;Input;Recall;0,15384615384615385
+reassistant-direct.rea;External Communication;Input;Accuracy;0,907103825136612
+reassistant-direct.rea;External Communication;Input;FMeasure-1;0,1904761904761905
+reassistant-direct.rea;External Communication;Input;WeightedFMeasure-0.5;0,4761904761904762
+reassistant-direct.rea;External Communication;Input;WeightedFMeasure-2.0;0,11904761904761905
+reassistant-direct.rea;External Communication;Input;TrueNegativeRate;0,9647058823529412
+reassistant-direct.rea;Integrity Management;Input;TruePositive;0,0
+reassistant-direct.rea;Integrity Management;Input;FalsePositive;0,0
+reassistant-direct.rea;Integrity Management;Input;FalseNegative;8,0
+reassistant-direct.rea;Integrity Management;Input;TrueNegative;175,0
+reassistant-direct.rea;Integrity Management;Input;Precision;0,0
+reassistant-direct.rea;Integrity Management;Input;Recall;0,0
+reassistant-direct.rea;Integrity Management;Input;Accuracy;0,9562841530054644
+reassistant-direct.rea;Integrity Management;Input;FMeasure-1;0,0
+reassistant-direct.rea;Integrity Management;Input;WeightedFMeasure-0.5;0,0
+reassistant-direct.rea;Integrity Management;Input;WeightedFMeasure-2.0;0,0
+reassistant-direct.rea;Integrity Management;Input;TrueNegativeRate;1,0
+reassistant-direct.rea;Error Management;Input;TruePositive;18,0
+reassistant-direct.rea;Error Management;Input;FalsePositive;5,0
+reassistant-direct.rea;Error Management;Input;FalseNegative;16,0
+reassistant-direct.rea;Error Management;Input;TrueNegative;144,0
+reassistant-direct.rea;Error Management;Input;Precision;0,782608695652174
+reassistant-direct.rea;Error Management;Input;Recall;0,5294117647058824
+reassistant-direct.rea;Error Management;Input;Accuracy;0,8852459016393442
+reassistant-direct.rea;Error Management;Input;FMeasure-1;0,631578947368421
+reassistant-direct.rea;Error Management;Input;WeightedFMeasure-0.5;1,5789473684210527
+reassistant-direct.rea;Error Management;Input;WeightedFMeasure-2.0;0,39473684210526316
+reassistant-direct.rea;Error Management;Input;TrueNegativeRate;0,9664429530201343
+reassistant-direct.rea;Persistence;Input;TruePositive;3,0
+reassistant-direct.rea;Persistence;Input;FalsePositive;1,0
+reassistant-direct.rea;Persistence;Input;FalseNegative;41,0
+reassistant-direct.rea;Persistence;Input;TrueNegative;138,0
+reassistant-direct.rea;Persistence;Input;Precision;0,75
+reassistant-direct.rea;Persistence;Input;Recall;0,06818181818181818
+reassistant-direct.rea;Persistence;Input;Accuracy;0,7704918032786885
+reassistant-direct.rea;Persistence;Input;FMeasure-1;0,125
+reassistant-direct.rea;Persistence;Input;WeightedFMeasure-0.5;0,3125
+reassistant-direct.rea;Persistence;Input;WeightedFMeasure-2.0;0,078125
+reassistant-direct.rea;Persistence;Input;TrueNegativeRate;0,9928057553956835
+reassistant-direct.rea;Presentation;Input;TruePositive;2,0
+reassistant-direct.rea;Presentation;Input;FalsePositive;5,0
+reassistant-direct.rea;Presentation;Input;FalseNegative;29,0
+reassistant-direct.rea;Presentation;Input;TrueNegative;147,0
+reassistant-direct.rea;Presentation;Input;Precision;0,2857142857142857
+reassistant-direct.rea;Presentation;Input;Recall;0,06451612903225806
+reassistant-direct.rea;Presentation;Input;Accuracy;0,8142076502732241
+reassistant-direct.rea;Presentation;Input;FMeasure-1;0,10526315789473685
+reassistant-direct.rea;Presentation;Input;WeightedFMeasure-0.5;0,26315789473684215
+reassistant-direct.rea;Presentation;Input;WeightedFMeasure-2.0;0,06578947368421054
+reassistant-direct.rea;Presentation;Input;TrueNegativeRate;0,9671052631578947
+reassistant-direct.rea;Persistence;Golden;TruePositive;3,0
+reassistant-direct.rea;Persistence;Golden;FalsePositive;1,0
+reassistant-direct.rea;Persistence;Golden;FalseNegative;41,0
+reassistant-direct.rea;Persistence;Golden;TrueNegative;138,0
+reassistant-direct.rea;Persistence;Golden;Precision;0,75
+reassistant-direct.rea;Persistence;Golden;Recall;0,06818181818181818
+reassistant-direct.rea;Persistence;Golden;Accuracy;0,7704918032786885
+reassistant-direct.rea;Persistence;Golden;FMeasure-1;0,125
+reassistant-direct.rea;Persistence;Golden;WeightedFMeasure-0.5;0,3125
+reassistant-direct.rea;Persistence;Golden;WeightedFMeasure-2.0;0,078125
+reassistant-direct.rea;Persistence;Golden;TrueNegativeRate;0,9928057553956835
+reassistant-direct.rea;Entitlement;Golden;TruePositive;3,0
+reassistant-direct.rea;Entitlement;Golden;FalsePositive;6,0
+reassistant-direct.rea;Entitlement;Golden;FalseNegative;7,0
+reassistant-direct.rea;Entitlement;Golden;TrueNegative;167,0
+reassistant-direct.rea;Entitlement;Golden;Precision;0,3333333333333333
+reassistant-direct.rea;Entitlement;Golden;Recall;0,3
+reassistant-direct.rea;Entitlement;Golden;Accuracy;0,9289617486338798
+reassistant-direct.rea;Entitlement;Golden;FMeasure-1;0,3157894736842105
+reassistant-direct.rea;Entitlement;Golden;WeightedFMeasure-0.5;0,7894736842105263
+reassistant-direct.rea;Entitlement;Golden;WeightedFMeasure-2.0;0,19736842105263158
+reassistant-direct.rea;Entitlement;Golden;TrueNegativeRate;0,9653179190751445
+reassistant-direct.rea;Communication;Golden;TruePositive;2,0
+reassistant-direct.rea;Communication;Golden;FalsePositive;6,0
+reassistant-direct.rea;Communication;Golden;FalseNegative;11,0
+reassistant-direct.rea;Communication;Golden;TrueNegative;164,0
+reassistant-direct.rea;Communication;Golden;Precision;0,25
+reassistant-direct.rea;Communication;Golden;Recall;0,15384615384615385
+reassistant-direct.rea;Communication;Golden;Accuracy;0,907103825136612
+reassistant-direct.rea;Communication;Golden;FMeasure-1;0,1904761904761905
+reassistant-direct.rea;Communication;Golden;WeightedFMeasure-0.5;0,4761904761904762
+reassistant-direct.rea;Communication;Golden;WeightedFMeasure-2.0;0,11904761904761905
+reassistant-direct.rea;Communication;Golden;TrueNegativeRate;0,9647058823529412
+reassistant-direct.rea;Ease-of-use;Golden;TruePositive;2,0
+reassistant-direct.rea;Ease-of-use;Golden;FalsePositive;5,0
+reassistant-direct.rea;Ease-of-use;Golden;FalseNegative;29,0
+reassistant-direct.rea;Ease-of-use;Golden;TrueNegative;147,0
+reassistant-direct.rea;Ease-of-use;Golden;Precision;0,2857142857142857
+reassistant-direct.rea;Ease-of-use;Golden;Recall;0,06451612903225806
+reassistant-direct.rea;Ease-of-use;Golden;Accuracy;0,8142076502732241
+reassistant-direct.rea;Ease-of-use;Golden;FMeasure-1;0,10526315789473685
+reassistant-direct.rea;Ease-of-use;Golden;WeightedFMeasure-0.5;0,26315789473684215
+reassistant-direct.rea;Ease-of-use;Golden;WeightedFMeasure-2.0;0,06578947368421054
+reassistant-direct.rea;Ease-of-use;Golden;TrueNegativeRate;0,9671052631578947
+reassistant-direct.rea;Data validation;Golden;TruePositive;0,0
+reassistant-direct.rea;Data validation;Golden;FalsePositive;0,0
+reassistant-direct.rea;Data validation;Golden;FalseNegative;8,0
+reassistant-direct.rea;Data validation;Golden;TrueNegative;175,0
+reassistant-direct.rea;Data validation;Golden;Precision;0,0
+reassistant-direct.rea;Data validation;Golden;Recall;0,0
+reassistant-direct.rea;Data validation;Golden;Accuracy;0,9562841530054644
+reassistant-direct.rea;Data validation;Golden;FMeasure-1;0,0
+reassistant-direct.rea;Data validation;Golden;WeightedFMeasure-0.5;0,0
+reassistant-direct.rea;Data validation;Golden;WeightedFMeasure-2.0;0,0
+reassistant-direct.rea;Data validation;Golden;TrueNegativeRate;1,0
+reassistant-direct.rea;Error handling;Golden;TruePositive;18,0
+reassistant-direct.rea;Error handling;Golden;FalsePositive;5,0
+reassistant-direct.rea;Error handling;Golden;FalseNegative;16,0
+reassistant-direct.rea;Error handling;Golden;TrueNegative;144,0
+reassistant-direct.rea;Error handling;Golden;Precision;0,782608695652174
+reassistant-direct.rea;Error handling;Golden;Recall;0,5294117647058824
+reassistant-direct.rea;Error handling;Golden;Accuracy;0,8852459016393442
+reassistant-direct.rea;Error handling;Golden;FMeasure-1;0,631578947368421
+reassistant-direct.rea;Error handling;Golden;WeightedFMeasure-0.5;1,5789473684210527
+reassistant-direct.rea;Error handling;Golden;WeightedFMeasure-2.0;0,39473684210526316
+reassistant-direct.rea;Error handling;Golden;TrueNegativeRate;0,9664429530201343
+reassistant-direct.rea;Synchronization;Golden;TruePositive;1,0
+reassistant-direct.rea;Synchronization;Golden;FalsePositive;0,0
+reassistant-direct.rea;Synchronization;Golden;FalseNegative;2,0
+reassistant-direct.rea;Synchronization;Golden;TrueNegative;180,0
+reassistant-direct.rea;Synchronization;Golden;Precision;1,0
+reassistant-direct.rea;Synchronization;Golden;Recall;0,3333333333333333
+reassistant-direct.rea;Synchronization;Golden;Accuracy;0,9890710382513661
+reassistant-direct.rea;Synchronization;Golden;FMeasure-1;0,5
+reassistant-direct.rea;Synchronization;Golden;WeightedFMeasure-0.5;1,25
+reassistant-direct.rea;Synchronization;Golden;WeightedFMeasure-2.0;0,3125
+reassistant-direct.rea;Synchronization;Golden;TrueNegativeRate;1,0
+reassistant-direct.rea;N/A;N/A;TruePositive;29,0
+reassistant-direct.rea;N/A;N/A;FalsePositive;23,0
+reassistant-direct.rea;N/A;N/A;FalseNegative;114,0
+reassistant-direct.rea;N/A;N/A;TrueNegative;1115,0
+reassistant-direct.rea;N/A;N/A;Precision;0,5576923076923077
+reassistant-direct.rea;N/A;N/A;Recall;0,20279720279720279
+reassistant-direct.rea;N/A;N/A;Accuracy;0,8930523028883685
+reassistant-direct.rea;N/A;N/A;FMeasure-1;0,2974358974358974
+reassistant-direct.rea;N/A;N/A;WeightedFMeasure-0.5;0,7435897435897434
+reassistant-direct.rea;N/A;N/A;WeightedFMeasure-2.0;0,18589743589743585
+reassistant-direct.rea;N/A;N/A;TrueNegativeRate;0,9797891036906854
+reassistant-impact.rea;Integrity Management;Input;TruePositive;2,0
+reassistant-impact.rea;Integrity Management;Input;FalsePositive;0,0
+reassistant-impact.rea;Integrity Management;Input;FalseNegative;6,0
+reassistant-impact.rea;Integrity Management;Input;TrueNegative;175,0
+reassistant-impact.rea;Integrity Management;Input;Precision;1,0
+reassistant-impact.rea;Integrity Management;Input;Recall;0,25
+reassistant-impact.rea;Integrity Management;Input;Accuracy;0,9672131147540983
+reassistant-impact.rea;Integrity Management;Input;FMeasure-1;0,4
+reassistant-impact.rea;Integrity Management;Input;WeightedFMeasure-0.5;1,0
+reassistant-impact.rea;Integrity Management;Input;WeightedFMeasure-2.0;0,25
+reassistant-impact.rea;Integrity Management;Input;TrueNegativeRate;1,0
+reassistant-impact.rea;Persistence;Input;TruePositive;28,0
+reassistant-impact.rea;Persistence;Input;FalsePositive;24,0
+reassistant-impact.rea;Persistence;Input;FalseNegative;16,0
+reassistant-impact.rea;Persistence;Input;TrueNegative;115,0
+reassistant-impact.rea;Persistence;Input;Precision;0,5384615384615384
+reassistant-impact.rea;Persistence;Input;Recall;0,6363636363636364
+reassistant-impact.rea;Persistence;Input;Accuracy;0,7814207650273224
+reassistant-impact.rea;Persistence;Input;FMeasure-1;0,5833333333333334
+reassistant-impact.rea;Persistence;Input;WeightedFMeasure-0.5;1,4583333333333335
+reassistant-impact.rea;Persistence;Input;WeightedFMeasure-2.0;0,36458333333333337
+reassistant-impact.rea;Persistence;Input;TrueNegativeRate;0,8273381294964028
+reassistant-impact.rea;User Access Control;Input;TruePositive;4,0
+reassistant-impact.rea;User Access Control;Input;FalsePositive;12,0
+reassistant-impact.rea;User Access Control;Input;FalseNegative;6,0
+reassistant-impact.rea;User Access Control;Input;TrueNegative;161,0
+reassistant-impact.rea;User Access Control;Input;Precision;0,25
+reassistant-impact.rea;User Access Control;Input;Recall;0,4
+reassistant-impact.rea;User Access Control;Input;Accuracy;0,9016393442622951
+reassistant-impact.rea;User Access Control;Input;FMeasure-1;0,3076923076923077
+reassistant-impact.rea;User Access Control;Input;WeightedFMeasure-0.5;0,7692307692307693
+reassistant-impact.rea;User Access Control;Input;WeightedFMeasure-2.0;0,19230769230769232
+reassistant-impact.rea;User Access Control;Input;TrueNegativeRate;0,930635838150289
+reassistant-impact.rea;External Communication;Input;TruePositive;1,0
+reassistant-impact.rea;External Communication;Input;FalsePositive;3,0
+reassistant-impact.rea;External Communication;Input;FalseNegative;12,0
+reassistant-impact.rea;External Communication;Input;TrueNegative;167,0
+reassistant-impact.rea;External Communication;Input;Precision;0,25
+reassistant-impact.rea;External Communication;Input;Recall;0,07692307692307693
+reassistant-impact.rea;External Communication;Input;Accuracy;0,9180327868852459
+reassistant-impact.rea;External Communication;Input;FMeasure-1;0,11764705882352941
+reassistant-impact.rea;External Communication;Input;WeightedFMeasure-0.5;0,29411764705882354
+reassistant-impact.rea;External Communication;Input;WeightedFMeasure-2.0;0,07352941176470588
+reassistant-impact.rea;External Communication;Input;TrueNegativeRate;0,9823529411764705
+reassistant-impact.rea;Presentation;Input;TruePositive;25,0
+reassistant-impact.rea;Presentation;Input;FalsePositive;5,0
+reassistant-impact.rea;Presentation;Input;FalseNegative;6,0
+reassistant-impact.rea;Presentation;Input;TrueNegative;147,0
+reassistant-impact.rea;Presentation;Input;Precision;0,8333333333333334
+reassistant-impact.rea;Presentation;Input;Recall;0,8064516129032258
+reassistant-impact.rea;Presentation;Input;Accuracy;0,9398907103825137
+reassistant-impact.rea;Presentation;Input;FMeasure-1;0,819672131147541
+reassistant-impact.rea;Presentation;Input;WeightedFMeasure-0.5;2,0491803278688527
+reassistant-impact.rea;Presentation;Input;WeightedFMeasure-2.0;0,5122950819672132
+reassistant-impact.rea;Presentation;Input;TrueNegativeRate;0,9671052631578947
+reassistant-impact.rea;Concurrence;Input;TruePositive;2,0
+reassistant-impact.rea;Concurrence;Input;FalsePositive;0,0
+reassistant-impact.rea;Concurrence;Input;FalseNegative;1,0
+reassistant-impact.rea;Concurrence;Input;TrueNegative;180,0
+reassistant-impact.rea;Concurrence;Input;Precision;1,0
+reassistant-impact.rea;Concurrence;Input;Recall;0,6666666666666666
+reassistant-impact.rea;Concurrence;Input;Accuracy;0,994535519125683
+reassistant-impact.rea;Concurrence;Input;FMeasure-1;0,8
+reassistant-impact.rea;Concurrence;Input;WeightedFMeasure-0.5;2,0
+reassistant-impact.rea;Concurrence;Input;WeightedFMeasure-2.0;0,5
+reassistant-impact.rea;Concurrence;Input;TrueNegativeRate;1,0
+reassistant-impact.rea;Error Management;Input;TruePositive;7,0
+reassistant-impact.rea;Error Management;Input;FalsePositive;0,0
+reassistant-impact.rea;Error Management;Input;FalseNegative;27,0
+reassistant-impact.rea;Error Management;Input;TrueNegative;149,0
+reassistant-impact.rea;Error Management;Input;Precision;1,0
+reassistant-impact.rea;Error Management;Input;Recall;0,20588235294117646
+reassistant-impact.rea;Error Management;Input;Accuracy;0,8524590163934426
+reassistant-impact.rea;Error Management;Input;FMeasure-1;0,34146341463414637
+reassistant-impact.rea;Error Management;Input;WeightedFMeasure-0.5;0,853658536585366
+reassistant-impact.rea;Error Management;Input;WeightedFMeasure-2.0;0,2134146341463415
+reassistant-impact.rea;Error Management;Input;TrueNegativeRate;1,0
+reassistant-impact.rea;Persistence;Golden;TruePositive;28,0
+reassistant-impact.rea;Persistence;Golden;FalsePositive;24,0
+reassistant-impact.rea;Persistence;Golden;FalseNegative;16,0
+reassistant-impact.rea;Persistence;Golden;TrueNegative;115,0
+reassistant-impact.rea;Persistence;Golden;Precision;0,5384615384615384
+reassistant-impact.rea;Persistence;Golden;Recall;0,6363636363636364
+reassistant-impact.rea;Persistence;Golden;Accuracy;0,7814207650273224
+reassistant-impact.rea;Persistence;Golden;FMeasure-1;0,5833333333333334
+reassistant-impact.rea;Persistence;Golden;WeightedFMeasure-0.5;1,4583333333333335
+reassistant-impact.rea;Persistence;Golden;WeightedFMeasure-2.0;0,36458333333333337
+reassistant-impact.rea;Persistence;Golden;TrueNegativeRate;0,8273381294964028
+reassistant-impact.rea;Entitlement;Golden;TruePositive;4,0
+reassistant-impact.rea;Entitlement;Golden;FalsePositive;12,0
+reassistant-impact.rea;Entitlement;Golden;FalseNegative;6,0
+reassistant-impact.rea;Entitlement;Golden;TrueNegative;161,0
+reassistant-impact.rea;Entitlement;Golden;Precision;0,25
+reassistant-impact.rea;Entitlement;Golden;Recall;0,4
+reassistant-impact.rea;Entitlement;Golden;Accuracy;0,9016393442622951
+reassistant-impact.rea;Entitlement;Golden;FMeasure-1;0,3076923076923077
+reassistant-impact.rea;Entitlement;Golden;WeightedFMeasure-0.5;0,7692307692307693
+reassistant-impact.rea;Entitlement;Golden;WeightedFMeasure-2.0;0,19230769230769232
+reassistant-impact.rea;Entitlement;Golden;TrueNegativeRate;0,930635838150289
+reassistant-impact.rea;Communication;Golden;TruePositive;1,0
+reassistant-impact.rea;Communication;Golden;FalsePositive;3,0
+reassistant-impact.rea;Communication;Golden;FalseNegative;12,0
+reassistant-impact.rea;Communication;Golden;TrueNegative;167,0
+reassistant-impact.rea;Communication;Golden;Precision;0,25
+reassistant-impact.rea;Communication;Golden;Recall;0,07692307692307693
+reassistant-impact.rea;Communication;Golden;Accuracy;0,9180327868852459
+reassistant-impact.rea;Communication;Golden;FMeasure-1;0,11764705882352941
+reassistant-impact.rea;Communication;Golden;WeightedFMeasure-0.5;0,29411764705882354
+reassistant-impact.rea;Communication;Golden;WeightedFMeasure-2.0;0,07352941176470588
+reassistant-impact.rea;Communication;Golden;TrueNegativeRate;0,9823529411764705
+reassistant-impact.rea;Ease-of-use;Golden;TruePositive;25,0
+reassistant-impact.rea;Ease-of-use;Golden;FalsePositive;5,0
+reassistant-impact.rea;Ease-of-use;Golden;FalseNegative;6,0
+reassistant-impact.rea;Ease-of-use;Golden;TrueNegative;147,0
+reassistant-impact.rea;Ease-of-use;Golden;Precision;0,8333333333333334
+reassistant-impact.rea;Ease-of-use;Golden;Recall;0,8064516129032258
+reassistant-impact.rea;Ease-of-use;Golden;Accuracy;0,9398907103825137
+reassistant-impact.rea;Ease-of-use;Golden;FMeasure-1;0,819672131147541
+reassistant-impact.rea;Ease-of-use;Golden;WeightedFMeasure-0.5;2,0491803278688527
+reassistant-impact.rea;Ease-of-use;Golden;WeightedFMeasure-2.0;0,5122950819672132
+reassistant-impact.rea;Ease-of-use;Golden;TrueNegativeRate;0,9671052631578947
+reassistant-impact.rea;Data validation;Golden;TruePositive;2,0
+reassistant-impact.rea;Data validation;Golden;FalsePositive;0,0
+reassistant-impact.rea;Data validation;Golden;FalseNegative;6,0
+reassistant-impact.rea;Data validation;Golden;TrueNegative;175,0
+reassistant-impact.rea;Data validation;Golden;Precision;1,0
+reassistant-impact.rea;Data validation;Golden;Recall;0,25
+reassistant-impact.rea;Data validation;Golden;Accuracy;0,9672131147540983
+reassistant-impact.rea;Data validation;Golden;FMeasure-1;0,4
+reassistant-impact.rea;Data validation;Golden;WeightedFMeasure-0.5;1,0
+reassistant-impact.rea;Data validation;Golden;WeightedFMeasure-2.0;0,25
+reassistant-impact.rea;Data validation;Golden;TrueNegativeRate;1,0
+reassistant-impact.rea;Error handling;Golden;TruePositive;7,0
+reassistant-impact.rea;Error handling;Golden;FalsePositive;0,0
+reassistant-impact.rea;Error handling;Golden;FalseNegative;27,0
+reassistant-impact.rea;Error handling;Golden;TrueNegative;149,0
+reassistant-impact.rea;Error handling;Golden;Precision;1,0
+reassistant-impact.rea;Error handling;Golden;Recall;0,20588235294117646
+reassistant-impact.rea;Error handling;Golden;Accuracy;0,8524590163934426
+reassistant-impact.rea;Error handling;Golden;FMeasure-1;0,34146341463414637
+reassistant-impact.rea;Error handling;Golden;WeightedFMeasure-0.5;0,853658536585366
+reassistant-impact.rea;Error handling;Golden;WeightedFMeasure-2.0;0,2134146341463415
+reassistant-impact.rea;Error handling;Golden;TrueNegativeRate;1,0
+reassistant-impact.rea;Synchronization;Golden;TruePositive;2,0
+reassistant-impact.rea;Synchronization;Golden;FalsePositive;0,0
+reassistant-impact.rea;Synchronization;Golden;FalseNegative;1,0
+reassistant-impact.rea;Synchronization;Golden;TrueNegative;180,0
+reassistant-impact.rea;Synchronization;Golden;Precision;1,0
+reassistant-impact.rea;Synchronization;Golden;Recall;0,6666666666666666
+reassistant-impact.rea;Synchronization;Golden;Accuracy;0,994535519125683
+reassistant-impact.rea;Synchronization;Golden;FMeasure-1;0,8
+reassistant-impact.rea;Synchronization;Golden;WeightedFMeasure-0.5;2,0
+reassistant-impact.rea;Synchronization;Golden;WeightedFMeasure-2.0;0,5
+reassistant-impact.rea;Synchronization;Golden;TrueNegativeRate;1,0
+reassistant-impact.rea;N/A;N/A;TruePositive;69,0
+reassistant-impact.rea;N/A;N/A;FalsePositive;44,0
+reassistant-impact.rea;N/A;N/A;FalseNegative;74,0
+reassistant-impact.rea;N/A;N/A;TrueNegative;1094,0
+reassistant-impact.rea;N/A;N/A;Precision;0,6106194690265486
+reassistant-impact.rea;N/A;N/A;Recall;0,4825174825174825
+reassistant-impact.rea;N/A;N/A;Accuracy;0,9078844652615145
+reassistant-impact.rea;N/A;N/A;FMeasure-1;0,5390625
+reassistant-impact.rea;N/A;N/A;WeightedFMeasure-0.5;1,34765625
+reassistant-impact.rea;N/A;N/A;WeightedFMeasure-2.0;0,3369140625
+reassistant-impact.rea;N/A;N/A;TrueNegativeRate;0,961335676625659
+reassistant-both.rea;Integrity Management;Input;TruePositive;2,0
+reassistant-both.rea;Integrity Management;Input;FalsePositive;0,0
+reassistant-both.rea;Integrity Management;Input;FalseNegative;6,0
+reassistant-both.rea;Integrity Management;Input;TrueNegative;175,0
+reassistant-both.rea;Integrity Management;Input;Precision;1,0
+reassistant-both.rea;Integrity Management;Input;Recall;0,25
+reassistant-both.rea;Integrity Management;Input;Accuracy;0,9672131147540983
+reassistant-both.rea;Integrity Management;Input;FMeasure-1;0,4
+reassistant-both.rea;Integrity Management;Input;WeightedFMeasure-0.5;1,0
+reassistant-both.rea;Integrity Management;Input;WeightedFMeasure-2.0;0,25
+reassistant-both.rea;Integrity Management;Input;TrueNegativeRate;1,0
+reassistant-both.rea;Error Management;Input;TruePositive;21,0
+reassistant-both.rea;Error Management;Input;FalsePositive;5,0
+reassistant-both.rea;Error Management;Input;FalseNegative;13,0
+reassistant-both.rea;Error Management;Input;TrueNegative;144,0
+reassistant-both.rea;Error Management;Input;Precision;0,8076923076923077
+reassistant-both.rea;Error Management;Input;Recall;0,6176470588235294
+reassistant-both.rea;Error Management;Input;Accuracy;0,9016393442622951
+reassistant-both.rea;Error Management;Input;FMeasure-1;0,7
+reassistant-both.rea;Error Management;Input;WeightedFMeasure-0.5;1,75
+reassistant-both.rea;Error Management;Input;WeightedFMeasure-2.0;0,4375
+reassistant-both.rea;Error Management;Input;TrueNegativeRate;0,9664429530201343
+reassistant-both.rea;User Access Control;Input;TruePositive;7,0
+reassistant-both.rea;User Access Control;Input;FalsePositive;20,0
+reassistant-both.rea;User Access Control;Input;FalseNegative;3,0
+reassistant-both.rea;User Access Control;Input;TrueNegative;153,0
+reassistant-both.rea;User Access Control;Input;Precision;0,25925925925925924
+reassistant-both.rea;User Access Control;Input;Recall;0,7
+reassistant-both.rea;User Access Control;Input;Accuracy;0,8743169398907104
+reassistant-both.rea;User Access Control;Input;FMeasure-1;0,37837837837837834
+reassistant-both.rea;User Access Control;Input;WeightedFMeasure-0.5;0,9459459459459458
+reassistant-both.rea;User Access Control;Input;WeightedFMeasure-2.0;0,23648648648648646
+reassistant-both.rea;User Access Control;Input;TrueNegativeRate;0,884393063583815
+reassistant-both.rea;Presentation;Input;TruePositive;26,0
+reassistant-both.rea;Presentation;Input;FalsePositive;10,0
+reassistant-both.rea;Presentation;Input;FalseNegative;5,0
+reassistant-both.rea;Presentation;Input;TrueNegative;142,0
+reassistant-both.rea;Presentation;Input;Precision;0,7222222222222222
+reassistant-both.rea;Presentation;Input;Recall;0,8387096774193549
+reassistant-both.rea;Presentation;Input;Accuracy;0,9180327868852459
+reassistant-both.rea;Presentation;Input;FMeasure-1;0,7761194029850746
+reassistant-both.rea;Presentation;Input;WeightedFMeasure-0.5;1,9402985074626866
+reassistant-both.rea;Presentation;Input;WeightedFMeasure-2.0;0,48507462686567165
+reassistant-both.rea;Presentation;Input;TrueNegativeRate;0,9342105263157895
+reassistant-both.rea;External Communication;Input;TruePositive;3,0
+reassistant-both.rea;External Communication;Input;FalsePositive;9,0
+reassistant-both.rea;External Communication;Input;FalseNegative;10,0
+reassistant-both.rea;External Communication;Input;TrueNegative;161,0
+reassistant-both.rea;External Communication;Input;Precision;0,25
+reassistant-both.rea;External Communication;Input;Recall;0,23076923076923078
+reassistant-both.rea;External Communication;Input;Accuracy;0,8961748633879781
+reassistant-both.rea;External Communication;Input;FMeasure-1;0,24000000000000002
+reassistant-both.rea;External Communication;Input;WeightedFMeasure-0.5;0,6000000000000001
+reassistant-both.rea;External Communication;Input;WeightedFMeasure-2.0;0,15000000000000002
+reassistant-both.rea;External Communication;Input;TrueNegativeRate;0,9470588235294117
+reassistant-both.rea;Persistence;Input;TruePositive;30,0
+reassistant-both.rea;Persistence;Input;FalsePositive;25,0
+reassistant-both.rea;Persistence;Input;FalseNegative;14,0
+reassistant-both.rea;Persistence;Input;TrueNegative;114,0
+reassistant-both.rea;Persistence;Input;Precision;0,5454545454545454
+reassistant-both.rea;Persistence;Input;Recall;0,6818181818181818
+reassistant-both.rea;Persistence;Input;Accuracy;0,7868852459016393
+reassistant-both.rea;Persistence;Input;FMeasure-1;0,6060606060606061
+reassistant-both.rea;Persistence;Input;WeightedFMeasure-0.5;1,5151515151515151
+reassistant-both.rea;Persistence;Input;WeightedFMeasure-2.0;0,3787878787878788
+reassistant-both.rea;Persistence;Input;TrueNegativeRate;0,8201438848920863
+reassistant-both.rea;Concurrence;Input;TruePositive;3,0
+reassistant-both.rea;Concurrence;Input;FalsePositive;0,0
+reassistant-both.rea;Concurrence;Input;FalseNegative;0,0
+reassistant-both.rea;Concurrence;Input;TrueNegative;180,0
+reassistant-both.rea;Concurrence;Input;Precision;1,0
+reassistant-both.rea;Concurrence;Input;Recall;1,0
+reassistant-both.rea;Concurrence;Input;Accuracy;1,0
+reassistant-both.rea;Concurrence;Input;FMeasure-1;1,0
+reassistant-both.rea;Concurrence;Input;WeightedFMeasure-0.5;2,5
+reassistant-both.rea;Concurrence;Input;WeightedFMeasure-2.0;0,625
+reassistant-both.rea;Concurrence;Input;TrueNegativeRate;1,0
+reassistant-both.rea;Persistence;Golden;TruePositive;30,0
+reassistant-both.rea;Persistence;Golden;FalsePositive;25,0
+reassistant-both.rea;Persistence;Golden;FalseNegative;14,0
+reassistant-both.rea;Persistence;Golden;TrueNegative;114,0
+reassistant-both.rea;Persistence;Golden;Precision;0,5454545454545454
+reassistant-both.rea;Persistence;Golden;Recall;0,6818181818181818
+reassistant-both.rea;Persistence;Golden;Accuracy;0,7868852459016393
+reassistant-both.rea;Persistence;Golden;FMeasure-1;0,6060606060606061
+reassistant-both.rea;Persistence;Golden;WeightedFMeasure-0.5;1,5151515151515151
+reassistant-both.rea;Persistence;Golden;WeightedFMeasure-2.0;0,3787878787878788
+reassistant-both.rea;Persistence;Golden;TrueNegativeRate;0,8201438848920863
+reassistant-both.rea;Entitlement;Golden;TruePositive;7,0
+reassistant-both.rea;Entitlement;Golden;FalsePositive;18,0
+reassistant-both.rea;Entitlement;Golden;FalseNegative;3,0
+reassistant-both.rea;Entitlement;Golden;TrueNegative;155,0
+reassistant-both.rea;Entitlement;Golden;Precision;0,28
+reassistant-both.rea;Entitlement;Golden;Recall;0,7
+reassistant-both.rea;Entitlement;Golden;Accuracy;0,8852459016393442
+reassistant-both.rea;Entitlement;Golden;FMeasure-1;0,4
+reassistant-both.rea;Entitlement;Golden;WeightedFMeasure-0.5;1,0
+reassistant-both.rea;Entitlement;Golden;WeightedFMeasure-2.0;0,25
+reassistant-both.rea;Entitlement;Golden;TrueNegativeRate;0,8959537572254336
+reassistant-both.rea;Communication;Golden;TruePositive;3,0
+reassistant-both.rea;Communication;Golden;FalsePositive;9,0
+reassistant-both.rea;Communication;Golden;FalseNegative;10,0
+reassistant-both.rea;Communication;Golden;TrueNegative;161,0
+reassistant-both.rea;Communication;Golden;Precision;0,25
+reassistant-both.rea;Communication;Golden;Recall;0,23076923076923078
+reassistant-both.rea;Communication;Golden;Accuracy;0,8961748633879781
+reassistant-both.rea;Communication;Golden;FMeasure-1;0,24000000000000002
+reassistant-both.rea;Communication;Golden;WeightedFMeasure-0.5;0,6000000000000001
+reassistant-both.rea;Communication;Golden;WeightedFMeasure-2.0;0,15000000000000002
+reassistant-both.rea;Communication;Golden;TrueNegativeRate;0,9470588235294117
+reassistant-both.rea;Ease-of-use;Golden;TruePositive;26,0
+reassistant-both.rea;Ease-of-use;Golden;FalsePositive;10,0
+reassistant-both.rea;Ease-of-use;Golden;FalseNegative;5,0
+reassistant-both.rea;Ease-of-use;Golden;TrueNegative;142,0
+reassistant-both.rea;Ease-of-use;Golden;Precision;0,7222222222222222
+reassistant-both.rea;Ease-of-use;Golden;Recall;0,8387096774193549
+reassistant-both.rea;Ease-of-use;Golden;Accuracy;0,9180327868852459
+reassistant-both.rea;Ease-of-use;Golden;FMeasure-1;0,7761194029850746
+reassistant-both.rea;Ease-of-use;Golden;WeightedFMeasure-0.5;1,9402985074626866
+reassistant-both.rea;Ease-of-use;Golden;WeightedFMeasure-2.0;0,48507462686567165
+reassistant-both.rea;Ease-of-use;Golden;TrueNegativeRate;0,9342105263157895
+reassistant-both.rea;Data validation;Golden;TruePositive;2,0
+reassistant-both.rea;Data validation;Golden;FalsePositive;0,0
+reassistant-both.rea;Data validation;Golden;FalseNegative;6,0
+reassistant-both.rea;Data validation;Golden;TrueNegative;175,0
+reassistant-both.rea;Data validation;Golden;Precision;1,0
+reassistant-both.rea;Data validation;Golden;Recall;0,25
+reassistant-both.rea;Data validation;Golden;Accuracy;0,9672131147540983
+reassistant-both.rea;Data validation;Golden;FMeasure-1;0,4
+reassistant-both.rea;Data validation;Golden;WeightedFMeasure-0.5;1,0
+reassistant-both.rea;Data validation;Golden;WeightedFMeasure-2.0;0,25
+reassistant-both.rea;Data validation;Golden;TrueNegativeRate;1,0
+reassistant-both.rea;Error handling;Golden;TruePositive;21,0
+reassistant-both.rea;Error handling;Golden;FalsePositive;5,0
+reassistant-both.rea;Error handling;Golden;FalseNegative;13,0
+reassistant-both.rea;Error handling;Golden;TrueNegative;144,0
+reassistant-both.rea;Error handling;Golden;Precision;0,8076923076923077
+reassistant-both.rea;Error handling;Golden;Recall;0,6176470588235294
+reassistant-both.rea;Error handling;Golden;Accuracy;0,9016393442622951
+reassistant-both.rea;Error handling;Golden;FMeasure-1;0,7
+reassistant-both.rea;Error handling;Golden;WeightedFMeasure-0.5;1,75
+reassistant-both.rea;Error handling;Golden;WeightedFMeasure-2.0;0,4375
+reassistant-both.rea;Error handling;Golden;TrueNegativeRate;0,9664429530201343
+reassistant-both.rea;Synchronization;Golden;TruePositive;3,0
+reassistant-both.rea;Synchronization;Golden;FalsePositive;0,0
+reassistant-both.rea;Synchronization;Golden;FalseNegative;0,0
+reassistant-both.rea;Synchronization;Golden;TrueNegative;180,0
+reassistant-both.rea;Synchronization;Golden;Precision;1,0
+reassistant-both.rea;Synchronization;Golden;Recall;1,0
+reassistant-both.rea;Synchronization;Golden;Accuracy;1,0
+reassistant-both.rea;Synchronization;Golden;FMeasure-1;1,0
+reassistant-both.rea;Synchronization;Golden;WeightedFMeasure-0.5;2,5
+reassistant-both.rea;Synchronization;Golden;WeightedFMeasure-2.0;0,625
+reassistant-both.rea;Synchronization;Golden;TrueNegativeRate;1,0
+reassistant-both.rea;N/A;N/A;TruePositive;92,0
+reassistant-both.rea;N/A;N/A;FalsePositive;67,0
+reassistant-both.rea;N/A;N/A;FalseNegative;51,0
+reassistant-both.rea;N/A;N/A;TrueNegative;1071,0
+reassistant-both.rea;N/A;N/A;Precision;0,5786163522012578
+reassistant-both.rea;N/A;N/A;Recall;0,6433566433566433
+reassistant-both.rea;N/A;N/A;Accuracy;0,9078844652615145
+reassistant-both.rea;N/A;N/A;FMeasure-1;0,609271523178808
+reassistant-both.rea;N/A;N/A;WeightedFMeasure-0.5;1,5231788079470199
+reassistant-both.rea;N/A;N/A;WeightedFMeasure-2.0;0,38079470198675497
+reassistant-both.rea;N/A;N/A;TrueNegativeRate;0,9411247803163445

@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="ASCII"?>
+<edu.unicen.ucrefactoring:UseCaseModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:edu.unicen.ucrefactoring="http://ucrefactoring/1.0" description="The purpose of the system is to collect then manage public health related complaints and notifications. The system is also used to notify people about important information regarding the Health System.&#xD;&#xA;The Health Watcher system must also exchange information with the SSVS system (Sanitary Surveillance System). Initially, this exchange will involve the querying of sanitary licenses. Subsequently, when the SSVS has the Complaint Control module deployed, Sanitary Surveillance complaints will be exchanged between the two systems." name="HWS">
+  <actors name="Citizen" description="Any person who wishes to interact with the system."/>
+  <actors name="Employee" description="Health System employees (inspectors, attendants and managers)."/>
+  <actors name="System" description="El actor que representa al sistema" type="SYSTEM"/>
+  <useCases name="Query information" description="This use case allows a citizen to perform queries.&#xD;&#xA;The citizen might query:&#xD;&#xA;&#x2022; Which health units take care of a specific specialty.&#xD;&#xA;&#x2022; What are the specialties of a particular health unit." primaryActor="#//@actors.0">
+    <context>
+      <preconditions name="Precondition 1" description="The data to be queried must be registered on the system.&#xD;&#xA;"/>
+      <postconditions name="Postcondition" description="The query result to the citizen.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The citizen chooses the type of query" number="1" eventId="1." subject="#//@actors.0">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="chooses"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="In the case of query on specialties grouped by health units, the system retrieves the list of health units stored." number="2" eventId="1.1 " subject="#//@actors.2">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="grouped"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="stored"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the details of each health unit such as its description and specialties." number="3" eventId="1.1.1" subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The list of health units is presented to the user on their local display." number="4" eventId="1.1.2">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="presented"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="In the case of a query on health units grouped by specialties, the system retrieves the list of registered specialties." number="5" eventId="1.2 " subject="#//@actors.2">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="grouped"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the details of each specialty such as its unique identifier and name." number="6" eventId="1.2.1 " subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The list of specialties is presented to the user on their local display." number="7" eventId="1.2.2">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="presented"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="In the case of a query on diseases, the system retrieves the list of diseases." number="8" eventId="1.3 " subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the details of each disease type such as its unique identifier and name." number="9" eventId="1.3.1" subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The list of disease is presented to the user on their local display." number="10" eventId="1.3.2">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="presented"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The citizen provides the data for the query" number="11" eventId="2. " subject="#//@actors.0">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="provides"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="In the case of a query on specialties grouped by health units, the citizen selects the health unit to be queried." number="12" eventId="2.1 " subject="#//@actors.0">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="grouped"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Single" confidence="1.0" ranking="1" predicate="queried"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A unique identifier representing the selected health unit is sent to the server." number="13" eventId="2.1.1">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="representing"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the health unit information is consistent." number="14" eventId="2.1.2" subject="#//@actors.2">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="20" predicate="ensures"/>
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The unique identifier is used by the system to search the repository for the selected health unit." number="15" eventId="2.1.3" subject="#//@actors.2">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="used"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="search"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The details of the selected health unit are retrieved including its specialties." number="16" eventId="2.1.4">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieved"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="including"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The specialties for the selected health unit are returned to the user." number="17" eventId="2.1.5">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="returned"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="In the case of a query on health units grouped by specialties, the citizen selects the specialty to be queried." number="18" eventId="2.2 " subject="#//@actors.0">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="grouped"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Single" confidence="1.0" ranking="1" predicate="queried"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A unique identifier representing the selected specialty is sent to the server." number="19" eventId="2.2.1 ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="representing"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the health unit information is consistent." number="20" eventId="2.2.2" subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="20" predicate="ensures"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The unique identifier is used to retrieve the list of health units which are associated with the selected specialty." number="21" eventId="2.2.3">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="used"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieve"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="associated"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The details of the health units and specialties are retrieved." number="22" eventId="2.2.4">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieved"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The retrieved health units are returned to the user." number="23" eventId="2.2.5 ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieved"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="returned"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="In the case of a query on complaints, the citizen provides the complaint code." number="24" eventId="2.3 " subject="#//@actors.0">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="provides"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The unique identifier representing the complaint to be retrieved is sent to the server." number="25" eventId="2.3.1 ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="representing"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieved"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+        <actionClasses name="Single" confidence="1.0" ranking="2" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the complaint information is consistent." number="26" eventId="2.3.2" subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The unique identifier is used to retrieve the complaint entry." number="27" eventId="2.3.3">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="used"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieve"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system must determine the complaint type as to retrieve the appropriate information." number="28" eventId="2.3.4" subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="determine"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieve"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="If the complaint is a special complaint the complainer&#x2019;s age, education level and occupation are retrieved (in addition to the standard complaint information)." number="29" eventId="2.3.4.1 ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieved"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="If the complaint is a food complaint the meal which was consumed, the number of people who ate the meal, the number of sick people, etc. are retrieved (in addition to the standard complaint information)." number="30" eventId="2.3.4.2">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="consumed"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="ate"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieved"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="If the complaint is an animal complaint the animal species and the number of animals affected (in addition to the standard complaint information)." number="31" eventId="2.3.4.3">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="affected"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint with all the appropriate information is returned to the user." number="32" eventId="2.3.5">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="returned"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="In the case of a query on diseases, the citizen selects the disease to be queried." number="33" eventId="2.4 " subject="#//@actors.0">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Single" confidence="1.0" ranking="1" predicate="queried"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The unique identifier representing the disease type to be retrieved is sent to the server." number="34" eventId="2.4.1 ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="representing"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieved"/>
+        <actionClasses name="Single" confidence="1.0" ranking="2" predicate="sent"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the disease type information is consistent." number="35" eventId="2.4.2" subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The unique identifier is used to retrieve the disease type to query." number="36" eventId="2.4.3">
+        <actionClasses name="Single" confidence="1.0" ranking="1" predicate="used"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieve"/>
+        <actionClasses name="Single" confidence="1.0" ranking="1" predicate="query"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The symptoms for the selected disease type are retrieved." number="37" eventId="2.4.4">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieved"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complete disease information is returned to the user." number="38" eventId="2.4.5">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="returned"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The query results are formatted and presented to the user on their local display." number="39" eventId="3. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="formatted"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="presented"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 1">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A communication problem occurs." number="1" eventId="1.x and 2.x: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message" number="2" eventId="1. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 2">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A problem occurs retrieving the complaint data." number="1" eventId="1.">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieving"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the available information." number="2" eventId="1.x.1 and 2.x.4:">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message" number="3" eventId="2. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 3">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="An invalid complaint code is entered." number="1" eventId="2.3.3:">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message informing the user the complaint does not exist." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="informing"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="exist"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 4">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Consistent data cannot be assured." number="1" eventId="2.x.2:">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="assured"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system abandons the data retrieval." number="2" eventId="1.">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="abandons"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="3" eventId="2. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Complaint specification" description="This use case allows a citizen to register complaints." primaryActor="#//@actors.0">
+    <context>
+      <postconditions name="Postcondition" description="The complaint saved on the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The citizen selects the kind of complaint." number="1" eventId="1." subject="#//@actors.0">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system shows the specific screen for each type of complaint." number="2" eventId="2. " subject="#//@actors.2">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="shows"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system registers the kind, date and time of the complaints." number="3" eventId="3. " subject="#//@actors.2">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="registers"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The citizen provides the complaint specific data." number="4" eventId="4. " subject="#//@actors.0">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="provides"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system saves the complaint." number="5" eventId="5. " subject="#//@actors.2">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="saves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The information entered by the user is sent to the server." number="6" eventId="5.1.">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system parses the data entered by the user." number="7" eventId="5.2." subject="#//@actors.2">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="parses"/>
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system creates a new instance of the appropriate complaint type." number="8" eventId="5.3." subject="#//@actors.2">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="creates"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system generates a unique identifier and assigns this to the new complaint." number="9" eventId="5.4." subject="#//@actors.2">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="generates"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="assigns"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complainers address is parsed and saved." number="10" eventId="5.5.">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="parsed"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="saved"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The common complaint information is parsed and stored with the OPENED state." number="11" eventId="6.">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="parsed"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="stored"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The specific complaint data is then extracted and stored accordingly." number="12" eventId="5.7.">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="extracted"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="stored"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the data is left in a consistent state." number="13" eventId="5.8." subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="left"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The unique identifier is returned and presented to the user on their local display." number="14" eventId="5.8.">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="returned"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="presented"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 1">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A communication problem occurs." number="1" eventId="5.1: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 2">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Invalid data is entered by the user." number="1" eventId="5.2: ">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 3">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A problem occurs storing the complaint." number="1" eventId="5.5-5.7:">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="storing"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint entry is rolled-back." number="2" eventId="1."/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="3" eventId="2. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 4">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Data consistency cannot be ensured." number="1" eventId="5.8: ">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensured"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint entry is rolled-back." number="2" eventId="1."/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="3" eventId="2. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Login" description="This use case allows an employee to have access to restricted operations on the Health-Watcher system." primaryActor="#//@actors.1">
+    <context>
+      <postconditions name="Postcondition" description="Password validated by the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee provides the login and password." number="1" eventId="1." subject="#//@actors.1">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="provides"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The login and password are sent to the server." number="2" eventId="2. ">
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the employee details using the login as a unique identifier." number="3" eventId="3. " subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="using"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system validates the entered password." number="4" eventId="4. " subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="validates"/>
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The result of the login attempt is presented to the employee on their local display." number="5" eventId="5. ">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="presented"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 1">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A communication error occurs." number="1" eventId="2: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 2">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A problem occurs retrieving the employee details." number="1" eventId="3: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieving"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 3">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system cannot validate the employee." number="1" eventId="4: ">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="validate"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Register tables" description="This use case allows the registration of system tables. The following operations are possible: insert, update, delete, search and print.&#xD;&#xA;The available tables include: Health unit (unit code, unit description), Specialty (code and description), Health unit / Specialty (health unit and specialty), Employee (login, name and password), Type of disease (code, name, description, symptom and duration), Symptom (code and description), Type of disease / Symptom (type of disease and symptom)." primaryActor="#//@actors.1">
+    <context>
+      <preconditions name="Precondition" description="Verified employee.&#xD;&#xA;"/>
+      <postconditions name="Postcondition" description="Updated data on the tables.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee chooses the option to register (insert/update) in one of the tables." number="1" eventId="1." subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="chooses"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="register"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee enters the data." number="2" eventId="2. " subject="#//@actors.1">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="enters"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system saves the data." number="3" eventId="3. " subject="#//@actors.2">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="saves"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Update complaint" description="This use case allows the state of a complaint to be updated." primaryActor="#//@actors.1">
+    <context>
+      <preconditions name="Precondition 1" description="The complaint must be registered and have the OPENED state.&#xD;&#xA;"/>
+      <preconditions name="Precondition 2" description="Verified employee.&#xD;&#xA;"/>
+      <postconditions name="Postcondition" description="Complaint updated and with state CLOSED.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee selects the update complaint option." number="1" eventId="1." subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="update"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the list of all registered complaints." number="2" eventId="2. " subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint list is populated with general and complaint type specific data." number="3" eventId="2.1.">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="populated"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The list of complaints is returned to the employee." number="4" eventId="3. ">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="returned"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaints are formatted and presented to the employee on their local display." number="5" eventId="4. ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="formatted"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="presented"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee selects the complaint they wish to update." number="6" eventId="5. " subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="wish"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="update"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint unique identifier is sent to the server." number="7" eventId="6.">
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the complaint data is consistent." number="8" eventId="7. " subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the complaint entry." number="9" eventId="8. " subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint is returned to the employee." number="10" eventId="9. ">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="returned"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint is formatted and presented to the employee on their local display." number="11" eventId="10.">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="formatted"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="presented"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee enters the conclusion." number="12" eventId="11." subject="#//@actors.1">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="enters"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The conclusion is sent to the server." number="13" eventId="12. ">
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint status is set to closed; the date the conclusion was entered is set in addition to the employee who dealt with the complaint." number="14" eventId="13.">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="set"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="closed"/>
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="set"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="dealt"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the complaint is left in a consistent state." number="15" eventId="14." subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="left"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint information is updated to store the new information." number="16" eventId="15.">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="updated"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="store"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 1">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="An error occurs retrieving the registered complaints." number="1" eventId="2 and 8: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieving"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 2">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Data consistency cannot be ensured." number="1" eventId="7 and 14: ">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensured"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint changes are rolled-back." number="2" eventId="1."/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="3" eventId="2. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 3">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail=", 6, 9, and 12: A communication error occurs." number="1" eventId="3">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 4">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="An error occurs storing the updated complaint." number="1" eventId="15: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="storing"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="updated"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The complaint changes are rolled back." number="2" eventId="1.">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="rolled"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message" number="3" eventId="2. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="Raise"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Register new employee" description="This use case allows new employees to be registered on the system." primaryActor="#//@actors.1">
+    <context>
+      <preconditions name="Precondition" description="Verified employee.&#xD;&#xA;"/>
+      <postconditions name="Postcondition" description="New employee registered on the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee selects the insert employee option." number="1" eventId="1." subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee provides the following information about the new employee: Name, Login ID, and Password (with second password field for confirmation)." number="2" eventId="2. " subject="#//@actors.1">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="provides"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="following"/>
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="("/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee confirms the operation." number="3" eventId="3. " subject="#//@actors.1">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="confirms"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The entered data is transmitted to the server." number="4" eventId="4. ">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="transmitted"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system verifies the entered data." number="5" eventId="5. " subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="verifies"/>
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures employee data is consistent." number="6" eventId="6." subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system saves the new employee's data." number="7" eventId="7. " subject="#//@actors.2">
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="saves"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 1">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Incomplete data entered." number="1" eventId="2: ">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="entered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Show a message informing the employee of the missing/incorrect data." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="informing"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 2">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A communication error occurs." number="1" eventId="4: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 3">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee is already entered." number="1" eventId="5: ">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Inform the employee that the new employee is already entered." number="2" eventId="1. ">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="Inform"/>
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Abandon the entry." number="3" eventId="2. ">
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="Abandon"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 4">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Data Consistency cannot be ensured." number="1" eventId="6: ">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensured"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee entry is rolled-back." number="2" eventId="1."/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee is informed the employee cannot be inserted." number="3" eventId="2. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="informed"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="inserted"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 5">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="An error occurs storing the new employee's details." number="1" eventId="7: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="storing"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee entry is rolled-back." number="2" eventId="1."/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="3" eventId="2. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Update employee" description="This use case allows of the employee's data to be updated on the system." primaryActor="#//@actors.1">
+    <context>
+      <preconditions name="Precondition" description="Verified employee.&#xD;&#xA;"/>
+      <postconditions name="Postcondition" description="Employee's data updated on the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee chooses the update employee option." number="1" eventId="1." subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="chooses"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="update"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee provides the data to be updated: Name, New password (with second password field for confirmation), and Current password." number="2" eventId="2. " subject="#//@actors.1">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="provides"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="updated"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee confirms the update." number="3" eventId="3. " subject="#//@actors.1">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="confirms"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="update"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The entered data is sent to the server." number="4" eventId="4. ">
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system verifies the entered data." number="5" eventId="5. " subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="verifies"/>
+        <actionClasses name="Entry" confidence="1.0" ranking="1" predicate="entered"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the employee data is consistent." number="6" eventId="6." subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system stores the updated employee information." number="7" eventId="7. ">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="updated"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Update health unit" description="This use case allows the health unit's data to be updated." primaryActor="#//@actors.1">
+    <context>
+      <preconditions name="Precondition" description="Verified employee.&#xD;&#xA;"/>
+      <postconditions name="Postcondition" description="Health unit's data updated on the system.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee chooses the update health unit option." number="1" eventId="1." subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="chooses"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="update"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the list of all health units." number="2" eventId="2. " subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The list of health units is returned to the employee." number="3" eventId="3. ">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="returned"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The list of health units is formatted and displayed on the employee's local display." number="4" eventId="4. ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="formatted"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="displayed"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee selects the health unit to be updated." number="5" eventId="5. " subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selects"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="updated"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The unique identifier for the selected health unit is sent to the server." number="6" eventId="6.">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the health unit data is consistent." number="7" eventId="7. " subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system retrieves the data for the selected health unit." number="8" eventId="8. " subject="#//@actors.2">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieves"/>
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="selected"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The data retrieved is returned to the employee." number="9" eventId="9. ">
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieved"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="returned"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The health unit data is formatted and presented on the employee's local display." number="10" eventId="10.">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="formatted"/>
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="presented"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee alters the necessary data." number="11" eventId="11." subject="#//@actors.1">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="alters"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The updated information is sent to the server." number="12" eventId="12. ">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="updated"/>
+        <actionClasses name="Outdoor" confidence="1.0" ranking="1" predicate="sent"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system ensures the health unit data is left in a consistent state." number="13" eventId="13." subject="#//@actors.2">
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="ensures"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="left"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system stores the updated health unit information." number="14" eventId="14.">
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="updated"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 1">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail=", 8: A problem occurs retrieving the health unit information." number="1" eventId="2">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+        <actionClasses name="Multiple" confidence="1.0" ranking="1" predicate="retrieving"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 2">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail=", 6, 9, 12: A communication problem occurs." number="1" eventId="3">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="2" eventId="1. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 3">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Data consistency cannot be assured." number="1" eventId="7 and 13: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="assured"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Any health unit updates are rolled-back." number="2" eventId="1. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="3" eventId="2. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+    <flows name="Alternative Flow 4">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="A problem occurs storing the updated health unit data." number="1" eventId="14: ">
+        <actionClasses name="Calculation" confidence="0.3333333333333333" ranking="19" predicate="occurs"/>
+        <actionClasses name="Create" confidence="0.5" ranking="16" predicate="storing"/>
+        <actionClasses name="Update" confidence="0.5" ranking="16" predicate="updated"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Any health unit updates are rolled-back." number="2" eventId="1. "/>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="Raise an error message." number="3" eventId="2. ">
+        <actionClasses name="Notification" confidence="1.0" ranking="1" predicate="Raise"/>
+      </events>
+    </flows>
+  </useCases>
+  <useCases name="Change logged employee" description="This use case allows the currently logged employee to be changed." primaryActor="#//@actors.1">
+    <context>
+      <preconditions name="Precondition" description="Verified employee.&#xD;&#xA;"/>
+      <postconditions name="Postcondition" description="First employee signed out and new employee logged-in.&#xD;&#xA;"/>
+    </context>
+    <flows name="Basic Flow">
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The employee chooses the change logged employee option." number="1" eventId="1." subject="#//@actors.1">
+        <actionClasses name="Selection" confidence="1.0" ranking="1" predicate="chooses"/>
+        <actionClasses name="Verification" confidence="0.3333333333333333" ranking="19" predicate="logged"/>
+      </events>
+      <events xsi:type="edu.unicen.ucrefactoring:FunctionalEvent" detail="The system shows the login screen, and from this point on, the flow will follow the one described in &quot;Login&quot;." number="2" eventId="2. " subject="#//@actors.2">
+        <actionClasses name="Display" confidence="1.0" ranking="1" predicate="shows"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="follow"/>
+        <actionClasses name="Noise" confidence="0.2" ranking="22" predicate="described"/>
+      </events>
+    </flows>
+  </useCases>
+</edu.unicen.ucrefactoring:UseCaseModel>

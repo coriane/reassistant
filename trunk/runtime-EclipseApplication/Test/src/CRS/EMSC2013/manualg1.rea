@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu.isistan.reassistant:REAssistantProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:edu.isistan.reassistant="http://www.users.exa.unicen.edu.ar/~arago/reassistant" ID="_UgpBwHKwEeGApc-it7rrMQ" Name="CRS" ProjectURI="/Test/src/CRS/CRS.ucs" UIMAURI="/Test/src/CRS/EMSC2013/CRS.uima">
+  <CrosscuttingConcerns ID="_ZI4SAHLNEeGApc-it7rrMQ" Name="Security" Description="Verificar que el usuario tenga los privilegios necesarios para utilizar la funcionalidad deseada.">
+    <Impacts ID="_VFX38HLbEeGBWbpJEc_Odw" Realization="El usuario está logueado">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#7"/>
+      <Sentence href="CRS.uima#93"/>
+    </Impacts>
+    <Impacts ID="_9LJeAHLbEeGBWbpJEc_Odw" Realization="El usuario está logueado">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#8"/>
+      <Sentence href="CRS.uima#95"/>
+    </Impacts>
+    <Impacts ID="_5shHEHLzEeGBWbpJEc_Odw" Realization="El usuario está logueado">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#15"/>
+      <Sentence href="CRS.uima#129"/>
+    </Impacts>
+    <Impacts ID="_V9kscHL1EeGBWbpJEc_Odw" Realization="El usuario está logueado">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#21"/>
+      <Sentence href="CRS.uima#160"/>
+    </Impacts>
+    <Impacts ID="_9fS9EHNfEeGBWbpJEc_Odw" Realization="El usuario está logueado">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#31"/>
+      <Sentence href="CRS.uima#198"/>
+    </Impacts>
+    <Impacts ID="_ahj88HNhEeGBWbpJEc_Odw" Realization="El usuario está logueado">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#36"/>
+      <Sentence href="CRS.uima#213"/>
+    </Impacts>
+    <Impacts ID="_ImZicHNiEeGBWbpJEc_Odw" Realization="El usuario está logueado">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#40"/>
+      <Sentence href="CRS.uima#226"/>
+    </Impacts>
+    <Impacts ID="_rqf3AHNlEeGBWbpJEc_Odw" Realization="El usuario está logueado">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#43"/>
+      <Sentence href="CRS.uima#232"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_aTpcAHLNEeGApc-it7rrMQ" Name="Error Control" Description="Informa al usuario y mantiene logs de los errores ocurridos durante la ejecución.">
+    <Impacts ID="_DFNBoHLcEeGBWbpJEc_Odw" Realization="If in the basic flow the system cannot find the name or the password is invalid, an error message is displayed." CompositionRule="Override">
+      <Document href="CRS.uima#61"/>
+      <Section href="CRS.uima#9"/>
+      <Sentence href="CRS.uima#96"/>
+    </Impacts>
+    <Impacts ID="_ATgCIHL0EeGBWbpJEc_Odw" Realization="If in the &quot;Add a Professor&quot; sub-flow, a professor already exists with the specified name, an error message, &quot;Professor Already Exists&quot;, is displayed. The Registrar can either change the name, choose to create another professor with the same name, or cancel the operation at which point the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#101"/>
+    </Impacts>
+    <Impacts ID="_C-UpoHL0EeGBWbpJEc_Odw" Realization="If in the &quot;Modify a Professor&quot; sub-flow or &quot;Delete a Professor&quot; sub-flow, a professor with the specified id number does not exist, the system displays an error message, &quot;Professor Not Found&quot;. Then the Registrar can type in a different id number or cancel the operation at which point the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_F9w2QHL0EeGBWbpJEc_Odw" Realization="If in the &quot;Modify a Professor&quot; sub-flow or &quot;Delete a Professor&quot; sub-flow, a professor with the specified id number does not exist, the system displays an error message, &quot;Professor Not Found&quot;. Then the Registrar can type in a different id number or cancel the operation at which point the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_SIH3sHNfEeGBWbpJEc_Odw" Realization="If in the &quot;Add a Student&quot; sub-flow, a student already exists with the specified name, an error message, &quot;Student Already Exists&quot;, is displayed. The Registrar can either change the name, choose to create another student with the same name, or cancel the operation at which point the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#133"/>
+    </Impacts>
+    <Impacts ID="_T1c8MHNfEeGBWbpJEc_Odw" Realization="If in the &quot;Modify a Student&quot; sub-flow or &quot;Delete a Student&quot; sub-flow, a professor with the specified id number does not exist, the system displays an error message, &quot;Student Not Found&quot;. Then the Registrar can type in a different id number or cancel the operation at which point the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_WiXOYHNfEeGBWbpJEc_Odw" Realization="If in the &quot;Modify a Student&quot; sub-flow or &quot;Delete a Student&quot; sub-flow, a professor with the specified id number does not exist, the system displays an error message, &quot;Student Not Found&quot;. Then the Registrar can type in a different id number or cancel the operation at which point the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_2w1EgHNgEeGBWbpJEc_Odw" Realization="If in the &quot;Add Course&quot; sub-flow the system determines that the Student has not satisfied the necessary prerequisites or that the selected course offering is full, an error message is displayed. The Student can either select a different course offering or cancel the operation, at which point the use case is restarted." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#26"/>
+      <Sentence href="CRS.uima#187"/>
+    </Impacts>
+    <Impacts ID="_6lu5gHNgEeGBWbpJEc_Odw" Realization="If in the &quot;Modify a Schedule&quot; or &quot;Delete a Schedule&quot; sub-flows the system is unable to retrieve the Student’s schedule, an error message is displayed. The Student acknowledges the error and the use case is restarted." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#169"/>
+    </Impacts>
+    <Impacts ID="_8L1UoHNgEeGBWbpJEc_Odw" Realization="If in the &quot;Modify a Schedule&quot; or &quot;Delete a Schedule&quot; sub-flows the system is unable to retrieve the Student’s schedule, an error message is displayed. The Student acknowledges the error and the use case is restarted." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#179"/>
+    </Impacts>
+    <Impacts ID="__7BjMHNgEeGBWbpJEc_Odw" Realization="A message is displayed to the Student and the use case terminates. Students cannot register for courses after registration for the current semester has been closed." CompositionRule="Override">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#30"/>
+      <Sentence href="CRS.uima#197"/>
+    </Impacts>
+    <Impacts ID="_gjJE4HNhEeGBWbpJEc_Odw" Realization="The system will display an error message. The professor acknowledges the message and the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#33"/>
+      <Sentence href="CRS.uima#205"/>
+    </Impacts>
+    <Impacts ID="_kg7wIHNhEeGBWbpJEc_Odw" Realization="The system will display an error message indicating that a schedule conflict has occurred. The system will also indicate which are the conflicting courses. The professor can either resolve the schedule conflict (i.e., by canceling his selection to teach one of the course offerings) or cancel the operation, in which case any selections will be lost and the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#207"/>
+    </Impacts>
+    <Impacts ID="_mD4woHNhEeGBWbpJEc_Odw" Realization="The system will display an error message indicating that a schedule conflict has occurred. The system will also indicate which are the conflicting courses. The professor can either resolve the schedule conflict (i.e., by canceling his selection to teach one of the course offerings) or cancel the operation, in which case any selections will be lost and the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#34"/>
+      <Sentence href="CRS.uima#209"/>
+    </Impacts>
+    <Impacts ID="_CX870HNlEeGBWbpJEc_Odw" Realization="The system displays an error message and the use case ends." CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#38"/>
+      <Sentence href="CRS.uima#223"/>
+    </Impacts>
+    <Impacts ID="_DIXFEHNlEeGBWbpJEc_Odw" Realization="The system displays an error message. If the Professor chooses to cancel the operation the use case terminates, otherwise is restarted at step 2 of the basic flow." CompositionRule="Override">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#39"/>
+      <Sentence href="CRS.uima#224"/>
+    </Impacts>
+    <Impacts ID="_3v-bEHNlEeGBWbpJEc_Odw" Realization="A message is displayed. Once the Student acknowledges the message the use case terminates." CompositionRule="Override">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#42"/>
+      <Sentence href="CRS.uima#230"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_eGCvkHLNEeGApc-it7rrMQ" Name="Data Validation" Description="Verificar que los datos ingresados al sistema tengan el formato correcto.">
+    <Impacts ID="_KELSAHL0EeGBWbpJEc_Odw" Realization="The system validates the data to insure the proper data format and searches for an existing professor with the specified name." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#101"/>
+    </Impacts>
+    <Impacts ID="_aThZAHL1EeGBWbpJEc_Odw" Realization="The system validates the data to insure the proper data format and searches for an existing student with the specified name." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#133"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_gGlD8HLNEeGApc-it7rrMQ" Name="Synchronization" Description="Evita el acceso simultáneo a un mismo recurso.">
+    <Impacts ID="_ahCPYHLbEeGBWbpJEc_Odw" Realization="If there’s a registration in progress, then a message is displayed to the Registrar and the use case terminates.">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#76"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_iUuWgHLNEeGApc-it7rrMQ" Name="Persistence" Description="Cómo se almacena y se recupera la información. El sistema debe ser capaz de almacenar información de manera confiable.">
+    <Impacts ID="_c3ja0HLbEeGBWbpJEc_Odw" Realization="System validates course data&#xD;&#xA;Professor>0&#xD;&#xA;Students>2" CompositionRule="Overlap">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#79"/>
+    </Impacts>
+    <Impacts ID="_fZhoUHLbEeGBWbpJEc_Odw" Realization="Notifica a cada estudiante inscripto y al sistema de facturación." CompositionRule="Overlap">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_NHf5EHL0EeGBWbpJEc_Odw" Realization="The system creates a new professor and assigns a unique system-generated id number." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#10"/>
+      <Sentence href="CRS.uima#101"/>
+    </Impacts>
+    <Impacts ID="_OSklEHL0EeGBWbpJEc_Odw" Realization="El sistema recupera la información acerca del profesor" CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#11"/>
+      <Sentence href="CRS.uima#109"/>
+    </Impacts>
+    <Impacts ID="_QhbCQHL0EeGBWbpJEc_Odw" Realization="El sistema elimina el profesor de la base de datos." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#118"/>
+    </Impacts>
+    <Impacts ID="_RVb5IHL0EeGBWbpJEc_Odw" Realization="El sistema elimina el profesor de la base de datos." CompositionRule="Overlap">
+      <Document href="CRS.uima#62"/>
+      <Section href="CRS.uima#12"/>
+      <Sentence href="CRS.uima#122"/>
+    </Impacts>
+    <Impacts ID="_tXa6kHNfEeGBWbpJEc_Odw" Realization="The system creates a new student and assigns a unique system-generated id number." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#16"/>
+      <Sentence href="CRS.uima#134"/>
+    </Impacts>
+    <Impacts ID="_vr43kHNfEeGBWbpJEc_Odw" Realization="El sistema recupera la información acerca del estudiante" CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#17"/>
+      <Sentence href="CRS.uima#140"/>
+    </Impacts>
+    <Impacts ID="_w-JJoHNfEeGBWbpJEc_Odw" Realization="El sistema recupera la información acerca del estudiante" CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#149"/>
+    </Impacts>
+    <Impacts ID="_xX2qIHNfEeGBWbpJEc_Odw" Realization="El sistema elimina el estudiante de la base de datos." CompositionRule="Overlap">
+      <Document href="CRS.uima#63"/>
+      <Section href="CRS.uima#18"/>
+      <Sentence href="CRS.uima#153"/>
+    </Impacts>
+    <Impacts ID="_M4VjoHNgEeGBWbpJEc_Odw" Realization="Los cursos recuperados son los que actualmente se encuentran abiertos." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#163"/>
+    </Impacts>
+    <Impacts ID="_OVpPIHNgEeGBWbpJEc_Odw" Realization="Almacena el nuevo programa dentro de la base de datos." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#167"/>
+    </Impacts>
+    <Impacts ID="_RU-HAHNgEeGBWbpJEc_Odw" Realization="Almacena el nuevo programa dentro de la base de datos." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#177"/>
+    </Impacts>
+    <Impacts ID="_SKA4oHNgEeGBWbpJEc_Odw" Realization="Se recupera el programa del alumno logeado." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#179"/>
+    </Impacts>
+    <Impacts ID="_TKe3IHNgEeGBWbpJEc_Odw" Realization="Se elimina el programa seleccionado." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#24"/>
+      <Sentence href="CRS.uima#183"/>
+    </Impacts>
+    <Impacts ID="_ViOKkHNgEeGBWbpJEc_Odw" Realization="El programa del alumno es actualizado." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#25"/>
+      <Sentence href="CRS.uima#185"/>
+    </Impacts>
+    <Impacts ID="_WoHboHNgEeGBWbpJEc_Odw" Realization="El programa del alumno es actualizado." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#25"/>
+      <Sentence href="CRS.uima#186"/>
+    </Impacts>
+    <Impacts ID="_Rz07UHNiEeGBWbpJEc_Odw" Realization="Se recuperan de la base de datos los cursos dictados por el profesor." CompositionRule="Overlap">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#214"/>
+    </Impacts>
+    <Impacts ID="_1JnSQHNkEeGBWbpJEc_Odw" Realization="Se recupera la información de los alumnos inscriptos en el curso." CompositionRule="Overlap">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#216"/>
+    </Impacts>
+    <Impacts ID="_1ar0IHNkEeGBWbpJEc_Odw" Realization="Se recupera la información de los alumnos inscriptos en el curso." CompositionRule="Overlap">
+      <Document href="CRS.uima#66"/>
+      <Section href="CRS.uima#37"/>
+      <Sentence href="CRS.uima#217"/>
+    </Impacts>
+    <Impacts ID="_x2VuMHNlEeGBWbpJEc_Odw" Realization="Se recupera la información de las notas obtenidas por el alumno en los cursos que realizó." CompositionRule="Overlap">
+      <Document href="CRS.uima#67"/>
+      <Section href="CRS.uima#41"/>
+      <Sentence href="CRS.uima#227"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+  <CrosscuttingConcerns ID="_j8j3AHLNEeGApc-it7rrMQ" Name="Integration" Description="El sistema se comunicará con sistemas tercerizados.">
+    <Impacts ID="_jyhB0HLbEeGBWbpJEc_Odw" Realization="El sistema comprueba que el sistema de facturación esté disponible y se comunica con este." CompositionRule="Overlap">
+      <Document href="CRS.uima#60"/>
+      <Section href="CRS.uima#2"/>
+      <Sentence href="CRS.uima#80"/>
+    </Impacts>
+    <Impacts ID="_N86woHNhEeGBWbpJEc_Odw" Realization="El sistema comprueba que el sistema del catálogo de cursos esté disponible y se comunica con este." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#22"/>
+      <Sentence href="CRS.uima#163"/>
+    </Impacts>
+    <Impacts ID="_Pk1JoHNhEeGBWbpJEc_Odw" Realization="El sistema comprueba que el sistema del catálogo de cursos esté disponible y se comunica con este." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#23"/>
+      <Sentence href="CRS.uima#170"/>
+    </Impacts>
+    <Impacts ID="_So4wgHNhEeGBWbpJEc_Odw" Realization="El sistema comprueba que el sistema del catálogo de cursos esté disponible y se comunica con este." CompositionRule="Overlap">
+      <Document href="CRS.uima#64"/>
+      <Section href="CRS.uima#29"/>
+      <Sentence href="CRS.uima#194"/>
+    </Impacts>
+    <Impacts ID="_xVrN8HNhEeGBWbpJEc_Odw" Realization="El sistema comprueba que el sistema del catálogo de cursos esté disponible y se comunica con este." CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#199"/>
+    </Impacts>
+    <Impacts ID="_xyS4gHNhEeGBWbpJEc_Odw" Realization="El sistema comprueba que el sistema del catálogo de cursos esté disponible y se comunica con este." CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#200"/>
+    </Impacts>
+    <Impacts ID="_1dXcEHNhEeGBWbpJEc_Odw" Realization="Se elimina el porfesor del curso seleccionado." CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#202"/>
+    </Impacts>
+    <Impacts ID="_4h6LIHNhEeGBWbpJEc_Odw" Realization="If there is no conflict, the system updates the course offering information for each offering the professor selects." CompositionRule="Overlap">
+      <Document href="CRS.uima#65"/>
+      <Section href="CRS.uima#32"/>
+      <Sentence href="CRS.uima#203"/>
+    </Impacts>
+  </CrosscuttingConcerns>
+</edu.isistan.reassistant:REAssistantProject>

@@ -1,0 +1,29 @@
+#Path
+caseStudies <- c("CRS", "HWS", "MSLite")
+caseStudy <- caseStudies[3]
+caseStudyLC <- tolower(caseStudy)
+refactored <- ""
+#refactored <- "-refactored"
+path <- paste("/Users/alejandrorago/Documents/Implementacion/Proyectos/REAssistant-SVN/runtime-EclipseApplication/Test/src/UCRefactoring-PhD/", caseStudy, refactored, "/", sep="")
+setwd(path)
+
+#Import
+data <- read.csv("matchings.csv", header=TRUE, sep =";")
+
+#Cleaning
+processFileNames <- function(dataSet, path, fileSuffix, suffix) {
+	cleanDataSet <- dataSet
+	cleanDataSet$InputID <- gsub(path, "", cleanDataSet$InputID)
+	cleanDataSet$InputID <- gsub(fileSuffix, suffix, cleanDataSet$InputID)
+	return(cleanDataSet)
+}
+
+fileSuffix <- ".rea"
+suffix <- ""
+data <- processFileNames(data, path, fileSuffix, suffix)
+print(data$InputID)
+
+#Filtering
+filteredData <- subset(data, Perspective == "N/A")
+filteredData <- subset(filteredData, Measure.Name == "Precision" | Measure.Name == "Recall")
+print(filteredData)

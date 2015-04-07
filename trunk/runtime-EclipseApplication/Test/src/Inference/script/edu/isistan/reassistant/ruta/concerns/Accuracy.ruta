@@ -1,0 +1,34 @@
+TYPESYSTEM edu.isistan.uima.unified.typesystems.REATypeSystem;
+
+STRINGLIST TokenList = {"precision", "accurate", "measure"}; 
+
+//Simple Query - Accuracy-related Keywords
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Accuracy", "kind" = "Simple/Direct")} <- {
+    (
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "precision" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "accurate" |
+        edu.isistan.uima.unified.typesystems.nlp.Token.lemma == "measure"
+    );
+};
+
+//Advanced Query - Calculation Actions
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Accuracy", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainActor{
+        AND(DomainActor.kind == "SYSTEM", DomainActor.role == "PRIMARY")
+    } %
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Calculation"
+    };
+};
+//Advanced Query - Process Actions with Results
+edu.isistan.uima.unified.typesystems.nlp.Sentence{ -> CREATE(CrosscuttingConcern, "name" = "Accuracy", "kind" = "Advanced/Indirect")} <- {
+    edu.isistan.uima.unified.typesystems.domain.DomainActor{
+        DomainActor.kind == "SYSTEM"
+    } %
+    edu.isistan.uima.unified.typesystems.domain.DomainAction{
+        DomainAction.label == "Process"
+    } %
+    edu.isistan.uima.unified.typesystems.nlp.Token{
+        Token.lemma == "result"
+    };
+};
